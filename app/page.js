@@ -1,3 +1,4 @@
+import { InstantBookingBar } from "@/components/BookingBar";
 import HeroSection from "../components/HeroSection";
 import RouteCarousel from "../components/RouteCarousel";
 import WhyChooseUs from "../components/WhyChooseUs";
@@ -39,6 +40,7 @@ export default function HomePage() {
         jsonLd={jsonLd}
       />
       <div>
+        <div className="sm:hidden"><InstantBookingBar/></div>
       <HeroSection />
       <RouteCarousel />
       <WhyChooseUs />

@@ -72,7 +72,7 @@ export default function QuickBookingSidebar({ route, searchParams = {} }) {
               <span className="text-green-400">📞</span>
             </div>
             <div>
-              <p className="text-white font-medium text-sm">Call Us</p>
+              <span className="text-white font-medium text-sm">Call Us</span>
               <p className="text-gray-400 text-xs">+91-62849-92669</p>
             </div>
           </a>
@@ -87,7 +87,7 @@ export default function QuickBookingSidebar({ route, searchParams = {} }) {
               <span className="text-green-400">💬</span>
             </div>
             <div>
-              <p className="text-white font-medium text-sm">WhatsApp</p>
+              <span className="text-white font-medium text-sm">WhatsApp</span>
               <p className="text-gray-400 text-xs">Quick support</p>
             </div>
           </a>
@@ -98,8 +98,7 @@ export default function QuickBookingSidebar({ route, searchParams = {} }) {
       <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4">
         <h4 className="text-yellow-400 font-medium text-sm mb-2">Important Information</h4>
         <ul className="text-yellow-200 text-xs space-y-1">
-          <li>• Tolls and parking charges extra</li>
-          <li>• Night charges: 10% extra (11 PM - 5 AM)</li>
+          <li>• Parking charges extra</li>
           <li>• Advance booking recommended</li>
           <li>• Cancellation charges may apply</li>
         </ul>

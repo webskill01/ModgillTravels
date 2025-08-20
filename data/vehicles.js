@@ -1,44 +1,38 @@
 // data/vehicles.js
 
 export const VEHICLE_TYPES = {
-  HATCHBACK: {
-    name: "Hatchback",
-    multiplier: 1,
-    capacity: "4",
-    icon: "🚗",
-    luggage: "2 Bags",
-    description: "Economic & fuel efficient"
-  },
   SEDAN: {
     name: "Sedan",
     multiplier: 1.2,
     capacity: "4",
     icon: "🚘",
     luggage: "3 Bags",
-    description: "Comfortable for long rides"
+    description: "Comfortable for long rides",
+     models:"Toyota Etios,Maruti Dzire,Honda Amaze,Aura"
   },
   SUV: {
-    name: "SUV",
+    name: "Maruti Ertiga WC",
     multiplier: 1.4,
     capacity: "7",
     icon: "🚙",
     luggage: "5 Bags",
-    description: "Perfect for family trips"
+    description: "Perfect for family trips",
+     models:""
   },
   PREMIUM: {
-    name: "Premium",
+    name: "Toyota Innova WC",
     multiplier: 1.6,
-    capacity: "4",
+    capacity: "6",
     icon: "🚗",
     luggage: "4 Bags",
-    description: "Luxury travel experience"
+    description: "Luxury travel experience",
   },
   TRAVELLER: {
-    name: "Traveller",
+    name: "Toyota Innova Crysta WC",
     multiplier: 2.2,
-    capacity: "15",
+    capacity: "6",
     icon: "🚐",
-    luggage: "10 Bags",
+    luggage: "6 Bags",
     description: "Perfect for group travel"
   }
 };

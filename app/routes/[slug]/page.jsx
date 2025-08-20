@@ -5,7 +5,7 @@ import RouteOverview from "@/components/RouteOverview";
 import VehicleOptions from "@/components/VehicleOptions";
 import QuickBookingSidebar from "@/components/QuickBookingSidebar";
 import SEO from '@/components/SEO';
-import { getServiceSchema, getBreadcrumbSchema } from '@/utils/structuredData';
+import { getServiceSchema } from '@/utils/structuredData';
 
 
 export async function generateStaticParams() {
@@ -49,8 +49,8 @@ export default async function RouteDetailsPage({ params }) {
   if (!route) {
     return (
       <div className="max-w-4xl mx-auto px-5 py-12 text-center">
-        <h1 className="text-3xl font-bold text-white mb-4">Route Not Found</h1>
-        <p className="text-gray-400 mb-8">Sorry, the requested route could not be found.</p>
+        <h1 className="text-3xl font-bold text-white mb-4">Route Not Found ! Call To Book</h1>
+        <p className="text-gray-400 mb-8">Sorry, the requested route could not be found .Call On This Number +91 483343-34834. To Book Cab For This Route</p>
         <Link href="/" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-full font-medium transition">
           Back to Home
         </Link>
