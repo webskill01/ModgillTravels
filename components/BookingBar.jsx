@@ -13,8 +13,8 @@ export function InstantBookingBar() {
         <PhoneIcon className="w-5 h-5 text-green-400 ml-4" />
         <span className="font-semibold text-base tracking-wide">
           For instant booking, call at{' '}
-          <a href="tel:+919876543210" className="underline underline-offset-2 transition">
-            +91-98765-43210
+          <a href="tel:+916284992669" className="underline underline-offset-2 transition">
+            +91-62849-92669
           </a>
         </span>
       </div>
