@@ -1,57 +1,69 @@
+// components/VehicleOptions.jsx
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import PeopleIcon from '@mui/icons-material/People';
 import LugageIcon from '@mui/icons-material/BusinessCenter';
-import { getVehicleTypes } from '@/data/vehicles';
+import { VEHICLE_TYPES } from '@/data/vehicles';
 import { calculateFare } from '@/utils/fareCalculator';
 
-export default function VehicleOptions({ route }) {
-  const vehicles = getVehicleTypes().map(vehicle => ({
-    ...vehicle,
-    fare: calculateFare({
-      basePrice: route.displayFare,
-      multiplier: vehicle.multiplier,
-      isRoundTrip: false
-    })
-  }));
+export default function VehicleOptions({ route, searchParams = {} }) {
+  const vehicles = Object.values(VEHICLE_TYPES);
+
   return (
-    <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 sm:p-6">
-      {/* Header */}
-      <p className="text-lg sm:text-2xl font-bold  mb-3 sm:mb-4 flex items-center gap-2">
-        <DirectionsCarIcon className="text-cyan-400 w-5 h-5 sm:w-5 sm:h-5" />
-        <span className='text-white'>Available Vehicles</span>
-      </p>
+    <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-3 sm:p-4">
+      <h3 className="text-sm sm:text-base font-semibold text-white sm:mb-3 flex items-center gap-2">
+        <DirectionsCarIcon className="text-cyan-400 w-3 h-3 sm:w-4 sm:h-4" />
+        <span>Available Vehicles</span>
+      </h3>
       
-      {/* Vehicle Cards Grid - 2 columns on mobile */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
-        {vehicles.map((vehicle, index) => (
-          <div key={index} className="bg-slate-700/50 rounded-lg p-3 border border-white/5 hover:border-cyan-400/30 transition-all group">
-            
-            {/* Vehicle Icon & Name */}
-            <div className="text-center mb-2 text-white">
-              <span className="text-base text-white  sm:text-xl font-semibold group-hover:text-cyan-400 transition-colors">
-                {vehicle.name}
-              </span>
+      <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 sm:gap-3">
+        {vehicles.map((vehicle, index) => {
+          // Calculate fare using new formula
+          const fare = calculateFare({
+            distanceKm: route.distanceKm,
+            vehicleName: vehicle.name,
+            isRoundTrip: false,
+            days: 1,
+            isNightRide: false
+          });
+
+          return (
+            <div key={index} className="bg-slate-700/50 rounded-lg p-2.5 pt-3 pb-0 sm:p-3 border border-white/5 hover:border-cyan-400/30 transition-all group cursor-pointer">
+              {/* Vehicle Name */}
+              <div className="text-center ">
+                <h4 className="text-sm sm:text-base font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                  {vehicle.name}
+                </h4>
+                <span className="text-xs text-gray-400 font-medium">One Way</span>
+              </div>
+              
+              {/* Price */}
+              <div className="text-center mb-2 sm:mb-3">
+                <div className="text-base sm:text-lg font-bold text-cyan-400">
+                  ₹{fare.toLocaleString()}
+                </div>
+              </div>
+              
+              {/* Vehicle Specs */}
+              <div className="flex justify-center items-center gap-2 sm:gap-3 mb-1">
+                <span className="flex items-center gap-1 text-xs text-gray-300">
+                  <PeopleIcon className="w-3 h-3" />
+                  <span className="font-medium">{vehicle.capacity}</span>
+                </span>
+                <span className="flex items-center gap-1 text-xs text-gray-300">
+                  <LugageIcon className="w-3 h-3" />
+                  <span className="font-medium">{vehicle.luggage}</span>
+                </span>
+              </div>
+
+              {/* Models */}
+              <div className="text-center">
+                <p className="text-xs text-gray-500 font-normal leading-tight">
+                  {vehicle.models || 'Swift, Baleno, Dzire'}
+                </p>
+              </div>
             </div>
-            
-            {/* Price */}
-            <div className="text-center mb-2">
-              <div className="text-sm sm:text-base font-bold text-cyan-400">₹{vehicle.fare.toLocaleString()}</div>
-              <div className="text-xs text-gray-400">One way</div>
-            </div>
-            
-            {/* Compact Features */}
-            <div className="flex justify-center items-center gap-3 mb-3 text-xs text-gray-300">
-              <span className="flex items-center gap-1">
-                <PeopleIcon className="w-3 h-3" />
-                {vehicle.capacity}
-              </span>
-              <span className="flex items-center gap-1">
-                <LugageIcon className="w-3 h-3" />
-                {vehicle.luggage}
-              </span>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

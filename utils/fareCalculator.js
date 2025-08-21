@@ -1,45 +1,51 @@
 // utils/fareCalculator.js
 
-/**
- * Calculate the total fare for a taxi booking
- * @param {Object} params - The parameters for fare calculation
- * @param {number} params.basePrice - The base price for the route
- * @param {number} params.multiplier - The vehicle type multiplier
- * @param {boolean} params.isRoundTrip - Whether the trip is round trip
- * @param {number} params.days - Number of days for round trip
- * @param {boolean} params.isNightRide - Whether the ride is during night hours (11 PM - 5 AM)
- * @returns {number} The calculated total fare
- */
+// Define per-km prices for different vehicle types
+export const PER_KM_RATES = {
+  SEDAN: 14,           // Rs per km
+  SUV: 32.20,             // Rs per km  
+  PREMIUM: 38.46,         // Rs per km
+  TRAVELLER: 52.30        // Rs per km
+};
+
+// Get per-km rate by vehicle name
+export const getPerKmRate = (vehicleName) => {
+  const rateMap = {
+    'Sedan': PER_KM_RATES.SEDAN,
+    'Maruti Ertiga WC': PER_KM_RATES.SUV,
+    'Toyota Innova WC': PER_KM_RATES.PREMIUM,
+    'Toyota Innova Crysta WC': PER_KM_RATES.TRAVELLER
+  };
+  return rateMap[vehicleName] || PER_KM_RATES.SEDAN;
+};
+
+// New fare calculation function
 export const calculateFare = ({
-  basePrice,
-  multiplier,
+  distanceKm,
+  vehicleName,
   isRoundTrip = false,
   days = 1,
   isNightRide = false
 }) => {
-  let fare = Math.round(basePrice * multiplier);
+  const perKmRate = getPerKmRate(vehicleName);
+  let fare = perKmRate * distanceKm;
   
-  // Apply round trip multiplication
   if (isRoundTrip) {
-    fare = fare * 2 * days;
+    // 1.9 times the base fare + 1000 Rs per extra day
+    fare = fare * 1.93 + (1000 * Math.max(days - 1, 0));
   }
   
-  // Apply night charges if applicable (10% extra)
+  // Night charges: 10% extra (11 PM - 5 AM)
   if (isNightRide) {
-    fare = fare * 1.1;
+    fare *= 1.1;
   }
   
   return Math.round(fare);
 };
 
-/**
- * Check if the given time is during night hours (11 PM - 5 AM)
- * @param {string} time - Time in 24-hour format (HH:mm)
- * @returns {boolean}
- */
-export const isNightTime = (time) => {
-  if (!time) return false;
-  
-  const hour = parseInt(time.split(':')[0], 10);
+// Helper function to check if time is night time
+export const isNightTime = (timeString) => {
+  if (!timeString) return false;
+  const hour = parseInt(timeString.split(':')[0]);
   return hour >= 23 || hour < 5;
 };

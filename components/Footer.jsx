@@ -89,7 +89,7 @@ export default function Footer() {
           {/* Contact Info */}
             <div className="flex flex-col justify-center align-center gap-3">
               <a 
-                href="tel:+6284992669" 
+                href="tel:+91 6284992669" 
                 className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors group"
               >
                 <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
@@ -97,7 +97,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="font-medium">Call Us</p>
-                  <p className="text-sm text-gray-400">+6284992669</p>
+                  <p className="text-sm text-gray-400">+91 62849-92669</p>
                 </div>
               </a>
               
@@ -154,8 +154,7 @@ export default function Footer() {
             <div className="flex flex-col lg:flex-row items-center space-y-3 lg:space-y-0 lg:space-x-6">
               {/* Disclaimer */}
               <div className="text-gray-500 text-xs text-center lg:text-right max-w-md">
-                <div>Estimated fares shown • Tolls/parking charges extra</div>
-                <div className="mt-1">Night charges (11 PM - 5 AM): 10% extra</div>
+                <div>Estimated fares shown • Parking charges extra</div>
               </div>
               
               {/* Social Links */}
@@ -186,6 +185,7 @@ export default function Footer() {
                   <InstagramIcon className="w-5 h-5" />
                 </a>
               </div>
+              <div className="text-gray-500 text-xs text-center">Made By <a href="https://wa.me/6283380110?text=Hi," className="text-blue-400">Nitin Kumar</a></div>
             </div>
           </div>
         </div>

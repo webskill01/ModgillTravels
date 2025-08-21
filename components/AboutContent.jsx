@@ -53,7 +53,7 @@ export default function AboutContent() {
               <InfoIcon className="w-8 h-8 text-cyan-400" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About ModgillTravels</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300  mx-auto leading-relaxed">
               Your trusted partner for comfortable and reliable taxi services across Punjab, Haryana, and Himachal Pradesh. 
               We've been connecting destinations with quality service since over a decade.
             </p>
@@ -176,23 +176,23 @@ export default function AboutContent() {
             <div className="space-y-4">
               <div>
                 <h4 className="text-white font-semibold mb-2">Phone & SMS</h4>
-                <a href="tel:+919876543210" className="text-cyan-400 hover:text-cyan-300 transition">
-                  +91-98765-43210
+                <a href="tel:+916284992669" className="text-cyan-400 hover:text-cyan-300 transition">
+                  +91-62849-92669
                 </a>
                 <p className="text-gray-400 text-sm mt-1">Available 24/7 for bookings and support</p>
               </div>
               
               <div>
                 <h4 className="text-white font-semibold mb-2">Email</h4>
-                <a href="mailto:support@modgilltravels.com" className="text-cyan-400 hover:text-cyan-300 transition">
-                  support@modgilltravels.com
+                <a href="mailto:modgilltravels@gmail.com" className="text-cyan-400 hover:text-cyan-300 transition">
+                  modgilltravels@gmail.com
                 </a>
                 <p className="text-gray-400 text-sm mt-1">Response within 2 hours</p>
               </div>
               
               <div>
                 <h4 className="text-white font-semibold mb-2">Office</h4>
-                <p className="text-gray-300">Patiala, Punjab, India</p>
+                <p className="text-gray-300">Urban Estate, Phase 2 Near Police Station <br /> Patiala, Punjab, India</p>
                 <p className="text-gray-400 text-sm mt-1">Visit us: Mon-Sun 9 AM - 8 PM</p>
               </div>
             </div>
@@ -239,7 +239,7 @@ export default function AboutContent() {
         {/* CTA Section */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Travel with Us?</h2>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-400 mb-8 w-full mx-auto text-center">
             Experience the difference with ModgillTravels. Book your next journey and discover why thousands of customers trust us for their transportation needs.
           </p>
           

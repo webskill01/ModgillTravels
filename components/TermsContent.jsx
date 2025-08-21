@@ -31,7 +31,7 @@ const sections = [
     details: [
       'Advance booking recommended for availability',
       'Service subject to driver and vehicle availability',
-      'Confirmation via SMS within 2 hours of booking',
+      'Confirmation via Call within 2 hours of booking',
       'Accurate information required for all bookings'
     ]
   },
@@ -42,23 +42,24 @@ const sections = [
     summary: 'Fare structure, payment methods, and additional charges.',
     details: [
       'Fixed rates as displayed during booking',
-      'Tolls, parking, and night charges extra',
-      'Night surcharge: 10% (11 PM - 5 AM)',
+      'Only Parking Charges Extra',
       'Payment due at trip completion unless pre-arranged'
     ]
   },
   {
-    id: 'cancellation-policy',
-    title: 'Cancellation Policy',
-    icon: <CancelIcon className="w-6 h-6 text-cyan-600" />,
-    summary: 'Cancellation rules, refunds, and modification policies.',
-    details: [
-      'Free cancellation up to 2 hours before pickup',
-      'Within 2 hours: 25% cancellation charge',
-      'No-show or last-minute cancellation: 50% charge',
-      'Weather/emergency cancellations: case-by-case basis'
-    ]
-  },
+  id: 'cancellation-policy',
+  title: 'Cancellation Policy',
+  icon: <CancelIcon className="w-6 h-6 text-cyan-600" />,
+  summary: 'Advance payment and cancellation terms for booking confirmation.',
+  details: [
+    'Driver will contact you to collect ₹200 advance payment for booking confirmation',
+    'Ride confirmed only after advance payment is received',
+    'Customer cancellation: ₹200 advance payment will not be refunded',
+    'Company cancellation: ₹200 refund + ₹100 additional compensation',
+    'Weather/emergency cancellations by company: Full refund with compensation',
+    'Advance payment ensures your booking priority and driver allocation'
+  ]
+},
   {
     id: 'user-responsibilities',
     title: 'User Responsibilities',
@@ -144,7 +145,7 @@ export default function TermsContent() {
         {/* Card Sections */}
         <section className="grid gap-6">
           {sections.map((section) => (
-            <div key={section.id} className="bg-gray-950 border border-slate-800 rounded-xl p-5">
+            <div key={section.id} className="bg-slate-800 border border-gray-700 rounded-xl p-5">
               <div className="flex items-start gap-4 mb-2">
                 <div className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center">{section.icon}</div>
                 <div>
@@ -194,11 +195,11 @@ export default function TermsContent() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
                 <div>
                   <span className="text-gray-400">Support Email:</span>
-                  <Link href="mailto:support@modgilltravels.com" className="text-cyan-600 hover:text-cyan-500 ml-1 underline">support@modgilltravels.com</Link>
+                  <Link href="mailto:modgilltravels@gmail.com" className="text-cyan-600 hover:text-cyan-500 ml-1 underline">modgilltravels@gmail.com</Link>
                 </div>
                 <div>
                   <span className="text-gray-400">Phone:</span>
-                  <Link href="tel:+919876543210" className="text-cyan-600 hover:text-cyan-500 ml-1 underline">+91-98765-43210</Link>
+                  <Link href="tel:+916284992669" className="text-cyan-600 hover:text-cyan-500 ml-1 underline">+91-62849-92669</Link>
                 </div>
               </div>
               <p className="text-gray-400 text-xs mt-2">

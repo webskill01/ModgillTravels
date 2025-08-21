@@ -28,7 +28,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="max-w-7xl mx-auto px-5 py-8">
+    <section className="max-w-7xl mx-auto px-5 py-2">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-white mb-4">Why ModgillTravels?</h2>
         <p className="text-gray-400 text-lg">The Best Way To Travel To Your Destination</p>

@@ -17,7 +17,7 @@ export const getOrganizationSchema = () => ({
     "addressCountry": "IN"
   },
   "sameAs": [
-    "https://wa.me/919876543210"
+    "https://wa.me/916284992669"
   ]
 });
 

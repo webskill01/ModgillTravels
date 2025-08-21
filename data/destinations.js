@@ -1,6 +1,17 @@
 // data/destinations.js
+
 const destinations = [
-  // Delhi Routes
+  // Patiala Routes (Priority)
+  {
+    id: "patiala-to-delhi",
+    slug: "patiala-to-delhi",
+    from: "Patiala",
+    to: "Delhi",
+    distanceKm: 240,
+    duration: "4.5-5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Professional Driver", "Highway Expert"],
+    description: "Professional taxi service from Patiala to Delhi with experienced drivers and comfortable vehicles."
+  },
   {
     id: "delhi-to-patiala",
     slug: "delhi-to-patiala",
@@ -8,9 +19,190 @@ const destinations = [
     to: "Patiala",
     distanceKm: 240,
     duration: "4.5-5 hours",
-    displayFare: 2800,
-    carFeatures: ["AC", "GPS Tracking", "Professional Driver", "Music System"]
+    carFeatures: ["AC", "GPS Tracking", "Professional Driver", "Highway Expert"]
   },
+  {
+    id: "patiala-to-chandigarh",
+    slug: "patiala-to-chandigarh",
+    from: "Patiala",
+    to: "Chandigarh",
+    distanceKm: 67,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "City Expert"]
+  },
+  {
+    id: "chandigarh-to-patiala",
+    slug: "chandigarh-to-patiala",
+    from: "Chandigarh",
+    to: "Patiala",
+    distanceKm: 67,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "City Expert"]
+  },
+  {
+    id: "patiala-to-mohali",
+    slug: "patiala-to-mohali",
+    from: "Patiala",
+    to: "Mohali",
+    distanceKm: 65,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Local Expert"]
+  },
+  {
+    id: "mohali-to-patiala",
+    slug: "mohali-to-patiala",
+    from: "Mohali",
+    to: "Patiala",
+    distanceKm: 65,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Local Expert"]
+  },
+  {
+    id: "patiala-to-ludhiana",
+    slug: "patiala-to-ludhiana",
+    from: "Patiala",
+    to: "Ludhiana",
+    distanceKm: 95,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Business Route", "Professional Driver"]
+  },
+  {
+    id: "ludhiana-to-patiala",
+    slug: "ludhiana-to-patiala",
+    from: "Ludhiana",
+    to: "Patiala",
+    distanceKm: 95,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Business Route", "Professional Driver"]
+  },
+  {
+    id: "patiala-to-jalandhar",
+    slug: "patiala-to-jalandhar",
+    from: "Patiala",
+    to: "Jalandhar",
+    distanceKm: 100,
+    duration: "2.5-3 hours",
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Comfortable Seats"]
+  },
+  {
+    id: "jalandhar-to-patiala",
+    slug: "jalandhar-to-patiala",
+    from: "Jalandhar",
+    to: "Patiala",
+    distanceKm: 100,
+    duration: "2.5-3 hours",
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Comfortable Seats"]
+  },
+  {
+    id: "patiala-to-amritsar",
+    slug: "patiala-to-amritsar",
+    from: "Patiala",
+    to: "Amritsar",
+    distanceKm: 165,
+    duration: "3-4 hours",
+    carFeatures: ["AC", "GPS Tracking", "Religious Tourism", "Highway Expert"]
+  },
+  {
+    id: "amritsar-to-patiala",
+    slug: "amritsar-to-patiala",
+    from: "Amritsar",
+    to: "Patiala",
+    distanceKm: 165,
+    duration: "3-4 hours",
+    carFeatures: ["AC", "GPS Tracking", "Religious Tourism", "Highway Expert"]
+  },
+  {
+    id: "patiala-to-sangrur",
+    slug: "patiala-to-sangrur",
+    from: "Patiala",
+    to: "Sangrur",
+    distanceKm: 60,
+    duration: "1.5-2 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Quick Transfer"]
+  },
+  {
+    id: "sangrur-to-patiala",
+    slug: "sangrur-to-patiala",
+    from: "Sangrur",
+    to: "Patiala",
+    distanceKm: 60,
+    duration: "1.5-2 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Quick Transfer"]
+  },
+  {
+    id: "patiala-to-sunam",
+    slug: "patiala-to-sunam",
+    from: "Patiala",
+    to: "Sunam",
+    distanceKm: 80,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Local Expert"]
+  },
+  {
+    id: "sunam-to-patiala",
+    slug: "sunam-to-patiala",
+    from: "Sunam",
+    to: "Patiala",
+    distanceKm: 80,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Local Expert"]
+  },
+  {
+    id: "patiala-to-mansa",
+    slug: "patiala-to-mansa",
+    from: "Patiala",
+    to: "Mansa",
+    distanceKm: 75,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Professional Driver"]
+  },
+  {
+    id: "mansa-to-patiala",
+    slug: "mansa-to-patiala",
+    from: "Mansa",
+    to: "Patiala",
+    distanceKm: 75,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Professional Driver"]
+  },
+  {
+    id: "patiala-to-bathinda",
+    slug: "patiala-to-bathinda",
+    from: "Patiala",
+    to: "Bathinda",
+    distanceKm: 110,
+    duration: "2.5-3 hours",
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Long Distance"]
+  },
+  {
+    id: "bathinda-to-patiala",
+    slug: "bathinda-to-patiala",
+    from: "Bathinda",
+    to: "Patiala",
+    distanceKm: 110,
+    duration: "2.5-3 hours",
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Long Distance"]
+  },
+  {
+    id: "patiala-to-shimla",
+    slug: "patiala-to-shimla",
+    from: "Patiala",
+    to: "Shimla",
+    distanceKm: 180,
+    duration: "5-6 hours",
+    carFeatures: ["AC", "GPS Tracking", "Hill Expert", "Mountain Route"]
+  },
+  {
+    id: "shimla-to-patiala",
+    slug: "shimla-to-patiala",
+    from: "Shimla",
+    to: "Patiala",
+    distanceKm: 180,
+    duration: "5-6 hours",
+    carFeatures: ["AC", "GPS Tracking", "Hill Expert", "Mountain Route"]
+  },
+
+  // Delhi Routes (Major Hub)
   {
     id: "delhi-to-chandigarh",
     slug: "delhi-to-chandigarh",
@@ -18,18 +210,16 @@ const destinations = [
     to: "Chandigarh",
     distanceKm: 245,
     duration: "4-5 hours",
-    displayFare: 2900,
     carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Comfortable Seats"]
   },
   {
-    id: "delhi-to-manali",
-    slug: "delhi-to-manali",
-    from: "Delhi", 
-    to: "Manali",
-    distanceKm: 520,
-    duration: "10-12 hours",
-    displayFare: 8500,
-    carFeatures: ["AC", "GPS Tracking", "Hill Station Expert", "Rest Stops"]
+    id: "chandigarh-to-delhi",
+    slug: "chandigarh-to-delhi",
+    from: "Chandigarh",
+    to: "Delhi",
+    distanceKm: 245,
+    duration: "4-5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Comfortable Seats"]
   },
   {
     id: "delhi-to-shimla",
@@ -38,7 +228,15 @@ const destinations = [
     to: "Shimla",
     distanceKm: 343,
     duration: "7-8 hours",
-    displayFare: 5200,
+    carFeatures: ["AC", "GPS Tracking", "Hill Driving Expert", "Scenic Route"]
+  },
+  {
+    id: "shimla-to-delhi",
+    slug: "shimla-to-delhi",
+    from: "Shimla",
+    to: "Delhi",
+    distanceKm: 343,
+    duration: "7-8 hours",
     carFeatures: ["AC", "GPS Tracking", "Hill Driving Expert", "Scenic Route"]
   },
   {
@@ -48,8 +246,16 @@ const destinations = [
     to: "Amritsar",
     distanceKm: 465,
     duration: "8-9 hours",
-    displayFare: 6800,
-    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Comfortable Seats"]
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Long Distance"]
+  },
+  {
+    id: "amritsar-to-delhi",
+    slug: "amritsar-to-delhi",
+    from: "Amritsar",
+    to: "Delhi",
+    distanceKm: 465,
+    duration: "8-9 hours",
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Long Distance"]
   },
   {
     id: "delhi-to-ludhiana",
@@ -58,7 +264,15 @@ const destinations = [
     to: "Ludhiana",
     distanceKm: 325,
     duration: "6-7 hours",
-    displayFare: 4200,
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Business Friendly"]
+  },
+  {
+    id: "ludhiana-to-delhi",
+    slug: "ludhiana-to-delhi",
+    from: "Ludhiana",
+    to: "Delhi",
+    distanceKm: 325,
+    duration: "6-7 hours",
     carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Business Friendly"]
   },
   {
@@ -68,7 +282,15 @@ const destinations = [
     to: "Jalandhar",
     distanceKm: 360,
     duration: "6.5-7.5 hours",
-    displayFare: 4600,
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Comfortable Seats"]
+  },
+  {
+    id: "jalandhar-to-delhi",
+    slug: "jalandhar-to-delhi",
+    from: "Jalandhar",
+    to: "Delhi",
+    distanceKm: 360,
+    duration: "6.5-7.5 hours",
     carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Comfortable Seats"]
   },
   {
@@ -78,90 +300,36 @@ const destinations = [
     to: "Bathinda",
     distanceKm: 245,
     duration: "4.5-5.5 hours",
-    displayFare: 3200,
     carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Long Distance"]
   },
   {
-    id: "delhi-to-ambala",
-    slug: "delhi-to-ambala",
-    from: "Delhi",
-    to: "Ambala",
-    distanceKm: 200,
-    duration: "3.5-4.5 hours",
-    displayFare: 2600,
-    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Quick Service"]
-  },
-  {
-    id: "delhi-to-karnal",
-    slug: "delhi-to-karnal",
-    from: "Delhi",
-    to: "Karnal",
-    distanceKm: 125,
-    duration: "2-3 hours",
-    displayFare: 1800,
-    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Business Travel"]
-  },
-  {
-    id: "delhi-to-panipat",
-    slug: "delhi-to-panipat",
-    from: "Delhi",
-    to: "Panipat",
-    distanceKm: 90,
-    duration: "1.5-2 hours",
-    displayFare: 1400,
-    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Quick Transfer"]
-  },
-  {
-    id: "delhi-to-kullu",
-    slug: "delhi-to-kullu",
-    from: "Delhi",
-    to: "Kullu",
-    distanceKm: 480,
-    duration: "9-11 hours",
-    displayFare: 7800,
-    carFeatures: ["AC", "GPS Tracking", "Hill Station Expert", "Valley Route"]
+    id: "bathinda-to-delhi",
+    slug: "bathinda-to-delhi",
+    from: "Bathinda",
+    to: "Delhi",
+    distanceKm: 245,
+    duration: "4.5-5.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Long Distance"]
   },
 
-  // Chandigarh Routes
+  // Chandigarh Routes (Major Hub)
   {
-    id: "chandigarh-to-shimla", 
+    id: "chandigarh-to-shimla",
     slug: "chandigarh-to-shimla",
     from: "Chandigarh",
-    to: "Shimla", 
+    to: "Shimla",
     distanceKm: 114,
     duration: "3-3.5 hours",
-    displayFare: 2400,
     carFeatures: ["AC", "GPS Tracking", "Hill Driving Expert", "Scenic Route"]
   },
   {
-    id: "chandigarh-to-manali",
-    slug: "chandigarh-to-manali",
-    from: "Chandigarh", 
-    to: "Manali",
-    distanceKm: 305,
-    duration: "8-9 hours", 
-    displayFare: 5800,
-    carFeatures: ["AC", "GPS Tracking", "Mountain Specialist", "Tourist Guide"]
-  },
-  {
-    id: "chandigarh-to-kullu",
-    slug: "chandigarh-to-kullu",
-    from: "Chandigarh",
-    to: "Kullu",
-    distanceKm: 260,
-    duration: "6-7 hours",
-    displayFare: 4200,
-    carFeatures: ["AC", "GPS Tracking", "Valley Expert", "Scenic Route"]
-  },
-  {
-    id: "chandigarh-to-spiti-valley",
-    slug: "chandigarh-to-spiti-valley",
-    from: "Chandigarh",
-    to: "Spiti Valley",
-    distanceKm: 430,
-    duration: "12-14 hours",
-    displayFare: 12000,
-    carFeatures: ["4WD Available", "High Altitude Expert", "Emergency Kit", "Local Guide"]
+    id: "shimla-to-chandigarh",
+    slug: "shimla-to-chandigarh",
+    from: "Shimla",
+    to: "Chandigarh",
+    distanceKm: 114,
+    duration: "3-3.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Hill Driving Expert", "Scenic Route"]
   },
   {
     id: "chandigarh-to-amritsar",
@@ -170,52 +338,7 @@ const destinations = [
     to: "Amritsar",
     distanceKm: 235,
     duration: "4-5 hours",
-    displayFare: 3400,
     carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Religious Tourism"]
-  },
-
-  // Patiala Routes
-  {
-    id: "patiala-to-chandigarh",
-    slug: "patiala-to-chandigarh",
-    from: "Patiala",
-    to: "Chandigarh",
-    distanceKm: 67,
-    duration: "2-2.5 hours",
-    displayFare: 1400,
-    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "City Expert"]
-  },
-  {
-    id: "patiala-to-delhi",
-    slug: "patiala-to-delhi",
-    from: "Patiala",
-    to: "Delhi",
-    distanceKm: 240,
-    duration: "4.5-5 hours",
-    displayFare: 2800,
-    carFeatures: ["AC", "GPS Tracking", "Professional Driver", "Highway Expert"]
-  },
-  {
-    id: "patiala-to-shimla",
-    slug: "patiala-to-shimla",
-    from: "Patiala",
-    to: "Shimla",
-    distanceKm: 180,
-    duration: "5-6 hours",
-    displayFare: 3600,
-    carFeatures: ["AC", "GPS Tracking", "Hill Expert", "Mountain Route"]
-  },
-
-  // Amritsar Routes
-  {
-    id: "amritsar-to-delhi",
-    slug: "amritsar-to-delhi",
-    from: "Amritsar",
-    to: "Delhi",
-    distanceKm: 465,
-    duration: "8-9 hours",
-    displayFare: 6800,
-    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Long Distance"]
   },
   {
     id: "amritsar-to-chandigarh",
@@ -224,30 +347,16 @@ const destinations = [
     to: "Chandigarh",
     distanceKm: 235,
     duration: "4-5 hours",
-    displayFare: 3400,
-    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "City Connection"]
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Religious Tourism"]
   },
   {
-    id: "amritsar-to-shimla",
-    slug: "amritsar-to-shimla",
-    from: "Amritsar",
-    to: "Shimla",
-    distanceKm: 340,
-    duration: "7-8 hours",
-    displayFare: 5600,
-    carFeatures: ["AC", "GPS Tracking", "Hill Expert", "Religious to Hill"]
-  },
-
-  // Ludhiana Routes
-  {
-    id: "ludhiana-to-delhi",
-    slug: "ludhiana-to-delhi",
-    from: "Ludhiana",
-    to: "Delhi",
-    distanceKm: 325,
-    duration: "6-7 hours",
-    displayFare: 4200,
-    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Business Friendly"]
+    id: "chandigarh-to-ludhiana",
+    slug: "chandigarh-to-ludhiana",
+    from: "Chandigarh",
+    to: "Ludhiana",
+    distanceKm: 95,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Business Route"]
   },
   {
     id: "ludhiana-to-chandigarh",
@@ -256,21 +365,17 @@ const destinations = [
     to: "Chandigarh",
     distanceKm: 95,
     duration: "2-2.5 hours",
-    displayFare: 1600,
     carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Business Route"]
   },
   {
-    id: "ludhiana-to-shimla",
-    slug: "ludhiana-to-shimla",
-    from: "Ludhiana",
-    to: "Shimla",
-    distanceKm: 210,
-    duration: "5.5-6.5 hours",
-    displayFare: 3800,
-    carFeatures: ["AC", "GPS Tracking", "Hill Expert", "Mountain Drive"]
+    id: "chandigarh-to-jalandhar",
+    slug: "chandigarh-to-jalandhar",
+    from: "Chandigarh",
+    to: "Jalandhar",
+    distanceKm: 145,
+    duration: "3-4 hours",
+    carFeatures: ["AC", "GPS Tracking", "City Expert", "Comfortable Ride"]
   },
-
-  // Jalandhar Routes
   {
     id: "jalandhar-to-chandigarh",
     slug: "jalandhar-to-chandigarh",
@@ -278,40 +383,16 @@ const destinations = [
     to: "Chandigarh",
     distanceKm: 145,
     duration: "3-4 hours",
-    displayFare: 2200,
     carFeatures: ["AC", "GPS Tracking", "City Expert", "Comfortable Ride"]
   },
   {
-    id: "jalandhar-to-delhi",
-    slug: "jalandhar-to-delhi",
-    from: "Jalandhar",
-    to: "Delhi",
-    distanceKm: 360,
-    duration: "6.5-7.5 hours",
-    displayFare: 4600,
-    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Long Distance"]
-  },
-  {
-    id: "jalandhar-to-shimla",
-    slug: "jalandhar-to-shimla",
-    from: "Jalandhar",
-    to: "Shimla",
-    distanceKm: 250,
-    duration: "6-7 hours",
-    displayFare: 4200,
-    carFeatures: ["AC", "GPS Tracking", "Hill Expert", "Mountain Route"]
-  },
-
-  // Bathinda Routes
-  {
-    id: "bathinda-to-delhi",
-    slug: "bathinda-to-delhi",
-    from: "Bathinda",
-    to: "Delhi",
-    distanceKm: 245,
-    duration: "4.5-5.5 hours",
-    displayFare: 3200,
-    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Long Distance"]
+    id: "chandigarh-to-bathinda",
+    slug: "chandigarh-to-bathinda",
+    from: "Chandigarh",
+    to: "Bathinda",
+    distanceKm: 175,
+    duration: "3.5-4.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Expert", "Comfortable Journey"]
   },
   {
     id: "bathinda-to-chandigarh",
@@ -320,11 +401,210 @@ const destinations = [
     to: "Chandigarh",
     distanceKm: 175,
     duration: "3.5-4.5 hours",
-    displayFare: 2600,
     carFeatures: ["AC", "GPS Tracking", "Regional Expert", "Comfortable Journey"]
   },
+  {
+    id: "chandigarh-to-mohali",
+    slug: "chandigarh-to-mohali",
+    from: "Chandigarh",
+    to: "Mohali",
+    distanceKm: 14,
+    duration: "0.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Local Expert"]
+  },
+  {
+    id: "mohali-to-chandigarh",
+    slug: "mohali-to-chandigarh",
+    from: "Mohali",
+    to: "Chandigarh",
+    distanceKm: 14,
+    duration: "0.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Local Expert"]
+  },
+  {
+    id: "chandigarh-to-sangrur",
+    slug: "chandigarh-to-sangrur",
+    from: "Chandigarh",
+    to: "Sangrur",
+    distanceKm: 85,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Comfortable Drive"]
+  },
+  {
+    id: "sangrur-to-chandigarh",
+    slug: "sangrur-to-chandigarh",
+    from: "Sangrur",
+    to: "Chandigarh",
+    distanceKm: 85,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Comfortable Drive"]
+  },
+  {
+    id: "chandigarh-to-mansa",
+    slug: "chandigarh-to-mansa",
+    from: "Chandigarh",
+    to: "Mansa",
+    distanceKm: 135,
+    duration: "3-3.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Expert", "Highway Route"]
+  },
+  {
+    id: "mansa-to-chandigarh",
+    slug: "mansa-to-chandigarh",
+    from: "Mansa",
+    to: "Chandigarh",
+    distanceKm: 135,
+    duration: "3-3.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Expert", "Highway Route"]
+  },
+  {
+    id: "chandigarh-to-sunam",
+    slug: "chandigarh-to-sunam",
+    from: "Chandigarh",
+    to: "Sunam",
+    distanceKm: 110,
+    duration: "2.5-3 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "City Connection"]
+  },
+  {
+    id: "sunam-to-chandigarh",
+    slug: "sunam-to-chandigarh",
+    from: "Sunam",
+    to: "Chandigarh",
+    distanceKm: 110,
+    duration: "2.5-3 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "City Connection"]
+  },
 
-  // Haryana Cities
+  // Inter-Punjab Routes
+  {
+    id: "ludhiana-to-jalandhar",
+    slug: "ludhiana-to-jalandhar",
+    from: "Ludhiana",
+    to: "Jalandhar",
+    distanceKm: 65,
+    duration: "1.5-2 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Business Route"]
+  },
+  {
+    id: "jalandhar-to-ludhiana",
+    slug: "jalandhar-to-ludhiana",
+    from: "Jalandhar",
+    to: "Ludhiana",
+    distanceKm: 65,
+    duration: "1.5-2 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Business Route"]
+  },
+  {
+    id: "amritsar-to-jalandhar",
+    slug: "amritsar-to-jalandhar",
+    from: "Amritsar",
+    to: "Jalandhar",
+    distanceKm: 80,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Religious Tourism", "Highway Expert"]
+  },
+  {
+    id: "jalandhar-to-amritsar",
+    slug: "jalandhar-to-amritsar",
+    from: "Jalandhar",
+    to: "Amritsar",
+    distanceKm: 80,
+    duration: "2-2.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Religious Tourism", "Highway Expert"]
+  },
+  {
+    id: "amritsar-to-bathinda",
+    slug: "amritsar-to-bathinda",
+    from: "Amritsar",
+    to: "Bathinda",
+    distanceKm: 150,
+    duration: "3-4 hours",
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Long Distance"]
+  },
+  {
+    id: "bathinda-to-amritsar",
+    slug: "bathinda-to-amritsar",
+    from: "Bathinda",
+    to: "Amritsar",
+    distanceKm: 150,
+    duration: "3-4 hours",
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Long Distance"]
+  },
+  {
+    id: "ludhiana-to-bathinda",
+    slug: "ludhiana-to-bathinda",
+    from: "Ludhiana",
+    to: "Bathinda",
+    distanceKm: 110,
+    duration: "2.5-3 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Professional Driver"]
+  },
+  {
+    id: "bathinda-to-ludhiana",
+    slug: "bathinda-to-ludhiana",
+    from: "Bathinda",
+    to: "Ludhiana",
+    distanceKm: 110,
+    duration: "2.5-3 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Professional Driver"]
+  },
+  {
+    id: "mohali-to-ludhiana",
+    slug: "mohali-to-ludhiana",
+    from: "Mohali",
+    to: "Ludhiana",
+    distanceKm: 58,
+    duration: "1.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Business Route"]
+  },
+  {
+    id: "ludhiana-to-mohali",
+    slug: "ludhiana-to-mohali",
+    from: "Ludhiana",
+    to: "Mohali",
+    distanceKm: 58,
+    duration: "1.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Business Route"]
+  },
+  {
+    id: "jalandhar-to-mohali",
+    slug: "jalandhar-to-mohali",
+    from: "Jalandhar",
+    to: "Mohali",
+    distanceKm: 90,
+    duration: "2-3 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Comfortable Ride"]
+  },
+  {
+    id: "mohali-to-jalandhar",
+    slug: "mohali-to-jalandhar",
+    from: "Mohali",
+    to: "Jalandhar",
+    distanceKm: 90,
+    duration: "2-3 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Comfortable Ride"]
+  },
+  {
+    id: "sunam-to-sangrur",
+    slug: "sunam-to-sangrur",
+    from: "Sunam",
+    to: "Sangrur",
+    distanceKm: 43,
+    duration: "1 hour",
+    carFeatures: ["AC", "GPS Tracking", "Local Route", "Quick Transfer"]
+  },
+  {
+    id: "sangrur-to-sunam",
+    slug: "sangrur-to-sunam",
+    from: "Sangrur",
+    to: "Sunam",
+    distanceKm: 43,
+    duration: "1 hour",
+    carFeatures: ["AC", "GPS Tracking", "Local Route", "Quick Transfer"]
+  },
+
+  // Haryana Routes
   {
     id: "ambala-to-chandigarh",
     slug: "ambala-to-chandigarh",
@@ -332,7 +612,15 @@ const destinations = [
     to: "Chandigarh",
     distanceKm: 45,
     duration: "1-1.5 hours",
-    displayFare: 900,
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Local Expert"]
+  },
+  {
+    id: "chandigarh-to-ambala",
+    slug: "chandigarh-to-ambala",
+    from: "Chandigarh",
+    to: "Ambala",
+    distanceKm: 45,
+    duration: "1-1.5 hours",
     carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Local Expert"]
   },
   {
@@ -342,7 +630,15 @@ const destinations = [
     to: "Delhi",
     distanceKm: 125,
     duration: "2-3 hours",
-    displayFare: 1800,
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Quick Service"]
+  },
+  {
+    id: "delhi-to-karnal",
+    slug: "delhi-to-karnal",
+    from: "Delhi",
+    to: "Karnal",
+    distanceKm: 125,
+    duration: "2-3 hours",
     carFeatures: ["AC", "GPS Tracking", "Highway Expert", "Quick Service"]
   },
   {
@@ -352,7 +648,15 @@ const destinations = [
     to: "Delhi",
     distanceKm: 90,
     duration: "1.5-2 hours",
-    displayFare: 1400,
+    carFeatures: ["AC", "GPS Tracking", "Highway Expert", "City Connection"]
+  },
+  {
+    id: "delhi-to-panipat",
+    slug: "delhi-to-panipat",
+    from: "Delhi",
+    to: "Panipat",
+    distanceKm: 90,
+    duration: "1.5-2 hours",
     carFeatures: ["AC", "GPS Tracking", "Highway Expert", "City Connection"]
   },
   {
@@ -362,7 +666,15 @@ const destinations = [
     to: "Chandigarh",
     distanceKm: 90,
     duration: "2-2.5 hours",
-    displayFare: 1500,
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Religious Tourism"]
+  },
+  {
+    id: "chandigarh-to-kurukshetra",
+    slug: "chandigarh-to-kurukshetra",
+    from: "Chandigarh",
+    to: "Kurukshetra",
+    distanceKm: 90,
+    duration: "2-2.5 hours",
     carFeatures: ["AC", "GPS Tracking", "Regional Route", "Religious Tourism"]
   },
   {
@@ -372,97 +684,17 @@ const destinations = [
     to: "Delhi",
     distanceKm: 45,
     duration: "1-1.5 hours",
-    displayFare: 800,
     carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "NCR Route"]
   },
-
-  // Himachal Pradesh Routes
   {
-    id: "kullu-to-manali",
-    slug: "kullu-to-manali",
-    from: "Kullu",
-    to: "Manali",
-    distanceKm: 42,
+    id: "delhi-to-sonipat",
+    slug: "delhi-to-sonipat",
+    from: "Delhi",
+    to: "Sonipat",
+    distanceKm: 45,
     duration: "1-1.5 hours",
-    displayFare: 1200,
-    carFeatures: ["AC", "GPS Tracking", "Hill Expert", "Scenic Route"]
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "NCR Route"]
   },
-  {
-    id: "shimla-to-manali",
-    slug: "shimla-to-manali",
-    from: "Shimla",
-    to: "Manali",
-    distanceKm: 245,
-    duration: "7-8 hours",
-    displayFare: 4800,
-    carFeatures: ["AC", "GPS Tracking", "Mountain Expert", "Hill Station Route"]
-  },
-  {
-    id: "shimla-to-kullu",
-    slug: "shimla-to-kullu",
-    from: "Shimla",
-    to: "Kullu",
-    distanceKm: 200,
-    duration: "6-7 hours",
-    displayFare: 4000,
-    carFeatures: ["AC", "GPS Tracking", "Mountain Expert", "Valley Route"]
-  },
-
-  // Mohali Routes
-  {
-    id: "mohali-to-manali",
-    slug: "mohali-to-manali",
-    from: "Mohali",
-    to: "Manali",
-    distanceKm: 290,
-    duration: "7-8 hours",
-    displayFare: 5400,
-    carFeatures: ["AC", "GPS Tracking", "Hill Expert", "Tourist Route"]
-  },
-  {
-    id: "mohali-to-shimla",
-    slug: "mohali-to-shimla",
-    from: "Mohali",
-    to: "Shimla",
-    distanceKm: 105,
-    duration: "3-4 hours",
-    displayFare: 2200,
-    carFeatures: ["AC", "GPS Tracking", "Hill Expert", "Scenic Drive"]
-  },
-
-  // Additional Punjab Cities
-  {
-    id: "sangrur-to-chandigarh",
-    slug: "sangrur-to-chandigarh",
-    from: "Sangrur",
-    to: "Chandigarh",
-    distanceKm: 85,
-    duration: "2-2.5 hours",
-    displayFare: 1500,
-    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Comfortable Drive"]
-  },
-  {
-    id: "mansa-to-chandigarh",
-    slug: "mansa-to-chandigarh",
-    from: "Mansa",
-    to: "Chandigarh",
-    distanceKm: 135,
-    duration: "3-3.5 hours",
-    displayFare: 2000,
-    carFeatures: ["AC", "GPS Tracking", "Regional Expert", "Highway Route"]
-  },
-  {
-    id: "sunam-to-chandigarh",
-    slug: "sunam-to-chandigarh",
-    from: "Sunam",
-    to: "Chandigarh",
-    distanceKm: 110,
-    duration: "2.5-3 hours",
-    displayFare: 1800,
-    carFeatures: ["AC", "GPS Tracking", "Regional Route", "City Connection"]
-  },
-
-  // Remaining Haryana
   {
     id: "kaithal-to-chandigarh",
     slug: "kaithal-to-chandigarh",
@@ -470,8 +702,70 @@ const destinations = [
     to: "Chandigarh",
     distanceKm: 120,
     duration: "2.5-3 hours",
-    displayFare: 1900,
     carFeatures: ["AC", "GPS Tracking", "Regional Route", "Highway Drive"]
+  },
+  {
+    id: "chandigarh-to-kaithal",
+    slug: "chandigarh-to-kaithal",
+    from: "Chandigarh",
+    to: "Kaithal",
+    distanceKm: 120,
+    duration: "2.5-3 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Highway Drive"]
+  },
+  {
+    id: "ambala-to-karnal",
+    slug: "ambala-to-karnal",
+    from: "Ambala",
+    to: "Karnal",
+    distanceKm: 50,
+    duration: "1-1.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Regional Route"]
+  },
+  {
+    id: "karnal-to-ambala",
+    slug: "karnal-to-ambala",
+    from: "Karnal",
+    to: "Ambala",
+    distanceKm: 50,
+    duration: "1-1.5 hours",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Regional Route"]
+  },
+  {
+    id: "kurukshetra-to-panipat",
+    slug: "kurukshetra-to-panipat",
+    from: "Kurukshetra",
+    to: "Panipat",
+    distanceKm: 85,
+    duration: "2 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Highway Expert"]
+  },
+  {
+    id: "panipat-to-kurukshetra",
+    slug: "panipat-to-kurukshetra",
+    from: "Panipat",
+    to: "Kurukshetra",
+    distanceKm: 85,
+    duration: "2 hours",
+    carFeatures: ["AC", "GPS Tracking", "Regional Route", "Highway Expert"]
+  },
+  {
+    id: "sonipat-to-panipat",
+    slug: "sonipat-to-panipat",
+    from: "Sonipat",
+    to: "Panipat",
+    distanceKm: 50,
+    duration: "1 hour",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Regional Route"]
+  },
+  {
+    id: "panipat-to-sonipat",
+    slug: "panipat-to-sonipat",
+    from: "Panipat",
+    to: "Sonipat",
+    distanceKm: 50,
+    duration: "1 hour",
+    carFeatures: ["AC", "GPS Tracking", "Quick Transfer", "Regional Route"]
   }
 ];
 

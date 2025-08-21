@@ -116,7 +116,7 @@ export default function PrivacyContent() {
         {/* Card Sections */}
         <section className="grid gap-6">
           {sections.map((section) => (
-            <div key={section.id} className="bg-gray-950 border border-slate-800 rounded-xl p-5">
+            <div key={section.id} className="bg-slate-800 border border-gray-700 rounded-xl p-5">
               <div className="flex items-start gap-4 mb-2">
                 <div className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center">
                   {section.icon}
@@ -149,14 +149,14 @@ export default function PrivacyContent() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
                 <div>
                   <span className="text-gray-400">Email:</span>
-                  <Link href="mailto:privacy@modgilltravels.com" className="text-cyan-600 hover:text-cyan-500 ml-1 underline">
-                    privacy@modgilltravels.com
+                  <Link href="mailto:modgilltravels@gmail.com" className="text-cyan-600 hover:text-cyan-500 ml-1 underline">
+                    modgilltravels@gmail.com
                   </Link>
                 </div>
                 <div>
                   <span className="text-gray-400">Phone:</span>
-                  <Link href="tel:+919876543210" className="text-cyan-600 hover:text-cyan-500 ml-1 underline">
-                    +91-98765-43210
+                  <Link href="tel:+916284992669" className="text-cyan-600 hover:text-cyan-500 ml-1 underline">
+                    +91-62849-92669
                   </Link>
                 </div>
               </div>

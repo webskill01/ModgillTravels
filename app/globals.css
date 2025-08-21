@@ -276,3 +276,32 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #000 inset !important;
   -webkit-text-fill-color: white !important;
 }
+/* Dark theme mobile scrollbar */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(75, 85, 99, 0.3);  /* Dark gray track */
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0891b2, #0ea5e9);  /* Cyan gradient */
+    border-radius: 3px;
+    border: 1px solid rgba(75, 85, 99, 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0ea5e9, #06b6d4);  /* Brighter gradient */
+  }
+
+  /* Firefox dark theme */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #0891b2 rgba(75, 85, 99, 0.3);
+  }
+}

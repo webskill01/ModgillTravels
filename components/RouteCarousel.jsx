@@ -3,11 +3,12 @@
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
+import destinations from '@/data/destinations';
+import { calculateFare } from '@/utils/fareCalculator';
 
+// Updated routes with dynamic fare calculation
 const routes = [
   {
     id: 1,
@@ -15,8 +16,14 @@ const routes = [
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"],
-    price: "INR 2500/-",
-    image: "/img1.png",
+    price: `INR ${calculateFare({
+      distanceKm: destinations.find(d => d.slug === "delhi-to-patiala")?.distanceKm || 260,
+      vehicleName: 'Sedan',
+      isRoundTrip: false,
+      days: 1,
+      isNightRide: false
+    }).toLocaleString()}/-`,
+    image: "/img1.jpg",
     slug: "delhi-to-patiala"
   },
   {
@@ -25,8 +32,14 @@ const routes = [
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"],
-    price: "INR 6500/-",
-    image: "/img2.jpg",
+    price: `INR ${calculateFare({
+      distanceKm: destinations.find(d => d.slug === "delhi-to-manali")?.distanceKm || 520,
+      vehicleName: 'Sedan',
+      isRoundTrip: false,
+      days: 1,
+      isNightRide: false
+    }).toLocaleString()}/-`,
+    image: "/img2.png",
     slug: "delhi-to-manali"
   },
   {
@@ -35,8 +48,14 @@ const routes = [
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"],
-    price: "INR 2200/-",
-    image: "/img3.jpg",
+    price: `INR ${calculateFare({
+      distanceKm: destinations.find(d => d.slug === "chandigarh-to-shimla")?.distanceKm || 114,
+      vehicleName: 'Sedan',
+      isRoundTrip: false,
+      days: 1,
+      isNightRide: false
+    }).toLocaleString()}/-`,
+    image: "/img3.png",
     slug: "chandigarh-to-shimla"
   },
   {
@@ -45,8 +64,14 @@ const routes = [
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"],
-    price: "INR 4800/-",
-    image: "/img4.jpg",
+    price: `INR ${calculateFare({
+      distanceKm: destinations.find(d => d.slug === "chandigarh-to-manali")?.distanceKm || 305,
+      vehicleName: 'Sedan',
+      isRoundTrip: false,
+      days: 1,
+      isNightRide: false
+    }).toLocaleString()}/-`,
+    image: "/img4.png",
     slug: "chandigarh-to-manali"
   }
 ];
@@ -56,41 +81,12 @@ export default function RouteCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-  // Check screen size
   useEffect(() => {
-    const checkScreenSize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024);
-    };
-    
+    const checkScreenSize = () => setIsLargeScreen(window.innerWidth >= 1024);
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
-
-  const scrollToIndex = (index) => {
-    if (carouselRef.current) {
-      const cardWidth = isLargeScreen ? 320 : window.innerWidth - 40;
-      const gap = isLargeScreen ? 24 : 0;
-      const scrollPosition = index * (cardWidth + gap);
-      
-      carouselRef.current.scrollTo({
-        left: scrollPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  const scrollLeft = () => {
-    const newIndex = currentIndex === 0 ? routes.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-    scrollToIndex(newIndex);
-  };
-
-  const scrollRight = () => {
-    const newIndex = currentIndex === routes.length - 1 ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-    scrollToIndex(newIndex);
-  };
 
   const handleScroll = () => {
     if (carouselRef.current && isLargeScreen) {
@@ -103,78 +99,93 @@ export default function RouteCarousel() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-5 py-6">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-white mb-4">A Cab For Every Occasion</h2>
-        <p className="text-gray-400">ModgillTravels offers one way cab at very reasonable prices</p>
+    <section className="py-6 md:py-12 px-4 md:px-6 relative">
+      <div className="text-center mb-5 md:mb-8">
+        <h2 className="text-base md:text-xl font-semibold text-white mb-2 md:mb-3">
+          A Cab For Every Occasion
+        </h2>
+        <p className="text-gray-400 text-xs md:text-base max-w-xl mx-auto">
+          ModgillTravels offers one way cab at very reasonable prices
+        </p>
       </div>
 
-      <div className="relative">
-        {/* Carousel Container */}
-        <div
-          ref={carouselRef}
-          onScroll={handleScroll}
-          className="flex overflow-x-auto gap-6 lg:gap-6 pb-4 px-2 lg:px-0 scrollbar-hide scroll-smooth snap-x snap-mandatory"
-          style={{ 
-            scrollbarWidth: 'none', 
-            msOverflowStyle: 'none',
-            WebkitOverflowScrolling: 'touch'
-          }}
-        >
-          {routes.map((route, index) => (
-            <div 
-              key={route.id} 
-              className="min-w-[calc(100vw-2.5rem)] lg:min-w-[320px] bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-lg overflow-hidden snap-center"
-            >
-              {/* Image */}
-              <div className="h-48 relative overflow-hidden">
-                <Image
-                  src={route.image}
-                  alt={route.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 320px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+      {/* Carousel Container */}
+      <div
+        ref={carouselRef}
+        onScroll={handleScroll}
+        className="flex gap-0 lg:gap-6 overflow-x-auto scrollbar-hide pb-2"
+        style={{ scrollSnapType: 'x mandatory', WebkitScrollSnapType: 'x mandatory' }}
+      >
+        {routes.map((route, index) => (
+          <div
+            key={route.id}
+            className="flex-none w-full lg:w-80 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden shadow-xl border border-white/10 flex flex-col"
+            style={{ scrollSnapAlign: 'start' }}
+          >
+            {/* Image */}
+            <div className="relative h-40 md:h-48 flex-shrink-0">
+              <Image
+                src={route.image}
+                alt={route.title}
+                fill
+                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 320px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+            </div>
+
+            {/* Content - Positioned at bottom with flex-grow */}
+            <div className="p-3 md:p-4 flex flex-col flex-grow mb-4">
+              {/* Top content - grows to push bottom content down */}
+              <div className="flex-grow">
+                <h3 className="text-sm md:text-lg font-semibold text-white mb-2">
+                  {route.title}
+                </h3>
+                <div className="text-gray-300 text-xs mb-1">
+                  {route.carInfo}
+                </div>
+                <div className="text-gray-400 text-xs mb-2">
+                  {route.seats}
+                </div>
               </div>
-              
-              {/* Content */}
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-white mb-2">{route.title}</h4>
-                <p className="text-gray-400 text-sm mb-2">{route.carInfo}</p>
-                <p className="text-gray-300 text-sm mb-3">{route.seats}</p>
-                
-                {/* Features */}
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2 text-gray-300 text-sm">
-                    <AcUnitIcon className="w-4 h-4 text-cyan-400" />
-                    <span>Air Conditioning</span>
+
+              {/* Bottom content - stays at bottom */}
+              <div className="mt-auto">
+                {/* Features - Inline grid */}
+                <div className="grid grid-cols-2  gap-1 mb-4">
+                  <div className="flex items-center justify-center gap-1 bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full text-[10px] font-medium">
+                    <AcUnitIcon className="w-3 h-3" />
+                    AC
                   </div>
-                  <div className="flex items-center gap-2 text-gray-300 text-sm">
-                    <GpsFixedIcon className="w-4 h-4 text-cyan-400" />
-                    <span>GPS Tracking</span>
+                  <div className="flex items-center justify-center gap-1 bg-green-500/20 text-green-400 px-2 py-0.5 rounded-full text-[10px] font-medium">
+                    <GpsFixedIcon className="w-3 h-3" />
+                    GPS
                   </div>
                 </div>
 
                 {/* Price and Book Button */}
-                <div className="flex items-center justify-between">
-                  <span className="text-cyan-400 font-bold text-lg">{route.price}</span>
+                <div className="grid grid-cols-2 justify-items-center items-center gap-2">
+                  <div className="text-base md:text-lg font-bold text-cyan-400">
+                    {route.price}
+                  </div>
                   <Link
                     href={`/routes/${route.slug}`}
-                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105"
+                    className="bg-cyan-500 w-full text-center hover:bg-cyan-600 text-white text-xs px-2 py-1 rounded-md font-medium transition-all"
                   >
                     View Details
                   </Link>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
 
       {/* Mobile scroll indicator */}
-      <div className="text-center mt-4">
-        <p className="text-gray-500 text-sm">← Scroll to see more routes →</p>
+      <div className="block text-center mt-3">
+        <span className="text-gray-400 text-xs ">
+          ← Scroll to see more routes →
+        </span>
       </div>
 
       {/* Custom CSS for hiding scrollbar */}

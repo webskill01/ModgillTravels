@@ -2,8 +2,8 @@
 const site = {
   businessName: "ModgillTravels",
   tagline: "Your trusted travel companion",
-  phone: "+6284992669",
-  whatsappNumber: "whatsapp:+6284992669", 
+  phone: "+91-62849-92669",
+  whatsappNumber: "whatsapp:+91-62849-92669", 
   email: "modgilltravels@gmail.com",
   address: {
     street: "Main Market, Near Bus Stand",
@@ -39,7 +39,7 @@ const site = {
   ],
   
   socialLinks: {
-    whatsapp: "https://wa.me/6284992669",
+    whatsapp: "https://wa.me/916284992669",
     facebook: "#",
     instagram: "#"
   }
