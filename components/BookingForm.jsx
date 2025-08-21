@@ -168,14 +168,14 @@ export default function BookingForm() {
           </p>
           <div className="flex flex-col justify-center items-center gap-3 mb-4">
             <a
-              href="tel:+6284992669"
+              href="tel:+916284992669"
               className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors group"
             >
               <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
                 <LocalPhoneOutlined className="w-5 h-5 text-green-400" />
               </div>
               <div>
-                <span className="text-sm text-white">+6284992669</span>
+                <span className="text-sm text-white">+91-62849-92669</span>
               </div>
             </a>
           </div>
@@ -226,7 +226,7 @@ export default function BookingForm() {
           </h2>
           <p className="text-gray-300 mb-6 text-sm">
             Unable to send booking request. Please try again or contact us
-            directly at +91-98765-43210
+            directly at +91-62849-92669
           </p>
           <button
             onClick={() => setSubmitStatus(null)}

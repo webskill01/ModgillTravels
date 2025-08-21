@@ -59,7 +59,7 @@ export default function Header() {
               {/* Desktop CTA Buttons */}
               <div className="flex items-center space-x-3 ml-6">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+916284992669"
                   className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-white/10 text-white hover:bg-white/20 font-medium transition-all duration-200 text-sm"
                 >
                   <PhoneIcon className="w-4 h-4 text-green-400" />
@@ -81,7 +81,7 @@ export default function Header() {
             {/* Mobile Menu Button - Only show on small/medium screens */}
             <div className="lg:hidden">
               <a
-                  href="tel:+919876543210"
+                  href="tel:+916284992669"
                   className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-white/10 text-white hover:bg-white/20 font-medium transition-all duration-200 text-sm"
                 >
                   <PhoneIcon className="w-4 h-4 text-green-400" />
