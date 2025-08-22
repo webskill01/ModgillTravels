@@ -2,7 +2,7 @@
 
 // Define per-km prices for different vehicle types
 export const PER_KM_RATES = {
-  SEDAN: 14,           // Rs per km
+  SEDAN: 22.38,           // Rs per km
   SUV: 32.20,             // Rs per km  
   PREMIUM: 38.46,         // Rs per km
   TRAVELLER: 52.30        // Rs per km
