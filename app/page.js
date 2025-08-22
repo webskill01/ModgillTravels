@@ -6,7 +6,7 @@ import SEO from '@/components/SEO';
 import { getOrganizationSchema, getLocalBusinessSchema } from '@/utils/structuredData';
 
 export const metadata = {
-  title: "Professional Taxi Service in Punjab | ModgillTravels - 24/7 Cab Booking",
+  title: "ModgillTravels Professional Taxi Service in Punjab | ModgillTravels - 24/7 Cab Booking",
   description: "Book reliable taxi service in Punjab, Haryana, Himachal Pradesh & Delhi NCR. Professional drivers, transparent pricing, 24/7 availability. Book now!",
   keywords: "taxi service Punjab, cab booking Patiala, Delhi to Patiala taxi, Chandigarh to Shimla cab, taxi booking India",
   
@@ -34,7 +34,7 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="Professional Taxi Service in Punjab"
+        title="ModgillTravels Professional Taxi Service in Punjab"
         description="Book reliable taxi service in Punjab, Haryana, Himachal Pradesh & Delhi NCR. Professional drivers, transparent pricing, 24/7 availability."
         keywords="taxi service Punjab, cab booking Patiala, Delhi to Patiala taxi, Chandigarh to Shimla cab"
         jsonLd={jsonLd}

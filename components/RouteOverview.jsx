@@ -6,18 +6,10 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
 import PeopleIcon from '@mui/icons-material/People';
-import { calculateFare } from '@/utils/fareCalculator';
 
 export default function RouteOverview({ route }) {
   // Calculate starting fare (using Sedan as base)
-  const startingFare = calculateFare({
-    distanceKm: route.distanceKm,
-    vehicleName: 'Sedan',
-    isRoundTrip: false,
-    days: 1,
-    isNightRide: false
-  });
-
+  const startingFare = route?.fare?.['Sedan'] || 0;
   return (
     <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-3 sm:p-4">
       {/* Header */}

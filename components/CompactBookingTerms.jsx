@@ -9,7 +9,7 @@ export default function CompactBookingTerms() {
             <h4 className="font-bold text-yellow-300 mb-2">Booking Terms</h4>
             <div className="text-sm space-y-2">
               <p>
-                <strong>Advance:</strong> Driver will collect ₹200 advance for confirmation.
+                <strong>Advance:</strong> We will collect ₹200 advance after booking for confirmation.
               </p>
               <div>
                   <p className='flex flex-col'>

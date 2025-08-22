@@ -26,6 +26,25 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
+     // Format date and time function
+    const formatDateTime = (dateString, timeString) => {
+      const dateTimeString = `${dateString}T${timeString}`;
+      const dateObj = new Date(dateTimeString);
+      
+      return dateObj.toLocaleString('en-IN', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'Asia/Kolkata'
+      });
+    };
+
+    const formattedDateTime = formatDateTime(date , time);
+    
     // Configure Gmail SMTP (Free Option)
     const transporter = nodemailer.createTransport({
       service: 'gmail',

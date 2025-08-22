@@ -96,7 +96,6 @@ export default function PrivacyContent() {
           <p className="text-gray-400 text-sm md:text-base">
             How we protect your personal information
           </p>
-          <p className="text-gray-500 text-xs mt-1">Last updated: January 19, 2025</p>
         </div>
       </div>
 

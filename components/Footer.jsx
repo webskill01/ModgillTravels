@@ -56,32 +56,32 @@ export default function Footer() {
               <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Popular Routes</h4>
               <div className="space-y-3">
                 <Link
-                  href="/routes/delhi-to-patiala"
+                  href="/routes/patiala-to-delhi"
                   className="flex items-center text-gray-400 hover:text-white text-sm transition-colors hover:translate-x-1 transform duration-200"
                 >
                   <ArrowForwardIcon className="w-4 h-4 mr-2" />
-                  Delhi to Patiala
+                  Patiala To Delhi
                 </Link>
                 <Link
-                  href="/routes/chandigarh-to-shimla"
+                  href="/routes/patiala-to-chandigarh"
                   className="flex items-center text-gray-400 hover:text-white text-sm transition-colors hover:translate-x-1 transform duration-200"
                 >
                   <ArrowForwardIcon className="w-4 h-4 mr-2" />
-                  Chandigarh to Shimla
+                  Patiala To Chandigarh
                 </Link>
                 <Link
-                  href="/routes/delhi-to-manali"
+                  href="/routes/patiala-to-ambala"
                   className="flex items-center text-gray-400 hover:text-white text-sm transition-colors hover:translate-x-1 transform duration-200"
                 >
                   <ArrowForwardIcon className="w-4 h-4 mr-2" />
-                  Delhi to Manali
+                  Paitala to Ambala
                 </Link>
                 <Link
-                  href="/routes/chandigarh-to-manali"
+                  href="/routes/patiala-to-ludhiana"
                   className="flex items-center text-gray-400 hover:text-white text-sm transition-colors hover:translate-x-1 transform duration-200"
                 >
                   <ArrowForwardIcon className="w-4 h-4 mr-2" />
-                  Chandigarh to Manali
+                  Patiala to Ludhiana
                 </Link>
               </div>
             </div>

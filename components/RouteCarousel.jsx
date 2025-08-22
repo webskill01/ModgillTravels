@@ -6,75 +6,56 @@ import Image from "next/image";
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
 import destinations from '@/data/destinations';
-import { calculateFare } from '@/utils/fareCalculator';
 
+// Helper function to get fare from destinations data
+const getFareFromDestinations = (slug) => {
+  const route = destinations.find(d => d.slug === slug);
+  return route?.fare?.['Sedan'] || 0;
+};
 // Updated routes with dynamic fare calculation
 const routes = [
-  {
+   {
     id: 1,
     title: "Delhi To Patiala",
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"],
-    price: `INR ${calculateFare({
-      distanceKm: destinations.find(d => d.slug === "delhi-to-patiala")?.distanceKm || 260,
-      vehicleName: 'Sedan',
-      isRoundTrip: false,
-      days: 1,
-      isNightRide: false
-    }).toLocaleString()}/-`,
+    price: `INR ${getFareFromDestinations("delhi-to-patiala").toLocaleString()}/-`,
     image: "/img1.jpg",
     slug: "delhi-to-patiala"
   },
   {
     id: 2,
-    title: "Delhi To Manali",
-    carInfo: "Swift Dzire / Toyota Etios / Similar",
+    title: "Patiala To Manali",
+    carInfo: "Swift Dzire / Toyota Etios / Similar", 
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"],
-    price: `INR ${calculateFare({
-      distanceKm: destinations.find(d => d.slug === "delhi-to-manali")?.distanceKm || 520,
-      vehicleName: 'Sedan',
-      isRoundTrip: false,
-      days: 1,
-      isNightRide: false
-    }).toLocaleString()}/-`,
+    price: `INR ${getFareFromDestinations("patiala-to-manali").toLocaleString()}/-`,
     image: "/img2.png",
-    slug: "delhi-to-manali"
+    slug: "patiala-to-manali"
   },
   {
     id: 3,
-    title: "Chandigarh To Shimla",
+    title: "Shimla To Patiala",
     carInfo: "Swift Dzire / Toyota Etios / Similar",
-    seats: "4 Passenger Seats",
+    seats: "4 Passenger Seats", 
     features: ["Air Conditioning", "GPS Tracking"],
-    price: `INR ${calculateFare({
-      distanceKm: destinations.find(d => d.slug === "chandigarh-to-shimla")?.distanceKm || 114,
-      vehicleName: 'Sedan',
-      isRoundTrip: false,
-      days: 1,
-      isNightRide: false
-    }).toLocaleString()}/-`,
+    price: `INR ${getFareFromDestinations("shimla-to-patiala").toLocaleString()}/-`,
     image: "/img3.png",
-    slug: "chandigarh-to-shimla"
+    slug: "shimla-to-patiala"
   },
   {
     id: 4,
-    title: "Chandigarh To Manali",
+    title: "Patiala To Chandigarh",
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats",
-    features: ["Air Conditioning", "GPS Tracking"],
-    price: `INR ${calculateFare({
-      distanceKm: destinations.find(d => d.slug === "chandigarh-to-manali")?.distanceKm || 305,
-      vehicleName: 'Sedan',
-      isRoundTrip: false,
-      days: 1,
-      isNightRide: false
-    }).toLocaleString()}/-`,
+    features: ["Air Conditioning", "GPS Tracking"], 
+    price: `INR ${getFareFromDestinations("patiala-to-chandigarh").toLocaleString()}/-`,
     image: "/img4.png",
-    slug: "chandigarh-to-manali"
+    slug: "patiala-to-chandigarh"
   }
 ];
+
 
 export default function RouteCarousel() {
   const carouselRef = useRef(null);

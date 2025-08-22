@@ -1,51 +1,51 @@
 // utils/fareCalculator.js
 
-// Define per-km prices for different vehicle types
-export const PER_KM_RATES = {
-  SEDAN: 14,           // Rs per km
-  SUV: 32.20,             // Rs per km  
-  PREMIUM: 38.46,         // Rs per km
-  TRAVELLER: 52.30        // Rs per km
-};
-
-// Get per-km rate by vehicle name
-export const getPerKmRate = (vehicleName) => {
-  const rateMap = {
-    'Sedan': PER_KM_RATES.SEDAN,
-    'Maruti Ertiga WC': PER_KM_RATES.SUV,
-    'Toyota Innova WC': PER_KM_RATES.PREMIUM,
-    'Toyota Innova Crysta WC': PER_KM_RATES.TRAVELLER
-  };
-  return rateMap[vehicleName] || PER_KM_RATES.SEDAN;
-};
-
-// New fare calculation function
+// Updated fare calculation function using hardcoded fares from route data
 export const calculateFare = ({
-  distanceKm,
+  route, // Pass the entire route object
   vehicleName,
   isRoundTrip = false,
-  days = 1,
-  isNightRide = false
+  days = 1
 }) => {
-  const perKmRate = getPerKmRate(vehicleName);
-  let fare = perKmRate * distanceKm;
-  
+  if (!route || !vehicleName) return 0;
+
+  let fare;
+
   if (isRoundTrip) {
-    // 1.9 times the base fare + 1000 Rs per extra day
-    fare = fare * 1.93 + (1000 * Math.max(days - 1, 0));
+    // Use hardcoded round trip fares
+    fare = route.roundTripFare[vehicleName] || 0;
+    
+    // Add extra days cost (₹1000 per additional day)
+    if (days > 1) {
+      fare += 1000 * (days - 1);
+    }
+  } else {
+    // Use hardcoded one-way fares
+    fare = route.fare[vehicleName] || 0;
   }
-  
-  // Night charges: 10% extra (11 PM - 5 AM)
-  if (isNightRide) {
-    fare *= 1.1;
-  }
-  
-  return Math.round(fare);
+
+  return fare;
 };
 
-// Helper function to check if time is night time
+// Helper function to get display fare for UI
+export const getDisplayFare = (route, vehicleName, isRoundTrip = false) => {
+  if (!route || !vehicleName) return 0;
+  
+  return isRoundTrip 
+    ? route.roundTripFare[vehicleName] || 0 
+    : route.fare[vehicleName] || 0;
+};
+
+// Legacy function for backward compatibility
 export const isNightTime = (timeString) => {
   if (!timeString) return false;
   const hour = parseInt(timeString.split(':')[0]);
   return hour >= 23 || hour < 5;
+};
+
+// Helper to get all fare options for a route
+export const getAllFareOptions = (route, isRoundTrip = false) => {
+  if (!route) return {};
+  
+  return isRoundTrip ? route.roundTripFare : route.fare;
 };

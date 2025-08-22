@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import destinations from "@/data/destinations";
 import { VEHICLE_TYPES } from "@/data/vehicles";
@@ -12,7 +12,6 @@ import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import PersonIcon from "@mui/icons-material/Person";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { calculateFare, isNightTime } from "@/utils/fareCalculator";
 import { LocalPhoneOutlined } from "@mui/icons-material";
 
 const schema = Yup.object().shape({
@@ -50,7 +49,6 @@ const schema = Yup.object().shape({
 const vehicleOptions = Object.values(VEHICLE_TYPES);
 
 export default function BookingForm() {
-  const router = useRouter();
   const searchParams = useSearchParams();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -88,13 +86,20 @@ export default function BookingForm() {
   const getFare = () => {
     if (!vehicle || !route) return 0;
 
-    return calculateFare({
-      distanceKm: route.distanceKm,
-      vehicleName: vehicle,
-      isRoundTrip: tripType === "roundtrip",
-      days,
-      isNightRide: isNightTime(time),
-    });
+    const isRoundTrip = tripType === "roundtrip";
+    let fare;
+
+    if (isRoundTrip) {
+      fare = route.roundTripFare?.[vehicle] || 0;
+      // Add extra days cost (₹1000 per additional day)
+      if (days > 1) {
+        fare += 1000 * (days - 1);
+      }
+    } else {
+      fare = route.fare?.[vehicle] || 0;
+    }
+
+    return fare;
   };
 
   const totalFare = getFare();
@@ -131,6 +136,15 @@ export default function BookingForm() {
     }
   };
 
+  useEffect(() => {
+    if (submitStatus === "success") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [submitStatus]);
+
   const onSubmit = async (data) => {
     setIsSubmitting(true);
     setSubmitStatus(null);
@@ -141,9 +155,6 @@ export default function BookingForm() {
 
       // Show success message
       setSubmitStatus("success");
-
-      // Redirect to home after 7 seconds
-      setTimeout(() => router.push("/"), 7000);
     } catch (error) {
       console.error("Booking error:", error);
       setSubmitStatus("error");
@@ -203,11 +214,27 @@ export default function BookingForm() {
             Booking Request Sent!
           </h2>
           <p className="text-gray-300 mb-6 text-sm">
-            Your booking request has been sent . Our team will contact
-            you within 2 hours to confirm your booking and pay for the advance payment.
+            Your booking request has been sent. Our team will contact you within
+            2 hours to confirm your booking and collect the advance payment.
           </p>
-          <div className="text-xs text-gray-400">
-            Redirecting to homepage in a few seconds...
+
+          {/* Action buttons */}
+          <div className="space-y-3">
+            <button
+              onClick={() => {
+                setSubmitStatus(null);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 px-4 rounded-lg font-medium transition"
+            >
+              <span className="text-center w-full">Submit Another Booking</span>
+            </button>
+            <Link
+              href="/"
+              className="block w-full bg-gray-700 hover:bg-gray-600 text-white py-3 px-4 rounded-lg font-medium transition text-center"
+            >
+              Back to Home
+            </Link>
           </div>
         </div>
       </div>
@@ -226,8 +253,21 @@ export default function BookingForm() {
           </h2>
           <p className="text-gray-300 mb-6 text-sm">
             Unable to send booking request. Please try again or contact us
-            directly at +91-62849-92669
+            directly at 
           </p>
+          <div className="flex flex-col justify-center items-center gap-3 mb-4">
+            <a
+              href="tel:+916284992669"
+              className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors group"
+            >
+              <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-cente">
+                <LocalPhoneOutlined className="w-5 h-5 text-green-400" />
+              </div>
+              <div>
+                <span className="text-sm text-white">+91-62849-92669</span>
+              </div>
+            </a>
+          </div>
           <button
             onClick={() => setSubmitStatus(null)}
             className="bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-lg transition text-sm"
@@ -319,13 +359,19 @@ export default function BookingForm() {
           </label>
           <div className="grid grid-cols-1 gap-2 sm:gap-3">
             {vehicleOptions.map((v) => {
-              const vehiclePrice = calculateFare({
-                distanceKm: route.distanceKm,
-                vehicleName: v.name,
-                isRoundTrip: tripType === "roundtrip",
-                days,
-                isNightRide: isNightTime(time),
-              });
+              // Get hardcoded fare from route data instead of calculating
+              const isRoundTrip = tripType === "roundtrip";
+              let vehiclePrice;
+
+              if (isRoundTrip) {
+                vehiclePrice = route?.roundTripFare?.[v.name] || 0;
+                // Add extra days cost for round trips
+                if (days > 1) {
+                  vehiclePrice += 1000 * (days - 1);
+                }
+              } else {
+                vehiclePrice = route?.fare?.[v.name] || 0;
+              }
 
               return (
                 <label key={v.name} className="cursor-pointer">
@@ -432,6 +478,9 @@ export default function BookingForm() {
                   {...register("days")}
                   className="w-full rounded-lg p-2 sm:p-3 bg-gray-700 text-white border border-gray-600 focus:border-cyan-400 text-xs sm:text-sm"
                 />
+                <span className="text-center text-xs text-gray-500 h-10">
+                  Note* A Day Means a Single Calender Day (From 12AM To 12AM)
+                </span>
                 {errors.days && (
                   <p className="text-red-400 text-xs mt-1">
                     {errors.days.message}
@@ -587,9 +636,13 @@ export default function BookingForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-2 sm:py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 disabled:from-gray-600 disabled:to-gray-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] disabled:scale-100 text-xs sm:text-base"
+          className="w-full py-2 sm:py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 disabled:from-gray-600 disabled:to-gray-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-[1.02] disabled:scale-100 text-xs sm:text-base text-center mx-auto"
         >
-          {isSubmitting ? "Sending Request..." : "Book Now"}
+          {isSubmitting ? (
+            <span className="w-full text-center"> Sending Request...</span>
+          ) : (
+            <span className="w-full text-center">Book Now</span>
+          )}
         </button>
 
         <p className="text-center text-xs text-gray-500 pt-6 sm:pt-4">

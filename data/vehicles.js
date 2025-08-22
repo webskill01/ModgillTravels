@@ -28,6 +28,15 @@ export const VEHICLE_TYPES = {
     models: "Toyota Innova",
     perKmRate: 18
   },
+  KIA_CARENS: {
+    name: "Kia Carens WC",
+    capacity: "7",
+    icon: "🚐",
+    luggage: "4 Bags",
+    description: "Modern family MPV with premium features",
+    models: "Kia Caren",
+    perKmRate: 18
+  },
   TRAVELLER: {
     name: "Toyota Innova Crysta WC",
     capacity: "6",

@@ -1,16 +1,10 @@
 import Link from "next/link";
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import { calculateFare } from '@/utils/fareCalculator';
+import { PhoneOutlined, WhatsApp } from "@mui/icons-material";
 
 export default function QuickBookingSidebar({ route, searchParams = {} }) {
   // Calculate starting fare using Sedan as base vehicle (lowest price)
-  const startingFare = calculateFare({
-    distanceKm: route.distanceKm,
-    vehicleName: 'Sedan',
-    isRoundTrip: false,
-    days: 1,
-    isNightRide: false
-  });
+  const startingFare = route?.fare?.['Sedan'] || 0;
 
   const buildBookingUrl = () => {
     const query = new URLSearchParams();
@@ -79,7 +73,7 @@ export default function QuickBookingSidebar({ route, searchParams = {} }) {
             className="flex items-center gap-3 p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition"
           >
             <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
-              <span className="text-green-400">📞</span>
+              <PhoneOutlined className="text-green-400" />
             </div>
             <div>
               <span className="text-white font-medium text-sm">Call Us</span>
@@ -94,7 +88,7 @@ export default function QuickBookingSidebar({ route, searchParams = {} }) {
             className="flex items-center gap-3 p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition"
           >
             <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
-              <span className="text-green-400">💬</span>
+              <WhatsApp className="text-green-400" />
             </div>
             <div>
               <span className="text-white font-medium text-sm">WhatsApp</span>

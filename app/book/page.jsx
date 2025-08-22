@@ -18,7 +18,7 @@ function BookingPageContent() {
             Complete Your Booking
           </h2>
           <p className="text-gray-400 text-center text-sm md:text-lg max-w-2xl mx-auto">
-            Fill in your travel details below and we'll confirm your booking instantly via WhatsApp
+            Fill in your travel details below and we'll confirm your booking Instantly
           </p>
         </div>
 

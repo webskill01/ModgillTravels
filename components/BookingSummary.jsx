@@ -113,8 +113,8 @@ export default function BookingSummary() {
       <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-3 lg:p-4">
         <h4 className="text-yellow-400 font-medium text-sm mb-2">Important Notes</h4>
         <ul className="text-yellow-200 text-xs space-y-1">
-          <li>• Tolls & parking charges extra</li>
-          <li>• Night charges: 10% extra (11 PM - 5 AM)</li>
+          <li>• Parking charges extra</li>
+          <li>• Pay The Advance Payment To Confirm Your Booking</li>
           <li>• Cancellation allowed up to 2 hours before pickup</li>
         </ul>
       </div>
