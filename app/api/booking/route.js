@@ -18,7 +18,8 @@ export async function POST(request) {
       dropAddress,
       specialRequests,
       totalFare,
-      routeInfo
+      routeInfo,
+      readableDateTime
     } = data;
 
     // Validate required fields
@@ -26,24 +27,6 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-     // Format date and time function
-    const formatDateTime = (dateString, timeString) => {
-      const dateTimeString = `${dateString}T${timeString}`;
-      const dateObj = new Date(dateTimeString);
-      
-      return dateObj.toLocaleString('en-IN', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true,
-        timeZone: 'Asia/Kolkata'
-      });
-    };
-
-    const formattedDateTime = formatDateTime(date , time);
     
     // Configure Gmail SMTP (Free Option)
     const transporter = nodemailer.createTransport({
@@ -81,7 +64,7 @@ export async function POST(request) {
 
           <div style="background-color: #f0fdf4; padding: 15px; margin: 15px 0; border-radius: 5px;">
             <h3 style="color: #1f2937; margin-bottom: 10px;">📅 SCHEDULE:</h3>
-            <p style="margin: 5px 0;"><strong>${date} at ${time}</strong></p>
+           <p style="margin: 5px 0;"><strong>${readableDateTime}</strong></p>
             ${days > 1 ? `<p style="margin: 5px 0;">Duration: ${days} days</p>` : ''}
           </div>
 

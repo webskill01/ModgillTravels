@@ -8,7 +8,8 @@ export const VEHICLE_TYPES = {
     luggage: "3 Bags",
     description: "Comfortable for long rides",
     models: "Toyota Etios, Maruti Dzire, Honda Amaze, Aura",
-    perKmRate: 12
+    perKmRate: 21,
+    perKmRateRound: 19.5
   },
   SUV: {
     name: "Maruti Ertiga WC",
@@ -17,7 +18,8 @@ export const VEHICLE_TYPES = {
     luggage: "5 Bags",
     description: "Perfect for family trips",
     models: "Maruti Ertiga",
-    perKmRate: 15
+    perKmRate: 27,
+    perKmRateRound: 25.5
   },
   PREMIUM: {
     name: "Toyota Innova WC",
@@ -26,7 +28,8 @@ export const VEHICLE_TYPES = {
     luggage: "4 Bags",
     description: "Luxury travel experience",
     models: "Toyota Innova",
-    perKmRate: 18
+    perKmRate: 36,
+    perKmRateRound: 31.5
   },
   KIA_CARENS: {
     name: "Kia Carens WC",
@@ -35,7 +38,8 @@ export const VEHICLE_TYPES = {
     luggage: "4 Bags",
     description: "Modern family MPV with premium features",
     models: "Kia Caren",
-    perKmRate: 18
+    perKmRate: 36,
+    perKmRateRound: 31.5
   },
   TRAVELLER: {
     name: "Toyota Innova Crysta WC",
@@ -44,7 +48,8 @@ export const VEHICLE_TYPES = {
     luggage: "6 Bags",
     description: "Perfect for group travel",
     models: "Toyota Innova Crysta",
-    perKmRate: 22
+    perKmRate: 51,
+    perKmRateRound: 37.5
   }
 };
 

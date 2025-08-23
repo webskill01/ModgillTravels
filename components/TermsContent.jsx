@@ -52,7 +52,7 @@ const sections = [
   icon: <CancelIcon className="w-6 h-6 text-cyan-600" />,
   summary: 'Advance payment and cancellation terms for booking confirmation.',
   details: [
-    'Driver will contact you to collect ₹200 advance payment for booking confirmation',
+    'We will contact you to collect ₹200 advance payment for booking confirmation',
     'Ride confirmed only after advance payment is received',
     'Customer cancellation: ₹200 advance payment will not be refunded',
     'Company cancellation: ₹200 refund + ₹100 additional compensation',

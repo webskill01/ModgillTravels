@@ -13,15 +13,19 @@ import PersonIcon from "@mui/icons-material/Person";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { LocalPhoneOutlined } from "@mui/icons-material";
+import PricingInfoTooltip from "./PricingTooltip";
 
 const schema = Yup.object().shape({
   tripType: Yup.string().oneOf(["oneway", "roundtrip"]).required(),
   vehicle: Yup.string().required("Please select a vehicle"),
   date: Yup.date()
     .required("Pickup date is required")
+    .typeError("Please enter a valid date")
     .min(new Date(), "Date cannot be in the past"),
   time: Yup.string().required("Pickup time is required"),
-  days: Yup.number().when("tripType", {
+  days: Yup.number()
+  .typeError("Please enter a valid number of days")
+  .when("tripType", {
     is: "roundtrip",
     then: (schema) =>
       schema
@@ -106,6 +110,13 @@ export default function BookingForm() {
 
   const sendEmailNotification = async (data) => {
     try {
+    // ✅ Super simple approach - just combine as strings
+    const formatDateTime = (date, time) => {
+      if (!date || !time) return 'Date/Time not provided';
+      return `${String(date)} at ${String(time)}`;
+    };
+
+    const readableDateTime = formatDateTime(data.date, data.time);
       const response = await fetch("/api/booking", {
         method: "POST",
         headers: {
@@ -113,6 +124,7 @@ export default function BookingForm() {
         },
         body: JSON.stringify({
           ...data,
+          readableDateTime,
           totalFare,
           routeInfo: {
             from: route.from,
@@ -253,7 +265,7 @@ export default function BookingForm() {
           </h2>
           <p className="text-gray-300 mb-6 text-sm">
             Unable to send booking request. Please try again or contact us
-            directly at 
+            directly at
           </p>
           <div className="flex flex-col justify-center items-center gap-3 mb-4">
             <a
@@ -398,9 +410,18 @@ export default function BookingForm() {
                       <span className="text-gray-400 text-xs">
                         {v.capacity} seats • {v.luggage}
                       </span>
-                      <span className="text-cyan-400 font-bold text-sm">
+                      <div className="text-cyan-400 font-bold text-sm flex flex-row gap-2 justify-center items-center">
                         ₹{vehiclePrice.toLocaleString()}
-                      </span>
+                        <PricingInfoTooltip
+                          perKmRate={
+                            tripType === "roundtrip"
+                              ? v.perKmRateRound
+                              : v.perKmRate
+                          }
+                          tripType={tripType}
+                          days={days}
+                        />
+                      </div>
                     </div>
                     <div className="text-gray-400 text-xs">{v.description}</div>
                     <div className="text-gray-400 text-xs">
@@ -414,7 +435,7 @@ export default function BookingForm() {
                       )}
                     </div>
                     {/* <div className="text-xs text-gray-400">
-                      ₹{v.perKmRate}/km •{" "}
+                      {tripType === "roundtrip"? `₹${v.perKmRateRound}/km •${" "}`:`₹${v.perKmRate}/km •${" "}`}
                       {tripType === "roundtrip" ? `${days} days` : "one way"}
                     </div> */}
                   </div>

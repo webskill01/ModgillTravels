@@ -152,11 +152,6 @@ export default function Footer() {
             
             {/* Disclaimer & Social */}
             <div className="flex flex-col lg:flex-row items-center space-y-3 lg:space-y-0 lg:space-x-6">
-              {/* Disclaimer */}
-              <div className="text-gray-500 text-xs text-center lg:text-right max-w-md">
-                <div>Estimated fares shown • Parking charges extra</div>
-              </div>
-              
               {/* Social Links */}
               <div className="flex items-center space-x-4">
                 <a
