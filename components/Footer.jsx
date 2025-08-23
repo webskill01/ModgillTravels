@@ -87,7 +87,7 @@ export default function Footer() {
             </div>
           </div>
           {/* Contact Info */}
-            <div className="flex flex-col justify-center align-center gap-3">
+            <div className="flex flex-col justify-center align-center gap-3 mb-2">
               <a 
                 href="tel:+91 6284992669" 
                 className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors group"
@@ -151,7 +151,7 @@ export default function Footer() {
             </div>
             
             {/* Disclaimer & Social */}
-            <div className="flex flex-col lg:flex-row items-center space-y-3 lg:space-y-0 lg:space-x-6">
+            <div className="flex flex-col lg:flex-row items-center space-y-3 lg:space-y-0 lg:space-x-6 ">
               {/* Social Links */}
               <div className="flex items-center space-x-4">
                 <a

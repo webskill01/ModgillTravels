@@ -55,7 +55,7 @@ export default function VehicleOptions({ route, tripType = "oneway", searchParam
 
               {/* Models */}
               <div className="text-center">
-                <p className="text-xs text-gray-500 font-normal leading-tight">
+                <p className="text-xs text-gray-500 font-normal leading-tight mb-1.5">
                   {vehicle.models || 'Swift, Baleno, Dzire'}
                 </p>
               </div>
