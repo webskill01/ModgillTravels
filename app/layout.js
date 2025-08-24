@@ -11,26 +11,28 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://modgilltravels.in'),
+  metadataBase: new URL("https://modgilltravels.in"),
   title: {
-    default: 'ModgillTravels - Best Taxi Service in Patiala | Online Cab Booking',
-    template: '%s | ModgillTravels'
+    default:
+      "ModgillTravels - Best Taxi Service in Patiala | Online Cab Booking",
+    template: "%s | ModgillTravels",
   },
-  description: 'Professional taxi service in Patiala offering one-way and round trips to Delhi, Shimla, Manali. Experienced drivers, AC vehicles, transparent pricing. Book online now!',
+  description:
+    "Professional taxi service in Patiala offering one-way and round trips to Delhi, Shimla, Manali. Experienced drivers, AC vehicles, transparent pricing. Book online now!",
   keywords: [
-    'taxi service Patiala',
-    'Patiala taxi',
-    'Delhi to Patiala taxi',
-    'cab booking Patiala',
-    'one way taxi Patiala',
-    'taxi to Shimla',
-    'taxi to Manali',
-    'Patiala to Delhi cab',
-    'outstation taxi Patiala'
+    "taxi service Patiala",
+    "Patiala taxi",
+    "Delhi to Patiala taxi",
+    "cab booking Patiala",
+    "one way taxi Patiala",
+    "taxi to Shimla",
+    "taxi to Manali",
+    "Patiala to Delhi cab",
+    "outstation taxi Patiala",
   ],
-  authors: [{ name: 'ModgillTravels', url: 'https://modgilltravels.in' }],
-  creator: 'ModgillTravels',
-  publisher: 'ModgillTravels',
+  authors: [{ name: "ModgillTravels", url: "https://modgilltravels.in" }],
+  creator: "ModgillTravels",
+  publisher: "ModgillTravels",
   formatDetection: {
     email: false,
     address: false,
@@ -44,108 +46,109 @@ export const metadata = {
       index: true,
       follow: true,
       noimageindex: false,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_IN',
-    url: 'https://modgilltravels.in',
-    siteName: 'ModgillTravels',
-    title: 'ModgillTravels - Best Taxi Service in Patiala',
-    description: 'Professional taxi service in Patiala offering reliable transportation to Delhi, Shimla, Manali and more. Book your cab online now!',
+    type: "website",
+    locale: "en_IN",
+    url: "https://modgilltravels.in",
+    siteName: "ModgillTravels",
+    title: "ModgillTravels - Best Taxi Service in Patiala",
+    description:
+      "Professional taxi service in Patiala offering reliable transportation to Delhi, Shimla, Manali and more. Book your cab online now!",
     images: [
       {
-        url: '/og-image.jpg', 
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'ModgillTravels Taxi Service in Patiala',
+        alt: "ModgillTravels Taxi Service in Patiala",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'ModgillTravels - Best Taxi Service in Patiala',
-    description: 'Professional taxi service in Patiala offering reliable transportation.',
-    images: ['/og-image.jpg'],
+    card: "summary_large_image",
+    title: "ModgillTravels - Best Taxi Service in Patiala",
+    description:
+      "Professional taxi service in Patiala offering reliable transportation.",
+    images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: 'https://modgilltravels.in',
+    canonical: "https://modgilltravels.in",
   },
-  category: 'transportation',
+  category: "transportation",
 };
 
 const businessStructuredData = {
   "@context": "https://schema.org",
   "@type": "TaxiService",
-  "name": "ModgillTravels",
-  "description": "Professional taxi service in Patiala offering one-way and round trips to Delhi, Shimla, Manali and other destinations",
-  "url": "https://modgilltravels.in",
-  "telephone": "+91-62849-92669",
-  "email": "info@modgilltravels.in",
-  "address": {
+  name: "ModgillTravels",
+  description:
+    "Professional taxi service in Patiala offering one-way and round trips to Delhi, Shimla, Manali and other destinations",
+  url: "https://modgilltravels.in",
+  telephone: "+91-62849-92669",
+  email: "info@modgilltravels.in",
+  address: {
     "@type": "PostalAddress",
-    "addressLocality": "Patiala",
-    "addressRegion": "Punjab",
-    "addressCountry": "IN",
-    "postalCode": "147001"
+    addressLocality: "Patiala",
+    addressRegion: "Punjab",
+    addressCountry: "IN",
+    postalCode: "147001",
   },
-  "geo": {
+  geo: {
     "@type": "GeoCoordinates",
-    "latitude": "30.3398",
-    "longitude": "76.3869"
+    latitude: "30.3398",
+    longitude: "76.3869",
   },
-  "serviceArea": [
+  serviceArea: [
     {
       "@type": "State",
-      "name": "Punjab"
-    },
-    {
-      "@type": "State", 
-      "name": "Haryana"
+      name: "Punjab",
     },
     {
       "@type": "State",
-      "name": "Himachal Pradesh"
-    }
+      name: "Haryana",
+    },
+    {
+      "@type": "State",
+      name: "Himachal Pradesh",
+    },
   ],
-  "areaServed": [
-    "Patiala", "Delhi", "Shimla", "Manali", "Chandigarh"
-  ],
-  "hasOfferCatalog": {
+  areaServed: ["Patiala", "Delhi", "Shimla", "Manali", "Chandigarh"],
+  hasOfferCatalog: {
     "@type": "OfferCatalog",
-    "name": "Taxi Services",
-    "itemListElement": [
+    name: "Taxi Services",
+    itemListElement: [
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "One Way Taxi Service",
-          "description": "Professional one-way taxi service from Patiala"
-        }
+          name: "One Way Taxi Service",
+          description: "Professional one-way taxi service from Patiala",
+        },
       },
       {
         "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service", 
-          "name": "Round Trip Taxi Service",
-          "description": "Comfortable round trip taxi service"
-        }
-      }
-    ]
+        itemOffered: {
+          "@type": "Service",
+          name: "Round Trip Taxi Service",
+          description: "Comfortable round trip taxi service",
+        },
+      },
+    ],
   },
-  "priceRange": "₹₹",
-  "paymentAccepted": ["Cash", "UPI", "Bank Transfer"],
-  "availableLanguage": ["English", "Hindi", "Punjabi"],
-  "openingHours": "Mo-Su 00:00-23:59",
-  "contactPoint": {
+  priceRange: "₹₹",
+  paymentAccepted: ["Cash", "UPI", "Bank Transfer"],
+  availableLanguage: ["English", "Hindi", "Punjabi"],
+  openingHours: "Mo-Su 00:00-23:59",
+  contactPoint: {
     "@type": "ContactPoint",
-    "telephone": "+91-62849-92669",
-    "contactType": "customer service",
-    "availableLanguage": ["English", "Hindi", "Punjabi"]
-  }
+    telephone: "+91-62849-92669",
+    contactType: "customer service",
+    availableLanguage: ["English", "Hindi", "Punjabi"],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -153,6 +156,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className="dark">
       <head>
         <link rel="canonical" href="https://modgilltravels.in" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="geo.region" content="IN-PB" />
         <meta name="geo.placename" content="Patiala, Punjab" />
@@ -164,11 +170,13 @@ export default function RootLayout({ children }) {
         <meta name="rating" content="general" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessStructuredData) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(businessStructuredData),
+          }}
         />
       </head>
       <body className={inter.className}>
-        <ScrollToTop/>
+        <ScrollToTop />
         <Header />
         <main>{children}</main>
         <Footer />
