@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/static/
+Disallow: /private/
+Disallow: /temp/
+
+Sitemap: https://modgilltravels.in/sitemap.xml
