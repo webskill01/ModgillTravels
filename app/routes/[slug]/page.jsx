@@ -18,29 +18,51 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const route = destinations.find(r => r.slug === slug);
   
-  if (!route) return {};
+  if (!route) {
+    return {
+      title: '404 - Route Not Found | ModgillTravels',
+      description: 'The requested taxi route was not found.',
+    };
+  }
 
   return {
     title: `${route.from} to ${route.to} Taxi Service | ₹${route.displayFare} | ModgillTravels`,
     description: `Book taxi from ${route.from} to ${route.to}. Distance: ${route.distanceKm}km, Duration: ${route.duration}. Starting ₹${route.displayFare}. Professional drivers, AC vehicles.`,
-    keywords: `${route.from} to ${route.to} taxi, ${route.from} ${route.to} cab booking, taxi fare ${route.from} ${route.to}`,
-    
-    openGraph: {
-      title: `${route.from} to ${route.to} Taxi Service - ModgillTravels`,
-      description: `Book reliable taxi from ${route.from} to ${route.to}. ${route.distanceKm}km journey starting at ₹${route.displayFare}.`,
-      type: 'website',
-      siteName: 'ModgillTravels',
+    keywords: [
+      `${route.from} to ${route.to} taxi`,
+      `${route.from} ${route.to} cab`,
+      `taxi service ${route.from}`,
+      `${route.to} taxi booking`,
+      `one way taxi ${route.from}`,
+      `${route.from} to ${route.to} cab fare`
+    ],
+    alternates: {
+      canonical: `https://modgilltravels.in/routes/${route.slug}`,
     },
-    
-    twitter: {
-      card: 'summary',
+   openGraph: {
       title: `${route.from} to ${route.to} Taxi Service - ModgillTravels`,
       description: `Book reliable taxi from ${route.from} to ${route.to}. ${route.distanceKm}km journey starting at ₹${route.displayFare}.`,
+      url: `https://modgilltravels.in/routes/${route.slug}`,
+      siteName: 'ModgillTravels',
+      images: [
+        {
+          url: `/route-images/${route.slug}.jpg`, // Create these images
+          width: 1200,
+          height: 630,
+          alt: `${route.from} to ${route.to} Taxi Service`,
+        },
+      ],
+      locale: 'en_IN',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${route.from} to ${route.to} Taxi Service - ModgillTravels`,
+      description: `Book reliable taxi from ${route.from} to ${route.to}. ${route.distanceKm}km journey starting at ₹${route.displayFare}.`,
+      images: [`/route-images/${route.slug}.jpg`],
     },
   };
 }
-
-
 
 export default async function RouteDetailsPage({ params }) {
   const { slug } = await params;

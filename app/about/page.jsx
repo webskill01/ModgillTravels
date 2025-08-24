@@ -12,7 +12,10 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
-  }
+  },
+  alternates: {
+    canonical: 'https://modgilltravels.in/about',
+  },
 };
 
 export default function AboutPage() {

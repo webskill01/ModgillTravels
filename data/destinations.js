@@ -19,11 +19,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 5900
     },
     roundTripFare: {
-      "Sedan": 6200,
-      "Maruti Ertiga WC": 8200,
-      "Toyota Innova WC": 9000,
-      "Kia Carens WC": 9000,
-      "Toyota Innova Crysta WC": 10900
+      "Sedan": 6400,
+      "Maruti Ertiga WC": 8400,
+      "Toyota Innova WC": 9400,
+      "Kia Carens WC": 9400,
+      "Toyota Innova Crysta WC": 10000
     }
   },
   {
@@ -42,11 +42,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 5900
     },
     roundTripFare: {
-      "Sedan": 6200,
-      "Maruti Ertiga WC": 8200,
-      "Toyota Innova WC": 9000,
-      "Kia Carens WC": 9000,
-      "Toyota Innova Crysta WC": 10900
+      "Sedan": 6400,
+      "Maruti Ertiga WC": 8400,
+      "Toyota Innova WC": 9400,
+      "Kia Carens WC": 9400,
+      "Toyota Innova Crysta WC": 10000
     }
   },
 
@@ -67,11 +67,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 3300
     },
     roundTripFare: {
-      "Sedan": 1800,
-      "Maruti Ertiga WC": 2300,
-      "Toyota Innova WC": 2700,
-      "Kia Carens WC": 2700,
-      "Toyota Innova Crysta WC": 3300
+      "Sedan": 2500,
+      "Maruti Ertiga WC": 3000,
+      "Toyota Innova WC": 4200,
+      "Kia Carens WC": 4200,
+      "Toyota Innova Crysta WC": 6200
     }
   },
   {
@@ -90,11 +90,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 3300
     },
     roundTripFare: {
-      "Sedan": 1800,
-      "Maruti Ertiga WC": 2300,
-      "Toyota Innova WC": 2700,
-      "Kia Carens WC": 2700,
-      "Toyota Innova Crysta WC": 3300
+      "Sedan": 2500,
+      "Maruti Ertiga WC": 3000,
+      "Toyota Innova WC": 4200,
+      "Kia Carens WC": 4200,
+      "Toyota Innova Crysta WC": 6200
     }
   },
 
@@ -115,11 +115,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 3500
     },
     roundTripFare: {
-      "Sedan": 2200,
-      "Maruti Ertiga WC": 2900,
-      "Toyota Innova WC": 3400,
-      "Kia Carens WC": 3400,
-      "Toyota Innova Crysta WC": 4100
+      "Sedan": 2800,
+      "Maruti Ertiga WC": 4000,
+      "Toyota Innova WC": 5200,
+      "Kia Carens WC": 5200,
+      "Toyota Innova Crysta WC": 6500
     }
   },
   {
@@ -138,11 +138,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 3500
     },
     roundTripFare: {
-      "Sedan": 2200,
-      "Maruti Ertiga WC": 2900,
-      "Toyota Innova WC": 3400,
-      "Kia Carens WC": 3400,
-      "Toyota Innova Crysta WC": 4100
+      "Sedan": 2800,
+      "Maruti Ertiga WC": 4000,
+      "Toyota Innova WC": 5200,
+      "Kia Carens WC": 5200,
+      "Toyota Innova Crysta WC": 6500
     }
   },
 
@@ -163,11 +163,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 3500
     },
     roundTripFare: {
-      "Sedan": 2400,
-      "Maruti Ertiga WC": 3200,
-      "Toyota Innova WC": 3800,
-      "Kia Carens WC": 3800,
-      "Toyota Innova Crysta WC": 4700
+      "Sedan": 4500,
+      "Maruti Ertiga WC": 5500,
+      "Toyota Innova WC": 6000,
+      "Kia Carens WC": 6000,
+      "Toyota Innova Crysta WC": 7500
     }
   },
   {
@@ -186,11 +186,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 3500
     },
     roundTripFare: {
-      "Sedan": 2400,
-      "Maruti Ertiga WC": 3200,
-      "Toyota Innova WC": 3800,
-      "Kia Carens WC": 3800,
-      "Toyota Innova Crysta WC": 4700
+      "Sedan": 4500,
+      "Maruti Ertiga WC": 5500,
+      "Toyota Innova WC": 6000,
+      "Kia Carens WC": 6000,
+      "Toyota Innova Crysta WC": 7500
     }
   },
 
@@ -211,11 +211,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 5800
     },
     roundTripFare: {
-      "Sedan": 4000,
-      "Maruti Ertiga WC": 5200,
-      "Toyota Innova WC": 6000,
-      "Kia Carens WC": 6000,
-      "Toyota Innova Crysta WC": 7400
+      "Sedan": 6300,
+      "Maruti Ertiga WC": 8300,
+      "Toyota Innova WC": 9300,
+      "Kia Carens WC": 9300,
+      "Toyota Innova Crysta WC": 9900
     }
   },
   {
@@ -234,11 +234,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 5800
     },
     roundTripFare: {
-      "Sedan": 4000,
-      "Maruti Ertiga WC": 5200,
-      "Toyota Innova WC": 6000,
-      "Kia Carens WC": 6000,
-      "Toyota Innova Crysta WC": 7400
+      "Sedan": 6300,
+      "Maruti Ertiga WC": 8300,
+      "Toyota Innova WC": 9300,
+      "Kia Carens WC": 9300,
+      "Toyota Innova Crysta WC": 9900
     }
   },
 
@@ -259,11 +259,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 3300
     },
     roundTripFare: {
-      "Sedan": 2000,
-      "Maruti Ertiga WC": 2700,
-      "Toyota Innova WC": 3200,
-      "Kia Carens WC": 3200,
-      "Toyota Innova Crysta WC": 3900
+      "Sedan": 2500,
+      "Maruti Ertiga WC": 3000,
+      "Toyota Innova WC": 4200,
+      "Kia Carens WC": 4200,
+      "Toyota Innova Crysta WC": 6200
     }
   },
   {
@@ -282,11 +282,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 3300
     },
     roundTripFare: {
-      "Sedan": 2000,
-      "Maruti Ertiga WC": 2700,
-      "Toyota Innova WC": 3200,
-      "Kia Carens WC": 3200,
-      "Toyota Innova Crysta WC": 3900
+      "Sedan": 2500,
+      "Maruti Ertiga WC": 3000,
+      "Toyota Innova WC": 4200,
+      "Kia Carens WC": 4200,
+      "Toyota Innova Crysta WC": 6200
     }
   },
 
@@ -307,11 +307,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 3600
     },
     roundTripFare: {
-      "Sedan": 6000,
-      "Maruti Ertiga WC": 7700,
-      "Toyota Innova WC": 9200,
-      "Kia Carens WC": 9200,
-      "Toyota Innova Crysta WC": 11300
+      "Sedan": "NA",
+      "Maruti Ertiga WC": "NA",
+      "Toyota Innova WC": "NA",
+      "Kia Carens WC": "NA",
+      "Toyota Innova Crysta WC": "NA"
     }
   },
   {
@@ -330,11 +330,11 @@ const destinations = [
       "Toyota Innova Crysta WC": 3600
     },
     roundTripFare: {
-      "Sedan": 6000,
-      "Maruti Ertiga WC": 7700,
-      "Toyota Innova WC": 9200,
-      "Kia Carens WC": 9200,
-      "Toyota Innova Crysta WC": 11300
+      "Sedan": "NA",
+      "Maruti Ertiga WC": "NA",
+      "Toyota Innova WC": "NA",
+      "Kia Carens WC": "NA",
+      "Toyota Innova Crysta WC": "NA"
     }
   },
   //Patiala to Manali
@@ -355,11 +355,11 @@ const destinations = [
     "Toyota Innova Crysta WC": 9200
   },
   roundTripFare: {
-    "Sedan": 10200,
-    "Maruti Ertiga WC": 13000,
-    "Toyota Innova WC": 14800,
-    "Kia Carens WC": 14800,
-    "Toyota Innova Crysta WC": 17500
+    "Sedan": "NA",
+    "Maruti Ertiga WC": "NA",
+    "Toyota Innova WC": "NA",
+    "Kia Carens WC": "NA",
+    "Toyota Innova Crysta WC": "NA"
   }
 },
 {
@@ -379,11 +379,11 @@ const destinations = [
     "Toyota Innova Crysta WC": 9200
   },
   roundTripFare: {
-    "Sedan": 10200,
-    "Maruti Ertiga WC": 13000,
-    "Toyota Innova WC": 14800,
-    "Kia Carens WC": 14800,
-    "Toyota Innova Crysta WC": 17500
+    "Sedan": "NA",
+    "Maruti Ertiga WC": "NA",
+    "Toyota Innova WC": "NA",
+    "Kia Carens WC": "NA",
+    "Toyota Innova Crysta WC": "NA"
   }
 }
 

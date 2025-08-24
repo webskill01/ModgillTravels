@@ -85,7 +85,7 @@ export default function BookingForm() {
   });
 
   const watchedValues = watch(["tripType", "vehicle", "days", "time"]);
-  const [tripType, vehicle, days, time] = watchedValues;
+  const [tripType, vehicle, days,] = watchedValues;
 
   const getFare = () => {
     if (!vehicle || !route) return 0;
@@ -110,7 +110,7 @@ export default function BookingForm() {
 
   const sendEmailNotification = async (data) => {
     try {
-    // ✅ Super simple approach - just combine as strings
+    // Super simple approach - just combine as strings
     const formatDateTime = (date, time) => {
       if (!date || !time) return 'Date/Time not provided';
       return `${String(date)} at ${String(time)}`;

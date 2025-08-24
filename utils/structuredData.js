@@ -49,21 +49,35 @@ export const getLocalBusinessSchema = () => ({
 });
 
 export const getServiceSchema = (route) => ({
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Taxi Service",
-  "provider": {
-    "@type": "Organization",
-    "name": "ModgillTravels"
-  },
-  "areaServed": `${route.from} to ${route.to}`,
-  "description": `Reliable taxi service from ${route.from} to ${route.to}. Distance: ${route.distanceKm}km, Duration: ${route.duration}`,
-  "offers": {
-    "@type": "Offer",
-    "price": route.displayFare,
-    "priceCurrency": "INR",
-    "availability": "https://schema.org/InStock"
-  }
+  '@context': 'https://schema.org',
+    '@type': 'TaxiService',
+    name: `${route.from} to ${route.to} Taxi Service`,
+    description: `Professional taxi service from ${route.from} to ${route.to}. Distance: ${route.distanceKm}km, Duration: ${route.duration}`,
+    provider: {
+      '@type': 'Organization',
+      name: 'ModgillTravels',
+      telephone: '+91-62849-92669',
+      url: 'https://modgilltravels.in'
+    },
+    areaServed: [route.from, route.to],
+    offers: {
+      '@type': 'Offer',
+      price: route.fare.Sedan,
+      priceCurrency: 'INR',
+      description: `Starting fare for ${route.from} to ${route.to} taxi service`
+    },
+    additionalProperty: [
+      {
+        '@type': 'PropertyValue',
+        name: 'Distance',
+        value: `${route.distanceKm} km`
+      },
+      {
+        '@type': 'PropertyValue', 
+        name: 'Duration',
+        value: route.duration
+      }
+    ]
 });
 
 export const getBreadcrumbSchema = (items) => ({

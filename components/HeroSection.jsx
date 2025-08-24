@@ -54,11 +54,15 @@ export default function HeroSection() {
     console.log("Form submitted with data:", data); // Debug log
 
     // First try to find exact route match
+    // const route = destinations.find(
+    //   (r) =>
+    //     (r.from === data.from && r.to === data.to) ||
+    //     (r.from === data.to && r.to === data.from)
+    // );
+
     const route = destinations.find(
-      (r) =>
-        (r.from === data.from && r.to === data.to) ||
-        (r.from === data.to && r.to === data.from)
-    );
+    (r) => r.from === data.from && r.to === data.to
+  );
 
     console.log("Found route:", route); // Debug log
 

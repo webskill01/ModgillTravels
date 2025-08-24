@@ -1,0 +1,5 @@
+Contact: mailto:modgilltravels@gmail.com
+Contact: tel:+91-62849-92669
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en, hi
+Canonical: https://modgilltravels.in/.well-known/security.txt
