@@ -41,3 +41,5 @@ export default function sitemap() {
 
   return [...staticPages, ...routePages];
 }
+
+export const contentType = 'application/xml';
