@@ -58,7 +58,7 @@ export const metadata = {
     description: 'Professional taxi service in Patiala offering reliable transportation to Delhi, Shimla, Manali and more. Book your cab online now!',
     images: [
       {
-        url: '/og-image.jpg', // You'll need to create this image
+        url: '/og-image.jpg', 
         width: 1200,
         height: 630,
         alt: 'ModgillTravels Taxi Service in Patiala',
@@ -70,9 +70,6 @@ export const metadata = {
     title: 'ModgillTravels - Best Taxi Service in Patiala',
     description: 'Professional taxi service in Patiala offering reliable transportation.',
     images: ['/og-image.jpg'],
-  },
-  verification: {
-    google: 'YOUR_GOOGLE_VERIFICATION_CODE', // We'll update this after GSC setup
   },
   alternates: {
     canonical: 'https://modgilltravels.in',
@@ -156,6 +153,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="dark">
       <head>
         <link rel="canonical" href="https://modgilltravels.in" />
+        <link rel="manifest" href="/manifest.json" />
         <meta name="geo.region" content="IN-PB" />
         <meta name="geo.placename" content="Patiala, Punjab" />
         <meta name="geo.position" content="30.3398;76.3869" />
