@@ -3,10 +3,10 @@ export const getOrganizationSchema = () => ({
   "@type": "Organization",
   "name": "ModgillTravels",
   "url": "https://modgilltravels.in",
-  "logo": "https://modgilltravels.com/logo.png",
+  "logo": "https://modgilltravels.in/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+91-98765-43210",
+    "telephone": "+91-62849-92669",
     "contactType": "customer service",
     "availableLanguage": ["English", "Hindi", "Punjabi"]
   },
@@ -27,7 +27,7 @@ export const getLocalBusinessSchema = () => ({
   "name": "ModgillTravels",
   "description": "Professional taxi and cab booking service in Punjab, Haryana, Himachal Pradesh, and Delhi NCR",
   "url": "https://modgilltravels.in",
-  "telephone": "+91-98765-43210",
+  "telephone": "+91-62849-92669",
   "priceRange": "₹₹",
   "address": {
     "@type": "PostalAddress",

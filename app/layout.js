@@ -13,8 +13,7 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL("https://modgilltravels.in"),
   title: {
-    default:
-      "ModgillTravels - Best Taxi Service in Patiala | Online Cab Booking",
+    default: "ModgillTravels",
     template: "%s | ModgillTravels",
   },
   description:
@@ -174,6 +173,14 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify(businessStructuredData),
           }}
         />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "ModgillTravels",
+            url: "https://modgilltravels.in",
+          })}
+        </script>
       </head>
       <body className={inter.className}>
         <ScrollToTop />
