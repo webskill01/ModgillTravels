@@ -25,7 +25,7 @@ export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "TaxiService",
   "name": "ModgillTravels",
-  "description": "Professional taxi and cab booking service in Punjab, Haryana, Himachal Pradesh, and Delhi NCR",
+  "description": "Professional taxi and cab booking service in Patiala, Punjab, Haryana, Himachal Pradesh, and Delhi NCR",
   "url": "https://modgilltravels.in",
   "telephone": "+91-62849-92669",
   "priceRange": "₹₹",
