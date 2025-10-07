@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PhoneIcon from "@mui/icons-material/Phone";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { InfoOutline, PersonOutline } from "@mui/icons-material";
+import { Article, InfoOutline, PersonOutline, RemoveCircle, RemoveRedEye } from "@mui/icons-material";
 
 export default function Header() {
   return (
@@ -43,6 +43,20 @@ export default function Header() {
             {/* Desktop Navigation - Only show on large screens */}
             <nav className="hidden lg:flex items-center space-x-1">
               <Link
+                href="/blog"
+                className="flex items-center space-x-2 px-4 py-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 font-medium transition-all duration-200"
+              >
+                <Article className="w-4 h-4" />
+                <span>Blogs</span>
+              </Link>
+              <Link
+                href="/sitemap-html"
+                className="flex items-center space-x-2 px-4 py-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 font-medium transition-all duration-200"
+              >
+                <RemoveRedEye className="w-4 h-4" />
+                <span>Overview</span>
+              </Link>
+              <Link
                 href="/contact"
                 className="flex items-center space-x-2 px-4 py-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 font-medium transition-all duration-200"
               >
@@ -56,6 +70,8 @@ export default function Header() {
                 <InfoOutline className="w-4 h-4" />
                 <span>About</span>
               </Link>
+              
+
               {/* Desktop CTA Buttons */}
               <div className="flex items-center space-x-3 ml-6">
                 <a

@@ -15,7 +15,7 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL("https://modgilltravels.in"),
   title: {
-    default: "Taxi Service Near Me in Patiala | Cab Service Patiala - ModgillTravels",
+    default: "ModgillTravels - Taxi Service Patiala | Book Cab Now",
     template: "%s | ModgillTravels - Best Taxi Service in Patiala",
   },
   description:
@@ -73,7 +73,7 @@ export const metadata = {
     locale: "en_IN",
     url: "https://modgilltravels.in",
     siteName: "ModgillTravels",
-    title: "Taxi Service Near Me in Patiala | Best Cab Service - ModgillTravels",
+    title: "ModgillTravels - Taxi Service Patiala | Book Cab Now",
     description:
       "Book reliable taxi service near me in Patiala. One way cab service, professional drivers, 24/7 availability. Best taxi agents near me with transparent pricing for local & outstation travel.",
     images: [
@@ -87,7 +87,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Taxi Service Near Me in Patiala | Cab Service Patiala - ModgillTravels",
+    title: "ModgillTravels - Taxi Service Patiala | Book Cab Now",
     description:
       "Book reliable taxi service near me in Patiala. One way cab service, professional drivers, 24/7 availability.",
     images: ["/og-image.jpg"],
@@ -270,7 +270,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="canonical" href="https://modgilltravels.in" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -308,6 +307,21 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify(websiteStructuredData),
           }}
         />
+<script dangerouslySetInnerHTML={{
+  __html: `
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  `
+}} />
+
       </head>
       <body className={inter.className}>
         <ScrollToTop />

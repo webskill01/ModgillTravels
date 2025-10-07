@@ -202,8 +202,7 @@ const popularRoutes = [
                   <EmailIcon className="w-4 h-4 text-blue-400" />
                 </div>
                 <div className="min-w-0 overflow-hidden">
-                  <p className="text-xs text-gray-400">Email</p>
-                  <p className="text-xs font-medium truncate">modgilltravels@gmail.com</p>
+                  <p className="text-xs text-gray-400">Contact via Email</p>
                 </div>
               </a>
 

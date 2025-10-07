@@ -1,4 +1,4 @@
-// components/WhyChooseUs.jsx
+// components/WhyChooseUs.jsx - OPTIMIZED
 import VerifiedIcon from '@mui/icons-material/Verified';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PaymentIcon from '@mui/icons-material/Payment';
@@ -9,42 +9,42 @@ export default function WhyChooseUs() {
     {
       icon: <VerifiedIcon className="w-6 h-6 sm:w-7 sm:h-7" />,
       title: 'Verified Drivers',
-      description: 'Background checked & licensed',
+      description: 'Background checked & licensed professionals',
       color: 'green'
     },
     {
       icon: <AccessTimeIcon className="w-6 h-6 sm:w-7 sm:h-7" />,
       title: '24/7 Service',
-      description: 'Available anytime, anywhere',
+      description: 'Available anytime for your convenience',
       color: 'blue'
     },
     {
       icon: <PaymentIcon className="w-6 h-6 sm:w-7 sm:h-7" />,
       title: 'Fair Pricing',
-      description: 'No hidden charges',
+      description: 'Transparent fares, no hidden charges',
       color: 'purple'
     },
     {
       icon: <SupportAgentIcon className="w-6 h-6 sm:w-7 sm:h-7" />,
       title: 'Quick Support',
-      description: 'Instant booking & help',
+      description: 'Instant booking confirmation & help',
       color: 'cyan'
     },
   ];
 
   return (
-    <section className="max-w-5xl mx-auto px-4">
-      {/* Header - Compact */}
+    <section className="max-w-6xl mx-auto px-4">
+      {/* Header */}
       <div className="text-center mb-6">
-        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-          Why Choose Us?
+        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+          Why Choose ModgillTravels?
         </h2>
-        <p className="text-gray-400 text-sm sm:text-base">
-          Your trusted taxi partner in Patiala
+        <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
+          Trusted taxi service in Patiala with verified drivers and transparent pricing
         </p>
       </div>
 
-      {/* Features Grid - Compact */}
+      {/* Features Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
         {features.map((feature, index) => (
           <div

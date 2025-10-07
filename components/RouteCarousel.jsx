@@ -5,15 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
-import destinations from '@/data/destinations';
 
-// Helper function to get fare from destinations data
-const getFareFromDestinations = (slug) => {
-  const route = destinations.find(d => d.slug === slug);
-  return route?.fare?.['Sedan'] || 0;
-};
 
-// Enhanced routes with SEO-friendly titles
 const routes = [
   {
     id: 1,
@@ -21,9 +14,9 @@ const routes = [
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"],
-    price: `INR ${getFareFromDestinations("delhi-to-patiala").toLocaleString()}/-`,
+    price: `INR 3,400`,
     image: "/img1.jpg",
-    slug: "delhi-to-patiala"
+    slug: "Delhi-to-Patiala"
   },
   {
     id: 2,
@@ -31,9 +24,9 @@ const routes = [
     carInfo: "Swift Dzire / Toyota Etios / Similar", 
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"],
-    price: `INR ${getFareFromDestinations("patiala-to-manali").toLocaleString()}/-`,
+    price: `INR 5,400`,
     image: "/img2.png",
-    slug: "patiala-to-manali"
+    slug: "Patiala-to-Manali"
   },
   {
     id: 3,
@@ -41,9 +34,9 @@ const routes = [
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats", 
     features: ["Air Conditioning", "GPS Tracking"],
-    price: `INR ${getFareFromDestinations("shimla-to-patiala").toLocaleString()}/-`,
+    price: `INR 2,600`,
     image: "/img3.png",
-    slug: "shimla-to-patiala"
+    slug: "Shimla-to-Patiala"
   },
   {
     id: 4,
@@ -51,9 +44,9 @@ const routes = [
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"], 
-    price: `INR ${getFareFromDestinations("patiala-to-chandigarh").toLocaleString()}/-`,
+    price: `INR 1,400`,
     image: "/img4.png",
-    slug: "patiala-to-chandigarh"
+    slug: "Patiala-to-Chandigarh"
   }
 ];
 

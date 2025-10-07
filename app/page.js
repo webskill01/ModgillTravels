@@ -7,10 +7,11 @@ import CitiesSection from "../components/CitiesSection";
 import BlogSection from "../components/BlogSection";
 import SEO from '@/components/SEO';
 import { getOrganizationSchema, getLocalBusinessSchema, getFAQSchema, getWebsiteSchema } from '@/utils/structuredData';
+import ServiceInfo from "@/components/ServiceInfo";
 
 export const metadata = {
-  title: "Taxi Service Near Me in Patiala | Best Cab Service Patiala - ModgillTravels",
-  description: "Looking for taxi service near me in Patiala? Book reliable cab service in Patiala with ModgillTravels. One way cab service, taxi agents near me, 24/7 availability. Professional drivers, transparent pricing. Call +91-62849-92669 now!",
+  title: "ModgillTravels - Taxi Service Patiala | Book Cab Now",
+  description: "Book taxi in Patiala - one way & round trip. Professional drivers, AC vehicles, 24/7 available. Call +91-62849-92669. Transparent pricing, instant booking!",
   keywords: [
     "taxi service near me",
     "taxi agents near me", 
@@ -24,8 +25,8 @@ export const metadata = {
     "best taxi service patiala",
   ],
   openGraph: {
-    title: "Taxi Service Near Me in Patiala | Cab Service Patiala - ModgillTravels",
-    description: "Book reliable taxi service near me in Patiala. Professional cab service, one way taxi, 24/7 availability. Best taxi agents near me with transparent pricing.",
+    title: "ModgillTravels - Taxi Service Patiala | Book Cab Now",
+    description: "Book taxi in Patiala - one way & round trip. Professional drivers, AC vehicles, 24/7 available. Call +91-62849-92669. Transparent pricing, instant booking!",
     type: "website",
     url: "https://modgilltravels.in",
     siteName: "ModgillTravels",
@@ -64,8 +65,8 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="Taxi Service Near Me in Patiala | Best Cab Service Patiala - ModgillTravels"
-        description="Looking for taxi service near me in Patiala? Book reliable cab service with ModgillTravels. One way cab service in Patiala, professional drivers, 24/7 availability."
+        title="ModgillTravels - Taxi Service Patiala | Book Cab Now"
+        description="Book taxi in Patiala - one way & round trip. Professional drivers, AC vehicles, 24/7 available. Call +91-62849-92669. Transparent pricing, instant booking!"
         keywords="taxi service near me, cab service patiala, one way cab service in patiala, taxi agents near me"
         url="/"
         jsonLd={[organizationSchema, localBusinessSchema, faqSchema, websiteSchema]}
@@ -87,6 +88,9 @@ export default function HomePage() {
         {/* Why Choose Us */}
         <section className="max-w-6xl mx-auto px-4">
           <WhyChooseUs />
+        </section>
+        <section className="max-w-6xl mx-auto px-4 space-y-12 py-8">
+          <ServiceInfo />
         </section>
         {/* Cities & Blog Combined - Desktop 2 Columns, Mobile Stacked */}
          <section className="max-w-6xl mx-auto px-4 py-6 sm:py-8">
