@@ -25,22 +25,22 @@ const nextConfig = {
     optimizePackageImports: ['@mui/icons-material', '@mui/material'],
   },
 
-  async redirects() {
-    return [
-      // Force www to non-www (or vice versa) - IMPORTANT for SEO
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.modgilltravels.in',
-          },
-        ],
-        destination: 'https://modgilltravels.in/:path*',
-        permanent: true,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     // Force www to non-www (or vice versa) - IMPORTANT for SEO
+  //     {
+  //       source: '/:path*',
+  //       has: [
+  //         {
+  //           type: 'host',
+  //           value: 'www.modgilltravels.in',
+  //         },
+  //       ],
+  //       destination: 'https://modgilltravels.in/:path*',
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 
   async headers() {
     return [
