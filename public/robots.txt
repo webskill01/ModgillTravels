@@ -1,9 +1,19 @@
-User-agent: *
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /_next/static/
-Disallow: /private/
-Disallow: /temp/
-
-Sitemap: https://modgilltravels.in/sitemap.xml
+// app/robots.js - UPDATED
+export default function robots() {
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/_next/'],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: ['/api/', '/admin/'],
+      },
+    ],
+    sitemap: 'https://modgilltravels.in/sitemap.xml',
+    host: 'https://modgilltravels.in',
+  };
+}

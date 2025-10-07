@@ -1,54 +1,42 @@
-import Head from 'next/head';
+// components/SEO.jsx
+'use client';
 
-export default function SEO({
-  title,
-  description,
-  keywords,
-  image = '/og-image.jpg',
-  url,
-  type = 'website',
-  jsonLd
-}) {
-  const siteUrl = 'https://modgilltravels.in'; // Replace with your domain
-  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
+import { useEffect } from 'react';
 
-  return (
-    <Head>
-      {/* Basic Meta Tags */}
-      <title>{title} | ModgillTravels</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="ModgillTravels" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="canonical" href={fullUrl} />
+/**
+ * SEO Component for Dynamic Structured Data
+ * Use this alongside Next.js metadata API for additional schemas
+ */
+export default function SEO({ jsonLd }) {
+  useEffect(() => {
+    if (!jsonLd) return;
 
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={`${title} | ModgillTravels`} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={`${siteUrl}${image}`} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="ModgillTravels" />
-      <meta property="og:locale" content="en_IN" />
+    // Create structured data script
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'dynamic-jsonld';
+    
+    // Support both single schema and array of schemas
+    const schemaData = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+    script.text = JSON.stringify(schemaData);
+    
+    // Remove existing script if present
+    const existingScript = document.getElementById('dynamic-jsonld');
+    if (existingScript) {
+      existingScript.remove();
+    }
+    
+    // Append to head
+    document.head.appendChild(script);
 
-      {/* Twitter Card Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={`${title} | ModgillTravels`} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${siteUrl}${image}`} />
+    // Cleanup on unmount
+    return () => {
+      const scriptToRemove = document.getElementById('dynamic-jsonld');
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
+    };
+  }, [jsonLd]);
 
-      {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="theme-color" content="#0891b2" />
-
-      {/* Structured Data */}
-      {jsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      )}
-    </Head>
-  );
+  return null; // This component doesn't render anything
 }

@@ -1,22 +1,15 @@
+// components/ScrollToTop.jsx
 'use client';
+
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
-export default function SmoothScrollFromBottomToTop() {
+export default function ScrollToTop() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Start from bottom instantly
-    window.scrollTo(0, document.body.scrollHeight);
-
-    // Then smoothly scroll to top
-    setTimeout(() => {
-      window.scrollTo({ 
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth' 
-      });
-    }, 100); // Small delay to ensure bottom scroll happened
+    // Scroll to top instantly when route changes
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   return null;

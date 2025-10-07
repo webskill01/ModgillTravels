@@ -668,7 +668,7 @@ export default function BookingForm() {
 
         <p className="text-center text-xs text-gray-500 pt-6 sm:pt-4">
           By clicking "Book Now", you agree to our terms and conditions. A
-          booking request will be to our team.
+          booking request will be sent to our team.
         </p>
       </form>
     </div>

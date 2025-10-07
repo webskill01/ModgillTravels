@@ -12,11 +12,12 @@ const getFareFromDestinations = (slug) => {
   const route = destinations.find(d => d.slug === slug);
   return route?.fare?.['Sedan'] || 0;
 };
-// Updated routes with dynamic fare calculation
+
+// Enhanced routes with SEO-friendly titles
 const routes = [
-   {
+  {
     id: 1,
-    title: "Delhi To Patiala",
+    title: "Delhi to Patiala Taxi",
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"],
@@ -26,7 +27,7 @@ const routes = [
   },
   {
     id: 2,
-    title: "Patiala To Manali",
+    title: "Patiala to Manali Cab",
     carInfo: "Swift Dzire / Toyota Etios / Similar", 
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"],
@@ -36,7 +37,7 @@ const routes = [
   },
   {
     id: 3,
-    title: "Shimla To Patiala",
+    title: "Shimla to Patiala Taxi",
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats", 
     features: ["Air Conditioning", "GPS Tracking"],
@@ -46,7 +47,7 @@ const routes = [
   },
   {
     id: 4,
-    title: "Patiala To Chandigarh",
+    title: "Patiala to Chandigarh Cab",
     carInfo: "Swift Dzire / Toyota Etios / Similar",
     seats: "4 Passenger Seats",
     features: ["Air Conditioning", "GPS Tracking"], 
@@ -55,7 +56,6 @@ const routes = [
     slug: "patiala-to-chandigarh"
   }
 ];
-
 
 export default function RouteCarousel() {
   const carouselRef = useRef(null);
@@ -83,10 +83,10 @@ export default function RouteCarousel() {
     <section className="py-6 md:py-12 px-4 md:px-6 relative">
       <div className="text-center mb-5 md:mb-8">
         <h2 className="text-base md:text-xl font-semibold text-white mb-2 md:mb-3">
-          A Cab For Every Occasion
+          Popular Taxi Routes from Patiala
         </h2>
         <p className="text-gray-400 text-xs md:text-base max-w-xl mx-auto">
-          ModgillTravels offers one way cab at very reasonable prices
+          One way cab service at affordable prices 
         </p>
       </div>
 
@@ -107,17 +107,16 @@ export default function RouteCarousel() {
             <div className="relative h-40 md:h-48 flex-shrink-0">
               <Image
                 src={route.image}
-                alt={route.title}
+                alt={`${route.title} - ModgillTravels Cab Booking`}
                 fill
-                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 320px"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 320px"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             </div>
 
-            {/* Content - Positioned at bottom with flex-grow */}
+            {/* Content */}
             <div className="p-3 md:p-4 flex flex-col flex-grow mb-4">
-              {/* Top content - grows to push bottom content down */}
               <div className="flex-grow">
                 <h3 className="text-sm md:text-lg font-semibold text-white mb-2">
                   {route.title}
@@ -130,10 +129,9 @@ export default function RouteCarousel() {
                 </div>
               </div>
 
-              {/* Bottom content - stays at bottom */}
               <div className="mt-auto">
-                {/* Features - Inline grid */}
-                <div className="grid grid-cols-2  gap-1 mb-4">
+                {/* Features */}
+                <div className="grid grid-cols-2 gap-1 mb-4">
                   <div className="flex items-center justify-center gap-1 bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full text-[10px] font-medium">
                     <AcUnitIcon className="w-3 h-3" />
                     AC
@@ -144,7 +142,7 @@ export default function RouteCarousel() {
                   </div>
                 </div>
 
-                {/* Price and Book Button */}
+                {/* Price and Button */}
                 <div className="grid grid-cols-2 justify-items-center items-center gap-2">
                   <div className="text-base md:text-lg font-bold text-cyan-400">
                     {route.price}
@@ -164,12 +162,12 @@ export default function RouteCarousel() {
 
       {/* Mobile scroll indicator */}
       <div className="block text-center mt-3">
-        <span className="text-gray-400 text-xs ">
+        <span className="text-gray-400 text-xs">
           ← Scroll to see more routes →
         </span>
       </div>
 
-      {/* Custom CSS for hiding scrollbar */}
+      {/* Custom CSS */}
       <style jsx>{`
         .scrollbar-hide {
           -ms-overflow-style: none;
