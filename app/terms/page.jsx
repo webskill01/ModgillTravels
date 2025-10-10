@@ -17,7 +17,7 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://modgilltravels.in/terms',
+    canonical: 'https://www.modgilltravels.in/terms',
   },
 };
 

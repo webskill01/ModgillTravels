@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
     description: city.metaDescription,
     keywords: city.keywords,
     alternates: {
-      canonical: `https://modgilltravels.in/city/${city.slug}`,
+      canonical: `https://www.modgilltravels.in/city/${city.slug}`,
     },
     openGraph: {
       title: city.metaTitle,
@@ -98,7 +98,7 @@ const cityRoutes = getCityRoutes(city.name);
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <a
               href="tel:+916284992669"
-              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg shadow-green-500/25"
+              className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg shadow-green-500/25"
             >
               <PhoneIcon className="w-5 h-5" />
               <span>Call +91-62849-92669</span>
@@ -107,7 +107,7 @@ const cityRoutes = getCityRoutes(city.name);
               href={`https://wa.me/916284992669?text=Hi, I want to book a taxi in ${city.name}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/25"
+              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-500 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/25"
             >
               <WhatsAppIcon className="w-5 h-5" />
               <span>WhatsApp Booking</span>
@@ -215,7 +215,7 @@ const cityRoutes = getCityRoutes(city.name);
       {cityRoutes.map((route) => (
         <Link
           key={route.id}
-          href={`/route/${route.slug}`}
+          href={`/routes/${route.slug}`}
           className="group bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5 hover:border-cyan-500/40 transition-all hover:scale-105"
         >
           <div className="flex items-center justify-between mb-3">
@@ -366,7 +366,7 @@ const cityRoutes = getCityRoutes(city.name);
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+916284992669"
-              className="bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-500 hover:to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2"
             >
               <Phone />
               Call Now

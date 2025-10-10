@@ -6,7 +6,6 @@ import cities from '@/data/cities';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PersonIcon from '@mui/icons-material/Person';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { getBlogSchema } from '@/utils/blogSchema';
@@ -35,7 +34,7 @@ export async function generateMetadata({ params }) {
     description: blog.metaDescription,
     keywords: blog.keywords,
     alternates: {
-      canonical: `https://modgilltravels.in/blog/${blog.slug}`,
+      canonical: `https://www.modgilltravels.in/blog/${blog.slug}`,
     },
     openGraph: {
       title: blog.metaTitle,

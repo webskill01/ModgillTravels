@@ -8,7 +8,6 @@ import BookOnlineIcon from '@mui/icons-material/BookOnline';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import GavelIcon from '@mui/icons-material/Gavel';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import BackToTopButton from '@/components/BackToTopButton';
 
 export const metadata = {
   title: 'Complete Sitemap - All Taxi Routes & Pages | ModgillTravels',
@@ -19,7 +18,7 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://modgilltravels.in/sitemap-html',
+    canonical: 'https://www.modgilltravels.in/sitemap-html',
   }
 };
 
@@ -207,23 +206,20 @@ export default function HTMLSitemapPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/booking"
-              className="inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 hover:scale-105"
             >
               <BookOnlineIcon />
               Book Now
             </Link>
             <a
               href="tel:+916284992669"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 backdrop-blur-sm border border-white/20 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200 hover:scale-105"
             >
               <ContactMailIcon />
               Call: +91-62849-92669
             </a>
           </div>
         </section>
-
-        {/* Back to Top - Client Component */}
-        <BackToTopButton />
       </div>
     </div>
   );

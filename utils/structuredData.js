@@ -72,6 +72,7 @@ export const getOrganizationSchema = () => ({
 export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": ["TaxiService", "LocalBusiness"],
+  "@id": "https://modgilltravels.in/#organization", // Added ID for reference
   "name": "ModgillTravels - Best Taxi Service Near Me in Patiala",
   "alternateName": "Modgill Travels Cab Service",
   "description": "Looking for taxi service near me in Patiala? ModgillTravels offers reliable cab service with professional drivers. One way taxi, round trip, airport transfers available 24/7. Best taxi agents in Patiala for local and outstation travel.",
@@ -238,10 +239,15 @@ export const getLocalBusinessSchema = () => ({
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": "5",
-        "bestRating": "5"
+        "bestRating": "5",
+        "worstRating": "1"
       },
       "reviewBody": "Excellent taxi service in Patiala. Professional driver, clean car, reached Delhi on time. Best cab service for outstation trips.",
-      "datePublished": "2024-12-15"
+      "datePublished": "2024-12-15",
+      "itemReviewed": {
+        "@type": "LocalBusiness",
+        "@id": "https://modgilltravels.in/#organization"
+      }
     },
     {
       "@type": "Review",
@@ -252,10 +258,15 @@ export const getLocalBusinessSchema = () => ({
       "reviewRating": {
         "@type": "Rating",
         "ratingValue": "5",
-        "bestRating": "5"
+        "bestRating": "5",
+        "worstRating": "1"
       },
       "reviewBody": "Reliable taxi agents. Booked one way cab to Shimla, transparent pricing, no hidden charges. Highly recommend ModgillTravels.",
-      "datePublished": "2024-11-28"
+      "datePublished": "2024-11-28",
+      "itemReviewed": {
+        "@type": "LocalBusiness",
+        "@id": "https://modgilltravels.in/#organization"
+      }
     }
   ],
   "sameAs": [

@@ -6,10 +6,10 @@ const cities = [
     state: 'Punjab',
     description: 'Book reliable taxi service in Patiala with ModgillTravels. Professional drivers, 24/7 availability, transparent pricing for local and outstation trips.',
     popularRoutes: [
-  { from: 'Patiala', to: 'Delhi', distance: '250 km', duration: '4-5 hours', fare: '3400', slug: 'Patiala-to-Delhi' },
-  { from: 'Patiala', to: 'Chandigarh', distance: '65 km', duration: '1-1.5 hours', fare: '1200', slug: 'Patiala-to-Chandigarh' },
-  { from: 'Patiala', to: 'Shimla', distance: '180 km', duration: '4-5 hours', fare: '3000', slug: 'Patiala-to-Shimla' },
-  { from: 'Patiala', to: 'Ludhiana', distance: '110 km', duration: '2 hours', fare: '2000', slug: 'Patiala-to-Ludhiana' },
+  { from: 'patiala', to: 'delhi', distance: '250 km', duration: '4-5 hours', fare: '3400', slug: 'patiala-to-delhi' },
+  { from: 'patiala', to: 'chandigarh', distance: '65 km', duration: '1-1.5 hours', fare: '1400', slug: 'patiala-to-chandigarh' },
+  { from: 'patiala', to: 'shimla', distance: '180 km', duration: '4-5 hours', fare: '2600', slug: 'patiala-to-shimla' },
+  { from: 'patiala', to: 'ludhiana', distance: '110 km', duration: '2 hours', fare: '1500', slug: 'patiala-to-ludhiana' },
 ],
     localLandmarks: [
       'Qila Mubarak Complex',
@@ -40,10 +40,10 @@ const cities = [
     state: 'Chandigarh (UT)',
     description: 'Professional taxi service in Chandigarh for city tours, airport transfers, and outstation travel. ModgillTravels offers reliable cab service with experienced drivers.',
     popularRoutes: [
-      { from: 'Chandigarh', to: 'Shimla', distance: '115 km', duration: '3-4 hours', fare: '2500' },
-      { from: 'Chandigarh', to: 'Manali', distance: '310 km', duration: '7-8 hours', fare: '6000' },
-      { from: 'Chandigarh', to: 'Delhi', distance: '245 km', duration: '4-5 hours', fare: '3500' },
-      { from: 'Chandigarh', to: 'Amritsar', distance: '240 km', duration: '4 hours', fare: '3500' },
+      { from: 'chandigarh', to: 'shimla', distance: '115 km', duration: '3-4 hours', fare: '2500' },
+      { from: 'chandigarh', to: 'manali', distance: '310 km', duration: '7-8 hours', fare: '6000' },
+      { from: 'chandigarh', to: 'delhi', distance: '245 km', duration: '4-5 hours', fare: '3500' },
+      { from: 'chandigarh', to: 'amritsar', distance: '240 km', duration: '4 hours', fare: '3500' },
     ],
     localLandmarks: [
       'Rock Garden',
@@ -73,10 +73,10 @@ const cities = [
     state: 'Punjab',
     description: 'Affordable taxi service in Ludhiana for business trips, family travel, and city tours. ModgillTravels provides comfortable cabs with professional drivers.',
     popularRoutes: [
-      { from: 'Ludhiana', to: 'Delhi', distance: '320 km', duration: '5-6 hours', fare: '4500' },
-      { from: 'Ludhiana', to: 'Chandigarh', distance: '100 km', duration: '2 hours', fare: '1800' },
-      { from: 'Ludhiana', to: 'Amritsar', distance: '140 km', duration: '2.5 hours', fare: '2500' },
-      { from: 'Ludhiana', to: 'Patiala', distance: '110 km', duration: '2 hours', fare: '2000' },
+      { from: 'ludhiana', to: 'delhi', distance: '320 km', duration: '5-6 hours', fare: '4500' },
+      { from: 'ludhiana', to: 'chandigarh', distance: '100 km', duration: '2 hours', fare: '1800' },
+      { from: 'ludhiana', to: 'amritsar', distance: '140 km', duration: '2.5 hours', fare: '2500' },
+      { from: 'ludhiana', to: 'patiala', distance: '110 km', duration: '2 hours', fare: '2000' },
     ],
     localLandmarks: [
       'Punjab Agricultural University',
@@ -107,10 +107,10 @@ const cities = [
     state: 'Delhi (NCR)',
     description: 'Reliable taxi service from Delhi to Punjab, Himachal, and nearby destinations. ModgillTravels offers comfortable outstation cabs from Delhi.',
     popularRoutes: [
-      { from: 'Delhi', to: 'Patiala', distance: '250 km', duration: '4-5 hours', fare: '3500' },
-      { from: 'Delhi', to: 'Chandigarh', distance: '245 km', duration: '4-5 hours', fare: '3500' },
-      { from: 'Delhi', to: 'Shimla', distance: '350 km', duration: '7-8 hours', fare: '6000' },
-      { from: 'Delhi', to: 'Manali', distance: '540 km', duration: '12-14 hours', fare: '9000' },
+      { from: 'delhi', to: 'patiala', distance: '250 km', duration: '4-5 hours', fare: '3500' },
+      { from: 'delhi', to: 'chandigarh', distance: '245 km', duration: '4-5 hours', fare: '3500' },
+      { from: 'delhi', to: 'shimla', distance: '350 km', duration: '7-8 hours', fare: '6000' },
+      { from: 'delhi', to: 'manali', distance: '540 km', duration: '12-14 hours', fare: '9000' },
     ],
     localLandmarks: [
       'India Gate',
@@ -140,9 +140,9 @@ const cities = [
     state: 'Himachal Pradesh',
     description: 'Book taxi to Shimla from Punjab cities. ModgillTravels provides safe mountain travel with experienced hill drivers for Shimla trips.',
     popularRoutes: [
-      { from: 'Chandigarh', to: 'Shimla', distance: '115 km', duration: '3-4 hours', fare: '2500' },
-      { from: 'Delhi', to: 'Shimla', distance: '350 km', duration: '7-8 hours', fare: '6000' },
-      { from: 'Patiala', to: 'Shimla', distance: '180 km', duration: '4-5 hours', fare: '3000' },
+      { from: 'chandigarh', to: 'shimla', distance: '115 km', duration: '3-4 hours', fare: '2500' },
+      { from: 'delhi', to: 'shimla', distance: '350 km', duration: '7-8 hours', fare: '6000' },
+      { from: 'patiala', to: 'shimla', distance: '180 km', duration: '4-5 hours', fare: '3000' },
     ],
     localLandmarks: [
       'The Mall Road',
@@ -172,10 +172,10 @@ const cities = [
     state: 'Punjab',
     description: 'Book taxi service in Amritsar for Golden Temple visits, Wagah Border, and city tours. Reliable cab service with professional drivers.',
     popularRoutes: [
-      { from: 'Amritsar', to: 'Delhi', distance: '450 km', duration: '7-8 hours', fare: '6500' },
-      { from: 'Amritsar', to: 'Chandigarh', distance: '240 km', duration: '4 hours', fare: '3500' },
-      { from: 'Amritsar', to: 'Ludhiana', distance: '140 km', duration: '2.5 hours', fare: '2500' },
-      { from: 'Amritsar', to: 'Patiala', distance: '200 km', duration: '3.5 hours', fare: '3200' },
+      { from: 'amritsar', to: 'delhi', distance: '450 km', duration: '7-8 hours', fare: '6500' },
+      { from: 'amritsar', to: 'chandigarh', distance: '240 km', duration: '4 hours', fare: '3500' },
+      { from: 'amritsar', to: 'ludhiana', distance: '140 km', duration: '2.5 hours', fare: '2500' },
+      { from: 'amritsar', to: 'patiala', distance: '200 km', duration: '3.5 hours', fare: '3200' },
     ],
     localLandmarks: [
       'Golden Temple',
@@ -205,9 +205,9 @@ const cities = [
     state: 'Himachal Pradesh',
     description: 'Book taxi to Manali from Punjab and Delhi. ModgillTravels offers comfortable mountain travel with experienced hill drivers for Manali trips.',
     popularRoutes: [
-      { from: 'Chandigarh', to: 'Manali', distance: '310 km', duration: '7-8 hours', fare: '6000' },
-      { from: 'Delhi', to: 'Manali', distance: '540 km', duration: '12-14 hours', fare: '9000' },
-      { from: 'Patiala', to: 'Manali', distance: '350 km', duration: '8-9 hours', fare: '6500' },
+      { from: 'chandigarh', to: 'manali', distance: '310 km', duration: '7-8 hours', fare: '6000' },
+      { from: 'delhi', to: 'manali', distance: '540 km', duration: '12-14 hours', fare: '9000' },
+      { from: 'patiala', to: 'manali', distance: '350 km', duration: '8-9 hours', fare: '6500' },
     ],
     localLandmarks: [
       'Rohtang Pass',

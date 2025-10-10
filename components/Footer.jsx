@@ -14,10 +14,10 @@ export default function Footer() {
 
 
 const popularRoutes = [
-  { name: 'Patiala → Delhi', slug: 'Patiala-to-Delhi' },
-  { name: 'Delhi → Patiala', slug: 'Delhi-to-Patiala' },
-  { name: 'Patiala → Chandigarh', slug: 'Patiala-to-Chandigarh' },
-  { name: 'Patiala → Shimla', slug: 'Patiala-to-Shimla' },
+  { name: 'Patiala → Delhi', slug: 'patiala-to-delhi' },
+  { name: 'Delhi → Patiala', slug: 'delhi-to-patiala' },
+  { name: 'Patiala → Chandigarh', slug: 'patiala-to-chandigarh' },
+  { name: 'Patiala → Shimla', slug: 'patiala-to-shimla' },
 ];
 
 
@@ -84,7 +84,7 @@ const popularRoutes = [
               {popularRoutes.map((route) => (
                 <Link
                   key={route.slug}
-                  href={`/route/${route.slug}`}
+                  href={`/routes/${route.slug}`}
                   className="block text-gray-400 hover:text-cyan-400 text-xs transition-colors"
                 >
                   {route.name}

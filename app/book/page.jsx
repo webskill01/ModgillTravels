@@ -9,7 +9,7 @@ export const metadata = {
   keywords: "book taxi online, cab booking, instant taxi booking, ModgillTravels booking, Patiala taxi booking, one way cab, round trip taxi, online cab booking, taxi near me, book cab Patiala",
   
   alternates: {
-    canonical: 'https://modgilltravels.in/booking',
+    canonical: 'https://www.modgilltravels.in/booking',
   },
   
   openGraph: {

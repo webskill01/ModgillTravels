@@ -3,7 +3,6 @@ import { InstantBookingBar } from "@/components/BookingBar";
 import HeroSection from "../components/HeroSection";
 import RouteCarousel from "../components/RouteCarousel";
 import WhyChooseUs from "../components/WhyChooseUs";
-import CitiesSection from "../components/CitiesSection";
 import BlogSection from "../components/BlogSection";
 import SEO from '@/components/SEO';
 import { getOrganizationSchema, getLocalBusinessSchema, getFAQSchema, getWebsiteSchema } from '@/utils/structuredData';
@@ -41,7 +40,7 @@ export const metadata = {
     locale: "en_IN"
   },
   alternates: {
-    canonical: "https://modgilltravels.in"
+    canonical: "https://www.modgilltravels.in"
   },
   robots: {
     index: true,

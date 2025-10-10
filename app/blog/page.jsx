@@ -12,7 +12,7 @@ export const metadata = {
   description: 'Read travel guides, taxi booking tips, destination information, and travel stories from ModgillTravels. Expert advice for Patiala, Delhi, Shimla, Chandigarh trips.',
   keywords: ['travel blog', 'travel guide', 'taxi tips', 'shimla guide', 'patiala travel', 'cab booking guide'],
   alternates: {
-    canonical: 'https://modgilltravels.in/blog',
+    canonical: 'https://www.modgilltravels.in/blog',
   },
   robots: {
     index: true,

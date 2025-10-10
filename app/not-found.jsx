@@ -20,10 +20,10 @@ export default function NotFound() {
   ];
 
   const popularRoutes = [
-    { name: 'Patiala to Delhi', slug: 'Patiala-to-Delhi' },
-    { name: 'Patiala to Chandigarh', slug: 'Patiala-to-Chandigarh' },
-    { name: 'Patiala to Shimla', slug: 'Patiala-to-Shimla' },
-    { name: 'Delhi to Patiala', slug: 'Delhi-to-Patiala' },
+    { name: 'Patiala to Delhi', slug: 'patiala-to-delhi' },
+    { name: 'Patiala to Chandigarh', slug: 'patiala-to-chandigarh' },
+    { name: 'Patiala to Shimla', slug: 'patiala-to-shimla' },
+    { name: 'Delhi to Patiala', slug: 'delhi-to-patiala' },
   ];
 
   return (
@@ -100,7 +100,7 @@ export default function NotFound() {
             {popularRoutes.map((route) => (
               <Link
                 key={route.slug}
-                href={`/route/${route.slug}`}
+                href={`/routes/${route.slug}`}
                 className="group bg-slate-700/30 border border-gray-600/50 rounded-lg p-4 hover:bg-slate-700/50 hover:border-cyan-500/40 transition-all"
               >
                 <div className="flex items-center justify-between">

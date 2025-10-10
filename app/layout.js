@@ -93,7 +93,7 @@ export const metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://modgilltravels.in",
+    canonical: "https://www.modgilltravels.in",
   },
   category: "transportation",
   verification: {

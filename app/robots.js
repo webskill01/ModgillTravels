@@ -1,37 +1,30 @@
-// app/robots.js - Production Ready with All Pages
-
+// app/robots.js - FINAL OPTIMIZED VERSION
 export default function robots() {
   return {
     rules: [
-      // Default rule for all bots
       {
         userAgent: '*',
         allow: '/',
         disallow: [
           '/api/',
           '/admin/',
-          '/_next/',
+          '/_next/static/',
           '/private/',
-          '/*.json$',
         ],
       },
-      // Priority for major search engines
+      // Google-specific (no crawlDelay - they ignore it)
       {
-        userAgent: ['Googlebot', 'Googlebot-Image'],
+        userAgent: ['Googlebot', 'Googlebot-Image', 'Googlebot-News'],
         allow: '/',
         disallow: ['/api/', '/admin/'],
-        crawlDelay: 0, // No delay for Google
       },
+      // Bing (supports crawlDelay if needed)
       {
         userAgent: 'Bingbot',
         allow: '/',
         disallow: ['/api/', '/admin/'],
-      },
-      // Social media for link previews
-      {
-        userAgent: ['facebookexternalhit', 'Twitterbot', 'WhatsApp'],
-        allow: '/',
-        disallow: [],
+        // Add crawlDelay only if server can't handle load
+        // crawlDelay: 1,
       },
     ],
     sitemap: 'https://modgilltravels.in/sitemap.xml',

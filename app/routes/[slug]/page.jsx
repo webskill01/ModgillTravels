@@ -6,13 +6,9 @@ import RouteOverview from "@/components/RouteOverview";
 import VehicleOptions from "@/components/VehicleOptions";
 import QuickBookingSidebar from "@/components/QuickBookingSidebar";
 import RouteContent from "@/components/RouteContent";
-import PhoneIcon from '@mui/icons-material/Phone';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SEO from '@/components/SEO';
 import { getServiceSchema, getBreadcrumbSchema } from '@/utils/structuredData';
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   return destinations.map((destination) => ({
@@ -45,7 +41,7 @@ export async function generateMetadata({ params }) {
       `cab booking ${route.from} to ${route.to}`
     ],
     alternates: {
-      canonical: `https://modgilltravels.in/routes/${route.slug}`,
+      canonical: `https://www.modgilltravels.in/routes/${route.slug}`,
     },
     openGraph: {
       title: `${route.from} to ${route.to} Taxi Service - ModgillTravels`,
@@ -82,118 +78,9 @@ export default async function RouteDetailsPage({ params }) {
   const { slug } = await params;
   const route = destinations.find(r => r.slug === slug);
 
-  if (!route) {
-  return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="max-w-2xl w-full">
-        
-        {/* Main Card */}
-        <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-2xl p-8 sm:p-10 text-center">
-          
-          {/* Icon */}
-          <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full flex items-center justify-center mx-auto mb-6">
-            <DirectionsCarIcon className="w-10 h-10 text-cyan-400" />
-          </div>
-
-          {/* Heading */}
-          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Looking for a Cab for this Route?
-          </h1>
-          
-          {/* Description */}
-          <p className="text-gray-400 text-base sm:text-lg mb-8 leading-relaxed">
-            We'd love to help you book a taxi for your journey! This route isn't listed yet, 
-            but our team can arrange it for you. Call or WhatsApp us now for instant booking.
-          </p>
-
-          {/* Contact Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <a
-              href="tel:+916284992669"
-              className="flex-1 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500  text-white px-6 py-4 rounded-xl font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-3 shadow-lg shadow-green-500/25"
-            >
-              <PhoneIcon className="w-6 h-6" />
-              <div className="text-left">
-                <div className="text-xs opacity-90">Call Us Now</div>
-                <div className="text-base font-bold">+91-62849-92669</div>
-              </div>
-            </a>
-
-            <a
-              href="https://wa.me/916284992669?text=Hi, I want to book a taxi for a custom route"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600  text-white px-6 py-4 rounded-xl font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-3 shadow-lg shadow-cyan-500/25"
-            >
-              <WhatsAppIcon className="w-6 h-6" />
-              <div className="text-left">
-                <div className="text-xs opacity-90">WhatsApp</div>
-                <div className="text-base font-bold">Instant Reply</div>
-              </div>
-            </a>
-          </div>
-
-          {/* Features */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 pt-6 border-t border-gray-700">
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
-                <SupportAgentIcon className="w-6 h-6 text-green-400" />
-              </div>
-              <div className="text-white text-sm font-semibold">24/7 Support</div>
-              <div className="text-gray-500 text-xs">Always available</div>
-            </div>
-
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
-                <DirectionsCarIcon className="w-6 h-6 text-blue-400" />
-              </div>
-              <div className="text-white text-sm font-semibold">Any Route</div>
-              <div className="text-gray-500 text-xs">Custom bookings</div>
-            </div>
-
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
-                <PhoneIcon className="w-6 h-6 text-purple-400" />
-              </div>
-              <div className="text-white text-sm font-semibold">Instant Quote</div>
-              <div className="text-gray-500 text-xs">Fair pricing</div>
-            </div>
-          </div>
-
-          {/* Back Button */}
-          <Link 
-            href="/" 
-            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition font-semibold"
-          >
-            <ArrowBackIcon className="w-5 h-5" />
-            Back to Home
-          </Link>
-        </div>
-
-        {/* Popular Routes Suggestion */}
-        <div className="mt-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-gray-700/50 rounded-xl p-6">
-          <h3 className="text-white font-semibold mb-4 text-center">Popular Routes You Might Like:</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {[
-              { name: 'Patiala → Delhi', slug: 'patiala-to-delhi' },
-              { name: 'Patiala → Chandigarh', slug: 'patiala-to-chandigarh' },
-              { name: 'Patiala → Shimla', slug: 'patiala-to-shimla' },
-              { name: 'Delhi → Patiala', slug: 'delhi-to-patiala' }
-            ].map((route) => (
-              <Link
-                key={route.slug}
-                href={`/route/${route.slug}`}
-                className="bg-slate-700/50 hover:bg-slate-700 border border-gray-600 hover:border-cyan-500/40 rounded-lg p-3 text-center transition-all hover:scale-105"
-              >
-                <div className="text-white text-sm font-medium">{route.name}</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+ if (!route) {
+    notFound(); // This returns proper 404 status
+  }
   
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "/" },

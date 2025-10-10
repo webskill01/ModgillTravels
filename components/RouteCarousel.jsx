@@ -16,7 +16,7 @@ const routes = [
     features: ["Air Conditioning", "GPS Tracking"],
     price: `INR 3,400`,
     image: "/img1.jpg",
-    slug: "Delhi-to-Patiala"
+    slug: "delhi-to-patiala"
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const routes = [
     features: ["Air Conditioning", "GPS Tracking"],
     price: `INR 5,400`,
     image: "/img2.png",
-    slug: "Patiala-to-Manali"
+    slug: "patiala-to-manali"
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const routes = [
     features: ["Air Conditioning", "GPS Tracking"],
     price: `INR 2,600`,
     image: "/img3.png",
-    slug: "Shimla-to-Patiala"
+    slug: "shimla-to-patiala"
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const routes = [
     features: ["Air Conditioning", "GPS Tracking"], 
     price: `INR 1,400`,
     image: "/img4.png",
-    slug: "Patiala-to-Chandigarh"
+    slug: "patiala-to-chandigarh"
   }
 ];
 

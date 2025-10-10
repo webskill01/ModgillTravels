@@ -16,7 +16,7 @@ export const metadata = {
   description: 'Browse all taxi routes and cities served by ModgillTravels. Book cab service from Patiala to Delhi, Chandigarh, Shimla, Ludhiana. View fares and book instantly.',
   keywords: ['book taxi online', 'taxi booking', 'cab booking patiala', 'all routes', 'taxi fares'],
   alternates: {
-    canonical: 'https://modgilltravels.in/booking',
+    canonical: 'https://www.modgilltravels.in/booking',
   },
   openGraph: {
     title: 'Book Taxi - All Routes & Cities | ModgillTravels',
@@ -38,12 +38,12 @@ export default function BookingPage() {
 
   // Popular routes (first in each category)
   const popularRoutes = [
-    destinations.find(r => r.slug === 'Patiala-to-Delhi'),
-    destinations.find(r => r.slug === 'Delhi-to-Patiala'),
-    destinations.find(r => r.slug === 'Patiala-to-Chandigarh'),
-    destinations.find(r => r.slug === 'Patiala-to-Shimla'),
-    destinations.find(r => r.slug === 'Patiala-to-Manali'),
-    destinations.find(r => r.slug === 'Patiala-to-Amritsar'),
+    destinations.find(r => r.slug === 'patiala-to-delhi'),
+    destinations.find(r => r.slug === 'delhi-to-patiala'),
+    destinations.find(r => r.slug === 'patiala-to-chandigarh'),
+    destinations.find(r => r.slug === 'patiala-to-shimla'),
+    destinations.find(r => r.slug === 'patiala-to-manali'),
+    destinations.find(r => r.slug === 'patiala-to-amritsar'),
   ].filter(Boolean);
 
   return (
@@ -66,7 +66,7 @@ export default function BookingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+916284992669"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-green-500/25"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-green-500/25"
             >
               <PhoneIcon className="w-5 h-5" />
               <span>Call +91-62849-92669</span>
@@ -75,7 +75,7 @@ export default function BookingPage() {
               href="https://wa.me/916284992669?text=Hi, I want to book a taxi"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-cyan-500/25"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-cyan-500/25"
             >
               <WhatsAppIcon className="w-5 h-5" />
               <span>WhatsApp Booking</span>
@@ -98,7 +98,7 @@ export default function BookingPage() {
             {popularRoutes.map((route) => (
               <Link
                 key={route.id}
-                href={`/route/${route.slug}`}
+                href={`/routes/${route.slug}`}
                 className="group bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5 sm:p-6 hover:border-cyan-500/40 transition-all hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10"
               >
                 {/* Route Header */}
@@ -193,7 +193,7 @@ export default function BookingPage() {
                   {routes.map((route) => (
                     <Link
                       key={route.id}
-                      href={`/route/${route.slug}`}
+                      href={`/routes/${route.slug}`}
                       className="group bg-slate-700/30 border border-gray-600/50 rounded-lg p-4 hover:bg-slate-700/50 hover:border-cyan-500/40 transition-all"
                     >
                       <div className="flex items-center justify-between mb-3">
@@ -304,7 +304,7 @@ export default function BookingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+916284992669"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white rounded-lg font-semibold transition-all hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg font-semibold transition-all hover:scale-105"
             >
               <PhoneIcon className="w-5 h-5" />
               Call Now
@@ -313,7 +313,7 @@ export default function BookingPage() {
               href="https://wa.me/916284992669?text=Hi, I want to book a taxi"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg font-semibold transition-all hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white rounded-lg font-semibold transition-all hover:scale-105"
             >
               <WhatsAppIcon className="w-5 h-5" />
               WhatsApp Us

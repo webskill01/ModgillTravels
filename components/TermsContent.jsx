@@ -228,7 +228,7 @@ export default function TermsContent() {
         {/* Key Policies Highlight - Visual Cards */}
         <section className="mt-8 sm:mt-10">
           <h2 className="text-xl sm:text-2xl font-bold text-white mb-5 text-center">Key Policies</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-purple-500/30 rounded-xl p-4 sm:p-5 text-center hover:scale-105 transition-transform">
               <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
                 <CancelIcon className="w-6 h-6 text-purple-400" />
@@ -319,7 +319,7 @@ export default function TermsContent() {
         <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
           <Link
             href="/"
-            className="flex-1 bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-500 hover:to-cyan-600 text-white py-3 px-4 sm:px-6 rounded-lg font-semibold transition-all hover:scale-105 text-center text-sm sm:text-base shadow-lg shadow-cyan-500/25"
+            className="flex-1 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white py-3 px-4 sm:px-6 rounded-lg font-semibold transition-all hover:scale-105 text-center text-sm sm:text-base shadow-lg shadow-cyan-500/25"
           >
             Back to Home
           </Link>

@@ -24,7 +24,7 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://modgilltravels.in/about',
+    canonical: 'https://www.modgilltravels.in/about',
   },
 };
 

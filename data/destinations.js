@@ -4,7 +4,7 @@ const destinations = [
   // Patiala to Delhi
   {
     id: "Patiala-to-Delhi",
-    slug: "Patiala-to-Delhi",
+    slug: "patiala-to-delhi",
     from: "Patiala",
     to: "Delhi",
     distanceKm: 240,
@@ -28,7 +28,7 @@ const destinations = [
   },
   {
     id: "Delhi-to-Patiala",
-    slug: "Delhi-to-Patiala",
+    slug: "delhi-to-patiala",
     from: "Delhi",
     to: "Patiala",
     distanceKm: 240,
@@ -54,7 +54,7 @@ const destinations = [
   // Patiala to Chandigarh
   {
     id: "Patiala-to-Chandigarh",
-    slug: "Patiala-to-Chandigarh",
+    slug: "patiala-to-chandigarh",
     from: "Patiala",
     to: "Chandigarh",
     distanceKm: 67,
@@ -78,7 +78,7 @@ const destinations = [
   },
   {
     id: "Chandigarh-to-Patiala",
-    slug: "Chandigarh-to-Patiala",
+    slug: "chandigarh-to-patiala",
     from: "Chandigarh",
     to: "Patiala",
     distanceKm: 67,
@@ -104,7 +104,7 @@ const destinations = [
   // Patiala to Ludhiana
   {
     id: "Patiala-to-Ludhiana",
-    slug: "Patiala-to-Ludhiana",
+    slug: "patiala-to-ludhiana",
     from: "Patiala",
     to: "Ludhiana",
     distanceKm: 95,
@@ -128,7 +128,7 @@ const destinations = [
   },
   {
     id: "Ludhiana-to-Patiala",
-    slug: "Ludhiana-to-Patiala",
+    slug: "ludhiana-to-patiala",
     from: "Ludhiana",
     to: "Patiala",
     distanceKm: 95,
@@ -154,7 +154,7 @@ const destinations = [
   // Patiala to Jalandhar
   {
     id: "Patiala-to-Jalandhar",
-    slug: "Patiala-to-Jalandhar",
+    slug: "patiala-to-jalandhar",
     from: "Patiala",
     to: "Jalandhar",
     distanceKm: 100,
@@ -178,7 +178,7 @@ const destinations = [
   },
   {
     id: "Jalandhar-to-Patiala",
-    slug: "Jalandhar-to-Patiala",
+    slug: "jalandhar-to-patiala",
     from: "Jalandhar",
     to: "Patiala",
     distanceKm: 100,
@@ -204,7 +204,7 @@ const destinations = [
   // Patiala to Amritsar
   {
     id: "Patiala-to-Amritsar",
-    slug: "Patiala-to-Amritsar",
+    slug: "patiala-to-amritsar",
     from: "Patiala",
     to: "Amritsar",
     distanceKm: 165,
@@ -228,7 +228,7 @@ const destinations = [
   },
   {
     id: "Amritsar-to-Patiala",
-    slug: "Amritsar-to-Patiala",
+    slug: "amritsar-to-patiala",
     from: "Amritsar",
     to: "Patiala",
     distanceKm: 165,
@@ -254,7 +254,7 @@ const destinations = [
   // Patiala to Ambala
   {
     id: "Patiala-to-Ambala",
-    slug: "Patiala-to-Ambala",
+    slug: "patiala-to-ambala",
     from: "Patiala",
     to: "Ambala",
     distanceKm: 85,
@@ -278,7 +278,7 @@ const destinations = [
   },
   {
     id: "Ambala-to-Patiala",
-    slug: "Ambala-to-Patiala",
+    slug: "ambala-to-patiala",
     from: "Ambala",
     to: "Patiala",
     distanceKm: 85,
@@ -304,7 +304,7 @@ const destinations = [
   // Patiala to Shimla
   {
     id: "Patiala-to-Shimla",
-    slug: "Patiala-to-Shimla",
+    slug: "patiala-to-shimla",
     from: "Patiala",
     to: "Shimla",
     distanceKm: 180,
@@ -328,7 +328,7 @@ const destinations = [
   },
   {
     id: "Shimla-to-Patiala",
-    slug: "Shimla-to-Patiala",
+    slug: "shimla-to-patiala",
     from: "Shimla",
     to: "Patiala",
     distanceKm: 180,
@@ -354,7 +354,7 @@ const destinations = [
   // Patiala to Manali
   {
     id: "Patiala-to-Manali",
-    slug: "Patiala-to-Manali", 
+    slug: "patiala-to-manali",
     from: "Patiala",
     to: "Manali",
     distanceKm: 301,
@@ -378,8 +378,8 @@ const destinations = [
   },
   {
     id: "Manali-to-Patiala",
-    slug: "Manali-to-Patiala",
-    from: "Manali", 
+    slug: "manali-to-patiala",
+    from: "Manali",
     to: "Patiala",
     distanceKm: 301,
     duration: "6.5-7 hours",

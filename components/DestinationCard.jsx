@@ -83,7 +83,7 @@ export default function DestinationCard({ route }) {
         </Link>
         
         <Link
-          href={`/book?route=${route.slug}`}
+          href={`/book?routes=${route.slug}`}
           className="flex items-center justify-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 flex-1 text-sm"
         >
           <DirectionsCarIcon className="w-4 h-4" />

@@ -1,4 +1,4 @@
-// app/sitemap.js - Updated with All New Pages
+// app/sitemap.js - Fixed version
 import destinations from '@/data/destinations';
 import cities from '@/data/cities';
 import blogs from '@/data/blogs';
@@ -52,24 +52,24 @@ export default function sitemap() {
     },
   ];
 
-  // Route pages (destinations) - Using capitalized slugs
+  // Route pages (destinations) - FIXED: Changed /route/ to /routes/
   const routePages = destinations.map((route) => ({
-    url: `${baseUrl}/route/${route.slug}`,
+    url: `${baseUrl}/routes/${route.slug}`,  // ← FIXED: plural "routes"
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
   }));
 
   // City pages - High priority for local SEO
-  const cityPages = cities.map((city) => ({
+  const cityPages = (cities || []).map((city) => ({
     url: `${baseUrl}/city/${city.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: 0.9, // High priority for local SEO
+    priority: 0.9,
   }));
 
   // Blog pages - With actual publish dates
-  const blogPages = blogs.map((blog) => ({
+  const blogPages = (blogs || []).map((blog) => ({
     url: `${baseUrl}/blog/${blog.slug}`,
     lastModified: new Date(blog.date),
     changeFrequency: 'monthly',
