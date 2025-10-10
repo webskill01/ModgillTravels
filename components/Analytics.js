@@ -13,26 +13,23 @@ function AnalyticsContent() {
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
   useEffect(() => {
-    // Only track if GA_MEASUREMENT_ID is set and gtag is available
-    if (pathname && GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX' && window.gtag) {
+    // Track page views on route changes
+    if (pathname && GA_MEASUREMENT_ID && window.gtag) {  // ✅ FIXED: Removed blocking condition
       const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
       
-      // Track page view
+      // Track page view (only once per navigation)
       window.gtag('config', GA_MEASUREMENT_ID, {
         page_path: url,
         page_title: document.title,
       });
-
-      // Optional: Track as custom event for better debugging
-      window.gtag('event', 'page_view', {
-        page_path: url,
-        page_title: document.title,
-      });
+      
+      // ✅ REMOVED duplicate event tracking
     }
   }, [pathname, searchParams, GA_MEASUREMENT_ID]);
 
-  // Don't render scripts if GA ID is not configured
-  if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === 'G-NMP5Y4P9N8') {
+  // ✅ FIXED: Only check if variable exists
+  if (!GA_MEASUREMENT_ID) {
+    console.warn('Google Analytics: NEXT_PUBLIC_GA_MEASUREMENT_ID not set');
     return null;
   }
 
@@ -61,7 +58,7 @@ function AnalyticsContent() {
         }}
       />
 
-      {/* Optional: Google Tag Manager (if you prefer GTM over direct GA) */}
+      {/* Optional: Google Tag Manager */}
       {process.env.NEXT_PUBLIC_GTM_ID && (
         <>
           <Script
@@ -99,14 +96,9 @@ export default function Analytics() {
   );
 }
 
-// Custom event tracking helper - export for use in your components
+// Custom event tracking helper
 export const trackEvent = (eventName, eventParams = {}) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, eventParams);
   }
 };
-
-// Example usage in components:
-// import { trackEvent } from '@/components/Analytics';
-// trackEvent('taxi_booking_started', { from: 'Patiala', to: 'Delhi' });
-// trackEvent('phone_call_clicked', { source: 'hero_section' });
