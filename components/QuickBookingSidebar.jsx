@@ -8,7 +8,7 @@ export default function QuickBookingSidebar({ route, searchParams = {} }) {
 
   const buildBookingUrl = () => {
     const query = new URLSearchParams();
-    query.set('routes', route.slug);
+    query.set('route', route.slug);
     return `/book?${query.toString()}`;
   };
 
