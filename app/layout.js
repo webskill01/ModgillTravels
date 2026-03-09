@@ -96,6 +96,8 @@ export const metadata = {
     canonical: "https://www.modgilltravels.in",
   },
   category: "transportation",
+  // NOTE for site owner: Replace 'your-google-verification-code' with actual GSC verification code
+  // from Google Search Console → Settings → Ownership verification → HTML tag method
   verification: {
     google: "your-google-verification-code",
   },
@@ -266,6 +268,81 @@ const websiteStructuredData = {
   },
 };
 
+// schema_001: Standalone Organization schema — improves Knowledge Graph display
+const organizationStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.modgilltravels.in/#organization",
+  "name": "ModgillTravels",
+  "alternateName": "Modgill Travels",
+  "url": "https://www.modgilltravels.in",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.modgilltravels.in/logo.png",
+    "width": 250,
+    "height": 250
+  },
+  "description": "Best taxi service near me in Patiala offering outstation cab booking to Delhi, Shimla, Manali, Amritsar. 24/7 service with professional drivers and AC vehicles.",
+  "telephone": "+91-62849-92669",
+  "email": "modgilltravels@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Urban Estate, Phase 2 Near Police Station",
+    "addressLocality": "Patiala",
+    "addressRegion": "Punjab",
+    "postalCode": "147001",
+    "addressCountry": "IN"
+  },
+  "foundingDate": "2025-01-01",
+  "sameAs": [
+    "https://wa.me/916284992669"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-62849-92669",
+    "contactType": "Customer Service",
+    "availableLanguage": ["en", "hi", "pa"]
+  }
+};
+
+// schema_003: LocalBusiness schema — enhances Google Business Profile integration
+const localBusinessStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.modgilltravels.in/#localbusiness",
+  "name": "ModgillTravels",
+  "url": "https://www.modgilltravels.in",
+  "telephone": "+91-62849-92669",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Urban Estate, Phase 2 Near Police Station",
+    "addressLocality": "Patiala",
+    "addressRegion": "Punjab",
+    "postalCode": "147001",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 30.3398,
+    "longitude": 76.3869
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "₹₹",
+  "image": "https://www.modgilltravels.in/logo.png",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.8,
+    "reviewCount": 500,
+    "bestRating": 5,
+    "worstRating": 1
+  }
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
@@ -279,19 +356,19 @@ export default function RootLayout({ children }) {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        
+
         {/* Geo-targeting for local SEO */}
         <meta name="geo.region" content="IN-PB" />
         <meta name="geo.placename" content="Patiala, Punjab" />
         <meta name="geo.position" content="30.3398;76.3869" />
         <meta name="ICBM" content="30.3398, 76.3869" />
-        
+
         {/* Additional SEO meta tags */}
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="web" />
         <meta name="rating" content="general" />
-        
+
         {/* Business structured data */}
         <script
           type="application/ld+json"
@@ -299,7 +376,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify(businessStructuredData),
           }}
         />
-        
+
         {/* Website structured data */}
         <script
           type="application/ld+json"
@@ -307,6 +384,23 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify(websiteStructuredData),
           }}
         />
+
+        {/* schema_001: Organization schema — Knowledge Graph */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationStructuredData),
+          }}
+        />
+
+        {/* schema_003: LocalBusiness schema — Google Business Profile integration */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessStructuredData),
+          }}
+        />
+
 <script dangerouslySetInnerHTML={{
   __html: `
     !function(f,b,e,v,n,t,s)

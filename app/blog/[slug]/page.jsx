@@ -21,8 +21,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const blog = blogs.find(b => b.slug === slug);
-  
-  
+
+
   if (!blog) {
     return {
       title: '404 - Blog Not Found',
@@ -44,6 +44,21 @@ export async function generateMetadata({ params }) {
       type: 'article',
       publishedTime: blog.date,
       authors: [blog.author],
+      images: [
+        {
+          url: blog.image || '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: blog.metaTitle,
+        }
+      ],
+    },
+    // patch_037: Add Twitter Card to blog post pages
+    twitter: {
+      card: 'summary_large_image',
+      title: blog.metaTitle,
+      description: blog.metaDescription,
+      images: [blog.image || '/og-image.jpg'],
     },
     robots: {
       index: true,
@@ -74,16 +89,16 @@ export default async function BlogPostPage({ params }) {
       />
     <div className="min-h-screen">
       <div className="max-w-4xl mx-auto px-4 py-8 sm:py-12">
-        
+
         <Breadcrumbs items={[
             { label: "Back to Blog", href: `/blog` },
             { label: blog.metaTitle, href: blog.slug },
-          ]} 
+          ]}
           />
 
         {/* Article Header */}
         <article className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-2xl p-6 sm:p-8 mb-8">
-          
+
           {/* Category Badge */}
           <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-lg mb-4">
             {blog.category}
@@ -124,7 +139,7 @@ export default async function BlogPostPage({ params }) {
 
           {/* Article Content */}
           <div className="prose prose-invert prose-lg max-w-none">
-  <div 
+  <div
     className="text-gray-300 leading-relaxed space-y-6"
     dangerouslySetInnerHTML={{ __html: blog.content }}
   />
@@ -133,8 +148,9 @@ export default async function BlogPostPage({ params }) {
 
         {/* CTA Section */}
         <section className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-6 sm:p-8 mb-8">
+          {/* patch_038: CTA H2 rewrite */}
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
-            Ready to Book Your Trip?
+            Book Your Taxi from Patiala — Call or WhatsApp +91-62849-92669
           </h2>
           <p className="text-gray-300 text-center mb-6">
             Call us now or WhatsApp for instant booking confirmation with professional drivers and comfortable vehicles.
@@ -162,7 +178,8 @@ export default async function BlogPostPage({ params }) {
         {/* Related Cities */}
         {relatedCityPages.length > 0 && (
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Explore These Cities</h2>
+            {/* patch_039: Related Cities H2 rewrite */}
+            <h2 className="text-2xl font-bold text-white mb-6">Taxi Service in Nearby Cities</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {relatedCityPages.map((city) => (
                 <Link

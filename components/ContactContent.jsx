@@ -70,7 +70,7 @@ export default function ContactContent() {
               Contact ModgillTravels
             </h1>
             <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              Need a taxi in Patiala or nearby areas? We're here to help 24/7. 
+              Need a taxi in Patiala or nearby areas? We&apos;re here to help 24/7.
               Get instant booking confirmation via WhatsApp or call us now.
             </p>
           </div>
@@ -221,6 +221,40 @@ export default function ContactContent() {
           </div>
         </section>
 
+        {/* patch_041: FAQ section for contact page */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-white mb-4">Quick Answers</h2>
+          <div className="space-y-3">
+            <details className="group">
+              <summary className="flex items-center justify-between cursor-pointer text-white font-semibold p-4 bg-slate-800 border border-gray-700 rounded-lg text-sm list-none">
+                <span>How do I book a taxi via WhatsApp?</span>
+                <span className="text-cyan-400">▼</span>
+              </summary>
+              <div className="mt-1 p-4 text-gray-300 text-sm bg-slate-800/50 border border-gray-700 rounded-lg">
+                Send a WhatsApp message to +91-62849-92669 (tap the WhatsApp button on this page). Include: your pickup location in Patiala, your destination, travel date and time, and preferred vehicle type. We reply with fare confirmation and driver details within 15 minutes.
+              </div>
+            </details>
+            <details className="group">
+              <summary className="flex items-center justify-between cursor-pointer text-white font-semibold p-4 bg-slate-800 border border-gray-700 rounded-lg text-sm list-none">
+                <span>What is Modgill Travels&apos; phone number?</span>
+                <span className="text-cyan-400">▼</span>
+              </summary>
+              <div className="mt-1 p-4 text-gray-300 text-sm bg-slate-800/50 border border-gray-700 rounded-lg">
+                ModgillTravels&apos; phone number is +91-62849-92669. This is also our WhatsApp number. We are available 24 hours a day, 7 days a week for taxi bookings, queries, and emergency cab service in Patiala and outstation routes.
+              </div>
+            </details>
+            <details className="group">
+              <summary className="flex items-center justify-between cursor-pointer text-white font-semibold p-4 bg-slate-800 border border-gray-700 rounded-lg text-sm list-none">
+                <span>How quickly can I get a cab in Patiala?</span>
+                <span className="text-cyan-400">▼</span>
+              </summary>
+              <div className="mt-1 p-4 text-gray-300 text-sm bg-slate-800/50 border border-gray-700 rounded-lg">
+                For immediate bookings in Patiala, we dispatch a cab within 30–45 minutes depending on your pickup location. For outstation trips, advance booking of 2+ hours is recommended. For airport transfers, book at least 3 hours before your flight. WhatsApp +91-62849-92669 for fastest response.
+              </div>
+            </details>
+          </div>
+        </section>
+
         {/* Social Media - Enhanced */}
         <section className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5 sm:p-6 mb-10 sm:mb-12">
           <h3 className="text-lg font-bold text-white mb-4 text-center">Connect With Us</h3>
@@ -271,7 +305,7 @@ export default function ContactContent() {
             Need Immediate Taxi Booking?
           </h2>
           <p className="text-gray-300 text-sm sm:text-base mb-6 max-w-2xl mx-auto leading-relaxed">
-            Our support team is ready to assist you 24/7. Call now for instant booking 
+            Our support team is ready to assist you 24/7. Call now for instant booking
             or WhatsApp us for quick confirmation. Professional drivers, transparent pricing.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

@@ -12,14 +12,15 @@ import ExploreIcon from '@mui/icons-material/Explore';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 
 export const metadata = {
-  title: 'Book Taxi Online | All Routes & Cities - ModgillTravels',
+  // patch_028: Title rewrite
+  title: 'Cab Booking Patiala | Outstation Taxi Routes & Fares — ModgillTravels',
   description: 'Browse all taxi routes and cities served by ModgillTravels. Book cab service from Patiala to Delhi, Chandigarh, Shimla, Ludhiana. View fares and book instantly.',
   keywords: ['book taxi online', 'taxi booking', 'cab booking patiala', 'all routes', 'taxi fares'],
   alternates: {
     canonical: 'https://www.modgilltravels.in/booking',
   },
   openGraph: {
-    title: 'Book Taxi - All Routes & Cities | ModgillTravels',
+    title: 'Cab Booking Patiala | Outstation Taxi Routes & Fares — ModgillTravels',
     description: 'Browse all available taxi routes and cities. Book your cab service instantly with ModgillTravels.',
     url: 'https://modgilltravels.in/booking',
     type: 'website',
@@ -49,17 +50,22 @@ export default function BookingPage() {
   return (
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-8 sm:py-12">
-        
+
         {/* Hero Section */}
         <section className="text-center mb-12">
           <div className="w-14 h-14 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full flex items-center justify-center mx-auto mb-5">
             <DirectionsCarIcon className="w-8 h-8 text-cyan-400" />
           </div>
+          {/* patch_027: H1 rewrite */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Book Your Taxi
+            Book Taxi in Patiala — All Outstation Routes & Cab Fares
           </h1>
-          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto mb-4">
             Browse all available routes and cities. Choose your destination and book instantly via phone or WhatsApp.
+          </p>
+          {/* patch_029: keyword-rich intro paragraph */}
+          <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto mb-8">
+            Modgill Travels offers cab booking in Patiala for all major outstation routes — Delhi (₹3,400), Chandigarh (₹1,400), Shimla (₹2,600), Manali (₹5,400), Amritsar (₹3,500), Ludhiana (₹1,500). Book one-way or round-trip taxis online or via WhatsApp. Professional drivers available 24/7.
           </p>
 
           {/* Quick Contact Buttons */}
@@ -203,7 +209,7 @@ export default function BookingPage() {
                         </div>
                         <span className="text-cyan-400 font-bold">₹{Object.values(route.fare)[0]}</span>
                       </div>
-                      
+
                       <div className="flex items-center justify-between text-xs text-gray-400">
                         <span>{route.distanceKm} km</span>
                         <span>•</span>
@@ -276,8 +282,9 @@ export default function BookingPage() {
                 <span className="text-green-400 text-2xl font-bold">2</span>
               </div>
               <h3 className="text-white font-bold mb-2">Call or WhatsApp</h3>
+              {/* patch_030: step-2 text rewrite */}
               <p className="text-gray-400 text-sm">
-                Contact us with your pickup location, date, and time
+                WhatsApp us at +91-62849-92669 with your pickup location, travel date, and destination — we confirm your cab within 15 minutes
               </p>
             </div>
 

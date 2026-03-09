@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 
 // Helper function to get routes for a city
 function getCityRoutes(cityName) {
-  return destinations.filter(route => 
+  return destinations.filter(route =>
     route.from === cityName || route.to === cityName
   );
 }
@@ -26,7 +26,7 @@ function getCityRoutes(cityName) {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const city = cities.find(c => c.slug === slug);
-  
+
   if (!city) {
     return {
       title: '404 - City Not Found',
@@ -46,6 +46,15 @@ export async function generateMetadata({ params }) {
       url: `https://modgilltravels.in/city/${city.slug}`,
       siteName: 'ModgillTravels',
       type: 'website',
+      // patch_045: Add OG image to city pages
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: `Taxi Service in ${city.name} — ModgillTravels`,
+        }
+      ],
     },
     robots: {
       index: true,
@@ -77,10 +86,10 @@ const cityRoutes = getCityRoutes(city.name);
         <Breadcrumbs items={[
     { label: 'Cities', href: '/booking' },
     { label: city.name, href: `/city/${city.slug}` }
-  ]} 
+  ]}
   />
-  
-        
+
+
         {/* Hero Section */}
         <section className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -94,7 +103,7 @@ const cityRoutes = getCityRoutes(city.name);
           <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-6">
             {city.description}
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <a
               href="tel:+916284992669"
@@ -114,7 +123,7 @@ const cityRoutes = getCityRoutes(city.name);
             </a>
           </div>
         </section>
-  
+
  {/* Popular Routes - Enhanced with MUI Icons */}
 <section className="mb-12">
   <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -123,10 +132,10 @@ const cityRoutes = getCityRoutes(city.name);
     </div>
     Popular Routes from {city.name}
   </h2>
-  
+
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
     {city.popularRoutes.map((route, index) => (
-      <div 
+      <div
         key={index}
         className="group bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5 sm:p-6 hover:border-cyan-500/40 transition-all hover:scale-[1.02] hover:shadow-xl hover:shadow-cyan-500/10"
       >
@@ -187,7 +196,7 @@ const cityRoutes = getCityRoutes(city.name);
         </div>
 
         {/* Book Now Button */}
-        <Link 
+        <Link
           href={`/routes/${route.from}-to-${route.to}`}
           className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-4 py-3 rounded-lg font-semibold transition-all hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20"
         >
@@ -210,7 +219,7 @@ const cityRoutes = getCityRoutes(city.name);
     <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
       All Taxi Routes from {city.name}
     </h2>
-    
+
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {cityRoutes.map((route) => (
         <Link
@@ -224,7 +233,7 @@ const cityRoutes = getCityRoutes(city.name);
             </h3>
             <ArrowForward className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition" />
           </div>
-          
+
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
               <span className="text-gray-400">Distance:</span>
@@ -241,7 +250,7 @@ const cityRoutes = getCityRoutes(city.name);
               </span>
             </div>
           </div>
-          
+
           <div className="mt-4 text-cyan-400 text-sm font-semibold group-hover:text-cyan-300 transition">
             View Details & Book →
           </div>
@@ -257,11 +266,13 @@ const cityRoutes = getCityRoutes(city.name);
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
             Service Areas in {city.name}
           </h2>
-          
+
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-6">
             <p className="text-gray-300 mb-4">
               We provide taxi service in all major areas of {city.name}, {city.state}:
             </p>
+            {/* geo_010: neighborhood-level paragraph for hyperlocal keywords */}
+            <p className="text-gray-300 text-sm mb-4">For Patiala bookings, we serve Urban Estate (Phase 1 &amp; 2), Rajpura Road near the bus stand, Sangrur Road, Leela Bhawan, Tripuri, New Lal Bagh Colony, and Model Town. Need a cab near Rajindra Hospital, Punjabi University, or Qila Mubarak? We pick up from your exact location within 30 minutes, 24/7.</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {city.serviceAreas.map((area, index) => (
                 <div key={index} className="flex items-center gap-2 text-sm">
@@ -278,10 +289,10 @@ const cityRoutes = getCityRoutes(city.name);
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
             Popular Destinations in {city.name}
           </h2>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {city.localLandmarks.map((landmark, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-lg p-4 text-center hover:border-cyan-500/40 transition-all"
               >
@@ -298,18 +309,18 @@ const cityRoutes = getCityRoutes(city.name);
             <LocalAirport className="text-cyan-400" />
             Airport Transfers
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {city.nearbyAirports.map((airport, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-6"
               >
                 <h3 className="text-white font-bold text-lg mb-2">{airport.name}</h3>
                 <p className="text-gray-400 text-sm mb-4">Distance: {airport.distance}</p>
+                {/* geo_006 + patch_019: Airport transfer paragraph rewrite */}
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Reliable airport pickup and drop service from {city.name} to {airport.name}. 
-                  24/7 available with professional drivers.
+                  Airport taxi from {city.name} to {airport.name} — {airport.distance} away. Pre-booked pickup with flight tracking, meet &amp; greet at the terminal, and guaranteed on-time arrival. Book at least 2 hours before departure — call or WhatsApp +91-62849-92669.
                 </p>
               </div>
             ))}
@@ -321,7 +332,7 @@ const cityRoutes = getCityRoutes(city.name);
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 text-center">
             Why Choose ModgillTravels in {city.name}?
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-14 h-14 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -332,7 +343,7 @@ const cityRoutes = getCityRoutes(city.name);
                 Drivers familiar with every corner of {city.name}
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-14 h-14 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-blue-400" />
@@ -342,15 +353,60 @@ const cityRoutes = getCityRoutes(city.name);
                 Book anytime for immediate or advance bookings
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-14 h-14 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <DirectionsCar className="w-8 h-8 text-purple-400" />
               </div>
               <h3 className="text-white font-semibold mb-2">Transparent Pricing</h3>
               <p className="text-gray-300 text-sm">
-                No hidden charges. Pay exactly what's quoted
+                No hidden charges. Pay exactly what&apos;s quoted
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* geo_005 + patch_020: FAQ section with FAQPage microdata */}
+        <section className="mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">Frequently Asked Questions — Taxi Service in {city.name}</h2>
+          <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
+            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
+              <h3 itemProp="name" className="text-white font-semibold mb-3">What is the taxi fare from {city.name} to Delhi?</h3>
+              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">ModgillTravels charges ₹3,400 one-way for a Sedan from Patiala to Delhi (240 km, 4.5–5 hours via NH44). Innova Crysta costs ₹5,900. Fares are fixed with no hidden charges. Both one-way and round-trip options are available. Book via WhatsApp at +91-62849-92669 for instant confirmation.</p>
+              </div>
+            </div>
+            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
+              <h3 itemProp="name" className="text-white font-semibold mb-3">How do I book a local taxi in {city.name}?</h3>
+              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">To book a local taxi in {city.name}, WhatsApp or call ModgillTravels at +91-62849-92669. Share your pickup location, destination, and time — we confirm your cab within 15 minutes. We cover all major areas of {city.name} including neighborhoods listed in the service areas section above. Available 24/7.</p>
+              </div>
+            </div>
+            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
+              <h3 itemProp="name" className="text-white font-semibold mb-3">Does ModgillTravels cover airport transfers from {city.name}?</h3>
+              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">Yes. We offer airport taxi from {city.name} to Chandigarh Airport (75 km from Patiala, Sedan from ₹1,600), Delhi IGI Airport (260 km, Sedan from ₹3,600), and Amritsar Airport (130 km, Sedan from ₹2,200). All airport transfers include flight tracking and guaranteed on-time pickup. Book at least 2 hours before departure.</p>
+              </div>
+            </div>
+            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
+              <h3 itemProp="name" className="text-white font-semibold mb-3">Is there a cab service available near me in {city.name} right now?</h3>
+              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">Yes. ModgillTravels provides 24/7 cab service across all major areas of {city.name}. Call or WhatsApp +91-62849-92669 for immediate or advance booking. Drivers are available around the clock including late nights, early mornings, and public holidays.</p>
+              </div>
+            </div>
+            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
+              <h3 itemProp="name" className="text-white font-semibold mb-3">How long does the taxi from {city.name} to Manali take?</h3>
+              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">The Patiala to Manali distance is approximately 301 km by road via Chandigarh and Kullu. The taxi journey takes 7–8 hours. ModgillTravels recommends an Innova Crysta for this hill route due to mountain terrain and luggage capacity. One-way fare starts at ₹5,400. Book at least 24 hours in advance for Manali trips.</p>
+              </div>
+            </div>
+
+            {/* patch_018: neighborhood-level service areas paragraph */}
+            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
+              <h3 itemProp="name" className="text-white font-semibold mb-3">Does ModgillTravels pick up from all neighborhoods in {city.name}?</h3>
+              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">We cover all {city.name} neighborhoods for taxi bookings — {city.serviceAreas.join(', ')}. If you need a cab near Rajindra Hospital, Punjabi University, or Qila Mubarak, we pick up from your exact location within 30 minutes of confirmation.</p>
+              </div>
             </div>
           </div>
         </section>

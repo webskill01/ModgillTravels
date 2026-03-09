@@ -70,10 +70,10 @@ export default function HeroSection() {
         <h1 className="text-3xl font-extrabold text-cyan-400 mb-6 text-center lg:text-left">
           Best Taxi Service in Patiala
         </h1>
-        
-        {/* Natural Description with Keywords */}
+
+        {/* Natural Description with Keywords — GEO/AEO optimized (geo_002 supersedes patch_003) */}
         <p className="text-gray-300 text-sm mb-6 text-center lg:text-left">
-          Book reliable cab service with professional drivers. One way or round trip – transparent pricing, 24/7 availability.
+          ModgillTravels is Patiala&apos;s 24/7 taxi service for outstation cab booking, airport transfers, and local rides across Punjab, Haryana, and Himachal Pradesh. One-way fares from ₹1,400. Call or WhatsApp +91-62849-92669 to book instantly.
         </p>
 
         {/* From and To Fields */}
@@ -140,7 +140,7 @@ export default function HeroSection() {
       <div className="flex justify-center w-full relative h-48 lg:h-full">
         <Image
           src="/car-caption.png"
-          alt="ModgillTravels Taxi Service in Patiala - Professional Cab Booking"
+          alt="ModgillTravels outstation taxi cab — Patiala to Delhi, Shimla, Manali, Chandigarh. Professional drivers, AC vehicles, 24/7 booking."
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 320px"
           className="rounded-2xl shadow-lg object-contain"

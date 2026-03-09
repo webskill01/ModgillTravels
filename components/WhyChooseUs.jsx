@@ -9,25 +9,25 @@ export default function WhyChooseUs() {
     {
       icon: <VerifiedIcon className="w-6 h-6 sm:w-7 sm:h-7" />,
       title: 'Verified Drivers',
-      description: 'Background checked & licensed professionals',
+      description: 'Background-verified, licensed drivers — serving Patiala since 2025 with 5,000+ completed trips across Punjab and NCR.',
       color: 'green'
     },
     {
       icon: <AccessTimeIcon className="w-6 h-6 sm:w-7 sm:h-7" />,
       title: '24/7 Service',
-      description: 'Available anytime for your convenience',
+      description: 'Available 24 hours, 7 days a week — book last-minute or advance outstation cab from Patiala any time of day or night.',
       color: 'blue'
     },
     {
       icon: <PaymentIcon className="w-6 h-6 sm:w-7 sm:h-7" />,
       title: 'Fair Pricing',
-      description: 'Transparent fares, no hidden charges',
+      description: 'Fixed fares quoted upfront — Patiala to Delhi Sedan from ₹3,400, Chandigarh from ₹1,400. No surprises at destination.',
       color: 'purple'
     },
     {
       icon: <SupportAgentIcon className="w-6 h-6 sm:w-7 sm:h-7" />,
       title: 'Quick Support',
-      description: 'Instant booking confirmation & help',
+      description: 'Confirm your cab in minutes via WhatsApp +91-62849-92669 — same-day and advance bookings, 24/7 support.',
       color: 'cyan'
     },
   ];

@@ -4,7 +4,8 @@ const cities = [
     slug: 'patiala',
     name: 'Patiala',
     state: 'Punjab',
-    description: 'Book reliable taxi service in Patiala with ModgillTravels. Professional drivers, 24/7 availability, transparent pricing for local and outstation trips.',
+    // patch_017: Patiala description rewrite with landmark keywords + fare anchor
+    description: 'ModgillTravels provides 24/7 taxi service in Patiala for local trips, outstation cab booking, and airport transfers. Based in Urban Estate Phase 2, we serve all major Patiala areas — Rajindra Hospital, Punjabi University, Leela Bhawan, Baradari Gardens, and Tripuri. One-way Sedan fares start from ₹1,400. Book by phone or WhatsApp +91-62849-92669.',
     popularRoutes: [
   { from: 'patiala', to: 'delhi', distance: '250 km', duration: '4-5 hours', fare: '3400', slug: 'patiala-to-delhi' },
   { from: 'patiala', to: 'chandigarh', distance: '65 km', duration: '1-1.5 hours', fare: '1400', slug: 'patiala-to-chandigarh' },
@@ -38,7 +39,8 @@ const cities = [
     slug: 'chandigarh',
     name: 'Chandigarh',
     state: 'Chandigarh (UT)',
-    description: 'Professional taxi service in Chandigarh for city tours, airport transfers, and outstation travel. ModgillTravels offers reliable cab service with experienced drivers.',
+    // patch_043: Chandigarh description rewrite with neighborhood, airport, and route keywords
+    description: 'ModgillTravels provides 24/7 taxi service in Chandigarh for city tours, Chandigarh Airport transfers, and outstation trips to Shimla (115 km), Manali (310 km), Delhi (245 km), and Amritsar (240 km). Serving Sector 17, Sector 22, Panchkula, Mohali, and Zirakpur. Book by WhatsApp +91-62849-92669.',
     popularRoutes: [
       { from: 'chandigarh', to: 'shimla', distance: '115 km', duration: '3-4 hours', fare: '2500' },
       { from: 'chandigarh', to: 'manali', distance: '310 km', duration: '7-8 hours', fare: '6000' },
