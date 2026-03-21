@@ -7,6 +7,7 @@ import BlogSection from "../components/BlogSection";
 import SEO from '@/components/SEO';
 import { getOrganizationSchema, getLocalBusinessSchema, getWebsiteSchema } from '@/utils/structuredData';
 import ServiceInfo from "@/components/ServiceInfo";
+import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
   title: "Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels",
@@ -397,56 +398,7 @@ export default function HomePage() {
         {/* FAQ Section — GEO/AEO Optimized (geo_001) */}
         <section className="max-w-6xl mx-auto px-4 py-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 text-center">Frequently Asked Questions — Taxi Service in Patiala</h2>
-          <div className="space-y-3" itemScope itemType="https://schema.org/FAQPage">
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
-              <h3 itemProp="name" className="text-white font-semibold mb-3">How much does a taxi from Patiala to Delhi cost?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">A one-way taxi from Patiala to Delhi costs ₹3,400 for a Sedan, ₹4,200 for an Ertiga, and ₹5,900 for an Innova Crysta. The 240 km route via NH44 takes approximately 4.5–5 hours. ModgillTravels offers transparent fixed fares — no hidden charges or surge pricing. Book via phone or WhatsApp for instant confirmation.</p>
-              </div>
-            </div>
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
-              <h3 itemProp="name" className="text-white font-semibold mb-3">Which is the best taxi service in Patiala?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">ModgillTravels is Patiala&apos;s top-rated outstation taxi service, founded in 2025 with 5,000+ completed trips across Punjab, Haryana, Delhi, and Himachal Pradesh. We offer 24/7 availability, background-verified drivers, AC vehicles with GPS tracking, and transparent fixed fares. Book by phone or WhatsApp at +91-62849-92669.</p>
-              </div>
-            </div>
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
-              <h3 itemProp="name" className="text-white font-semibold mb-3">How do I book a cab from Patiala to Delhi?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">Booking a Patiala to Delhi cab with ModgillTravels takes under 2 minutes: WhatsApp us at +91-62849-92669 with your pickup location, travel date, and time. We confirm your driver and vehicle within 15 minutes. Alternatively, call us directly or use the online booking form on our website.</p>
-              </div>
-            </div>
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
-              <h3 itemProp="name" className="text-white font-semibold mb-3">Can I book a one-way taxi from Patiala to Chandigarh?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">Yes. ModgillTravels offers one-way taxi from Patiala to Chandigarh starting at ₹1,400 for a Sedan. One-way trips have no return fare — you pay only for the distance traveled (67 km via NH44). Same-day bookings are available 24/7. Book via WhatsApp at +91-62849-92669.</p>
-              </div>
-            </div>
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
-              <h3 itemProp="name" className="text-white font-semibold mb-3">Does Modgill Travels offer 24-hour taxi service in Patiala?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">Yes. ModgillTravels operates 24 hours a day, 7 days a week, including late nights, early mornings, and all public holidays. Whether you need a last-minute cab at 2 AM or want to pre-book a week in advance, our drivers are always available. Call or WhatsApp +91-62849-92669 any time.</p>
-              </div>
-            </div>
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
-              <h3 itemProp="name" className="text-white font-semibold mb-3">What is the taxi fare from Patiala to Shimla?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">The Patiala to Shimla taxi fare starts at ₹2,600 for a Sedan one-way. The 180 km hill route typically takes 4–5 hours depending on traffic near Kalka and the Shimla ghats. For hill routes, we recommend an Ertiga or Innova Crysta for extra comfort and luggage space.</p>
-              </div>
-            </div>
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
-              <h3 itemProp="name" className="text-white font-semibold mb-3">Is there a taxi service from Patiala to Amritsar Airport?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">Yes. ModgillTravels provides airport taxi from Patiala to Amritsar Airport (Sri Guru Ram Dass Jee International Airport), approximately 130 km away. We offer pre-booked airport pickups with flight tracking and on-time arrival guarantee. Book at least 2 hours before departure. Call +91-62849-92669.</p>
-              </div>
-            </div>
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
-              <h3 itemProp="name" className="text-white font-semibold mb-3">What type of vehicles are available for Patiala to Delhi taxi?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">ModgillTravels offers three vehicle categories for Patiala to Delhi: Sedan (Dzire/Etios, up to 4 passengers, ₹3,400 one-way), Ertiga (up to 6 passengers, ₹4,200 one-way), and Innova Crysta (up to 7 passengers, ₹5,900 one-way). All vehicles are air-conditioned with GPS tracking and professional drivers.</p>
-              </div>
-            </div>
-          </div>
+          <FAQAccordion />
         </section>
 
         {/* Cities & Blog Combined - Desktop 2 Columns, Mobile Stacked */}
