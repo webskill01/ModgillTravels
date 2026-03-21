@@ -5,7 +5,7 @@ import RouteCarousel from "../components/RouteCarousel";
 import WhyChooseUs from "../components/WhyChooseUs";
 import BlogSection from "../components/BlogSection";
 import SEO from '@/components/SEO';
-import { getOrganizationSchema, getLocalBusinessSchema, getFAQSchema, getWebsiteSchema } from '@/utils/structuredData';
+import { getOrganizationSchema, getLocalBusinessSchema, getWebsiteSchema } from '@/utils/structuredData';
 import ServiceInfo from "@/components/ServiceInfo";
 
 export const metadata = {
@@ -89,7 +89,7 @@ const faqPageSchema = {
       "name": "Which is the best taxi service in Patiala?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ModgillTravels is the best taxi service in Patiala with 4.8/5 rating from 500+ customers. We offer professional drivers, well-maintained AC vehicles, 24/7 availability, and transparent pricing. Our services include one-way taxis, round trips, airport transfers, and corporate cab services across Punjab and neighboring states."
+        "text": "ModgillTravels is the best taxi service in Patiala with a 5.0/5 rating from 31 Google reviews. We offer professional drivers, well-maintained AC vehicles, 24/7 availability, and transparent pricing. Our services include one-way taxis, round trips, airport transfers, and corporate cab services across Punjab and neighboring states."
       }
     },
     {
@@ -341,41 +341,10 @@ const webPageSchema = {
   "datePublished": "2025-01-01"
 };
 
-const aggregateRatingSchema = {
-  "@context": "https://schema.org",
-  "@type": "AggregateRating",
-  "@id": "https://www.modgilltravels.in/#aggregateRating",
-  "ratingValue": 4.8,
-  "reviewCount": 500,
-  "bestRating": 5,
-  "worstRating": 1
-};
-
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@type": "LocalBusiness",
-    "name": "ModgillTravels"
-  },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": 5,
-    "bestRating": 5,
-    "worstRating": 1
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Satisfied Customer"
-  },
-  "reviewBody": "Excellent taxi service! Professional drivers, clean vehicles, and very punctual. Highly recommended for outstation travel from Patiala.",
-  "datePublished": "2026-03-01"
-};
 
 export default function HomePage() {
   const organizationSchema = getOrganizationSchema();
   const localBusinessSchema = getLocalBusinessSchema();
-  const faqSchema = getFAQSchema();
   const websiteSchema = getWebsiteSchema();
 
   return (
@@ -396,20 +365,12 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      />
       <SEO
         title="Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels"
         description="Book reliable taxi service in Patiala 24/7 — one way & round trip. Sedan from ₹1,400. Professional drivers, AC vehicles, GPS tracking. Call or WhatsApp +91-62849-92669 now."
         keywords="taxi service near me, cab service patiala, one way cab service in patiala, taxi agents near me"
         url="/"
-        jsonLd={[organizationSchema, localBusinessSchema, faqSchema, websiteSchema]}
+        jsonLd={[organizationSchema, localBusinessSchema, websiteSchema]}
       />
 
       <main className="min-h-screen">

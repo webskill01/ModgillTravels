@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: blog.metaTitle,
       description: blog.metaDescription,
-      url: `https://modgilltravels.in/blog/${blog.slug}`,
+      url: `https://www.modgilltravels.in/blog/${blog.slug}`,
       siteName: 'ModgillTravels',
       type: 'article',
       publishedTime: blog.date,

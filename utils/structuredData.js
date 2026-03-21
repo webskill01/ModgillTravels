@@ -9,18 +9,18 @@ export const getOrganizationSchema = () => ({
   "@type": "Organization",
   "name": "ModgillTravels",
   "alternateName": "Modgill Travels Taxi Service",
-  "url": "https://modgilltravels.in",
+  "url": "https://www.modgilltravels.in",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://modgilltravels.in/logo.png",
+    "url": "https://www.modgilltravels.in/logo.png",
     "width": 250,
     "height": 60
   },
-  "image": "https://modgilltravels.in/og-image.jpg",
+  "image": "https://www.modgilltravels.in/og-image.jpg",
   "description": "Professional taxi service in Patiala offering one way cab service, round trip taxis, and outstation travel. Available 24/7 with verified drivers.",
   "telephone": "+91-62849-92669",
   "email": "info@modgilltravels.in",
-  "foundingDate": "2015",
+  "foundingDate": "2025-01-01",
   "priceRange": "₹₹",
   "paymentAccepted": ["Cash", "UPI", "Credit Card", "Debit Card"],
   "address": {
@@ -72,19 +72,19 @@ export const getOrganizationSchema = () => ({
 export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": ["TaxiService", "LocalBusiness"],
-  "@id": "https://modgilltravels.in/#organization", // Added ID for reference
+  "@id": "https://www.modgilltravels.in/#organization", // Added ID for reference
   "name": "ModgillTravels - Best Taxi Service Near Me in Patiala",
   "alternateName": "Modgill Travels Cab Service",
   "description": "Looking for taxi service near me in Patiala? ModgillTravels offers reliable cab service with professional drivers. One way taxi, round trip, airport transfers available 24/7. Best taxi agents in Patiala for local and outstation travel.",
-  "url": "https://modgilltravels.in",
+  "url": "https://www.modgilltravels.in",
   "telephone": "+91-62849-92669",
   "email": "info@modgilltravels.in",
   "priceRange": "₹₹",
   "currenciesAccepted": "INR",
   "paymentAccepted": ["Cash", "UPI", "Google Pay", "PhonePe", "Paytm", "Credit Card", "Debit Card"],
   "image": [
-    "https://modgilltravels.in/og-image.jpg",
-    "https://modgilltravels.in/car-caption.png"
+    "https://www.modgilltravels.in/og-image.jpg",
+    "https://www.modgilltravels.in/car-caption.png"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -224,8 +224,8 @@ export const getLocalBusinessSchema = () => ({
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "500",
+    "ratingValue": "5.0",
+    "reviewCount": "31",
     "bestRating": "5",
     "worstRating": "1"
   },
@@ -246,7 +246,7 @@ export const getLocalBusinessSchema = () => ({
       "datePublished": "2024-12-15",
       "itemReviewed": {
         "@type": "LocalBusiness",
-        "@id": "https://modgilltravels.in/#organization"
+        "@id": "https://www.modgilltravels.in/#organization"
       }
     },
     {
@@ -265,7 +265,7 @@ export const getLocalBusinessSchema = () => ({
       "datePublished": "2024-11-28",
       "itemReviewed": {
         "@type": "LocalBusiness",
-        "@id": "https://modgilltravels.in/#organization"
+        "@id": "https://www.modgilltravels.in/#organization"
       }
     }
   ],
@@ -371,7 +371,7 @@ export const getServiceSchema = (route) => ({
     "@type": "TaxiService",
     "name": "ModgillTravels",
     "telephone": "+91-62849-92669",
-    "url": "https://modgilltravels.in",
+    "url": "https://www.modgilltravels.in",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Patiala",
@@ -391,7 +391,7 @@ export const getServiceSchema = (route) => ({
   ],
   "availableChannel": {
     "@type": "ServiceChannel",
-    "serviceUrl": `https://modgilltravels.in/routes/${route.slug}`,
+    "serviceUrl": `https://www.modgilltravels.in/routes/${route.slug}`,
     "servicePhone": "+91-62849-92669"
   },
   "offers": {
@@ -434,7 +434,7 @@ export const getServiceSchema = (route) => ({
     }
   ],
   "category": "Transportation",
-  "termsOfService": "https://modgilltravels.in/terms",
+  "termsOfService": "https://www.modgilltravels.in/terms",
   "audience": {
     "@type": "Audience",
     "audienceType": "Travelers, Business professionals, Tourists"
@@ -452,7 +452,7 @@ export const getBreadcrumbSchema = (items) => ({
     "@type": "ListItem",
     "position": index + 1,
     "name": item.name,
-    "item": `https://modgilltravels.in${item.url}`
+    "item": `https://www.modgilltravels.in${item.url}`
   }))
 });
 
@@ -465,15 +465,7 @@ export const getWebsiteSchema = () => ({
   "@type": "WebSite",
   "name": "ModgillTravels - Taxi Service Near Me in Patiala",
   "alternateName": "Modgill Travels Cab Booking",
-  "url": "https://modgilltravels.in",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://modgilltravels.in/search?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  },
+  "url": "https://www.modgilltravels.in",
   "description": "Book taxi service near me in Patiala. Best cab service with professional drivers, one way taxi, round trip, and airport transfers. Available 24/7.",
   "publisher": {
     "@type": "Organization",
@@ -490,7 +482,7 @@ export const getProductSchema = (route) => ({
   "@type": "Product",
   "name": `${route.from} to ${route.to} Taxi Package`,
   "description": `Book ${route.from} to ${route.to} taxi service. Professional drivers, AC vehicles. Distance: ${route.distanceKm}km.`,
-  "image": "https://modgilltravels.in/car-caption.png",
+  "image": "https://www.modgilltravels.in/car-caption.png",
   "brand": {
     "@type": "Brand",
     "name": "ModgillTravels"
@@ -500,7 +492,7 @@ export const getProductSchema = (route) => ({
     "price": route.fare?.Sedan || route.displayFare,
     "priceCurrency": "INR",
     "availability": "https://schema.org/InStock",
-    "url": `https://modgilltravels.in/routes/${route.slug}`,
+    "url": `https://www.modgilltravels.in/routes/${route.slug}`,
     "seller": {
       "@type": "Organization",
       "name": "ModgillTravels"
@@ -508,7 +500,7 @@ export const getProductSchema = (route) => ({
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "50"
+    "ratingValue": "5.0",
+    "reviewCount": "31"
   }
 });

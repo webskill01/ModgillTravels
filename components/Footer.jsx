@@ -29,9 +29,11 @@ const popularRoutes = [
   ];
 
   const blogLinks = [
+    { name: 'Patiala to Chandigarh Taxi', slug: 'patiala-to-chandigarh-taxi' },
+    { name: 'Patiala to Manali Guide', slug: 'patiala-to-manali-travel-guide' },
+    { name: 'Chandigarh to Shimla Cab', slug: 'chandigarh-to-shimla-taxi' },
+    { name: 'Patiala to Amritsar Taxi', slug: 'patiala-to-amritsar-golden-temple-taxi' },
     { name: 'Best Places in Shimla', slug: 'best-places-to-visit-in-shimla' },
-    { name: 'Patiala to Delhi Guide', slug: 'patiala-to-delhi-travel-guide' },
-    { name: 'One Way Taxi Booking', slug: 'how-to-book-one-way-taxi' },
   ];
 
   return (

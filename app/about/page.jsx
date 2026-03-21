@@ -1,6 +1,5 @@
 // app/about/page.jsx
 import AboutContent from '@/components/AboutContent';
-import SEO from '@/components/SEO';
 import { getOrganizationSchema } from '@/utils/structuredData';
 
 export const metadata = {
@@ -12,7 +11,7 @@ export const metadata = {
     title: "About ModgillTravels - Best Taxi Service in Patiala, Punjab",
     description: "Professional taxi service founded in 2025, 5000+ completed trips, and 24/7 support. Serving Punjab, Haryana & Himachal Pradesh.",
     type: "website",
-    url: "https://modgilltravels.in/about",
+    url: "https://www.modgilltravels.in/about",
     siteName: "ModgillTravels",
   },
   twitter: {
@@ -30,16 +29,11 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  const organizationSchema = getOrganizationSchema();
-
   return (
     <>
-      <SEO
-        title="About ModgillTravels - Best Taxi Service in Patiala, Punjab"
-        description="Learn about ModgillTravels - professional taxi service in Patiala founded 2025 with 5000+ completed trips, transparent pricing, and 24/7 support."
-        keywords="about ModgillTravels, taxi service Patiala, professional drivers, reliable cab service"
-        url="/about"
-        jsonLd={[organizationSchema]}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getOrganizationSchema()) }}
       />
       <AboutContent />
     </>

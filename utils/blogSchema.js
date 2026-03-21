@@ -5,8 +5,14 @@ export function getBlogSchema(blog) {
     "@type": "BlogPosting",
     "headline": blog.title,
     "description": blog.excerpt,
+    "image": {
+      "@type": "ImageObject",
+      "url": `https://www.modgilltravels.in${blog.image || '/og-image.jpg'}`,
+      "width": 1200,
+      "height": 630
+    },
     "datePublished": blog.date,
-    "dateModified": blog.date,
+    "dateModified": blog.dateModified || blog.date,
     "author": {
       "@type": "Organization",
       "name": blog.author
@@ -16,12 +22,12 @@ export function getBlogSchema(blog) {
       "name": "ModgillTravels",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://modgilltravels.in/logo.png"
+        "url": "https://www.modgilltravels.in/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://modgilltravels.in/blog/${blog.slug}`
+      "@id": `https://www.modgilltravels.in/blog/${blog.slug}`
     },
     "articleBody": blog.content.substring(0, 500),
     "keywords": blog.keywords.join(', ')

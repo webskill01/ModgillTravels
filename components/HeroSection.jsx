@@ -39,22 +39,16 @@ export default function HeroSection() {
   });
 
   function onSubmit(data) {
-    console.log("Form submitted with data:", data);
-
     const route = destinations.find(
       (r) => r.from === data.from && r.to === data.to
     );
 
-    console.log("Found route:", route);
-
     if (route) {
-      console.log("Navigating to:", `/routes/${route.slug}`);
       router.push(`/routes/${route.slug}`);
     } else {
       const query = new URLSearchParams();
       query.set("from", data.from);
       query.set("to", data.to);
-      console.log("Navigating to:", `/book?${query.toString()}`);
       router.push(`/book?${query.toString()}`);
     }
   }

@@ -18,16 +18,31 @@ export default function robots() {
         allow: '/',
         disallow: ['/api/', '/admin/'],
       },
-      // Bing (supports crawlDelay if needed)
+      // Bing
       {
         userAgent: 'Bingbot',
         allow: '/',
         disallow: ['/api/', '/admin/'],
-        // Add crawlDelay only if server can't handle load
-        // crawlDelay: 1,
+      },
+      // AI crawlers — explicit allow for GPT, Claude, Perplexity, Anthropic
+      {
+        userAgent: 'GPTBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'ClaudeBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Anthropic-AI',
+        allow: '/',
+      },
+      {
+        userAgent: 'PerplexityBot',
+        allow: '/',
       },
     ],
-    sitemap: 'https://modgilltravels.in/sitemap.xml',
-    host: 'https://modgilltravels.in',
+    sitemap: 'https://www.modgilltravels.in/sitemap.xml',
+    host: 'https://www.modgilltravels.in',
   };
 }

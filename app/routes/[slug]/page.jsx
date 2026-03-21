@@ -6,7 +6,6 @@ import RouteOverview from "@/components/RouteOverview";
 import VehicleOptions from "@/components/VehicleOptions";
 import QuickBookingSidebar from "@/components/QuickBookingSidebar";
 import RouteContent from "@/components/RouteContent";
-import SEO from '@/components/SEO';
 import { getServiceSchema, getBreadcrumbSchema } from '@/utils/structuredData';
 import { notFound } from "next/navigation";
 
@@ -46,7 +45,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${route.from} to ${route.to} Taxi Service - ModgillTravels`,
       description: `Book reliable taxi from ${route.from} to ${route.to}. ${route.distanceKm}km journey starting at ₹${route.fare["Sedan"]}.`,
-      url: `https://modgilltravels.in/routes/${route.slug}`,
+      url: `https://www.modgilltravels.in/routes/${route.slug}`,
       siteName: 'ModgillTravels',
       images: [
         {
@@ -84,23 +83,19 @@ export default async function RouteDetailsPage({ params }) {
   
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "/" },
-    { name: "Routes", url: "/" },
+    { name: "Routes", url: "/booking" },
     { name: `${route.from} to ${route.to}`, url: `/routes/${route.slug}` }
   ]);
 
-  const jsonLd = [
-    getServiceSchema(route),
-    breadcrumbSchema
-  ];
-
   return (
     <>
-      <SEO
-        title={`${route.from} to ${route.to} Taxi | ₹${route.fare["Sedan"]}`}
-        description={`Book taxi from ${route.from} to ${route.to}. Distance: ${route.distanceKm}km, Duration: ${route.duration}. Starting ₹${route.fare["Sedan"]}. Professional drivers, AC vehicles.`}
-        keywords={`${route.from} to ${route.to} taxi, ${route.from} ${route.to} cab, taxi fare, cab booking`}
-        url={`/routes/${slug}`}
-        jsonLd={jsonLd}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getServiceSchema(route)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
       <div className="max-w-7xl mx-auto px-5 py-6">

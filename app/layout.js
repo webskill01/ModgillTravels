@@ -12,8 +12,15 @@ const inter = Inter({
   preload: true,
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
+
 export const metadata = {
-  metadataBase: new URL("https://modgilltravels.in"),
+  metadataBase: new URL("https://www.modgilltravels.in"),
   title: {
     default: "ModgillTravels - Taxi Service Patiala | Book Cab Now",
     template: "%s | ModgillTravels - Best Taxi Service in Patiala",
@@ -99,7 +106,7 @@ export const metadata = {
   // NOTE for site owner: Replace 'your-google-verification-code' with actual GSC verification code
   // from Google Search Console → Settings → Ownership verification → HTML tag method
   verification: {
-    google: "your-google-verification-code",
+    google: "google-site-verification=DJ_UpLtNI9zKezyfhwu9FYVVkvWKMQelaXUkLJwL6GE",
   },
 };
 
@@ -242,8 +249,8 @@ const businessStructuredData = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "500",
+    "ratingValue": "5.0",
+    "reviewCount": "31",
     "bestRating": "5",
     "worstRating": "1",
   },
@@ -257,15 +264,7 @@ const websiteStructuredData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "ModgillTravels - Taxi Service Near Me in Patiala",
-  "url": "https://modgilltravels.in",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://modgilltravels.in/search?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
+  "url": "https://www.modgilltravels.in",
 };
 
 // schema_001: Standalone Organization schema — improves Knowledge Graph display
@@ -336,8 +335,8 @@ const localBusinessStructuredData = {
   "image": "https://www.modgilltravels.in/logo.png",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": 4.8,
-    "reviewCount": 500,
+    "ratingValue": 5.0,
+    "reviewCount": 31,
     "bestRating": 5,
     "worstRating": 1
   }

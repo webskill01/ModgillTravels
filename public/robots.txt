@@ -1,5 +1,14 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/static/
+Disallow: /private/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
 
 User-agent: GPTBot
 Allow: /
@@ -15,5 +24,7 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
+Disallow: /api/
+Disallow: /admin/
 
 Sitemap: https://www.modgilltravels.in/sitemap.xml

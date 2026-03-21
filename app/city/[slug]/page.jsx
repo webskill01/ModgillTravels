@@ -43,7 +43,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: city.metaTitle,
       description: city.metaDescription,
-      url: `https://modgilltravels.in/city/${city.slug}`,
+      url: `https://www.modgilltravels.in/city/${city.slug}`,
       siteName: 'ModgillTravels',
       type: 'website',
       // patch_045: Add OG image to city pages
@@ -66,13 +66,13 @@ export async function generateMetadata({ params }) {
 export default async function CityPage({ params }) {
   const { slug } = await params;
   const city = cities.find(c => c.slug === slug);
-   const citySchema = getCitySchema(city);
-const cityRoutes = getCityRoutes(city.name);
-
 
   if (!city) {
     notFound();
   }
+
+  const citySchema = getCitySchema(city);
+  const cityRoutes = getCityRoutes(city.name);
 
   return (
 
@@ -197,7 +197,7 @@ const cityRoutes = getCityRoutes(city.name);
 
         {/* Book Now Button */}
         <Link
-          href={`/routes/${route.from}-to-${route.to}`}
+          href={`/routes/${route.from.toLowerCase()}-to-${route.to.toLowerCase()}`}
           className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-4 py-3 rounded-lg font-semibold transition-all hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20"
         >
           <span>Book This Route</span>

@@ -25,7 +25,7 @@ export const metadata = {
     title: 'Taxi Travel Guides for Patiala, Punjab | ModgillTravels Blog',
     description: 'Expert taxi travel guides for routes from Patiala — Delhi, Shimla, Manali, Amritsar. Cab booking tips and fare guides.',
     type: 'website',
-    url: 'https://modgilltravels.in/blog',
+    url: 'https://www.modgilltravels.in/blog',
     siteName: 'ModgillTravels',
     images: [
       {
