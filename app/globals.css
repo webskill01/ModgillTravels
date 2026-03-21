@@ -303,6 +303,25 @@ input:-webkit-autofill:active {
     scrollbar-color: #0891b2 rgba(75, 85, 99, 0.3);
   }
 }
+/* Accordion button reset — overrides global button styles */
+.accordion-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  min-height: unset;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  overflow: visible;
+}
+
+.accordion-btn:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 /* FAQ Accordion Smooth Animations */
 .faq-item summary {
   position: relative;

@@ -60,7 +60,7 @@ export default function FAQAccordion() {
             <button
               onClick={() => toggle(index)}
               aria-expanded={isOpen}
-              className="w-full flex items-center justify-between gap-3 px-4 py-3 sm:px-5 sm:py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500/50 rounded-xl"
+              className="accordion-btn w-full flex items-center justify-between gap-3 px-4 py-3 sm:px-5 sm:py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500/50 rounded-xl"
             >
               <h3
                 itemProp="name"

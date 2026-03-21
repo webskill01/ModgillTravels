@@ -11,7 +11,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
   title: "Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels",
-  description: "Book reliable taxi service in Patiala 24/7 — one way & round trip. Sedan from ₹1,400. Professional drivers, AC vehicles, GPS tracking. Call or WhatsApp +91-62849-92669 now.",
+  description: "Patiala's 24/7 taxi service. One-way & round trip — Sedan from ₹1,400. Professional drivers, AC vehicles, GPS tracking. Call +91-62849-92669.",
   keywords: [
     "taxi service near me",
     "taxi agents near me",
@@ -26,9 +26,9 @@ export const metadata = {
   ],
   openGraph: {
     title: "Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels",
-    description: "Book reliable taxi service in Patiala 24/7 — one way & round trip. Sedan from ₹1,400. Professional drivers, AC vehicles, GPS tracking. Call or WhatsApp +91-62849-92669 now.",
+    description: "Patiala's 24/7 taxi service. One-way & round trip — Sedan from ₹1,400. Professional AC vehicles, GPS tracking. Call +91-62849-92669.",
     type: "website",
-    url: "https://modgilltravels.in",
+    url: "https://www.modgilltravels.in",
     siteName: "ModgillTravels",
     images: [
       {
