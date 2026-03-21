@@ -62,12 +62,12 @@ export default function FAQAccordion() {
               aria-expanded={isOpen}
               className="accordion-btn w-full flex items-center justify-between gap-3 px-4 py-3 sm:px-5 sm:py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500/50 rounded-xl"
             >
-              <h3
+              <h4
                 itemProp="name"
-                className="text-white font-semibold text-xs sm:text-sm leading-snug"
+                className="text-white font-semibold text-xs sm:text-xs leading-snug"
               >
                 {faq.question}
-              </h3>
+              </h4>
 
               {/* Chevron icon */}
               <span
