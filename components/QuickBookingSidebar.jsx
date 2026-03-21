@@ -1,6 +1,5 @@
 import Link from "next/link";
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import { PhoneOutlined, WhatsApp } from "@mui/icons-material";
+import { DirectionsCarIcon, PhoneOutlined, WhatsApp } from '@/components/Icons';
 
 export default function QuickBookingSidebar({ route, searchParams = {} }) {
   // Calculate starting fare using Sedan as base vehicle (lowest price)

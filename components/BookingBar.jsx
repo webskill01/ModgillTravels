@@ -1,5 +1,5 @@
 "use client"
-import PhoneIcon from '@mui/icons-material/Phone';
+import { PhoneIcon } from '@/components/Icons';
 
 export function InstantBookingBar() {
   return (

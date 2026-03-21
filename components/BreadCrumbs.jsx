@@ -1,7 +1,6 @@
 // components/Breadcrumbs.jsx
 import Link from 'next/link';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import HomeIcon from '@mui/icons-material/Home';
+import { NavigateNextIcon, HomeIcon } from '@/components/Icons';
 
 export default function Breadcrumbs({ items }) {
   return (

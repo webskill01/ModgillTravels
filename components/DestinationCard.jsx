@@ -1,9 +1,6 @@
 // components/DestinationCard.jsx
 import Link from "next/link";
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import RouteIcon from '@mui/icons-material/Route';
-import StarIcon from '@mui/icons-material/Star';
+import { DirectionsCarIcon, AccessTimeIcon, RouteIcon, StarIcon } from '@/components/Icons';
 
 export default function DestinationCard({ route }) {
   return (

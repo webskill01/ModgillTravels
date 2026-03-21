@@ -4,10 +4,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import ArticleIcon from '@mui/icons-material/Article';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import { ArticleIcon, ArrowForwardIcon, AccessTimeIcon, AutoStoriesIcon } from '@/components/Icons';
 
 export default function BlogSection() {
   const router = useRouter();

@@ -3,8 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import AcUnitIcon from '@mui/icons-material/AcUnit';
-import GpsFixedIcon from '@mui/icons-material/GpsFixed';
+import { AcUnitIcon, GpsFixedIcon } from '@/components/Icons';
 
 
 const routes = [

@@ -12,7 +12,7 @@ export const metadata = {
     title: "Contact ModgillTravels - 24/7 Taxi Booking Support",
     description: "Need a taxi in Patiala? Contact us 24/7 via phone, WhatsApp, or email. Fast response, professional service.",
     type: "website",
-    url: "https://modgilltravels.in/contact",
+    url: "https://www.modgilltravels.in/contact",
     siteName: "ModgillTravels",
   },
   twitter: {

@@ -1,10 +1,6 @@
 // app/not-found.jsx
 import Link from 'next/link';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import HomeIcon from '@mui/icons-material/Home';
-import PhoneIcon from '@mui/icons-material/Phone';
-import SearchIcon from '@mui/icons-material/Search';
-import ExploreIcon from '@mui/icons-material/Explore';
+import { DirectionsCarIcon, HomeIcon, PhoneIcon, SearchIcon, ExploreIcon } from '@/components/Icons';
 
 export const metadata = {
   title: '404 - Page Not Found | ModgillTravels',

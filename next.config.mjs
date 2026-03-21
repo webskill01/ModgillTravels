@@ -22,7 +22,6 @@ const nextConfig = {
   },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@mui/icons-material', '@mui/material'],
   },
 
   // async redirects() {
@@ -150,14 +149,6 @@ const nextConfig = {
               test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|scheduler|prop-types)[\\/]/,
               priority: 40,
               enforce: true,
-            },
-            
-            mui: {
-              name: 'mui',
-              test: /[\\/]node_modules[\\/](@mui)[\\/]/,
-              chunks: 'all',
-              priority: 30,
-              reuseExistingChunk: true,
             },
             
             vendor: {

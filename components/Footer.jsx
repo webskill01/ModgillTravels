@@ -1,13 +1,6 @@
 // components/Footer.jsx
 import Link from "next/link";
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import ArticleIcon from '@mui/icons-material/Article';
-import { LinkedIn } from "@mui/icons-material";
+import { PhoneIcon, EmailIcon, WhatsAppIcon, InstagramIcon, LocationOnIcon, ArticleIcon, LinkedIn } from '@/components/Icons';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

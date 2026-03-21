@@ -2,9 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import destinations from '@/data/destinations';
-import InfoIcon from '@mui/icons-material/Info';
-import PhoneIcon from '@mui/icons-material/Phone';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { InfoIcon, PhoneIcon, WhatsAppIcon } from '@/components/Icons';
 import CompactBookingTerms from './CompactBookingTerms';
 
 export default function BookingSummary() {

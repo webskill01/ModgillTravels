@@ -8,11 +8,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import destinations from "@/data/destinations";
 import { VEHICLE_TYPES } from "@/data/vehicles";
-import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
-import PersonIcon from "@mui/icons-material/Person";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { LocalPhoneOutlined } from "@mui/icons-material";
+import { DirectionsCarIcon, PersonIcon, LocationOnIcon, ArrowBackIcon, LocalPhoneOutlined } from '@/components/Icons';
 import PricingInfoTooltip from "./PricingTooltip";
 
 const schema = Yup.object().shape({

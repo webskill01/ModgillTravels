@@ -2,16 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import GavelIcon from '@mui/icons-material/Gavel';
-import BookOnlineIcon from '@mui/icons-material/BookOnline';
-import PaymentIcon from '@mui/icons-material/Payment';
-import CancelIcon from '@mui/icons-material/Cancel';
-import SecurityIcon from '@mui/icons-material/Security';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import WarningIcon from '@mui/icons-material/Warning';
-import UpdateIcon from '@mui/icons-material/Update';
-import VerifiedIcon from '@mui/icons-material/Verified';
+import { GavelIcon, BookOnlineIcon, PaymentIcon, CancelIcon, SecurityIcon, SupportAgentIcon, ContactMailIcon, WarningIcon, UpdateIcon, VerifiedIcon } from '@/components/Icons';
 
 const sections = [
   {

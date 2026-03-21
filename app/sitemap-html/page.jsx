@@ -1,13 +1,7 @@
 // app/sitemap-html/page.jsx
 import Link from 'next/link';
 import destinations from '@/data/destinations';
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import BookOnlineIcon from '@mui/icons-material/BookOnline';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import GavelIcon from '@mui/icons-material/Gavel';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { HomeIcon, InfoIcon, ContactMailIcon, BookOnlineIcon, DirectionsCarIcon, GavelIcon, ArrowForwardIcon } from '@/components/Icons';
 
 export const metadata = {
   title: 'Complete Sitemap - All Taxi Routes & Pages | ModgillTravels',

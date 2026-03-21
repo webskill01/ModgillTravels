@@ -2,14 +2,7 @@
 import Link from 'next/link';
 import destinations from '@/data/destinations';
 import cities from '@/data/cities';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PhoneIcon from '@mui/icons-material/Phone';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import SearchIcon from '@mui/icons-material/Search';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import ExploreIcon from '@mui/icons-material/Explore';
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import { DirectionsCarIcon, LocationOnIcon, PhoneIcon, WhatsAppIcon, SearchIcon, TrendingUpIcon, ExploreIcon, LocalOfferIcon } from '@/components/Icons';
 
 export const metadata = {
   // patch_028: Title rewrite
@@ -22,7 +15,7 @@ export const metadata = {
   openGraph: {
     title: 'Cab Booking Patiala | Outstation Taxi Routes & Fares — ModgillTravels',
     description: 'Browse all available taxi routes and cities. Book your cab service instantly with ModgillTravels.',
-    url: 'https://modgilltravels.in/booking',
+    url: 'https://www.modgilltravels.in/booking',
     type: 'website',
   },
 };

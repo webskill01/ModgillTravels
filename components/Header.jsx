@@ -2,9 +2,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import PhoneIcon from "@mui/icons-material/Phone";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { Article, InfoOutline, PersonOutline, RemoveCircle, RemoveRedEye } from "@mui/icons-material";
+import { PhoneIcon, WhatsAppIcon, Article, InfoOutline, PersonOutline, RemoveCircle, RemoveRedEye } from "@/components/Icons";
 
 export default function Header() {
   return (

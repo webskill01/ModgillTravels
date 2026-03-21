@@ -340,7 +340,7 @@ const blogs = [
 
 <h2>How to Book Patiala to Chandigarh Taxi</h2>
 <p>Booking is simple: WhatsApp or call <strong>+91-62849-92669</strong> with your pickup location, date, time, and number of passengers. We confirm your driver within 15 minutes. Same-day bookings accepted 24/7.</p>`,
-    image: '/patiala-chandigrah.jpg',
+    image: '/blog/patiala-chandigarh.jpg',
     relatedCities: ['patiala', 'chandigarh'],
     relatedRoutes: ['patiala-to-chandigarh', 'chandigarh-to-patiala'],
   },
@@ -424,7 +424,7 @@ const blogs = [
 
 <h2>Patiala to Manali Booking</h2>
 <p>WhatsApp or call <strong>+91-62849-92669</strong> to book your Patiala to Manali cab. We recommend booking 2–3 days in advance for peak season (May–June, September). All our Manali route drivers are hill-certified with 5+ years of mountain driving experience.</p>`,
-    image: '/patiala-manali.jpg',
+    image: '/blog/patiala-manali.jpg',
     relatedCities: ['patiala', 'manali', 'chandigarh'],
     relatedRoutes: ['patiala-to-manali', 'manali-to-patiala'],
   },
@@ -504,7 +504,7 @@ const blogs = [
 
 <h2>How to Book Chandigarh to Shimla Cab</h2>
 <p>Call or WhatsApp ModgillTravels at <strong>+91-62849-92669</strong>. Share your pickup point in Chandigarh (Sector 17, airport, any sector), date, time, and vehicle preference. Confirmation in 15 minutes. 24/7 booking available.</p>`,
-    image: '/chandigrah-shimla.jpg',
+    image: '/blog/chandigarh-shimla.jpg',
     relatedCities: ['chandigarh', 'shimla', 'patiala'],
     relatedRoutes: ['patiala-to-shimla', 'patiala-to-chandigarh'],
   },
@@ -590,7 +590,7 @@ const blogs = [
 
 <h2>How to Book Patiala to Amritsar Taxi</h2>
 <p>WhatsApp or call <strong>+91-62849-92669</strong>. Share your pickup location in Patiala, travel date, preferred vehicle, and whether you need Wagah Border coverage. We confirm in 15 minutes and can arrange early morning 5 AM departures.</p>`,
-    image: '/golden-temple.jpg',
+    image: '/blog/golden-temple.jpg',
     relatedCities: ['patiala', 'amritsar', 'ludhiana'],
     relatedRoutes: ['patiala-to-amritsar', 'amritsar-to-patiala'],
   },
@@ -705,7 +705,7 @@ const blogs = [
 </ul>
 
 <p>Call or WhatsApp <strong>+91-62849-92669</strong> and our team will recommend the right vehicle for your specific route, passenger count, and luggage. We'll make sure you get the best fit — not just the most expensive option.</p>`,
-    image: '/sedan-vs-innova.jpg',
+    image: '/blog/sedan-vs-innova.jpg',
     relatedCities: ['patiala', 'manali', 'shimla', 'delhi'],
     relatedRoutes: ['patiala-to-delhi', 'patiala-to-manali', 'patiala-to-shimla'],
   },

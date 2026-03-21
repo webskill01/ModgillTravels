@@ -1,7 +1,5 @@
 // components/VehicleOptions.jsx
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import PeopleIcon from '@mui/icons-material/People';
-import LugageIcon from '@mui/icons-material/BusinessCenter';
+import { DirectionsCarIcon, PeopleIcon, BusinessCenterIcon as LugageIcon } from '@/components/Icons';
 import { VEHICLE_TYPES } from '@/data/vehicles';
 
 export default function VehicleOptions({ route, tripType = "oneway", searchParams = {} }) {

@@ -2,10 +2,7 @@
 import { notFound } from 'next/navigation';
 import cities from '@/data/cities';
 import Link from 'next/link';
-import PhoneIcon from '@mui/icons-material/Phone';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { AccessTime, ArrowForward, CheckCircle, CurrencyRupee, DirectionsCar, LocalAirport, LocationOn, Phone, Straighten } from '@mui/icons-material';
+import { PhoneIcon, WhatsAppIcon, LocationOnIcon, AccessTime, ArrowForward, CheckCircle, CurrencyRupee, DirectionsCar, LocalAirport, LocationOn, Phone, Straighten } from '@/components/Icons';
 import Breadcrumbs from '@/components/BreadCrumbs';
 import { getCitySchema } from '@/utils/citySchema';
 import destinations from '@/data/destinations';

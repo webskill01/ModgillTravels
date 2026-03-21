@@ -1,7 +1,7 @@
 // app/routes/[slug]/page.jsx
 import Link from "next/link";
 import destinations from "@/data/destinations";
-import PlaceIcon from '@mui/icons-material/Place';
+import { PlaceIcon } from '@/components/Icons';
 import RouteOverview from "@/components/RouteOverview";
 import VehicleOptions from "@/components/VehicleOptions";
 import QuickBookingSidebar from "@/components/QuickBookingSidebar";

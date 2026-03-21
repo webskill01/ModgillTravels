@@ -1,6 +1,6 @@
 // Enhanced PricingInfoTooltip.jsx
 import { useState } from 'react';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import { InfoOutlinedIcon } from '@/components/Icons';
 
 export default function PricingInfoTooltip({ perKmRate, tripType, days }) {
   const [showTooltip, setShowTooltip] = useState(false);

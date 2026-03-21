@@ -2,15 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import SecurityIcon from '@mui/icons-material/Security';
-import PersonIcon from '@mui/icons-material/Person';
-import StorageIcon from '@mui/icons-material/Storage';
-import ShareIcon from '@mui/icons-material/Share';
-import CookieIcon from '@mui/icons-material/Cookie';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
-import LockIcon from '@mui/icons-material/Lock';
-import UpdateIcon from '@mui/icons-material/Update';
+import { SecurityIcon, PersonIcon, StorageIcon, ShareIcon, CookieIcon, ContactMailIcon, VerifiedUserIcon, LockIcon, UpdateIcon } from '@/components/Icons';
 
 const sections = [
   {

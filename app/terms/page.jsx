@@ -10,7 +10,7 @@ export const metadata = {
     title: "Terms & Conditions - ModgillTravels",
     description: "Understand our booking terms, cancellation policy, and service conditions for ModgillTravels taxi services.",
     type: "website",
-    url: "https://modgilltravels.in/terms",
+    url: "https://www.modgilltravels.in/terms",
   },
   robots: {
     index: true,

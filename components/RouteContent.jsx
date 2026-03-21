@@ -1,8 +1,5 @@
 // components/RouteContent.jsx
-import InfoIcon from '@mui/icons-material/Info';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import { InfoIcon, CheckCircleIcon, LocalOfferIcon, HelpOutlineIcon } from '@/components/Icons';
 
 export default function RouteContent({ route }) {
   // Calculate starting fare from route data

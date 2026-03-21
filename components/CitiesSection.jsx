@@ -1,7 +1,6 @@
 // components/CitiesSection.jsx - ENHANCED VERSION
 import Link from 'next/link';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { LocationOnIcon, ArrowForwardIcon } from '@/components/Icons';
 
 export default function CitiesSection() {
   const cities = [

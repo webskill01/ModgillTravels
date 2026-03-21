@@ -1,9 +1,6 @@
 // app/not-found.jsx - MINIMAL DARK VERSION
 import Link from 'next/link';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import PhoneIcon from '@mui/icons-material/Phone';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import SearchOffIcon from '@mui/icons-material/SearchOff';
+import { DirectionsCarIcon, PhoneIcon, WhatsAppIcon, SearchOffIcon } from '@/components/Icons';
 
 export default function NotFound() {
   return (

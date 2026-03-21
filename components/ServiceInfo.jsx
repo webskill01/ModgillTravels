@@ -1,6 +1,5 @@
 // components/ServiceInfo.jsx - NEW LIGHTWEIGHT COMPONENT
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
+import { DirectionsCarIcon, LocalTaxiIcon } from '@/components/Icons';
 
 export default function ServiceInfo() {
   return (

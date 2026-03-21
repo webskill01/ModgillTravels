@@ -1,11 +1,5 @@
 // components/RouteOverview.jsx
-import RouteIcon from '@mui/icons-material/Route';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import AcUnitIcon from '@mui/icons-material/AcUnit';
-import GpsFixedIcon from '@mui/icons-material/GpsFixed';
-import PeopleIcon from '@mui/icons-material/People';
+import { RouteIcon, AccessTimeIcon, LocalOfferIcon, DirectionsCarIcon, AcUnitIcon, GpsFixedIcon, PeopleIcon } from '@/components/Icons';
 
 export default function RouteOverview({ route }) {
   // Calculate starting fare (using Sedan as base)

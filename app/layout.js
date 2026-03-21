@@ -26,7 +26,7 @@ export const metadata = {
     template: "%s | ModgillTravels - Best Taxi Service in Patiala",
   },
   description:
-    "Looking for taxi service near me? ModgillTravels offers best cab service in Patiala with one way taxi, round trip options. Trusted taxi agents near me with professional drivers, AC vehicles, transparent pricing. Available 24/7 for local & outstation trips to Delhi, Shimla, Manali. Book now!",
+    "Best taxi service in Patiala. One-way cab to Delhi, Shimla & Manali from ₹1,400. AC vehicles, professional drivers, 24/7 booking. Call ModgillTravels.",
   keywords: [
     "taxi service near me",
     "taxi agents near me",

@@ -54,17 +54,17 @@ export default function FAQAccordion() {
             itemScope
             itemProp="mainEntity"
             itemType="https://schema.org/Question"
-            className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl overflow-hidden transition-all duration-200 hover:border-cyan-500/40"
+            className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl overflow-hidden transition-all duration-200 hover:border-gray-600"
           >
             {/* Question row — clickable */}
             <button
               onClick={() => toggle(index)}
               aria-expanded={isOpen}
-              className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/50 rounded-xl"
+              className="w-full flex items-center justify-between gap-3 px-4 py-3 sm:px-5 sm:py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500/50 rounded-xl"
             >
               <h3
                 itemProp="name"
-                className="text-white font-semibold text-sm sm:text-base leading-snug"
+                className="text-white font-semibold text-xs sm:text-sm leading-snug"
               >
                 {faq.question}
               </h3>
@@ -72,7 +72,7 @@ export default function FAQAccordion() {
               {/* Chevron icon */}
               <span
                 className={`flex-shrink-0 w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center transition-transform duration-300 ${
-                  isOpen ? 'rotate-180 border-cyan-500 bg-cyan-500/10' : ''
+                  isOpen ? 'rotate-180 border-gray-500 bg-slate-700' : ''
                 }`}
                 aria-hidden="true"
               >
@@ -82,7 +82,7 @@ export default function FAQAccordion() {
                   height="12"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke={isOpen ? '#22d3ee' : '#9ca3af'}
+                  stroke="#9ca3af"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -107,7 +107,7 @@ export default function FAQAccordion() {
                 >
                   <p
                     itemProp="text"
-                    className="text-gray-300 text-sm leading-relaxed"
+                    className="text-gray-300 text-xs sm:text-sm leading-relaxed"
                   >
                     {faq.answer}
                   </p>

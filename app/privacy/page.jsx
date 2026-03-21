@@ -10,7 +10,7 @@ export const metadata = {
     title: "Privacy Policy - ModgillTravels",
     description: "Learn how ModgillTravels protects your personal information with SSL encryption and transparent privacy practices.",
     type: "website",
-    url: "https://modgilltravels.in/privacy",
+    url: "https://www.modgilltravels.in/privacy",
   },
   robots: {
     index: true,

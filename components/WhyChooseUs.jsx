@@ -1,8 +1,5 @@
 // components/WhyChooseUs.jsx - OPTIMIZED
-import VerifiedIcon from '@mui/icons-material/Verified';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import PaymentIcon from '@mui/icons-material/Payment';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import { VerifiedIcon, AccessTimeIcon, PaymentIcon, SupportAgentIcon } from '@/components/Icons';
 
 export default function WhyChooseUs() {
   const features = [

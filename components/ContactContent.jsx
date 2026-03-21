@@ -2,16 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import ContactMailIcon from "@mui/icons-material/ContactMail";
-import PhoneIcon from "@mui/icons-material/Phone";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import EmailIcon from "@mui/icons-material/Email";
-import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
-import { LinkedIn } from "@mui/icons-material";
+import { ContactMailIcon, PhoneIcon, WhatsAppIcon, FacebookIcon, InstagramIcon, LocationOnIcon, AccessTimeIcon, EmailIcon, HeadsetMicIcon, LinkedIn } from '@/components/Icons';
 
 const contactMethods = [
   {

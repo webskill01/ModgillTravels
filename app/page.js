@@ -395,15 +395,15 @@ export default function HomePage() {
           <ServiceInfo />
         </section>
 
-        {/* FAQ Section — GEO/AEO Optimized (geo_001) */}
-        <section className="max-w-6xl mx-auto px-4 py-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 text-center">Frequently Asked Questions — Taxi Service in Patiala</h2>
-          <FAQAccordion />
-        </section>
-
         {/* Cities & Blog Combined - Desktop 2 Columns, Mobile Stacked */}
          <section className="max-w-6xl mx-auto px-4 py-6 sm:py-8">
           <BlogSection />
+        </section>
+
+        {/* FAQ Section — GEO/AEO Optimized (geo_001) */}
+        <section className="max-w-6xl mx-auto px-4 py-10">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 text-center">Frequently Asked Questions — Taxi Service in Patiala</h2>
+          <FAQAccordion />
         </section>
       </main>
     </>

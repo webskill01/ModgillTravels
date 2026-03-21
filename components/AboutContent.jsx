@@ -2,16 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import InfoIcon from '@mui/icons-material/Info';
-import PeopleIcon from '@mui/icons-material/People';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import StarIcon from '@mui/icons-material/Star';
-import SecurityIcon from '@mui/icons-material/Security';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PhoneIcon from '@mui/icons-material/Phone';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { InfoIcon, PeopleIcon, DirectionsCarIcon, StarIcon, SecurityIcon, SupportAgentIcon, LocationOnIcon, PhoneIcon, CheckCircleIcon, WhatsAppIcon } from '@/components/Icons';
 
 // patch_025: Replace '10+ Years Experience' with '5,000+ Trips Completed' (fixes false claim)
 const stats = [

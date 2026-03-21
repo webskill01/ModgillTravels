@@ -1,4 +1,4 @@
-import WarningAmberIcon from '@mui/icons-material/WarningAmber';
+import { WarningAmberIcon } from '@/components/Icons';
 export default function CompactBookingTerms() {
   return (
     <div className="my-4 max-w-3xl mx-auto px-4">
