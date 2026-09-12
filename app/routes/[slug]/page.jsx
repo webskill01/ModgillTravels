@@ -26,8 +26,13 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${route.from} to ${route.to} Taxi | ${route.distanceKm} km Cab Service`,
-    description: `${route.from} to ${route.to} taxi: ${route.distanceKm} km, ${route.duration}. AC vehicles, verified drivers, 24/7. Book on WhatsApp or call ${site.phone}.`,
+    // Distance first. Live GSC shows the demand on these pages is
+    // distance-intent — "patiala to manali distance" alone is 134 impressions
+    // at position 11.8, and the page was 56 km wrong until Phase 8. Leading
+    // with the number answers the query in the SERP and earns the click;
+    // burying it behind "Taxi" matched a query nobody is typing.
+    title: `${route.from} to ${route.to} Distance: ${route.distanceKm} km | Taxi ${route.duration}`,
+    description: `${route.from} to ${route.to} is ${route.distanceKm} km and takes ${route.duration} by road. AC cab, verified driver, one way or round trip. Quote fixed before you travel.`,
     keywords: [
       `${route.from} to ${route.to} taxi`,
       `${route.from} ${route.to} cab`,

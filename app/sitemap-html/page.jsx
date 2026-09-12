@@ -6,7 +6,7 @@ import destinations from '@/data/destinations';
 import { HomeIcon, InfoIcon, ContactMailIcon, BookOnlineIcon, DirectionsCarIcon, GavelIcon, ArrowForwardIcon } from '@/components/Icons';
 
 export const metadata = {
-  title: 'Complete Sitemap - All Taxi Routes & Pages | ModgillTravels',
+  title: 'Sitemap — All Taxi Routes & Pages | ModgillTravels',
   description: 'Browse all taxi routes, pages, and services on ModgillTravels. Find your route from Patiala to Delhi, Chandigarh, Shimla, Manali and more destinations.',
   keywords: 'sitemap, taxi routes, cab service patiala, all routes, navigation',
   robots: {

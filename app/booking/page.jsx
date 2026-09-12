@@ -6,15 +6,18 @@ import cities from '@/data/cities';
 import { DirectionsCarIcon, LocationOnIcon, SearchIcon, TrendingUpIcon, ExploreIcon, LocalOfferIcon } from '@/components/Icons';
 
 export const metadata = {
-  // patch_028: Title rewrite
-  title: 'Cab Booking Patiala | Outstation Routes & Fares',
-  description: 'All outstation taxi routes from Patiala — Delhi 250 km, Chandigarh 68 km, Shimla 170 km, Manali 357 km. Book on WhatsApp or call +91-62849-92669.',
+  // "Fares" removed from the title and H1: Phase 6 deleted per-route pricing,
+  // so the page was promising content it does not have — a bounce on arrival.
+  // Live GSC also says fare/price/cost queries draw 3 impressions at position
+  // 51 combined, against 369 for distance queries. Lead with distance.
+  title: 'Cab Booking Patiala | All Outstation Routes & Distances',
+  description: 'Every outstation route from Patiala with real distances and drive times — Delhi 250 km, Chandigarh 68 km, Shimla 170 km, Manali 357 km. Book on WhatsApp, 24/7.',
   keywords: ['book taxi online', 'taxi booking', 'cab booking patiala', 'all routes', 'outstation taxi patiala'],
   alternates: {
     canonical: 'https://www.modgilltravels.in/booking',
   },
   openGraph: {
-    title: 'Cab Booking Patiala | Outstation Taxi Routes & Fares — ModgillTravels',
+    title: 'Cab Booking Patiala | All Outstation Routes & Distances — ModgillTravels',
     description: 'Browse all available taxi routes and cities. Book your cab service instantly with ModgillTravels.',
     url: 'https://www.modgilltravels.in/booking',
     type: 'website',
@@ -52,7 +55,7 @@ export default function BookingPage() {
           </div>
           {/* patch_027: H1 rewrite */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-ink mb-4">
-            Book Taxi in Patiala — All Outstation Routes & Cab Fares
+            Book Taxi in Patiala — All Outstation Routes & Distances
           </h1>
           <p className="text-ink-muted text-base sm:text-lg max-w-2xl mx-auto mb-4">
             Browse all available routes and cities. Choose your destination and book instantly via phone or WhatsApp.

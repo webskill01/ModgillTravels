@@ -14,7 +14,7 @@ import { VerifiedIcon, AccessTimeIcon, WhatsAppIcon, LocationOnIcon } from "@/co
 
 export const metadata = {
   title: "Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels",
-  description: "Patiala's 24/7 taxi service. One-way and round trip to Delhi, Chandigarh, Shimla and Manali. Verified drivers, AC vehicles. Call +91-62849-92669.",
+  description: "Patiala's 24/7 taxi service. One-way and round trip to Delhi, Chandigarh, Shimla and Manali. Verified drivers, AC vehicles, fixed quote before you travel.",
   keywords: [
     "taxi service near me",
     "taxi agents near me",
@@ -29,7 +29,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels",
-    description: "Patiala's 24/7 taxi service. One-way and round trip to Delhi, Chandigarh, Shimla and Manali. Verified drivers, AC vehicles. Call +91-62849-92669.",
+    description: "Patiala's 24/7 taxi service. One-way and round trip to Delhi, Chandigarh, Shimla and Manali. Verified drivers, AC vehicles, fixed quote before you travel.",
     type: "website",
     url: "https://www.modgilltravels.in",
     siteName: "ModgillTravels",
