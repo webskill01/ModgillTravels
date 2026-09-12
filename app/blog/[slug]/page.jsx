@@ -94,20 +94,20 @@ export default async function BlogPostPage({ params }) {
           />
 
         {/* Article Header */}
-        <article className="bg-white border border-[--color-line] rounded-2xl p-6 sm:p-8 mb-8">
+        <article className="bg-white border border-line rounded-2xl p-6 sm:p-8 mb-8">
 
           {/* Category Badge */}
-          <span className="inline-block px-3 py-1 bg-[--color-accent-soft] text-[--color-brand] text-sm rounded-lg mb-4">
+          <span className="inline-block px-3 py-1 bg-accent-soft text-brand text-sm rounded-lg mb-4">
             {blog.category}
           </span>
 
           {/* Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[--color-ink] mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-ink mb-6 leading-tight">
             {blog.title}
           </h1>
 
           {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-[--color-ink-muted] pb-6 border-b border-[--color-line]">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-ink-muted pb-6 border-b border-line">
             <div className="flex items-center gap-2">
               <PersonIcon className="w-5 h-5" />
               <span>{blog.author}</span>
@@ -137,19 +137,19 @@ export default async function BlogPostPage({ params }) {
           {/* Article Content */}
           <div className="prose prose-invert prose-lg max-w-none">
   <div
-    className="text-[--color-ink-muted] leading-relaxed space-y-6"
+    className="text-ink-muted leading-relaxed space-y-6"
     dangerouslySetInnerHTML={{ __html: blog.content }}
   />
 </div>
         </article>
 
         {/* CTA Section */}
-        <section className="bg-[--color-accent-soft] border border-[--color-brand] rounded-2xl p-6 sm:p-8 mb-8">
+        <section className="bg-accent-soft border border-brand rounded-2xl p-6 sm:p-8 mb-8">
           {/* patch_038: CTA H2 rewrite */}
-          <h2 className="text-2xl sm:text-3xl font-bold text-[--color-ink] mb-4 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink mb-4 text-center">
             Book Your Taxi from Patiala — Call or WhatsApp +91-62849-92669
           </h2>
-          <p className="text-[--color-ink-muted] text-center mb-6">
+          <p className="text-ink-muted text-center mb-6">
             Call us now or WhatsApp for instant booking confirmation with professional drivers and comfortable vehicles.
           </p>
           <BookCta align="center" size="lg" />
@@ -159,17 +159,17 @@ export default async function BlogPostPage({ params }) {
         {relatedCityPages.length > 0 && (
           <section className="mb-8">
             {/* patch_039: Related Cities H2 rewrite */}
-            <h2 className="text-2xl font-bold text-[--color-ink] mb-6">Taxi Service in Nearby Cities</h2>
+            <h2 className="text-2xl font-bold text-ink mb-6">Taxi Service in Nearby Cities</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {relatedCityPages.map((city) => (
                 <Link
                   key={city.slug}
                   href={`/city/${city.slug}`}
-                  className="bg-white border border-[--color-line] rounded-xl p-5 hover:border-[--color-brand] transition-all"
+                  className="bg-white border border-line rounded-xl p-5 hover:border-brand transition-all"
                 >
-                  <h3 className="text-[--color-ink] font-bold text-lg mb-2">{city.name}</h3>
-                  <p className="text-[--color-ink-muted] text-sm line-clamp-2">{city.description}</p>
-                  <span className="text-[--color-brand] text-sm mt-3 inline-block">
+                  <h3 className="text-ink font-bold text-lg mb-2">{city.name}</h3>
+                  <p className="text-ink-muted text-sm line-clamp-2">{city.description}</p>
+                  <span className="text-brand text-sm mt-3 inline-block">
                     View Taxi Service →
                   </span>
                 </Link>
@@ -180,7 +180,7 @@ export default async function BlogPostPage({ params }) {
 
         {/* Related Blogs */}
         <section>
-          <h2 className="text-2xl font-bold text-[--color-ink] mb-6">More Travel Guides</h2>
+          <h2 className="text-2xl font-bold text-ink mb-6">More Travel Guides</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {blogs
               .filter(b => b.slug !== slug)
@@ -189,18 +189,18 @@ export default async function BlogPostPage({ params }) {
                 <Link
                   key={relatedBlog.slug}
                   href={`/blog/${relatedBlog.slug}`}
-                  className="bg-white border border-[--color-line] rounded-xl p-5 hover:border-[--color-brand] transition-all"
+                  className="bg-white border border-line rounded-xl p-5 hover:border-brand transition-all"
                 >
-                  <span className="inline-block px-2 py-1 bg-[--color-accent-soft] text-[--color-brand] text-xs rounded mb-3">
+                  <span className="inline-block px-2 py-1 bg-accent-soft text-brand text-xs rounded mb-3">
                     {relatedBlog.category}
                   </span>
-                  <h3 className="text-[--color-ink] font-bold text-lg mb-2 line-clamp-2">
+                  <h3 className="text-ink font-bold text-lg mb-2 line-clamp-2">
                     {relatedBlog.title}
                   </h3>
-                  <p className="text-[--color-ink-muted] text-sm line-clamp-2 mb-3">
+                  <p className="text-ink-muted text-sm line-clamp-2 mb-3">
                     {relatedBlog.excerpt}
                   </p>
-                  <span className="text-[--color-brand] text-sm font-semibold">
+                  <span className="text-brand text-sm font-semibold">
                     Read More →
                   </span>
                 </Link>

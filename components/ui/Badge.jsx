@@ -1,9 +1,9 @@
 // Where amber is allowed to appear: as a fill behind --ink (11:1), never as
 // text on white (1.9:1) and never as a button.
 const TONES = {
-  accent: "bg-[--color-accent] text-[--color-ink]",
-  soft: "bg-[--color-accent-soft] text-[--color-ink] border border-[--color-accent]",
-  neutral: "bg-[--color-surface-2] text-[--color-ink-muted]",
+  accent: "bg-accent text-ink",
+  soft: "bg-accent-soft text-ink border border-accent",
+  neutral: "bg-surface-2 text-ink-muted",
 };
 
 export default function Badge({ tone = "soft", className = "", children, ...props }) {

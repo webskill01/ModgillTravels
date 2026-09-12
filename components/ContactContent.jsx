@@ -54,16 +54,16 @@ export default function ContactContent() {
   return (
     <div className="min-h-screen">
       {/* Hero Header - Mobile Optimized */}
-      <section className="border-b border-[--color-line] bg-white">
+      <section className="border-b border-line bg-white">
         <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
           <div className="text-center">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[--color-accent-soft] border border-[--color-brand] rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-              <HeadsetMicIcon className="w-7 h-7 sm:w-8 sm:h-8 text-[--color-brand]" />
+            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-accent-soft border border-brand rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+              <HeadsetMicIcon className="w-7 h-7 sm:w-8 sm:h-8 text-brand" />
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[--color-ink] mb-3 sm:mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-ink mb-3 sm:mb-4">
               Contact ModgillTravels
             </h1>
-            <p className="text-[--color-ink-muted] text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-ink-muted text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
               Need a taxi in Patiala or nearby areas? We&apos;re here to help 24/7.
               Get instant booking confirmation via WhatsApp or call us now.
             </p>
@@ -74,7 +74,7 @@ export default function ContactContent() {
       <main className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
         {/* Contact Methods Grid - Mobile First */}
         <section className="mb-10 sm:mb-12">
-          <h2 className="text-xl sm:text-2xl font-bold text-[--color-ink] mb-6 text-center">
+          <h2 className="text-xl sm:text-2xl font-bold text-ink mb-6 text-center">
             Get In Touch
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -84,37 +84,37 @@ export default function ContactContent() {
                 href={method.action}
                 target={method.action.startsWith("http") ? "_blank" : undefined}
                 rel={method.action.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="group bg-white border border-[--color-line] rounded-xl p-5 sm:p-6 hover:border-[--color-brand] transition-all duration-300"
+                className="group bg-white border border-line rounded-xl p-5 sm:p-6 hover:border-brand transition-all duration-300"
               >
                 <div
                   className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center mb-4 transition-transform group- ${
                     method.color === "green"
-                      ? "bg-[--color-accent-soft] group-hover:bg-[--color-accent-soft]"
+                      ? "bg-accent-soft group-hover:bg-accent-soft"
                       : method.color === "blue"
-                      ? "bg-[--color-accent-soft] group-hover:bg-[--color-accent-soft]"
-                      : "bg-[--color-accent-soft] group-hover:bg-[--color-accent-soft]"
+                      ? "bg-accent-soft group-hover:bg-accent-soft"
+                      : "bg-accent-soft group-hover:bg-accent-soft"
                   }`}
                 >
                   <span
                     className={
                       method.color === "green"
-                        ? "text-[--color-brand]"
+                        ? "text-brand"
                         : method.color === "blue"
-                        ? "text-[--color-brand]"
-                        : "text-[--color-brand]"
+                        ? "text-brand"
+                        : "text-brand"
                     }
                   >
                     {method.icon}
                   </span>
                 </div>
-                <h3 className="text-[--color-ink] font-bold text-base sm:text-lg mb-2">
+                <h3 className="text-ink font-bold text-base sm:text-lg mb-2">
                   {method.title}
                 </h3>
-                <p className="text-[--color-brand] text-sm sm:text-base font-medium mb-2 break-all">
+                <p className="text-brand text-sm sm:text-base font-medium mb-2 break-all">
                   {method.value}
                 </p>
-                <p className="text-[--color-ink-muted] text-xs sm:text-sm mb-3">{method.description}</p>
-                <div className="flex items-center gap-2 text-xs text-[--color-ink-muted]">
+                <p className="text-ink-muted text-xs sm:text-sm mb-3">{method.description}</p>
+                <div className="flex items-center gap-2 text-xs text-ink-muted">
                   <AccessTimeIcon className="w-4 h-4" />
                   <span>{method.availability}</span>
                 </div>
@@ -126,27 +126,27 @@ export default function ContactContent() {
         {/* Info Sections - Responsive Grid */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 sm:mb-12">
           {/* Business Hours */}
-          <div className="bg-white border border-[--color-line] rounded-xl p-5 sm:p-6">
-            <h3 className="text-lg font-bold text-[--color-ink] mb-4 flex items-center gap-2">
-              <AccessTimeIcon className="text-[--color-brand]" />
+          <div className="bg-white border border-line rounded-xl p-5 sm:p-6">
+            <h3 className="text-lg font-bold text-ink mb-4 flex items-center gap-2">
+              <AccessTimeIcon className="text-brand" />
               Business Hours
             </h3>
             <div className="space-y-3 text-sm">
-              <div className="flex justify-between items-center p-2 bg-[--color-surface] rounded-lg">
-                <span className="text-[--color-ink-muted]">Phone Support:</span>
-                <span className="text-[--color-brand] font-semibold">24/7</span>
+              <div className="flex justify-between items-center p-2 bg-surface rounded-lg">
+                <span className="text-ink-muted">Phone Support:</span>
+                <span className="text-brand font-semibold">24/7</span>
               </div>
-              <div className="flex justify-between items-center p-2 bg-[--color-surface] rounded-lg">
-                <span className="text-[--color-ink-muted]">WhatsApp:</span>
-                <span className="text-[--color-brand] font-semibold">24/7</span>
+              <div className="flex justify-between items-center p-2 bg-surface rounded-lg">
+                <span className="text-ink-muted">WhatsApp:</span>
+                <span className="text-brand font-semibold">24/7</span>
               </div>
-              <div className="flex justify-between items-center p-2 bg-[--color-surface] rounded-lg">
-                <span className="text-[--color-ink-muted]">Email Response:</span>
-                <span className="text-[--color-ink] font-medium">Within 2 hrs</span>
+              <div className="flex justify-between items-center p-2 bg-surface rounded-lg">
+                <span className="text-ink-muted">Email Response:</span>
+                <span className="text-ink font-medium">Within 2 hrs</span>
               </div>
-              <div className="flex justify-between items-center p-2 bg-[--color-surface] rounded-lg">
-                <span className="text-[--color-ink-muted]">Office Visits:</span>
-                <span className="text-[--color-ink] font-medium">9 AM - 8 PM</span>
+              <div className="flex justify-between items-center p-2 bg-surface rounded-lg">
+                <span className="text-ink-muted">Office Visits:</span>
+                <span className="text-ink font-medium">9 AM - 8 PM</span>
               </div>
             </div>
           </div>
@@ -154,25 +154,25 @@ export default function ContactContent() {
           {/* Office Location */}
           <div
             id="office-location"
-            className="bg-white border border-[--color-line] rounded-xl p-5 sm:p-6"
+            className="bg-white border border-line rounded-xl p-5 sm:p-6"
           >
-            <h3 className="text-lg font-bold text-[--color-ink] mb-4 flex items-center gap-2">
-              <LocationOnIcon className="text-[--color-brand]" />
+            <h3 className="text-lg font-bold text-ink mb-4 flex items-center gap-2">
+              <LocationOnIcon className="text-brand" />
               Our Location
             </h3>
             <div className="space-y-4 text-sm">
-              <div className="p-3 bg-[--color-surface] rounded-lg">
-                <span className="text-[--color-ink-muted] text-xs block mb-1">Office Address:</span>
-                <p className="text-[--color-ink] font-medium leading-relaxed">
+              <div className="p-3 bg-surface rounded-lg">
+                <span className="text-ink-muted text-xs block mb-1">Office Address:</span>
+                <p className="text-ink font-medium leading-relaxed">
                   Urban Estate, Phase 2<br />
                   Near Police Station<br />
                   Patiala, Punjab 147001<br />
                   India
                 </p>
               </div>
-              <div className="p-3 bg-[--color-surface] rounded-lg">
-                <span className="text-[--color-ink-muted] text-xs block mb-1">Service Coverage:</span>
-                <p className="text-[--color-ink] font-medium">
+              <div className="p-3 bg-surface rounded-lg">
+                <span className="text-ink-muted text-xs block mb-1">Service Coverage:</span>
+                <p className="text-ink font-medium">
                   Punjab • Haryana • Himachal Pradesh • Delhi NCR
                 </p>
               </div>
@@ -180,26 +180,26 @@ export default function ContactContent() {
           </div>
 
           {/* Quick Help Links */}
-          <div className="bg-white border border-[--color-line] rounded-xl p-5 sm:p-6">
-            <h3 className="text-lg font-bold text-[--color-ink] mb-4">Quick Links</h3>
+          <div className="bg-white border border-line rounded-xl p-5 sm:p-6">
+            <h3 className="text-lg font-bold text-ink mb-4">Quick Links</h3>
             <div className="space-y-3 text-sm">
               <Link
                 href="/"
-                className="flex items-center gap-2 text-[--color-brand] hover:text-[--color-brand] transition p-2 bg-[--color-surface] rounded-lg hover:bg-[--color-surface]"
+                className="flex items-center gap-2 text-brand hover:text-brand transition p-2 bg-surface rounded-lg hover:bg-surface"
               >
                 <span>→</span>
                 <span>Book Taxi Now</span>
               </Link>
               <Link
                 href="/about"
-                className="flex items-center gap-2 text-[--color-brand] hover:text-[--color-brand] transition p-2 bg-[--color-surface] rounded-lg hover:bg-[--color-surface]"
+                className="flex items-center gap-2 text-brand hover:text-brand transition p-2 bg-surface rounded-lg hover:bg-surface"
               >
                 <span>→</span>
                 <span>About Us</span>
               </Link>
               <Link
                 href="/privacy"
-                className="flex items-center gap-2 text-[--color-brand] hover:text-[--color-brand] transition p-2 bg-[--color-surface] rounded-lg hover:bg-[--color-surface]"
+                className="flex items-center gap-2 text-brand hover:text-brand transition p-2 bg-surface rounded-lg hover:bg-surface"
               >
                 <span>→</span>
                 <span>Privacy Policy</span>
@@ -212,32 +212,32 @@ export default function ContactContent() {
 
         {/* patch_041: FAQ section for contact page */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-[--color-ink] mb-4">Quick Answers</h2>
+          <h2 className="text-2xl font-bold text-ink mb-4">Quick Answers</h2>
           <div className="space-y-3">
             <details className="group">
-              <summary className="flex items-center justify-between cursor-pointer text-[--color-ink] font-semibold p-4 bg-[--color-surface] border border-[--color-line] rounded-lg text-sm list-none">
+              <summary className="flex items-center justify-between cursor-pointer text-ink font-semibold p-4 bg-surface border border-line rounded-lg text-sm list-none">
                 <span>How do I book a taxi via WhatsApp?</span>
-                <span className="text-[--color-brand]">▼</span>
+                <span className="text-brand">▼</span>
               </summary>
-              <div className="mt-1 p-4 text-[--color-ink-muted] text-sm bg-[--color-surface] border border-[--color-line] rounded-lg">
+              <div className="mt-1 p-4 text-ink-muted text-sm bg-surface border border-line rounded-lg">
                 Send a WhatsApp message to +91-62849-92669 (tap the WhatsApp button on this page). Include: your pickup location in Patiala, your destination, travel date and time, and preferred vehicle type. We reply with a confirmed quote and driver details within 15 minutes.
               </div>
             </details>
             <details className="group">
-              <summary className="flex items-center justify-between cursor-pointer text-[--color-ink] font-semibold p-4 bg-[--color-surface] border border-[--color-line] rounded-lg text-sm list-none">
+              <summary className="flex items-center justify-between cursor-pointer text-ink font-semibold p-4 bg-surface border border-line rounded-lg text-sm list-none">
                 <span>What is Modgill Travels&apos; phone number?</span>
-                <span className="text-[--color-brand]">▼</span>
+                <span className="text-brand">▼</span>
               </summary>
-              <div className="mt-1 p-4 text-[--color-ink-muted] text-sm bg-[--color-surface] border border-[--color-line] rounded-lg">
+              <div className="mt-1 p-4 text-ink-muted text-sm bg-surface border border-line rounded-lg">
                 ModgillTravels&apos; phone number is +91-62849-92669. This is also our WhatsApp number. We are available 24 hours a day, 7 days a week for taxi bookings, queries, and emergency cab service in Patiala and outstation routes.
               </div>
             </details>
             <details className="group">
-              <summary className="flex items-center justify-between cursor-pointer text-[--color-ink] font-semibold p-4 bg-[--color-surface] border border-[--color-line] rounded-lg text-sm list-none">
+              <summary className="flex items-center justify-between cursor-pointer text-ink font-semibold p-4 bg-surface border border-line rounded-lg text-sm list-none">
                 <span>How quickly can I get a cab in Patiala?</span>
-                <span className="text-[--color-brand]">▼</span>
+                <span className="text-brand">▼</span>
               </summary>
-              <div className="mt-1 p-4 text-[--color-ink-muted] text-sm bg-[--color-surface] border border-[--color-line] rounded-lg">
+              <div className="mt-1 p-4 text-ink-muted text-sm bg-surface border border-line rounded-lg">
                 For immediate bookings in Patiala, we dispatch a cab within 30–45 minutes depending on your pickup location. For outstation trips, advance booking of 2+ hours is recommended. For airport transfers, book at least 3 hours before your flight. WhatsApp +91-62849-92669 for fastest response.
               </div>
             </details>
@@ -245,17 +245,17 @@ export default function ContactContent() {
         </section>
 
         {/* Social Media - Enhanced */}
-        <section className="bg-white border border-[--color-line] rounded-xl p-5 sm:p-6 mb-10 sm:mb-12">
-          <h3 className="text-lg font-bold text-[--color-ink] mb-4 text-center">Connect With Us</h3>
+        <section className="bg-white border border-line rounded-xl p-5 sm:p-6 mb-10 sm:mb-12">
+          <h3 className="text-lg font-bold text-ink mb-4 text-center">Connect With Us</h3>
           <BookCta align="center" size="lg" />
         </section>
 
         {/* Bottom CTA - Enhanced */}
-        <section className="bg-[--color-accent-soft] border border-[--color-brand] rounded-2xl p-6 sm:p-8 text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[--color-ink] mb-3 sm:mb-4">
+        <section className="bg-accent-soft border border-brand rounded-2xl p-6 sm:p-8 text-center">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-ink mb-3 sm:mb-4">
             Need Immediate Taxi Booking?
           </h2>
-          <p className="text-[--color-ink-muted] text-sm sm:text-base mb-6 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-ink-muted text-sm sm:text-base mb-6 max-w-2xl mx-auto leading-relaxed">
             Our support team is ready to assist you 24/7. Call now for instant booking
             or WhatsApp us for quick confirmation. Professional drivers, transparent pricing.
           </p>

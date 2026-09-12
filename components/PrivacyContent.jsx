@@ -94,18 +94,18 @@ export default function PrivacyContent() {
   return (
     <div className="min-h-screen">
       {/* Header - Mobile Optimized */}
-      <section className="bg-white border-b border-[--color-line]">
+      <section className="bg-white border-b border-line">
         <div className="max-w-4xl mx-auto px-4 py-8 sm:py-10 text-center">
-          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[--color-accent-soft] border border-[--color-line] rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
-            <SecurityIcon className="w-6 h-6 sm:w-7 sm:h-7 text-[--color-brand]" />
+          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-accent-soft border border-line rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
+            <SecurityIcon className="w-6 h-6 sm:w-7 sm:h-7 text-brand" />
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[--color-ink] mb-3 sm:mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-ink mb-3 sm:mb-4">
             Privacy Policy
           </h1>
-          <p className="text-[--color-ink-muted] text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          <p className="text-ink-muted text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             How ModgillTravels collects, uses, and protects your personal information
           </p>
-          <div className="flex items-center justify-center gap-2 mt-4 text-xs sm:text-sm text-[--color-ink-muted]">
+          <div className="flex items-center justify-center gap-2 mt-4 text-xs sm:text-sm text-ink-muted">
             <UpdateIcon className="w-4 h-4" />
             <span>Last updated: October 7, 2025</span>
           </div>
@@ -115,41 +115,41 @@ export default function PrivacyContent() {
       <main className="max-w-4xl mx-auto px-4 py-6 sm:py-8">
         {/* Trust Badges */}
         <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-8">
-          <div className="bg-white border border-[--color-line] rounded-lg p-3 sm:p-4 text-center">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[--color-accent-soft] rounded-full flex items-center justify-center mx-auto mb-2">
-              <LockIcon className="w-4 h-4 sm:w-5 sm:h-5 text-[--color-brand]" />
+          <div className="bg-white border border-line rounded-lg p-3 sm:p-4 text-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-2">
+              <LockIcon className="w-4 h-4 sm:w-5 sm:h-5 text-brand" />
             </div>
-            <p className="text-[--color-ink] font-semibold text-xs sm:text-sm">SSL Encrypted</p>
-            <p className="text-[--color-ink-muted] text-xs mt-1 hidden sm:block">Secure Data</p>
+            <p className="text-ink font-semibold text-xs sm:text-sm">SSL Encrypted</p>
+            <p className="text-ink-muted text-xs mt-1 hidden sm:block">Secure Data</p>
           </div>
-          <div className="bg-white border border-[--color-line] rounded-lg p-3 sm:p-4 text-center">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[--color-accent-soft] rounded-full flex items-center justify-center mx-auto mb-2">
-              <VerifiedUserIcon className="w-4 h-4 sm:w-5 sm:h-5 text-[--color-brand]" />
+          <div className="bg-white border border-line rounded-lg p-3 sm:p-4 text-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-2">
+              <VerifiedUserIcon className="w-4 h-4 sm:w-5 sm:h-5 text-brand" />
             </div>
-            <p className="text-[--color-ink] font-semibold text-xs sm:text-sm">No Data Selling</p>
-            <p className="text-[--color-ink-muted] text-xs mt-1 hidden sm:block">Privacy First</p>
+            <p className="text-ink font-semibold text-xs sm:text-sm">No Data Selling</p>
+            <p className="text-ink-muted text-xs mt-1 hidden sm:block">Privacy First</p>
           </div>
-          <div className="bg-white border border-[--color-line] rounded-lg p-3 sm:p-4 text-center">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[--color-accent-soft] rounded-full flex items-center justify-center mx-auto mb-2">
-              <SecurityIcon className="w-4 h-4 sm:w-5 sm:h-5 text-[--color-brand]" />
+          <div className="bg-white border border-line rounded-lg p-3 sm:p-4 text-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-2">
+              <SecurityIcon className="w-4 h-4 sm:w-5 sm:h-5 text-brand" />
             </div>
-            <p className="text-[--color-ink] font-semibold text-xs sm:text-sm">Your Control</p>
-            <p className="text-[--color-ink-muted] text-xs mt-1 hidden sm:block">Full Rights</p>
+            <p className="text-ink font-semibold text-xs sm:text-sm">Your Control</p>
+            <p className="text-ink-muted text-xs mt-1 hidden sm:block">Full Rights</p>
           </div>
         </div>
 
         {/* Quick Summary - Enhanced */}
-        <section className="bg-[--color-accent-soft] border border-[--color-brand] rounded-xl p-5 sm:p-6 mb-8">
+        <section className="bg-accent-soft border border-brand rounded-xl p-5 sm:p-6 mb-8">
           <div className="flex items-start gap-3 mb-3">
-            <div className="w-10 h-10 bg-[--color-accent-soft] rounded-full flex items-center justify-center flex-shrink-0">
-              <SecurityIcon className="w-5 h-5 text-[--color-brand]" />
+            <div className="w-10 h-10 bg-accent-soft rounded-full flex items-center justify-center flex-shrink-0">
+              <SecurityIcon className="w-5 h-5 text-brand" />
             </div>
             <div>
-              <h2 className="text-lg sm:text-xl font-bold text-[--color-ink] mb-2">Privacy at a Glance</h2>
-              <p className="text-[--color-brand] text-sm sm:text-base leading-relaxed">
+              <h2 className="text-lg sm:text-xl font-bold text-ink mb-2">Privacy at a Glance</h2>
+              <p className="text-brand text-sm sm:text-base leading-relaxed">
                 We collect only what's necessary for taxi bookings, protect your data with SSL encryption, 
                 never sell your information to third parties, and give you complete control over your data. 
-                Questions? <Link href="#contact" className="text-[--color-brand] hover:text-[--color-brand] underline font-semibold transition">
+                Questions? <Link href="#contact" className="text-brand hover:text-brand underline font-semibold transition">
                   Contact us anytime
                 </Link>.
               </p>
@@ -163,34 +163,34 @@ export default function PrivacyContent() {
             <div 
               key={section.id} 
               id={section.id}
-              className="bg-white border border-[--color-line] rounded-xl p-4 sm:p-6 hover:border-[--color-brand] transition-all scroll-mt-20"
+              className="bg-white border border-line rounded-xl p-4 sm:p-6 hover:border-brand transition-all scroll-mt-20"
             >
               <div className="flex items-start gap-3 sm:gap-4 mb-4">
                 <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0 ${
-                  section.color === 'cyan' ? 'bg-[--color-accent-soft]' :
-                  section.color === 'blue' ? 'bg-[--color-accent-soft]' :
-                  section.color === 'purple' ? 'bg-[--color-accent-soft]' :
-                  section.color === 'green' ? 'bg-[--color-accent-soft]' : 'bg-[--color-accent-soft]'
+                  section.color === 'cyan' ? 'bg-accent-soft' :
+                  section.color === 'blue' ? 'bg-accent-soft' :
+                  section.color === 'purple' ? 'bg-accent-soft' :
+                  section.color === 'green' ? 'bg-accent-soft' : 'bg-accent-soft'
                 }`}>
                   <span className={
-                    section.color === 'cyan' ? 'text-[--color-brand]' :
-                    section.color === 'blue' ? 'text-[--color-brand]' :
-                    section.color === 'purple' ? 'text-[--color-brand]' :
-                    section.color === 'green' ? 'text-[--color-brand]' : 'text-[--color-brand]'
+                    section.color === 'cyan' ? 'text-brand' :
+                    section.color === 'blue' ? 'text-brand' :
+                    section.color === 'purple' ? 'text-brand' :
+                    section.color === 'green' ? 'text-brand' : 'text-brand'
                   }>
                     {section.icon}
                   </span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-[--color-ink] font-bold text-base sm:text-lg mb-2">{section.title}</h3>
-                  <p className="text-[--color-ink-muted] text-xs sm:text-sm leading-relaxed">{section.summary}</p>
+                  <h3 className="text-ink font-bold text-base sm:text-lg mb-2">{section.title}</h3>
+                  <p className="text-ink-muted text-xs sm:text-sm leading-relaxed">{section.summary}</p>
                 </div>
               </div>
               <ul className="space-y-2 sm:space-y-2.5 pl-1 sm:pl-2">
                 {section.details.map((detail, idx) => (
-                  <li key={idx} className="flex items-start gap-2 sm:gap-3 text-[--color-ink-muted] text-xs sm:text-sm leading-relaxed">
+                  <li key={idx} className="flex items-start gap-2 sm:gap-3 text-ink-muted text-xs sm:text-sm leading-relaxed">
                     <span className={`mt-1.5 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 ${
-                      section.color === 'cyan' ? 'bg-[--color-accent]' :
+                      section.color === 'cyan' ? 'bg-accent' :
                       section.color === 'blue' ? 'bg-blue-400' :
                       section.color === 'purple' ? 'bg-purple-400' :
                       section.color === 'green' ? 'bg-green-400' : 'bg-yellow-400'
@@ -206,40 +206,40 @@ export default function PrivacyContent() {
         {/* Contact Section - Enhanced */}
         <section 
           id="contact" 
-          className="mt-8 sm:mt-10 bg-white border border-[--color-brand] rounded-xl p-5 sm:p-6"
+          className="mt-8 sm:mt-10 bg-white border border-brand rounded-xl p-5 sm:p-6"
         >
           <div className="flex items-start gap-3 sm:gap-4 mb-4">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[--color-accent-soft] rounded-full flex items-center justify-center flex-shrink-0">
-              <ContactMailIcon className="w-5 h-5 sm:w-6 sm:h-6 text-[--color-brand]" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-soft rounded-full flex items-center justify-center flex-shrink-0">
+              <ContactMailIcon className="w-5 h-5 sm:w-6 sm:h-6 text-brand" />
             </div>
             <div className="flex-1">
-              <h3 className="text-[--color-ink] font-bold text-base sm:text-lg mb-3">Questions About Your Privacy?</h3>
+              <h3 className="text-ink font-bold text-base sm:text-lg mb-3">Questions About Your Privacy?</h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
-                <div className="p-3 bg-[--color-surface] rounded-lg">
-                  <span className="text-[--color-ink-muted] text-xs sm:text-sm block mb-1">Email Us:</span>
+                <div className="p-3 bg-surface rounded-lg">
+                  <span className="text-ink-muted text-xs sm:text-sm block mb-1">Email Us:</span>
                   <Link 
                     href="mailto:modgilltravels@gmail.com" 
-                    className="text-[--color-brand] hover:text-[--color-brand] font-medium text-sm sm:text-base break-all transition"
+                    className="text-brand hover:text-brand font-medium text-sm sm:text-base break-all transition"
                   >
                     modgilltravels@gmail.com
                   </Link>
                 </div>
-                <div className="p-3 bg-[--color-surface] rounded-lg">
-                  <span className="text-[--color-ink-muted] text-xs sm:text-sm block mb-1">Call Us:</span>
+                <div className="p-3 bg-surface rounded-lg">
+                  <span className="text-ink-muted text-xs sm:text-sm block mb-1">Call Us:</span>
                   <Link 
                     href="tel:+916284992669" 
-                    className="text-[--color-brand] hover:text-[--color-brand] font-medium text-sm sm:text-base transition"
+                    className="text-brand hover:text-brand font-medium text-sm sm:text-base transition"
                   >
                     +91-62849-92669
                   </Link>
                 </div>
               </div>
 
-              <div className="bg-[--color-accent-soft] border border-[--color-line] rounded-lg p-3 sm:p-4">
+              <div className="bg-accent-soft border border-line rounded-lg p-3 sm:p-4">
                 <div className="flex items-start gap-2">
-                  <UpdateIcon className="w-4 h-4 text-[--color-brand] flex-shrink-0 mt-0.5" />
-                  <p className="text-[--color-brand] text-xs sm:text-sm leading-relaxed">
+                  <UpdateIcon className="w-4 h-4 text-brand flex-shrink-0 mt-0.5" />
+                  <p className="text-brand text-xs sm:text-sm leading-relaxed">
                     <strong>Policy Updates:</strong> We may update this privacy policy occasionally. 
                     Material changes will be communicated via email to registered users.
                   </p>
@@ -253,27 +253,27 @@ export default function PrivacyContent() {
         <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
           <Link
             href="/"
-            className="flex-1 text-[--color-ink] py-3 px-4 sm:px-6 rounded-lg font-semibold transition-all text-center text-sm sm:text-base shadow-lg shadow-[--shadow]"
+            className="flex-1 text-ink py-3 px-4 sm:px-6 rounded-lg font-semibold transition-all text-center text-sm sm:text-base shadow-lg shadow-md"
           >
             Back to Home
           </Link>
           <Link
             href="/terms"
-            className="flex-1 bg-white hover:bg-[--color-surface] border border-[--color-line] hover:border-[--color-brand] text-[--color-ink] py-3 px-4 sm:px-6 rounded-lg font-semibold transition-all text-center text-sm sm:text-base"
+            className="flex-1 bg-white hover:bg-surface border border-line hover:border-brand text-ink py-3 px-4 sm:px-6 rounded-lg font-semibold transition-all text-center text-sm sm:text-base"
           >
             Terms of Service →
           </Link>
         </div>
 
         {/* Quick Navigation - Mobile Friendly */}
-        <div className="mt-8 p-4 sm:p-5 bg-[--color-surface] border border-[--color-line] rounded-xl">
-          <h4 className="text-[--color-ink] font-semibold text-sm sm:text-base mb-3">Quick Links:</h4>
+        <div className="mt-8 p-4 sm:p-5 bg-surface border border-line rounded-xl">
+          <h4 className="text-ink font-semibold text-sm sm:text-base mb-3">Quick Links:</h4>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs sm:text-sm">
             {sections.map((section) => (
               <Link
                 key={section.id}
                 href={`#${section.id}`}
-                className="text-[--color-brand] hover:text-[--color-brand] transition truncate"
+                className="text-brand hover:text-brand transition truncate"
               >
                 → {section.title}
               </Link>

@@ -30,19 +30,19 @@ export default function NotFound() {
         
         {/* 404 Icon & Message */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-[--color-accent-soft] border border-[--color-line] rounded-full mb-6">
-            <SearchIcon className="w-12 h-12 text-[--color-brand]" />
+          <div className="inline-flex items-center justify-center w-24 h-24 bg-accent-soft border border-line rounded-full mb-6">
+            <SearchIcon className="w-12 h-12 text-brand" />
           </div>
           
-          <h1 className="text-6xl sm:text-8xl font-bold text-transparent bg-clip-text bg-[--color-brand] mb-4">
+          <h1 className="text-6xl sm:text-8xl font-bold text-transparent bg-clip-text bg-brand mb-4">
             404
           </h1>
           
-          <h2 className="text-2xl sm:text-3xl font-bold text-[--color-ink] mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink mb-4">
             Oops! Page Not Found
           </h2>
           
-          <p className="text-[--color-ink-muted] text-base sm:text-lg max-w-md mx-auto mb-8">
+          <p className="text-ink-muted text-base sm:text-lg max-w-md mx-auto mb-8">
             The page you're looking for doesn't exist or has been moved. Let's get you back on track!
           </p>
 
@@ -50,7 +50,7 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
               href="/"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[--color-brand] hover:bg-[--color-brand-hover] text-white rounded-lg font-semibold transition-all shadow-lg shadow-[--shadow]"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-brand hover:bg-brand-hover text-white rounded-lg font-semibold transition-all shadow-lg shadow-md"
             >
               <HomeIcon className="w-5 h-5" />
               Go to Homepage
@@ -62,7 +62,7 @@ export default function NotFound() {
 
         {/* Quick Links */}
         <section className="mb-12">
-          <h3 className="text-xl font-bold text-[--color-ink] mb-6 text-center">
+          <h3 className="text-xl font-bold text-ink mb-6 text-center">
             Quick Links
           </h3>
           
@@ -73,10 +73,10 @@ export default function NotFound() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="group bg-white border border-[--color-line] rounded-xl p-5 text-center hover:border-[--color-brand] transition-all"
+                  className="group bg-white border border-line rounded-xl p-5 text-center hover:border-brand transition-all"
                 >
-                  <Icon className="w-8 h-8 text-[--color-brand] mx-auto mb-3 group- transition" />
-                  <span className="text-[--color-ink] font-semibold text-sm">{link.name}</span>
+                  <Icon className="w-8 h-8 text-brand mx-auto mb-3 group- transition" />
+                  <span className="text-ink font-semibold text-sm">{link.name}</span>
                 </Link>
               );
             })}
@@ -84,8 +84,8 @@ export default function NotFound() {
         </section>
 
         {/* Popular Routes */}
-        <section className="bg-white border border-[--color-line] rounded-2xl p-6 sm:p-8">
-          <h3 className="text-xl font-bold text-[--color-ink] mb-6 text-center">
+        <section className="bg-white border border-line rounded-2xl p-6 sm:p-8">
+          <h3 className="text-xl font-bold text-ink mb-6 text-center">
             Popular Taxi Routes
           </h3>
           
@@ -94,14 +94,14 @@ export default function NotFound() {
               <Link
                 key={route.slug}
                 href={`/routes/${route.slug}`}
-                className="group bg-[--color-surface] border border-[--color-line]/50 rounded-lg p-4 hover:bg-[--color-surface] hover:border-[--color-brand] transition-all"
+                className="group bg-surface border border-line/50 rounded-lg p-4 hover:bg-surface hover:border-brand transition-all"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <DirectionsCarIcon className="w-5 h-5 text-[--color-brand]" />
-                    <span className="text-[--color-ink] font-semibold text-sm">{route.name}</span>
+                    <DirectionsCarIcon className="w-5 h-5 text-brand" />
+                    <span className="text-ink font-semibold text-sm">{route.name}</span>
                   </div>
-                  <span className="text-[--color-brand] text-sm group-hover:translate-x-1 transition-transform">
+                  <span className="text-brand text-sm group-hover:translate-x-1 transition-transform">
                     →
                   </span>
                 </div>
@@ -112,7 +112,7 @@ export default function NotFound() {
           <div className="mt-6 text-center">
             <Link
               href="/booking"
-              className="inline-flex items-center gap-2 text-[--color-brand] hover:text-[--color-brand] transition font-semibold"
+              className="inline-flex items-center gap-2 text-brand hover:text-brand transition font-semibold"
             >
               <ExploreIcon className="w-5 h-5" />
               View All Routes
@@ -122,17 +122,17 @@ export default function NotFound() {
 
         {/* Help Section */}
         <div className="mt-12 text-center">
-          <p className="text-[--color-ink-muted] text-sm mb-3">
+          <p className="text-ink-muted text-sm mb-3">
             Need help finding something?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
             <Button variant="call" href={`tel:${site.phone}`} className="">Call: +91-62849-92669</Button>
-            <span className="hidden sm:inline text-[--color-ink-muted]">•</span>
+            <span className="hidden sm:inline text-ink-muted">•</span>
             <Button variant="whatsapp" external href="https://wa.me/916284992669" className="">WhatsApp Us</Button>
-            <span className="hidden sm:inline text-[--color-ink-muted]">•</span>
+            <span className="hidden sm:inline text-ink-muted">•</span>
             <a
               href="mailto:modgilltravels@gmail.com"
-              className="text-[--color-brand] hover:text-[--color-brand] transition"
+              className="text-brand hover:text-brand transition"
             >
               Email Support
             </a>

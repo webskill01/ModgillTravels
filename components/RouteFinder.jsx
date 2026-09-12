@@ -55,11 +55,11 @@ export default function RouteFinder() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Where are you going? Try Delhi, Shimla, Manali…"
-        className="w-full min-h-12 rounded-[--radius] border border-[--color-line-strong] bg-white px-4 py-3 text-[--color-ink] placeholder:text-[--color-ink-muted] focus:border-[--color-brand] focus:outline-none"
+        className="w-full min-h-12 rounded-xl border border-line-strong bg-white px-4 py-3 text-ink placeholder:text-ink-muted focus:border-brand focus:outline-none"
       />
 
       {results.length === 0 ? (
-        <p className="mt-4 text-sm text-[--color-ink-muted]">
+        <p className="mt-4 text-sm text-ink-muted">
           No route page for that yet — call or WhatsApp us and we will quote it.
         </p>
       ) : (
@@ -68,12 +68,12 @@ export default function RouteFinder() {
             <li key={route.slug}>
               <Link
                 href={`/routes/${route.slug}`}
-                className="block h-full rounded-[--radius-lg] border border-[--color-line] bg-white p-4 transition-colors duration-200 hover:border-[--color-brand] hover:shadow-[--shadow]"
+                className="block h-full rounded-2xl border border-line bg-white p-4 transition-colors duration-200 hover:border-brand hover:shadow-md"
               >
-                <span className="block font-semibold text-[--color-ink]">
+                <span className="block font-semibold text-ink">
                   {route.from} to {route.to}
                 </span>
-                <span className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-[--color-ink-muted]">
+                <span className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-ink-muted">
                   <span className="inline-flex items-center gap-1.5">
                     <RouteIcon className="h-4 w-4" />
                     {route.distanceKm} km
@@ -92,7 +92,7 @@ export default function RouteFinder() {
       <p className="mt-4 text-sm">
         <Link
           href="/booking"
-          className="font-semibold text-[--color-brand] underline underline-offset-2"
+          className="font-semibold text-brand underline underline-offset-2"
         >
           See all outstation routes from Patiala
         </Link>

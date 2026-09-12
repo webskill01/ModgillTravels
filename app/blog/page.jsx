@@ -49,36 +49,36 @@ export default function BlogPage() {
 
         {/* Header */}
         <section className="text-center mb-6">
-          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[--color-accent-soft] border border-[--color-line] rounded-full flex items-center justify-center mx-auto mb-4">
-            <ArticleIcon className="w-6 h-6 sm:w-7 sm:h-7 text-[--color-brand]" />
+          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-accent-soft border border-line rounded-full flex items-center justify-center mx-auto mb-4">
+            <ArticleIcon className="w-6 h-6 sm:w-7 sm:h-7 text-brand" />
           </div>
           {/* patch_031: H1 rewrite */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[--color-ink] mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-ink mb-4">
             Taxi & Travel Guides from Patiala — ModgillTravels Blog
           </h1>
-          <p className="text-[--color-ink-muted] text-base sm:text-lg max-w-2xl mx-auto">
+          <p className="text-ink-muted text-base sm:text-lg max-w-2xl mx-auto">
             Expert travel guides, booking tips, and destination information to help you plan your perfect trip.
           </p>
           {/* patch_034: keyword-rich intro paragraph */}
-          <p className="text-[--color-ink-muted] text-sm sm:text-base max-w-2xl mx-auto mt-3">
+          <p className="text-ink-muted text-sm sm:text-base max-w-2xl mx-auto mt-3">
             We cover route guides for Patiala to Delhi, Shimla, Manali and Amritsar; vehicle comparison tips (Sedan vs Ertiga vs Innova Crysta); airport transfer guides for Chandigarh Airport; and hill station travel advice for first-time travelers from Punjab.
           </p>
         </section>
 
 {/* Categories (Future Enhancement) */}
-        <section className="mt-12 mb-6 bg-white border border-[--color-line] rounded-xl p-6">
-          <h2 className="text-xl font-bold text-[--color-ink] mb-4">Popular Categories</h2>
+        <section className="mt-12 mb-6 bg-white border border-line rounded-xl p-6">
+          <h2 className="text-xl font-bold text-ink mb-4">Popular Categories</h2>
           <div className="flex flex-wrap gap-3">
-            <span className="px-4 py-2 bg-[--color-accent-soft] text-[--color-brand] rounded-lg text-sm cursor-pointer hover:bg-[--color-accent-soft] transition">
+            <span className="px-4 py-2 bg-accent-soft text-brand rounded-lg text-sm cursor-pointer hover:bg-accent-soft transition">
               Travel Guides
             </span>
-            <span className="px-4 py-2 bg-[--color-accent-soft] text-[--color-brand] rounded-lg text-sm cursor-pointer hover:bg-[--color-accent-soft] transition">
+            <span className="px-4 py-2 bg-accent-soft text-brand rounded-lg text-sm cursor-pointer hover:bg-accent-soft transition">
               Booking Tips
             </span>
-            <span className="px-4 py-2 bg-[--color-accent-soft] text-[--color-brand] rounded-lg text-sm cursor-pointer hover:bg-[--color-accent-soft] transition">
+            <span className="px-4 py-2 bg-accent-soft text-brand rounded-lg text-sm cursor-pointer hover:bg-accent-soft transition">
               Destination Info
             </span>
-            <span className="px-4 py-2 bg-[--color-accent-soft] text-[--color-brand] rounded-lg text-sm cursor-pointer hover:bg-[--color-accent-soft] transition">
+            <span className="px-4 py-2 bg-accent-soft text-brand rounded-lg text-sm cursor-pointer hover:bg-accent-soft transition">
               Travel Stories
             </span>
           </div>
@@ -90,10 +90,10 @@ export default function BlogPage() {
             <Link
               key={blog.slug}
               href={`/blog/${blog.slug}`}
-              className="group bg-white border border-[--color-line] rounded-xl overflow-hidden hover:border-[--color-brand] transition-all"
+              className="group bg-white border border-line rounded-xl overflow-hidden hover:border-brand transition-all"
             >
               {/* Image */}
-              <div className="relative w-full h-48 overflow-hidden bg-[--color-surface]">
+              <div className="relative w-full h-48 overflow-hidden bg-surface">
                 <Image
                   src={blog.image}
                   alt={blog.title}
@@ -105,7 +105,7 @@ export default function BlogPage() {
 
               {/* Content */}
               <div className="p-5">
-                <div className="flex items-center gap-3 mb-3 text-xs text-[--color-ink-muted]">
+                <div className="flex items-center gap-3 mb-3 text-xs text-ink-muted">
                   <span className="flex items-center gap-1">
                     <CalendarMonthIcon className="w-4 h-4" />
                     {new Date(blog.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
@@ -116,19 +116,19 @@ export default function BlogPage() {
                   </span>
                 </div>
 
-                <span className="inline-block px-2 py-1 bg-[--color-accent-soft] text-[--color-brand] text-xs rounded mb-3">
+                <span className="inline-block px-2 py-1 bg-accent-soft text-brand text-xs rounded mb-3">
                   {blog.category}
                 </span>
 
-                <h2 className="text-[--color-ink] font-bold text-lg mb-2 group-hover:text-[--color-brand] transition line-clamp-2">
+                <h2 className="text-ink font-bold text-lg mb-2 group-hover:text-brand transition line-clamp-2">
                   {blog.title}
                 </h2>
 
-                <p className="text-[--color-ink-muted] text-sm mb-4 line-clamp-3">
+                <p className="text-ink-muted text-sm mb-4 line-clamp-3">
                   {blog.excerpt}
                 </p>
 
-                <div className="flex items-center gap-2 text-[--color-brand] text-sm font-semibold group-hover:gap-3 transition-all">
+                <div className="flex items-center gap-2 text-brand text-sm font-semibold group-hover:gap-3 transition-all">
                   <span>Read More</span>
                   <ArrowForwardIcon className="w-4 h-4" />
                 </div>

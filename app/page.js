@@ -384,7 +384,7 @@ export default function HomePage() {
               {site.rating.value} from {site.rating.count} Google reviews
             </Badge>
             <h1>Taxi service in Patiala, available 24/7</h1>
-            <p className="mt-4 text-lg text-[--color-ink-muted]">
+            <p className="mt-4 text-lg text-ink-muted">
               ModgillTravels runs outstation cabs, airport transfers and local
               rides across Punjab, Haryana, Delhi and Himachal Pradesh. Send a
               WhatsApp message and we reply within about 15 minutes with the
@@ -416,12 +416,12 @@ export default function HomePage() {
             ].map(([value, label]) => (
               <div
                 key={label}
-                className="rounded-[--radius-lg] border border-[--color-line] bg-white p-4 text-center"
+                className="rounded-2xl border border-line bg-white p-4 text-center"
               >
-                <dt className="text-2xl font-semibold text-[--color-brand]">
+                <dt className="text-2xl font-semibold text-brand">
                   {value}
                 </dt>
-                <dd className="mt-1 text-sm text-[--color-ink-muted]">{label}</dd>
+                <dd className="mt-1 text-sm text-ink-muted">{label}</dd>
               </div>
             ))}
           </dl>
@@ -454,23 +454,23 @@ export default function HomePage() {
             ].map(([icon, title, text]) => (
               <li
                 key={title}
-                className="rounded-[--radius-lg] border border-[--color-line] bg-white p-5"
+                className="rounded-2xl border border-line bg-white p-5"
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[--color-accent-soft] text-[--color-ink]">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft text-ink">
                   {icon}
                 </span>
                 <h3 className="mt-3 text-base font-semibold">{title}</h3>
-                <p className="mt-1.5 text-sm text-[--color-ink-muted]">{text}</p>
+                <p className="mt-1.5 text-sm text-ink-muted">{text}</p>
               </li>
             ))}
           </ul>
-          <p className="mt-5 text-sm text-[--color-ink-muted]">
+          <p className="mt-5 text-sm text-ink-muted">
             Serving all of Patiala — Urban Estate, Rajindra Hospital, Punjabi
             University, Leela Bhawan and Tripuri — and every major outstation
             route across Punjab, Haryana and Himachal Pradesh.{" "}
             <Link
               href="/about"
-              className="font-semibold text-[--color-brand] underline underline-offset-2"
+              className="font-semibold text-brand underline underline-offset-2"
             >
               More about us
             </Link>

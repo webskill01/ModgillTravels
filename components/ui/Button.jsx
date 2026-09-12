@@ -11,13 +11,13 @@ import Link from "next/link";
 //   - Amber is never a button. It is a fill or a marker, handled in Badge.
 const VARIANTS = {
   whatsapp:
-    "bg-[--color-cta] text-[--color-ink] hover:bg-[--color-cta-hover] shadow-sm",
+    "bg-cta text-ink hover:bg-cta-hover shadow-sm",
   call:
-    "bg-[--color-brand] text-white hover:bg-[--color-brand-hover] shadow-sm",
+    "bg-brand text-white hover:bg-brand-hover shadow-sm",
   secondary:
-    "bg-white text-[--color-ink] border border-[--color-line-strong] hover:bg-[--color-surface]",
+    "bg-white text-ink border border-line-strong hover:bg-surface",
   ghost:
-    "bg-transparent text-[--color-ink-muted] hover:text-[--color-ink] hover:bg-[--color-surface]",
+    "bg-transparent text-ink-muted hover:text-ink hover:bg-surface",
 };
 
 const SIZES = {
@@ -38,7 +38,7 @@ export default function Button({
   // min-h-11 is the 44px touch target; hover shifts colour only, never
   // transform, so rows don't reflow under the cursor.
   const classes = [
-    "inline-flex items-center justify-center rounded-[--radius]",
+    "inline-flex items-center justify-center rounded-xl",
     "font-semibold min-h-11 cursor-pointer select-none",
     "transition-colors duration-200",
     SIZES[size] ?? SIZES.md,

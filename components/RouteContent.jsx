@@ -20,15 +20,15 @@ export default function RouteContent({ route }) {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-[--radius-lg] border border-[--color-line] bg-white p-5 sm:p-6">
+      <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
         <h2 className="mb-3">
           {from} to {to} distance and travel time
         </h2>
-        <p className="text-[--color-ink-muted]">
+        <p className="text-ink-muted">
           The road distance from {from} to {to} is approximately{" "}
-          <strong className="text-[--color-ink]">{distanceKm} km</strong>, and
+          <strong className="text-ink">{distanceKm} km</strong>, and
           the drive takes{" "}
-          <strong className="text-[--color-ink]">{duration}</strong> in normal
+          <strong className="text-ink">{duration}</strong> in normal
           traffic. ModgillTravels runs this route around the clock with
           air-conditioned Sedan, Ertiga and Innova Crysta vehicles, GPS
           tracking and background-verified drivers.
@@ -42,10 +42,10 @@ export default function RouteContent({ route }) {
           ].map(([label, value]) => (
             <div
               key={label}
-              className="rounded-[--radius] bg-[--color-surface] p-3"
+              className="rounded-xl bg-surface p-3"
             >
-              <dt className="text-xs text-[--color-ink-muted]">{label}</dt>
-              <dd className="mt-0.5 font-semibold text-[--color-ink]">
+              <dt className="text-xs text-ink-muted">{label}</dt>
+              <dd className="mt-0.5 font-semibold text-ink">
                 {value}
               </dd>
             </div>
@@ -53,11 +53,11 @@ export default function RouteContent({ route }) {
         </dl>
       </section>
 
-      <section className="rounded-[--radius-lg] border border-[--color-line] bg-white p-5 sm:p-6">
+      <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
         <h2 className="mb-3">
           How to book a {from} to {to} taxi
         </h2>
-        <p className="text-[--color-ink-muted]">
+        <p className="text-ink-muted">
           Send a WhatsApp message with your pickup point in {from}, your drop
           address in {to}, and the date and time you want to leave. We reply
           within about 15 minutes with the driver, the vehicle and a quote
@@ -67,7 +67,7 @@ export default function RouteContent({ route }) {
         <BookCta route={route} className="mt-5" />
       </section>
 
-      <section className="rounded-[--radius-lg] border border-[--color-line] bg-white p-5 sm:p-6">
+      <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
         <h2 className="mb-4">What is included</h2>
         <ul className="grid gap-3 sm:grid-cols-2">
           {[
@@ -78,45 +78,45 @@ export default function RouteContent({ route }) {
           ].map(([title, text]) => (
             <li
               key={title}
-              className="rounded-[--radius] bg-[--color-surface] p-4"
+              className="rounded-xl bg-surface p-4"
             >
-              <h3 className="text-base font-semibold text-[--color-ink]">
+              <h3 className="text-base font-semibold text-ink">
                 {title}
               </h3>
-              <p className="mt-1 text-sm text-[--color-ink-muted]">{text}</p>
+              <p className="mt-1 text-sm text-ink-muted">{text}</p>
             </li>
           ))}
         </ul>
       </section>
 
-      <section className="rounded-[--radius-lg] border border-[--color-line] bg-white p-5 sm:p-6">
+      <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
         <h2 className="mb-3">Other routes from Patiala</h2>
-        <p className="text-[--color-ink-muted]">
+        <p className="text-ink-muted">
           Also looking at{" "}
           <Link
             href="/routes/patiala-to-chandigarh"
-            className="font-semibold text-[--color-brand] underline underline-offset-2"
+            className="font-semibold text-brand underline underline-offset-2"
           >
             Patiala to Chandigarh
           </Link>{" "}
           (67 km),{" "}
           <Link
             href="/routes/patiala-to-shimla"
-            className="font-semibold text-[--color-brand] underline underline-offset-2"
+            className="font-semibold text-brand underline underline-offset-2"
           >
             Patiala to Shimla
           </Link>{" "}
           (180 km), or{" "}
           <Link
             href="/routes/patiala-to-delhi"
-            className="font-semibold text-[--color-brand] underline underline-offset-2"
+            className="font-semibold text-brand underline underline-offset-2"
           >
             Patiala to Delhi
           </Link>{" "}
           (240 km)? See{" "}
           <Link
             href="/booking"
-            className="font-semibold text-[--color-brand] underline underline-offset-2"
+            className="font-semibold text-brand underline underline-offset-2"
           >
             all outstation routes from Patiala
           </Link>

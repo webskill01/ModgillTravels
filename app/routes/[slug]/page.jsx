@@ -99,22 +99,22 @@ export default async function RouteDetailsPage({ params }) {
       <div className="max-w-7xl mx-auto px-5 py-6">
         {/* Breadcrumb */}
         <nav className="mb-6 text-sm" aria-label="Breadcrumb">
-          <div className="flex items-center space-x-2 text-[--color-ink-muted]">
-            <Link href="/" className="hover:text-[--color-brand] transition">Home</Link>
+          <div className="flex items-center space-x-2 text-ink-muted">
+            <Link href="/" className="hover:text-brand transition">Home</Link>
             <span>/</span>
-            <Link href="/" className="hover:text-[--color-brand] transition">Routes</Link>
+            <Link href="/" className="hover:text-brand transition">Routes</Link>
             <span>/</span>
-            <span className="text-[--color-ink]">{route.from} to {route.to}</span>
+            <span className="text-ink">{route.from} to {route.to}</span>
           </div>
         </nav>
 
         {/* Page Header - SEO Optimized H1 */}
         <div className="mb-6">
-          <h1 className="text-3xl lg:text-4xl font-bold text-[--color-ink] mb-2 flex items-center gap-3">
-            <PlaceIcon className="text-[--color-brand]" />
+          <h1 className="text-3xl lg:text-4xl font-bold text-ink mb-2 flex items-center gap-3">
+            <PlaceIcon className="text-brand" />
             {route.from} to {route.to} Taxi Service
           </h1>
-          <p className="text-[--color-ink-muted] text-sm sm:lg">
+          <p className="text-ink-muted text-sm sm:lg">
             {route.distanceKm} km • {route.duration} • Verified drivers • Available 24/7
           </p>
         </div>
@@ -130,9 +130,9 @@ export default async function RouteDetailsPage({ params }) {
           </div>
           {/* Mobile: Sidebar appears FIRST (order-1 on mobile, order-2 on desktop) */}
           <div className="lg:col-span-1 lg:order-1">
-            <div className="rounded-[--radius-lg] border border-[--color-line] bg-[--color-surface] p-5 lg:sticky lg:top-24">
+            <div className="rounded-2xl border border-line bg-surface p-5 lg:sticky lg:top-24">
               <h2 className="text-lg mb-1">Book this route</h2>
-              <p className="text-sm text-[--color-ink-muted] mb-4">
+              <p className="text-sm text-ink-muted mb-4">
                 Send a message with your pickup point and time. We reply with the
                 driver and vehicle details.
               </p>

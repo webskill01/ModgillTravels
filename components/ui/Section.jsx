@@ -17,7 +17,7 @@ export default function Section({
     <section
       className={[
         tight ? "py-8 sm:py-10" : "py-12 sm:py-16",
-        surface ? "bg-[--color-surface]" : "",
+        surface ? "bg-surface" : "",
         className,
       ]
         .filter(Boolean)
@@ -28,7 +28,7 @@ export default function Section({
         {title && (
           <div className="mb-6 max-w-2xl">
             <Heading>{title}</Heading>
-            {lead && <p className="mt-2 text-[--color-ink-muted]">{lead}</p>}
+            {lead && <p className="mt-2 text-ink-muted">{lead}</p>}
           </div>
         )}
         {children}

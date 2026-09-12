@@ -12,10 +12,10 @@ export default function Card({
   ...props
 }) {
   const classes = [
-    "bg-white border border-[--color-line] rounded-[--radius-lg]",
+    "bg-white border border-line rounded-2xl",
     padding,
     href
-      ? "cursor-pointer transition-colors duration-200 hover:border-[--color-brand] hover:shadow-[--shadow]"
+      ? "cursor-pointer transition-colors duration-200 hover:border-brand hover:shadow-md"
       : "",
     className,
   ]

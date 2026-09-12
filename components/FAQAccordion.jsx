@@ -54,7 +54,7 @@ export default function FAQAccordion() {
             itemScope
             itemProp="mainEntity"
             itemType="https://schema.org/Question"
-            className="bg-white border border-[--color-line] rounded-[--radius-lg] overflow-hidden transition-colors duration-200 hover:border-[--color-brand]"
+            className="bg-white border border-line rounded-2xl overflow-hidden transition-colors duration-200 hover:border-brand"
           >
             {/* Question row — clickable */}
             <button
@@ -64,15 +64,15 @@ export default function FAQAccordion() {
             >
               <h4
                 itemProp="name"
-                className="text-[--color-ink] font-semibold text-xs sm:text-xs leading-snug"
+                className="text-ink font-semibold text-xs sm:text-xs leading-snug"
               >
                 {faq.question}
               </h4>
 
               {/* Chevron icon */}
               <span
-                className={`flex-shrink-0 w-6 h-6 rounded-full border border-[--color-line] flex items-center justify-center transition-transform duration-300 ${
-                  isOpen ? 'rotate-180 border-[--color-line] bg-[--color-surface]' : ''
+                className={`flex-shrink-0 w-6 h-6 rounded-full border border-line flex items-center justify-center transition-transform duration-300 ${
+                  isOpen ? 'rotate-180 border-line bg-surface' : ''
                 }`}
                 aria-hidden="true"
               >
@@ -103,11 +103,11 @@ export default function FAQAccordion() {
                   itemScope
                   itemProp="acceptedAnswer"
                   itemType="https://schema.org/Answer"
-                  className="px-5 pb-5 pt-1 border-t border-[--color-line]/60"
+                  className="px-5 pb-5 pt-1 border-t border-line/60"
                 >
                   <p
                     itemProp="text"
-                    className="text-[--color-ink-muted] text-xs sm:text-sm leading-relaxed"
+                    className="text-ink-muted text-xs sm:text-sm leading-relaxed"
                   >
                     {faq.answer}
                   </p>

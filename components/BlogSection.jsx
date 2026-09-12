@@ -22,8 +22,8 @@ export default function BlogSection() {
       slug: 'best-places-to-visit-in-shimla',
       readTime: '8 min',
       category: 'Travel Guide',
-      borderColor: 'border-[--color-line]',
-      accentColor: 'text-[--color-brand]',
+      borderColor: 'border-line',
+      accentColor: 'text-brand',
       dotColor: 'bg-purple-400',
       emoji: '⛰️',
       keywords: 'shimla taxi, patiala to shimla, hill station travel'
@@ -34,8 +34,8 @@ export default function BlogSection() {
       slug: 'patiala-to-delhi-travel-guide',
       readTime: '6 min',
       category: 'Route Guide',
-      borderColor: 'border-[--color-line]',
-      accentColor: 'text-[--color-brand]',
+      borderColor: 'border-line',
+      accentColor: 'text-brand',
       dotColor: 'bg-blue-400',
       emoji: '🚗',
       keywords: 'patiala to delhi, taxi booking, outstation cab'
@@ -46,8 +46,8 @@ export default function BlogSection() {
       slug: 'how-to-book-one-way-taxi',
       readTime: '5 min',
       category: 'Booking Tips',
-      borderColor: 'border-[--color-line]',
-      accentColor: 'text-[--color-brand]',
+      borderColor: 'border-line',
+      accentColor: 'text-brand',
       dotColor: 'bg-green-400',
       emoji: '💡',
       keywords: 'one way taxi, cab booking patiala, outstation taxi'
@@ -117,23 +117,23 @@ export default function BlogSection() {
   }, []);
 
   return (
-    <div className="bg-[--color-surface] /50 border border-[--color-line] rounded-xl p-4 sm:p-5 overflow-hidden">
+    <div className="bg-surface /50 border border-line rounded-xl p-4 sm:p-5 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-2 sm:gap-3">
-          <div className="w-9 h-9 bg-[--color-accent-soft] rounded-lg flex items-center justify-center">
-            <AutoStoriesIcon className="w-5 h-5 text-[--color-brand]" />
+          <div className="w-9 h-9 bg-accent-soft rounded-lg flex items-center justify-center">
+            <AutoStoriesIcon className="w-5 h-5 text-brand" />
           </div>
           <div>
-            <h2 className="text-base sm:text-lg font-bold text-[--color-ink]">
+            <h2 className="text-base sm:text-lg font-bold text-ink">
               Travel Guides & Booking Tips
             </h2>
-            <p className="text-[--color-ink-muted] text-xs">Expert advice for your journey</p>
+            <p className="text-ink-muted text-xs">Expert advice for your journey</p>
           </div>
         </div>
         <Link 
           href="/blog" 
-          className="text-[--color-brand] hover:text-[--color-brand] text-xs sm:text-sm font-semibold transition flex items-center gap-1 group flex-shrink-0"
+          className="text-brand hover:text-brand text-xs sm:text-sm font-semibold transition flex items-center gap-1 group flex-shrink-0"
         >
           <span>All Guides</span>
           <ArrowForwardIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -181,30 +181,30 @@ export default function BlogSection() {
                       <span className={`px-2 py-0.5 ${blog.borderColor} border rounded text-xs font-medium ${blog.accentColor}`}>
                         {blog.category}
                       </span>
-                      <div className="flex items-center gap-1 text-xs text-[--color-ink-muted]">
+                      <div className="flex items-center gap-1 text-xs text-ink-muted">
                         <AccessTimeIcon className="w-3 h-3" />
                         <span>{blog.readTime}</span>
                       </div>
                     </div>
                     
-                    <h3 className={`text-[--color-ink] font-bold text-base sm:text-lg mb-2 group-hover:${blog.accentColor} transition-colors`}>
+                    <h3 className={`text-ink font-bold text-base sm:text-lg mb-2 group-hover:${blog.accentColor} transition-colors`}>
                       {blog.title}
                     </h3>
                   </div>
                 </div>
                 
                 {/* Enhanced Description with SEO Content */}
-                <p className="text-[--color-ink-muted] text-sm leading-relaxed mb-3 line-clamp-3">
+                <p className="text-ink-muted text-sm leading-relaxed mb-3 line-clamp-3">
                   {blog.description}
                 </p>
 
                 {/* Keywords Tag */}
-                <div className="mb-4 pb-3 border-b border-[--color-line]">
+                <div className="mb-4 pb-3 border-b border-line">
                   <div className="flex items-center gap-2 flex-wrap">
                     {blog.keywords.split(', ').map((keyword, index) => (
                       <span 
                         key={index}
-                        className="text-xs bg-[--color-surface] px-2 py-1 rounded text-[--color-ink-muted]"
+                        className="text-xs bg-surface px-2 py-1 rounded text-ink-muted"
                       >
                         {keyword}
                       </span>
@@ -233,7 +233,7 @@ export default function BlogSection() {
             className={`h-2 rounded-full transition-all ${
               currentCard === index 
                 ? `w-2 ${blog.dotColor}` 
-                : 'w-2 bg-[--color-surface] hover:bg-[--color-surface]'
+                : 'w-2 bg-surface hover:bg-surface'
             }`}
             aria-label={`Go to ${blog.title}`}
           />
@@ -241,7 +241,7 @@ export default function BlogSection() {
       </div>
 
       {/* Slide Counter */}
-      <p className="text-center text-[--color-ink-muted] text-xs mt-2">
+      <p className="text-center text-ink-muted text-xs mt-2">
         Article {currentCard + 1} of {blogs.length}
       </p>
 

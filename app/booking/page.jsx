@@ -47,18 +47,18 @@ export default function BookingPage() {
 
         {/* Hero Section */}
         <section className="text-center mb-12">
-          <div className="w-14 h-14 bg-[--color-accent-soft] border border-[--color-brand] rounded-full flex items-center justify-center mx-auto mb-5">
-            <DirectionsCarIcon className="w-8 h-8 text-[--color-brand]" />
+          <div className="w-14 h-14 bg-accent-soft border border-brand rounded-full flex items-center justify-center mx-auto mb-5">
+            <DirectionsCarIcon className="w-8 h-8 text-brand" />
           </div>
           {/* patch_027: H1 rewrite */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[--color-ink] mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-ink mb-4">
             Book Taxi in Patiala — All Outstation Routes & Cab Fares
           </h1>
-          <p className="text-[--color-ink-muted] text-base sm:text-lg max-w-2xl mx-auto mb-4">
+          <p className="text-ink-muted text-base sm:text-lg max-w-2xl mx-auto mb-4">
             Browse all available routes and cities. Choose your destination and book instantly via phone or WhatsApp.
           </p>
           {/* patch_029: keyword-rich intro paragraph */}
-          <p className="text-[--color-ink-muted] text-sm sm:text-base max-w-2xl mx-auto mb-8">
+          <p className="text-ink-muted text-sm sm:text-base max-w-2xl mx-auto mb-8">
             ModgillTravels covers every major outstation route from Patiala — Delhi (240 km), Chandigarh (67 km), Shimla (180 km), Manali (301 km), Amritsar (230 km) and Ludhiana (110 km). One-way or round trip, booked on WhatsApp or by phone, with verified drivers available 24/7.
           </p>
 
@@ -69,10 +69,10 @@ export default function BookingPage() {
         {/* Popular Routes Section */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-[--color-accent-soft] rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-accent-soft rounded-full flex items-center justify-center">
               <TrendingUpIcon className="w-6 h-6 text-orange-400" />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[--color-ink]">
+            <h2 className="text-2xl sm:text-3xl font-bold text-ink">
               Popular Routes
             </h2>
           </div>
@@ -82,15 +82,15 @@ export default function BookingPage() {
               <Link
                 key={route.id}
                 href={`/routes/${route.slug}`}
-                className="group bg-white border border-[--color-line] rounded-xl p-5 sm:p-6 hover:border-[--color-brand] transition-all hover:shadow-xl hover:shadow-[--shadow]"
+                className="group bg-white border border-line rounded-xl p-5 sm:p-6 hover:border-brand transition-all hover:shadow-xl hover:shadow-md"
               >
                 {/* Route Header */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 text-lg font-bold">
-                      <span className="text-[--color-brand]">{route.from}</span>
-                      <DirectionsCarIcon className="w-5 h-5 text-[--color-ink-muted] group-hover:text-[--color-brand] transition" />
-                      <span className="text-[--color-ink]">{route.to}</span>
+                      <span className="text-brand">{route.from}</span>
+                      <DirectionsCarIcon className="w-5 h-5 text-ink-muted group-hover:text-brand transition" />
+                      <span className="text-ink">{route.to}</span>
                     </div>
                   </div>
                 </div>
@@ -98,22 +98,22 @@ export default function BookingPage() {
                 {/* Route Info */}
                 <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
                   <div>
-                    <span className="text-[--color-ink-muted] block mb-1">Distance</span>
-                    <span className="text-[--color-ink] font-semibold">{route.distanceKm} km</span>
+                    <span className="text-ink-muted block mb-1">Distance</span>
+                    <span className="text-ink font-semibold">{route.distanceKm} km</span>
                   </div>
                   <div>
-                    <span className="text-[--color-ink-muted] block mb-1">Duration</span>
-                    <span className="text-[--color-ink] font-semibold">{route.duration}</span>
+                    <span className="text-ink-muted block mb-1">Duration</span>
+                    <span className="text-ink font-semibold">{route.duration}</span>
                   </div>
                 </div>
 
                 {/* Fare */}
-                <div className="pt-4 border-t border-[--color-line] flex items-center justify-between">
+                <div className="pt-4 border-t border-line flex items-center justify-between">
                   <div>
-                    <span className="text-[--color-ink-muted] text-xs block mb-1">Starting from</span>
-                    <span className="text-[--color-brand] font-bold text-xl">{route.distanceKm} km</span>
+                    <span className="text-ink-muted text-xs block mb-1">Starting from</span>
+                    <span className="text-brand font-bold text-xl">{route.distanceKm} km</span>
                   </div>
-                  <span className="text-[--color-brand] text-sm font-semibold group-hover:text-[--color-brand] transition">
+                  <span className="text-brand text-sm font-semibold group-hover:text-brand transition">
                     View Details →
                   </span>
                 </div>
@@ -125,10 +125,10 @@ export default function BookingPage() {
         {/* Cities We Serve Section */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-[--color-accent-soft] rounded-full flex items-center justify-center">
-              <ExploreIcon className="w-6 h-6 text-[--color-brand]" />
+            <div className="w-10 h-10 bg-accent-soft rounded-full flex items-center justify-center">
+              <ExploreIcon className="w-6 h-6 text-brand" />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[--color-ink]">
+            <h2 className="text-2xl sm:text-3xl font-bold text-ink">
               Cities We Serve
             </h2>
           </div>
@@ -138,12 +138,12 @@ export default function BookingPage() {
               <Link
                 key={city.slug}
                 href={`/city/${city.slug}`}
-                className="group bg-white border border-[--color-line] rounded-xl p-5 text-center hover:border-[--color-line] transition-all"
+                className="group bg-white border border-line rounded-xl p-5 text-center hover:border-line transition-all"
               >
-                <LocationOnIcon className="w-10 h-10 text-[--color-brand] mx-auto mb-3 group- transition" />
-                <h3 className="text-[--color-ink] font-bold mb-1">{city.name}</h3>
-                <p className="text-[--color-ink-muted] text-xs mb-3">{city.state}</p>
-                <span className="text-[--color-brand] text-sm group-hover:text-[--color-brand] transition">
+                <LocationOnIcon className="w-10 h-10 text-brand mx-auto mb-3 group- transition" />
+                <h3 className="text-ink font-bold mb-1">{city.name}</h3>
+                <p className="text-ink-muted text-xs mb-3">{city.state}</p>
+                <span className="text-brand text-sm group-hover:text-brand transition">
                   Explore Routes →
                 </span>
               </Link>
@@ -154,10 +154,10 @@ export default function BookingPage() {
         {/* All Routes by City */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-[--color-accent-soft] rounded-full flex items-center justify-center">
-              <SearchIcon className="w-6 h-6 text-[--color-brand]" />
+            <div className="w-10 h-10 bg-accent-soft rounded-full flex items-center justify-center">
+              <SearchIcon className="w-6 h-6 text-brand" />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[--color-ink]">
+            <h2 className="text-2xl sm:text-3xl font-bold text-ink">
               Browse All Routes
             </h2>
           </div>
@@ -165,11 +165,11 @@ export default function BookingPage() {
           {/* Routes Grouped by Origin City */}
           <div className="space-y-8">
             {Object.entries(routesByCity).map(([cityName, routes]) => (
-              <div key={cityName} className="bg-white border border-[--color-line] rounded-2xl p-6">
-                <h3 className="text-xl font-bold text-[--color-ink] mb-5 flex items-center gap-2">
-                  <LocationOnIcon className="w-6 h-6 text-[--color-brand]" />
+              <div key={cityName} className="bg-white border border-line rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-ink mb-5 flex items-center gap-2">
+                  <LocationOnIcon className="w-6 h-6 text-brand" />
                   From {cityName}
-                  <span className="text-[--color-ink-muted] text-sm font-normal ml-2">({routes.length} routes)</span>
+                  <span className="text-ink-muted text-sm font-normal ml-2">({routes.length} routes)</span>
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -177,21 +177,21 @@ export default function BookingPage() {
                     <Link
                       key={route.id}
                       href={`/routes/${route.slug}`}
-                      className="group bg-[--color-surface] border border-[--color-line]/50 rounded-lg p-4 hover:bg-[--color-surface] hover:border-[--color-brand] transition-all"
+                      className="group bg-surface border border-line/50 rounded-lg p-4 hover:bg-surface hover:border-brand transition-all"
                     >
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-2">
-                          <span className="text-[--color-ink] font-semibold">{route.to}</span>
-                          <DirectionsCarIcon className="w-4 h-4 text-[--color-ink-muted] group-hover:text-[--color-brand] transition" />
+                          <span className="text-ink font-semibold">{route.to}</span>
+                          <DirectionsCarIcon className="w-4 h-4 text-ink-muted group-hover:text-brand transition" />
                         </div>
-                        <span className="text-[--color-brand] font-bold">{route.distanceKm} km</span>
+                        <span className="text-brand font-bold">{route.distanceKm} km</span>
                       </div>
 
-                      <div className="flex items-center justify-between text-xs text-[--color-ink-muted]">
+                      <div className="flex items-center justify-between text-xs text-ink-muted">
                         <span>{route.distanceKm} km</span>
                         <span>•</span>
                         <span>{route.duration}</span>
-                        <span className="text-[--color-brand] group-hover:text-[--color-brand] ml-auto">View →</span>
+                        <span className="text-brand group-hover:text-brand ml-auto">View →</span>
                       </div>
                     </Link>
                   ))}
@@ -202,75 +202,75 @@ export default function BookingPage() {
         </section>
 
         {/* Special Offers Section */}
-        <section className="mb-12 bg-[--color-accent-soft] border border-[--color-line] rounded-2xl p-6 sm:p-8">
+        <section className="mb-12 bg-accent-soft border border-line rounded-2xl p-6 sm:p-8">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-[--color-accent-soft] rounded-full flex items-center justify-center">
-              <LocalOfferIcon className="w-6 h-6 text-[--color-brand]" />
+            <div className="w-10 h-10 bg-accent-soft rounded-full flex items-center justify-center">
+              <LocalOfferIcon className="w-6 h-6 text-brand" />
             </div>
-            <h2 className="text-2xl font-bold text-[--color-ink]">Special Offers</h2>
+            <h2 className="text-2xl font-bold text-ink">Special Offers</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-[--color-surface] rounded-xl p-5">
-              <h3 className="text-[--color-ink] font-bold mb-2">₹200 advance to confirm</h3>
-              <p className="text-[--color-ink-muted] text-sm mb-3">
+            <div className="bg-surface rounded-xl p-5">
+              <h3 className="text-ink font-bold mb-2">₹200 advance to confirm</h3>
+              <p className="text-ink-muted text-sm mb-3">
                 A ₹200 advance confirms the booking. The balance is settled after the trip.
               </p>
-              <span className="text-[--color-brand] text-xs font-semibold">✓ Easy Confirmation</span>
+              <span className="text-brand text-xs font-semibold">✓ Easy Confirmation</span>
             </div>
 
-            <div className="bg-[--color-surface] rounded-xl p-5">
-              <h3 className="text-[--color-ink] font-bold mb-2">One Way Taxi</h3>
-              <p className="text-[--color-ink-muted] text-sm mb-3">
+            <div className="bg-surface rounded-xl p-5">
+              <h3 className="text-ink font-bold mb-2">One Way Taxi</h3>
+              <p className="text-ink-muted text-sm mb-3">
                 Pay only for the journey you take. One-way trips are not charged for the return leg.
               </p>
-              <span className="text-[--color-brand] text-xs font-semibold">✓ Save Money</span>
+              <span className="text-brand text-xs font-semibold">✓ Save Money</span>
             </div>
 
-            <div className="bg-[--color-surface] rounded-xl p-5">
-              <h3 className="text-[--color-ink] font-bold mb-2">24/7 Availability</h3>
-              <p className="text-[--color-ink-muted] text-sm mb-3">
+            <div className="bg-surface rounded-xl p-5">
+              <h3 className="text-ink font-bold mb-2">24/7 Availability</h3>
+              <p className="text-ink-muted text-sm mb-3">
                 Book anytime, day or night. Professional drivers available round the clock.
               </p>
-              <span className="text-[--color-brand] text-xs font-semibold">✓ Always Ready</span>
+              <span className="text-brand text-xs font-semibold">✓ Always Ready</span>
             </div>
           </div>
         </section>
 
         {/* How to Book Section */}
         <section className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[--color-ink] mb-6 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink mb-6 text-center">
             How to Book
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white border border-[--color-line] rounded-xl p-6 text-center">
-              <div className="w-14 h-14 bg-[--color-accent-soft] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-[--color-brand] text-2xl font-bold">1</span>
+            <div className="bg-white border border-line rounded-xl p-6 text-center">
+              <div className="w-14 h-14 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-brand text-2xl font-bold">1</span>
               </div>
-              <h3 className="text-[--color-ink] font-bold mb-2">Choose Your Route</h3>
-              <p className="text-[--color-ink-muted] text-sm">
+              <h3 className="text-ink font-bold mb-2">Choose Your Route</h3>
+              <p className="text-ink-muted text-sm">
                 Browse routes above or use our search to find your destination
               </p>
             </div>
 
-            <div className="bg-white border border-[--color-line] rounded-xl p-6 text-center">
-              <div className="w-14 h-14 bg-[--color-accent-soft] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-[--color-brand] text-2xl font-bold">2</span>
+            <div className="bg-white border border-line rounded-xl p-6 text-center">
+              <div className="w-14 h-14 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-brand text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-[--color-ink] font-bold mb-2">Call or WhatsApp</h3>
+              <h3 className="text-ink font-bold mb-2">Call or WhatsApp</h3>
               {/* patch_030: step-2 text rewrite */}
-              <p className="text-[--color-ink-muted] text-sm">
+              <p className="text-ink-muted text-sm">
                 WhatsApp us at +91-62849-92669 with your pickup location, travel date, and destination — we confirm your cab within 15 minutes
               </p>
             </div>
 
-            <div className="bg-white border border-[--color-line] rounded-xl p-6 text-center">
-              <div className="w-14 h-14 bg-[--color-accent-soft] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-[--color-brand] text-2xl font-bold">3</span>
+            <div className="bg-white border border-line rounded-xl p-6 text-center">
+              <div className="w-14 h-14 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-brand text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-[--color-ink] font-bold mb-2">Get Confirmation</h3>
-              <p className="text-[--color-ink-muted] text-sm">
+              <h3 className="text-ink font-bold mb-2">Get Confirmation</h3>
+              <p className="text-ink-muted text-sm">
                 Receive driver details and vehicle info within 30 minutes
               </p>
             </div>
@@ -278,11 +278,11 @@ export default function BookingPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="bg-[--color-accent-soft] border border-[--color-brand] rounded-2xl p-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[--color-ink] mb-4">
+        <section className="bg-accent-soft border border-brand rounded-2xl p-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink mb-4">
             Ready to Book Your Ride?
           </h2>
-          <p className="text-[--color-ink-muted] mb-6 max-w-xl mx-auto">
+          <p className="text-ink-muted mb-6 max-w-xl mx-auto">
             Our team is available 24/7 to assist with your booking. Call or WhatsApp for instant confirmation.
           </p>
           <BookCta align="center" size="lg" />
