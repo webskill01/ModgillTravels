@@ -34,7 +34,7 @@ export default function BookCta({
         <WhatsAppIcon className="w-5 h-5" />
         Book on WhatsApp
       </Button>
-      <Button variant="call" size={size} href={`tel:${site.phone}`}>
+      <Button variant="call" size={size} href={`tel:${site.callPhone}`}>
         <PhoneIcon className="w-5 h-5" />
         Call Now
       </Button>

@@ -208,7 +208,7 @@ export default function Footer() {
               <Button
                 variant="call"
                 size="sm"
-                href={`tel:${site.phone}`}
+                href={`tel:${site.callPhone}`}
                 className="justify-start"
               >
                 <PhoneIcon className="w-4 h-4 shrink-0" />

@@ -1,5 +1,6 @@
 // components/TermsContent.jsx
 import Link from 'next/link';
+import site from '@/data/site';
 import Button from '@/components/ui/Button';
 import { GavelIcon, BookOnlineIcon, PaymentIcon, CancelIcon, SecurityIcon, SupportAgentIcon, ContactMailIcon, WarningIcon, UpdateIcon, VerifiedIcon } from '@/components/Icons';
 
@@ -258,7 +259,7 @@ export default function TermsContent() {
                 <div className="p-3 bg-surface rounded-lg">
                   <span className="text-ink-muted text-sm block mb-1">Support Phone:</span>
                   <Link 
-                    href="tel:+916284992669" 
+                    href={`tel:${site.callPhone}`} 
                     className="text-brand hover:text-brand-hover font-medium text-sm sm:text-base transition"
                   >
                     Call Now

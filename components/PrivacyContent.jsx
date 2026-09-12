@@ -1,5 +1,6 @@
 // components/PrivacyContent.jsx
 import Link from 'next/link';
+import site from '@/data/site';
 import { SecurityIcon, PersonIcon, StorageIcon, ShareIcon, CookieIcon, ContactMailIcon, VerifiedUserIcon, LockIcon, UpdateIcon } from '@/components/Icons';
 
 const sections = [
@@ -221,7 +222,7 @@ export default function PrivacyContent() {
                 <div className="p-3 bg-surface rounded-lg">
                   <span className="text-ink-muted text-sm block mb-1">Call Us:</span>
                   <Link 
-                    href="tel:+916284992669" 
+                    href={`tel:${site.callPhone}`} 
                     className="text-brand hover:text-brand-hover font-medium text-sm sm:text-base transition"
                   >
                     Call Now

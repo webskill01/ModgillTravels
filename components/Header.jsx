@@ -77,7 +77,7 @@ export default function Header() {
             <div className="flex items-center gap-3 ml-6">
               {/* Icons inherit the button's white — never text-brand, which is
                   navy on navy and vanishes. */}
-              <Button variant="call" href={`tel:${site.phone}`}>
+              <Button variant="call" href={`tel:${site.callPhone}`}>
                 <PhoneIcon className="w-4 h-4" />
                 <span className="hidden xl:inline">Call</span>
               </Button>
@@ -91,7 +91,7 @@ export default function Header() {
           {/* Mobile: call + native details menu. Before this the four nav
               links were unreachable on phones, which is most of the traffic. */}
           <div className="flex lg:hidden items-center gap-2">
-            <Button variant="call" size="sm" href={`tel:${site.phone}`}>
+            <Button variant="call" size="sm" href={`tel:${site.callPhone}`}>
               <PhoneIcon className="w-4 h-4" />
               <span>Call</span>
             </Button>

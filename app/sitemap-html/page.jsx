@@ -205,7 +205,7 @@ export default function HTMLSitemapPage() {
               <BookOnlineIcon />
               Book Now
             </Button>
-            <Button variant="call" href={`tel:${site.phone}`} className="justify-center"><ContactMailIcon />
+            <Button variant="call" href={`tel:${site.callPhone}`} className="justify-center"><ContactMailIcon />
               Call Now</Button>
           </div>
         </section>

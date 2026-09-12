@@ -146,7 +146,7 @@ export default async function CityPage({ params }) {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button variant="call" href={`tel:${site.phone}`} className="justify-center"><PhoneIcon className="w-5 h-5" />
+            <Button variant="call" href={`tel:${site.callPhone}`} className="justify-center"><PhoneIcon className="w-5 h-5" />
               <span>Call Now</span></Button>
             <Button variant="whatsapp" external href={waLink(`Hi, I want to book a taxi in ${city.name}`)} className="justify-center"><WhatsAppIcon className="w-5 h-5" />
               <span>WhatsApp Booking</span></Button>
@@ -414,7 +414,7 @@ export default async function CityPage({ params }) {
             Call us now for instant booking or WhatsApp for quick confirmation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="call" href={`tel:${site.phone}`} className="justify-center"><Phone />
+            <Button variant="call" href={`tel:${site.callPhone}`} className="justify-center"><Phone />
               Call Now</Button>
           </div>
         </section>

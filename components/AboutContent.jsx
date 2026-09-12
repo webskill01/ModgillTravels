@@ -232,7 +232,7 @@ export default function AboutContent() {
  <div className="space-y-4">
  <div className="p-3 bg-surface rounded-lg">
  <h4 className="text-ink font-semibold mb-2 text-sm sm:text-base">Phone & WhatsApp</h4>
- <Button variant="call" size="sm" href={`tel:${site.phone}`}>
+ <Button variant="call" size="sm" href={`tel:${site.callPhone}`}>
  <PhoneIcon className="w-4 h-4 shrink-0" />
  <span>Call Now</span>
  </Button>

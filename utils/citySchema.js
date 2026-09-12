@@ -10,13 +10,12 @@ export function getCitySchema(city) {
       "@type": "Brand",
       "name": "ModgillTravels"
     },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "INR",
-      "lowPrice": city.popularRoutes[0]?.fare || "1000",
-      "highPrice": "10000",
-      "offerCount": city.popularRoutes.length
-    },
+    // No offers block. It read `city.popularRoutes[0]?.fare`, and fares were
+    // deleted in Phase 6 — so it always fell through to a hardcoded "1000"
+    // against an invented "10000", publishing a fabricated INR 1,000-10,000
+    // range on every city page. Same class of problem as the fabricated
+    // Review nodes removed in Phase 4: made-up structured data is a manual
+    // action risk, and this site quotes per trip rather than by price list.
     "areaServed": {
       "@type": "City",
       "name": city.name,
@@ -26,7 +25,7 @@ export function getCitySchema(city) {
     "provider": {
       "@type": "LocalBusiness",
       "name": "ModgillTravels",
-      "telephone": "+91-62849-92669",
+      "telephone": site.phone,
       "url": "https://www.modgilltravels.in"
     },
     "aggregateRating": {

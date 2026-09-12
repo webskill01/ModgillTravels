@@ -262,15 +262,16 @@ const businessStructuredData = {
     "areaServed": ["IN-PB", "IN-HR", "IN-HP", "IN-DL"],
     "availableLanguage": ["English", "Hindi", "Punjabi"],
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": site.rating.value,
-    "reviewCount": site.rating.count,
-    "bestRating": "5",
-    "worstRating": "1",
-  },
+  // No aggregateRating here, deliberately. This node is a bare TaxiService,
+  // and Service subtypes are NOT on Google's supported list for review
+  // snippets — the parent must be LocalBusiness, Organization, Product,
+  // Event, Recipe, Book, Course, Movie or SoftwareApplication. Attaching one
+  // anyway is what produced "Invalid object type for field <parent_node>"
+  // and failed rich results on all 40 pages. The rating lives on
+  // localBusinessStructuredData below, which is a valid parent and is
+  // rendered on the same page.
   "sameAs": [
-    "https://wa.me/916284992669",
+    site.whatsapp,
   ],
 };
 

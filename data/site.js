@@ -15,10 +15,17 @@ const site = {
   legalName: "Modgill Travels",
   tagline: "Patiala's 24/7 taxi and outstation cab service",
 
-  // 6284992669 is primary: it is what the GBP displays and what every
-  // citation carries. 8976376926 is a confirmed second line.
+  // Two numbers, two jobs — do not collapse them.
+  //
+  // `phone` is the NAP number: what the GBP displays and what Justdial and
+  // IndiaMART carry. It is the only one that belongs in schema `telephone`,
+  // because NAP agreement across site/GBP/citations is a top-3 local ranking
+  // signal and a number Google cannot corroborate weakens it.
+  //
+  // `callPhone` is what the Call buttons dial — the owner takes calls on the
+  // second line. WhatsApp stays on the NAP number.
   phone: "+91-62849-92669",
-  phoneSecondary: "+91-89763-76926",
+  callPhone: "+91-89763-76926",
   phoneDigits: "916284992669",
   whatsapp: "https://wa.me/916284992669",
   // Prefilled booking link. Every CTA uses this rather than a hand-written

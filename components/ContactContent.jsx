@@ -12,7 +12,7 @@ const contactMethods = [
     title: "Call Us",
     icon: <PhoneIcon className="w-6 h-6" />,
     value: "Call Now",
-    action: "tel:+916284992669",
+    action: `tel:${site.callPhone}`,
     description: "Immediate taxi booking assistance",
     availability: "Available 24/7",
     color: "green",
@@ -218,7 +218,7 @@ export default function ContactContent() {
                 <span>→</span>
                 <span>Privacy Policy</span>
               </Link>
-              <Button variant="call" href={`tel:${site.phone}`} className=""><PhoneIcon className="w-4 h-4" />
+              <Button variant="call" href={`tel:${site.callPhone}`} className=""><PhoneIcon className="w-4 h-4" />
                 <span>Emergency Booking</span></Button>
             </div>
           </div>

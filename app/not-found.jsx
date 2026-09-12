@@ -53,7 +53,7 @@ export default function NotFound() {
               <HomeIcon className="w-5 h-5" />
               Go to Homepage
             </Button>
-            <Button variant="call" href={`tel:${site.phone}`} className="justify-center"><PhoneIcon className="w-5 h-5" />
+            <Button variant="call" href={`tel:${site.callPhone}`} className="justify-center"><PhoneIcon className="w-5 h-5" />
               Call Us Now</Button>
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function NotFound() {
             Need help finding something?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-            <Button variant="call" href={`tel:${site.phone}`}>Call Now</Button>
+            <Button variant="call" href={`tel:${site.callPhone}`}>Call Now</Button>
             <span className="hidden sm:inline text-ink-muted">•</span>
             <Button variant="whatsapp" external href={site.whatsappBook} className="">WhatsApp Us</Button>
             <span className="hidden sm:inline text-ink-muted">•</span>
