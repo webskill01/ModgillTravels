@@ -148,10 +148,6 @@ export default function BlogSection() {
         onTouchMove={handleDragMove}
         onTouchEnd={handleDragEnd}
         className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth cursor-grab active:cursor-grabbing select-none"
-        style={{
-          scrollbarWidth: 'none',
-          msOverflowStyle: 'none',
-        }}
       >
         {blogs.map((blog) => (
           <div
@@ -249,11 +245,6 @@ export default function BlogSection() {
       </p>
 
       {/* Hide scrollbar CSS */}
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </div>
   );
 }

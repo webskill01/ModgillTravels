@@ -65,6 +65,22 @@ const socials = [
   },
 ];
 
+function Credit() {
+  return (
+    <>
+      Designed By{" "}
+      <a
+        href="https://easebuilds.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-brand hover:text-brand-hover transition-colors"
+      >
+        EaseBuilds
+      </a>
+    </>
+  );
+}
+
 function Socials() {
   return (
     <div className="flex items-center gap-3">
@@ -270,15 +286,7 @@ export default function Footer() {
                 &copy; {currentYear} {site.businessName}
               </div>
               <div className="mt-1">
-                Designed By{" "}
-                <a
-                  href="https://codenest-service.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand hover:text-brand-hover transition-colors"
-                >
-                  CodeNest
-                </a>
+                <Credit />
               </div>
             </div>
           </div>
@@ -311,15 +319,7 @@ export default function Footer() {
             <div className="flex items-center gap-6">
               <Socials />
               <div className="text-ink-muted text-sm">
-                Designed By{" "}
-                <a
-                  href="https://codenest-service.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand hover:text-brand-hover transition-colors"
-                >
-                  CodeNest
-                </a>
+                <Credit />
               </div>
             </div>
           </div>
