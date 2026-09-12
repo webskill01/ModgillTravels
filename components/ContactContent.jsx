@@ -128,7 +128,7 @@ export default function ContactContent() {
           {/* Business Hours */}
           <div className="bg-white border border-line rounded-xl p-5 sm:p-6">
             <h3 className="text-lg font-bold text-ink mb-4 flex items-center gap-2">
-              <AccessTimeIcon className="text-brand" />
+              <AccessTimeIcon className="w-5 h-5 text-brand" />
               Business Hours
             </h3>
             <div className="space-y-3 text-sm">
@@ -157,7 +157,7 @@ export default function ContactContent() {
             className="bg-white border border-line rounded-xl p-5 sm:p-6"
           >
             <h3 className="text-lg font-bold text-ink mb-4 flex items-center gap-2">
-              <LocationOnIcon className="text-brand" />
+              <LocationOnIcon className="w-5 h-5 text-brand" />
               Our Location
             </h3>
             <div className="space-y-4 text-sm">

@@ -57,7 +57,7 @@ export default function HTMLSitemapPage() {
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-surface flex items-center justify-center">
-              <HomeIcon className="text-brand" />
+              <HomeIcon className="w-5 h-5 text-brand" />
             </div>
             <h2 className="text-2xl font-bold text-ink">Main Pages</h2>
           </div>
@@ -68,11 +68,11 @@ export default function HTMLSitemapPage() {
               className="group bg-surface backdrop-blur-sm hover:bg-surface border border-line hover:border-brand rounded-xl p-5 transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-2">
-                <HomeIcon className="text-brand" />
+                <HomeIcon className="w-5 h-5 text-brand" />
                 <h3 className="text-ink font-semibold">Home</h3>
               </div>
               <p className="text-ink-muted text-sm">Main landing page with booking form</p>
-              <ArrowForwardIcon className="text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowForwardIcon className="w-5 h-5 text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
 
             <Link
@@ -80,11 +80,11 @@ export default function HTMLSitemapPage() {
               className="group bg-surface backdrop-blur-sm hover:bg-surface border border-line hover:border-brand rounded-xl p-5 transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-2">
-                <InfoIcon className="text-brand" />
+                <InfoIcon className="w-5 h-5 text-brand" />
                 <h3 className="text-ink font-semibold">About Us</h3>
               </div>
               <p className="text-ink-muted text-sm">Learn about our company and services</p>
-              <ArrowForwardIcon className="text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowForwardIcon className="w-5 h-5 text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
 
             <Link
@@ -92,11 +92,11 @@ export default function HTMLSitemapPage() {
               className="group bg-surface backdrop-blur-sm hover:bg-surface border border-line hover:border-brand rounded-xl p-5 transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-2">
-                <ContactMailIcon className="text-brand" />
+                <ContactMailIcon className="w-5 h-5 text-brand" />
                 <h3 className="text-ink font-semibold">Contact</h3>
               </div>
               <p className="text-ink-muted text-sm">Get in touch with our support team</p>
-              <ArrowForwardIcon className="text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowForwardIcon className="w-5 h-5 text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
 
             <Link
@@ -104,11 +104,11 @@ export default function HTMLSitemapPage() {
               className="group bg-surface backdrop-blur-sm hover:bg-surface border border-line hover:border-brand rounded-xl p-5 transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-2">
-                <BookOnlineIcon className="text-brand" />
+                <BookOnlineIcon className="w-5 h-5 text-brand" />
                 <h3 className="text-ink font-semibold">Book Taxi</h3>
               </div>
               <p className="text-ink-muted text-sm">Instant taxi booking with confirmation</p>
-              <ArrowForwardIcon className="text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowForwardIcon className="w-5 h-5 text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
           </div>
         </section>
@@ -117,7 +117,7 @@ export default function HTMLSitemapPage() {
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-surface flex items-center justify-center">
-              <DirectionsCarIcon className="text-brand" />
+              <DirectionsCarIcon className="w-5 h-5 text-brand" />
             </div>
             <div>
               <h2 className="text-2xl font-bold text-ink">
@@ -150,7 +150,7 @@ export default function HTMLSitemapPage() {
                       </div>
                     )}
                   </div>
-                  <ArrowForwardIcon className="text-brand opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 text-lg" />
+                  <ArrowForwardIcon className="w-5 h-5 text-brand opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 text-lg" />
                 </div>
               </Link>
             ))}
@@ -161,7 +161,7 @@ export default function HTMLSitemapPage() {
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-surface flex items-center justify-center">
-              <GavelIcon className="text-brand" />
+              <GavelIcon className="w-5 h-5 text-brand" />
             </div>
             <h2 className="text-2xl font-bold text-ink">Legal & Policies</h2>
           </div>
@@ -175,7 +175,7 @@ export default function HTMLSitemapPage() {
                 Privacy Policy
               </h3>
               <p className="text-ink-muted text-sm">How we protect and handle your personal information</p>
-              <ArrowForwardIcon className="text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowForwardIcon className="w-5 h-5 text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
 
             <Link
@@ -186,7 +186,7 @@ export default function HTMLSitemapPage() {
                 Terms of Service
               </h3>
               <p className="text-ink-muted text-sm">Booking terms, cancellation policies, and conditions</p>
-              <ArrowForwardIcon className="text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowForwardIcon className="w-5 h-5 text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
           </div>
         </section>

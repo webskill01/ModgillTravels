@@ -187,7 +187,7 @@ export default function AboutContent() {
           {/* Service Areas */}
           <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-line">
             <h3 className="text-xl sm:text-2xl font-bold text-ink mb-5 sm:mb-6 flex items-center gap-2">
-              <LocationOnIcon className="text-brand" />
+              <LocationOnIcon className="w-5 h-5 text-brand" />
               Service Coverage
             </h3>
 
@@ -247,7 +247,7 @@ export default function AboutContent() {
           {/* Contact Info */}
           <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-line">
             <h3 className="text-xl sm:text-2xl font-bold text-ink mb-5 sm:mb-6 flex items-center gap-2">
-              <PhoneIcon className="text-brand" />
+              <PhoneIcon className="w-5 h-5 text-brand" />
               Contact Information
             </h3>
 

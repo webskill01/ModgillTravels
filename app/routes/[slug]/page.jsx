@@ -111,7 +111,7 @@ export default async function RouteDetailsPage({ params }) {
         {/* Page Header - SEO Optimized H1 */}
         <div className="mb-6">
           <h1 className="text-3xl lg:text-4xl font-bold text-ink mb-2 flex items-center gap-3">
-            <PlaceIcon className="text-brand" />
+            <PlaceIcon className="w-5 h-5 text-brand" />
             {route.from} to {route.to} Taxi Service
           </h1>
           <p className="text-ink-muted text-sm sm:lg">
