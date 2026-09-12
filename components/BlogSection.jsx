@@ -18,24 +18,24 @@ export default function BlogSection() {
   const blogs = [
     {
       title: 'Best Places to Visit in Shimla',
-      description: 'ModgillTravels offers comfortable taxi service from Patiala to Shimla covering 180 km. Explore Mall Road, Jakhoo Temple, Kufri, and more scenic destinations. Our experienced hill drivers ensure safe mountain travel with well-maintained AC vehicles.',
+      description: 'ModgillTravels offers comfortable taxi service from Patiala to Shimla covering 170 km. Explore Mall Road, Jakhoo Temple, Kufri, and more scenic destinations. Our experienced hill drivers ensure safe mountain travel with well-maintained AC vehicles.',
       slug: 'best-places-to-visit-in-shimla',
       readTime: '8 min',
       category: 'Travel Guide',
-      borderColor: 'border-purple-500/40',
-      accentColor: 'text-purple-400',
+      borderColor: 'border-line',
+      accentColor: 'text-brand',
       dotColor: 'bg-purple-400',
       emoji: '⛰️',
       keywords: 'shimla taxi, patiala to shimla, hill station travel'
     },
     {
       title: 'Patiala to Delhi Complete Guide',
-      description: 'Planning a trip from Patiala to Delhi? Book reliable taxi service covering 250 km in 4-5 hours. Our professional drivers know the best routes via Rajpura, Ambala, and Panipat. Get transparent pricing starting at ₹3,500 for one-way trips.',
+      description: 'Planning a trip from Patiala to Delhi? Book reliable taxi service covering 250 km in 4-5 hours. Our professional drivers know the best routes via Rajpura, Ambala, and Panipat. A quote is confirmed on WhatsApp before you travel.',
       slug: 'patiala-to-delhi-travel-guide',
       readTime: '6 min',
       category: 'Route Guide',
-      borderColor: 'border-blue-500/40',
-      accentColor: 'text-blue-400',
+      borderColor: 'border-line',
+      accentColor: 'text-brand',
       dotColor: 'bg-blue-400',
       emoji: '🚗',
       keywords: 'patiala to delhi, taxi booking, outstation cab'
@@ -46,11 +46,11 @@ export default function BlogSection() {
       slug: 'how-to-book-one-way-taxi',
       readTime: '5 min',
       category: 'Booking Tips',
-      borderColor: 'border-green-500/40',
-      accentColor: 'text-green-400',
+      borderColor: 'border-line',
+      accentColor: 'text-brand',
       dotColor: 'bg-green-400',
       emoji: '💡',
-      keywords: 'one way taxi, cheap cab booking, no return fare'
+      keywords: 'one way taxi, cab booking patiala, outstation taxi'
     },
   ];
 
@@ -117,23 +117,23 @@ export default function BlogSection() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-gray-700 rounded-xl p-4 sm:p-5 overflow-hidden">
+    <div className="bg-surface /50 border border-line rounded-xl p-4 sm:p-5 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-2 sm:gap-3">
-          <div className="w-9 h-9 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center">
-            <AutoStoriesIcon className="w-5 h-5 text-purple-400" />
+          <div className="w-9 h-9 bg-surface rounded-lg flex items-center justify-center">
+            <AutoStoriesIcon className="w-5 h-5 text-brand" />
           </div>
           <div>
-            <h2 className="text-base sm:text-lg font-bold text-white">
+            <h2 className="text-base sm:text-lg font-bold text-ink">
               Travel Guides & Booking Tips
             </h2>
-            <p className="text-gray-500 text-xs">Expert advice for your journey</p>
+            <p className="text-ink-muted text-xs">Expert advice for your journey</p>
           </div>
         </div>
         <Link 
           href="/blog" 
-          className="text-cyan-400 hover:text-cyan-300 text-xs sm:text-sm font-semibold transition flex items-center gap-1 group flex-shrink-0"
+          className="text-brand hover:text-brand text-xs sm:text-sm font-semibold transition flex items-center gap-1 group flex-shrink-0"
         >
           <span>All Guides</span>
           <ArrowForwardIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -163,16 +163,16 @@ export default function BlogSection() {
             className="flex-shrink-0 w-full snap-center"
           >
             <div
-              className={`group border-2 ${blog.borderColor} hover:border-opacity-80 rounded-xl p-4 sm:p-5 transition-all duration-300 hover:scale-[1.01] relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 cursor-pointer`}
+              className={`group border-2 ${blog.borderColor} hover:border-opacity-80 rounded-xl p-4 sm:p-5 transition-all duration-300  relative overflow-hidden bg-white cursor-pointer`}
             >
               {/* Shimmer Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/3 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
               
               {/* Content */}
               <div className="relative z-10">
                 {/* Top Section with Emoji */}
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  <div className="text-4xl sm:text-5xl group- transition-transform duration-300 flex-shrink-0">
                     {blog.emoji}
                   </div>
                   
@@ -181,30 +181,30 @@ export default function BlogSection() {
                       <span className={`px-2 py-0.5 ${blog.borderColor} border rounded text-xs font-medium ${blog.accentColor}`}>
                         {blog.category}
                       </span>
-                      <div className="flex items-center gap-1 text-xs text-gray-400">
+                      <div className="flex items-center gap-1 text-xs text-ink-muted">
                         <AccessTimeIcon className="w-3 h-3" />
                         <span>{blog.readTime}</span>
                       </div>
                     </div>
                     
-                    <h3 className={`text-white font-bold text-base sm:text-lg mb-2 group-hover:${blog.accentColor} transition-colors`}>
+                    <h3 className={`text-ink font-bold text-base sm:text-lg mb-2 group-hover:${blog.accentColor} transition-colors`}>
                       {blog.title}
                     </h3>
                   </div>
                 </div>
                 
                 {/* Enhanced Description with SEO Content */}
-                <p className="text-gray-300 text-sm leading-relaxed mb-3 line-clamp-3">
+                <p className="text-ink-muted text-sm leading-relaxed mb-3 line-clamp-3">
                   {blog.description}
                 </p>
 
                 {/* Keywords Tag */}
-                <div className="mb-4 pb-3 border-b border-gray-700">
+                <div className="mb-4 pb-3 border-b border-line">
                   <div className="flex items-center gap-2 flex-wrap">
                     {blog.keywords.split(', ').map((keyword, index) => (
                       <span 
                         key={index}
-                        className="text-xs bg-slate-700/50 px-2 py-1 rounded text-gray-400"
+                        className="text-xs bg-surface px-2 py-1 rounded text-ink-muted"
                       >
                         {keyword}
                       </span>
@@ -233,7 +233,7 @@ export default function BlogSection() {
             className={`h-2 rounded-full transition-all ${
               currentCard === index 
                 ? `w-2 ${blog.dotColor}` 
-                : 'w-2 bg-gray-600 hover:bg-gray-500'
+                : 'w-2 bg-surface hover:bg-surface'
             }`}
             aria-label={`Go to ${blog.title}`}
           />
@@ -241,7 +241,7 @@ export default function BlogSection() {
       </div>
 
       {/* Slide Counter */}
-      <p className="text-center text-gray-500 text-xs mt-2">
+      <p className="text-center text-ink-muted text-xs mt-2">
         Article {currentCard + 1} of {blogs.length}
       </p>
 

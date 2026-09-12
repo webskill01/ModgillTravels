@@ -1,5 +1,7 @@
 // app/not-found.jsx
 import Link from 'next/link';
+import site from "@/data/site";
+import Button from "@/components/ui/Button";
 import { DirectionsCarIcon, HomeIcon, PhoneIcon, SearchIcon, ExploreIcon } from '@/components/Icons';
 
 export const metadata = {
@@ -28,19 +30,19 @@ export default function NotFound() {
         
         {/* 404 Icon & Message */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-full mb-6">
-            <SearchIcon className="w-12 h-12 text-red-400" />
+          <div className="inline-flex items-center justify-center w-24 h-24 bg-accent-soft border border-line rounded-full mb-6">
+            <SearchIcon className="w-12 h-12 text-brand" />
           </div>
           
-          <h1 className="text-6xl sm:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-4">
+          <h1 className="text-6xl sm:text-8xl font-bold text-brand mb-4">
             404
           </h1>
           
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink mb-4">
             Oops! Page Not Found
           </h2>
           
-          <p className="text-gray-400 text-base sm:text-lg max-w-md mx-auto mb-8">
+          <p className="text-ink-muted text-base sm:text-lg max-w-md mx-auto mb-8">
             The page you're looking for doesn't exist or has been moved. Let's get you back on track!
           </p>
 
@@ -48,24 +50,19 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
               href="/"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-cyan-500/25"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-brand hover:bg-brand-hover text-white rounded-lg font-semibold transition-all shadow-lg shadow-md"
             >
               <HomeIcon className="w-5 h-5" />
               Go to Homepage
             </Link>
-            <a
-              href="tel:+916284992669"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-green-500/25"
-            >
-              <PhoneIcon className="w-5 h-5" />
-              Call Us Now
-            </a>
+            <Button variant="call" href={`tel:${site.phone}`} className="justify-center"><PhoneIcon className="w-5 h-5" />
+              Call Us Now</Button>
           </div>
         </div>
 
         {/* Quick Links */}
         <section className="mb-12">
-          <h3 className="text-xl font-bold text-white mb-6 text-center">
+          <h3 className="text-xl font-bold text-ink mb-6 text-center">
             Quick Links
           </h3>
           
@@ -76,10 +73,10 @@ export default function NotFound() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="group bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5 text-center hover:border-cyan-500/40 transition-all hover:scale-105"
+                  className="group bg-white border border-line rounded-xl p-5 text-center hover:border-brand transition-all"
                 >
-                  <Icon className="w-8 h-8 text-cyan-400 mx-auto mb-3 group-hover:scale-110 transition" />
-                  <span className="text-white font-semibold text-sm">{link.name}</span>
+                  <Icon className="w-8 h-8 text-brand mx-auto mb-3 group- transition" />
+                  <span className="text-ink font-semibold text-sm">{link.name}</span>
                 </Link>
               );
             })}
@@ -87,8 +84,8 @@ export default function NotFound() {
         </section>
 
         {/* Popular Routes */}
-        <section className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-2xl p-6 sm:p-8">
-          <h3 className="text-xl font-bold text-white mb-6 text-center">
+        <section className="bg-white border border-line rounded-2xl p-6 sm:p-8">
+          <h3 className="text-xl font-bold text-ink mb-6 text-center">
             Popular Taxi Routes
           </h3>
           
@@ -97,14 +94,14 @@ export default function NotFound() {
               <Link
                 key={route.slug}
                 href={`/routes/${route.slug}`}
-                className="group bg-slate-700/30 border border-gray-600/50 rounded-lg p-4 hover:bg-slate-700/50 hover:border-cyan-500/40 transition-all"
+                className="group bg-surface border border-line/50 rounded-lg p-4 hover:bg-surface hover:border-brand transition-all"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <DirectionsCarIcon className="w-5 h-5 text-cyan-400" />
-                    <span className="text-white font-semibold text-sm">{route.name}</span>
+                    <DirectionsCarIcon className="w-5 h-5 text-brand" />
+                    <span className="text-ink font-semibold text-sm">{route.name}</span>
                   </div>
-                  <span className="text-cyan-400 text-sm group-hover:translate-x-1 transition-transform">
+                  <span className="text-brand text-sm group-hover:translate-x-1 transition-transform">
                     →
                   </span>
                 </div>
@@ -115,7 +112,7 @@ export default function NotFound() {
           <div className="mt-6 text-center">
             <Link
               href="/booking"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition font-semibold"
+              className="inline-flex items-center gap-2 text-brand hover:text-brand transition font-semibold"
             >
               <ExploreIcon className="w-5 h-5" />
               View All Routes
@@ -125,29 +122,17 @@ export default function NotFound() {
 
         {/* Help Section */}
         <div className="mt-12 text-center">
-          <p className="text-gray-400 text-sm mb-3">
+          <p className="text-ink-muted text-sm mb-3">
             Need help finding something?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-            <a
-              href="tel:+916284992669"
-              className="text-cyan-400 hover:text-cyan-300 transition"
-            >
-              Call: +91-62849-92669
-            </a>
-            <span className="hidden sm:inline text-gray-600">•</span>
-            <a
-              href="https://wa.me/916284992669"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-400 hover:text-green-300 transition"
-            >
-              WhatsApp Us
-            </a>
-            <span className="hidden sm:inline text-gray-600">•</span>
+            <Button variant="call" href={`tel:${site.phone}`} className="">Call: +91-62849-92669</Button>
+            <span className="hidden sm:inline text-ink-muted">•</span>
+            <Button variant="whatsapp" external href="https://wa.me/916284992669" className="">WhatsApp Us</Button>
+            <span className="hidden sm:inline text-ink-muted">•</span>
             <a
               href="mailto:modgilltravels@gmail.com"
-              className="text-blue-400 hover:text-blue-300 transition"
+              className="text-brand hover:text-brand transition"
             >
               Email Support
             </a>

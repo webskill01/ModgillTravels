@@ -6,7 +6,7 @@ import { getOrganizationSchema } from '@/utils/structuredData';
 export const metadata = {
   title: "Contact ModgillTravels | 24/7 Taxi Booking, Patiala",
   // patch_040: meta description rewrite with office address for local SEO
-  description: "Contact ModgillTravels for taxi bookings in Patiala, Punjab — 24/7 phone & WhatsApp at +91-62849-92669. Email modgilltravels@gmail.com. Office: Urban Estate Phase 2, Patiala 147001. Instant cab booking confirmation.",
+  description: "Contact ModgillTravels for taxi bookings in Patiala — phone and WhatsApp on +91-62849-92669, any hour. We reply within about 15 minutes.",
   keywords: "contact ModgillTravels, taxi booking Patiala, customer support, WhatsApp taxi booking, phone number, Patiala taxi contact, 24/7 cab support",
   openGraph: {
     title: "Contact ModgillTravels - 24/7 Taxi Booking Support",

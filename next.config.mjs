@@ -24,6 +24,15 @@ const nextConfig = {
     optimizeCss: true,
   },
 
+  async redirects() {
+    return [
+      // /book carried the deleted booking form. It drew 3 impressions in 90
+      // days; /booking ranks at 12.7, so the signal consolidates there.
+      { source: '/book', destination: '/booking', permanent: true },
+      { source: '/book/:path*', destination: '/booking', permanent: true },
+    ];
+  },
+
   // async redirects() {
   //   return [
   //     // Force www to non-www (or vice versa) - IMPORTANT for SEO

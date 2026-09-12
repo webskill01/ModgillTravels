@@ -1,17 +1,19 @@
 // app/page.js - UPDATED WITH NEW COMPONENTS
-import { InstantBookingBar } from "@/components/BookingBar";
-import HeroSection from "../components/HeroSection";
-import RouteCarousel from "../components/RouteCarousel";
-import WhyChooseUs from "../components/WhyChooseUs";
+import Link from "next/link";
+import Image from "next/image";
 import BlogSection from "../components/BlogSection";
 import SEO from '@/components/SEO';
 import { getOrganizationSchema, getLocalBusinessSchema, getWebsiteSchema } from '@/utils/structuredData';
-import ServiceInfo from "@/components/ServiceInfo";
 import FAQAccordion from "@/components/FAQAccordion";
+import RouteFinder from "@/components/RouteFinder";
+import BookCta from "@/components/ui/BookCta";
+import { Section, Container, Badge } from "@/components/ui";
+import site from "@/data/site";
+import { VerifiedIcon, AccessTimeIcon, WhatsAppIcon, StarIcon } from "@/components/Icons";
 
 export const metadata = {
   title: "Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels",
-  description: "Patiala's 24/7 taxi service. One-way & round trip — Sedan from ₹1,400. Professional drivers, AC vehicles, GPS tracking. Call +91-62849-92669.",
+  description: "Patiala's 24/7 taxi service. One-way and round trip to Delhi, Chandigarh, Shimla and Manali. Verified drivers, AC vehicles. Call +91-62849-92669.",
   keywords: [
     "taxi service near me",
     "taxi agents near me",
@@ -26,7 +28,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels",
-    description: "Patiala's 24/7 taxi service. One-way & round trip — Sedan from ₹1,400. Professional AC vehicles, GPS tracking. Call +91-62849-92669.",
+    description: "Patiala's 24/7 taxi service. One-way and round trip to Delhi, Chandigarh, Shimla and Manali. Verified drivers, AC vehicles. Call +91-62849-92669.",
     type: "website",
     url: "https://www.modgilltravels.in",
     siteName: "ModgillTravels",
@@ -66,15 +68,15 @@ const faqPageSchema = {
       "name": "How much does a taxi from Patiala to Delhi cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The taxi fare from Patiala to Delhi ranges from ₹2,500 to ₹4,500 depending on vehicle type. Sedan costs approximately ₹2,500-₹3,000, Innova or Ertiga ranges from ₹3,500-₹4,500. Final price depends on exact pickup/drop location and current fuel rates. Use our booking form for instant quotes."
+        "text": "The Patiala to Delhi road distance is about 250 km via NH44, and the drive takes 4.5 to 5 hours in normal traffic. Sedan, Ertiga and Innova Crysta are all available. Send your pickup point and travel time on WhatsApp and we confirm the vehicle and a fixed quote before the trip."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the taxi fare from Patiala to Shimla?",
+      "name": "How far is Patiala from Shimla by taxi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Patiala to Shimla taxi fare typically ranges from ₹2,000 to ₹3,500. The distance is approximately 170 km and journey takes 4-5 hours. Sedan options are available starting at ₹2,000, while larger vehicles like Innova cost ₹3,000-₹3,500. Book 24 hours in advance for best rates."
+        "text": "Patiala to Shimla is about 170 km by road and takes 4 to 5 hours, climbing through Kalka and Solan. An Innova or Ertiga is the sensible choice for the hill section. Book a day ahead for morning departures, which avoid the afternoon hill traffic."
       }
     },
     {
@@ -114,7 +116,7 @@ const faqPageSchema = {
       "name": "Can I book a one-way taxi from Patiala to Chandigarh?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, ModgillTravels offers one-way taxi service from Patiala to Chandigarh. The distance is approximately 100 km and journey takes 2-2.5 hours. You pay only for the one-way trip without return charges. Ideal for airport transfers or relocation."
+        "text": "Yes, ModgillTravels offers one-way taxi service from Patiala to Chandigarh. The distance is about 68 km and the drive takes around 1.5 hours. You pay only for the one-way trip without return charges. Ideal for airport transfers or relocation."
       }
     },
     {
@@ -138,7 +140,7 @@ const faqPageSchema = {
       "name": "How much does an Innova Crysta taxi cost from Patiala to Delhi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Innova Crysta taxi from Patiala to Delhi costs approximately ₹3,500 to ₹4,200 depending on season and demand. This spacious 6-7 seater vehicle is ideal for families or groups. Prices may vary slightly based on pickup location within Patiala and current fuel rates."
+        "text": "The Innova Crysta seats 6 to 7 with room for luggage, which makes it the usual pick for families on the 250 km Patiala to Delhi run. Tell us the group size on WhatsApp and we confirm the vehicle and a fixed quote before you travel."
       }
     },
     {
@@ -368,43 +370,140 @@ export default function HomePage() {
       />
       <SEO
         title="Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels"
-        description="Book reliable taxi service in Patiala 24/7 — one way & round trip. Sedan from ₹1,400. Professional drivers, AC vehicles, GPS tracking. Call or WhatsApp +91-62849-92669 now."
+        description="Book a taxi in Patiala 24/7 — one way and round trip to Delhi, Chandigarh, Shimla and Manali. Verified drivers, AC vehicles. Call or WhatsApp +91-62849-92669."
         keywords="taxi service near me, cab service patiala, one way cab service in patiala, taxi agents near me"
         url="/"
         jsonLd={[organizationSchema, localBusinessSchema, websiteSchema]}
       />
 
-      <main className="min-h-screen">
-        {/* Booking Bar */}
-        <InstantBookingBar />
+      <main>
+        {/* 1 — Hero. One headline, one paragraph, the two booking actions. */}
+        <Section tight>
+          <div className="grid items-center gap-8 lg:grid-cols-2">
+            <div>
+              <Badge tone="soft" className="mb-4">
+                <StarIcon className="h-3.5 w-3.5" />
+                {site.rating.value} from {site.rating.count} Google reviews
+              </Badge>
+              <h1>Taxi service in Patiala, available 24/7</h1>
+              <p className="mt-4 text-lg text-ink-muted">
+                ModgillTravels runs outstation cabs, airport transfers and local
+                rides across Punjab, Haryana, Delhi and Himachal Pradesh. Send a
+                WhatsApp message and we reply within about 15 minutes with the
+                driver, the vehicle and a quote fixed before you travel.
+              </p>
+              <BookCta size="lg" className="mt-6" />
+            </div>
 
-        {/* Hero Section */}
-        <HeroSection />
+            {/* LCP element, so it carries `priority` and explicit dimensions —
+                no layout shift while it loads. Order is set so it sits under
+                the copy on phones and beside it from lg up. */}
+            <div className="order-first lg:order-last">
+              <Image
+                src="/car-caption.png"
+                alt="ModgillTravels outstation taxi — Patiala to Delhi, Shimla, Manali and Chandigarh, with professional drivers and AC vehicles."
+                width={640}
+                height={420}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="h-auto w-full max-w-lg mx-auto lg:ml-auto lg:mr-0"
+                priority
+              />
+            </div>
+          </div>
+        </Section>
 
+        {/* 2 — Route finder. The interactive block; replaces the hero form
+            and the carousel, and links straight to the pages that rank. */}
+        <Section
+          tight
+          surface
+          title="Find your route"
+          lead="Distances and travel times for every route we run from Patiala."
+        >
+          <RouteFinder />
+        </Section>
 
-        {/* Route Carousel */}
-        <section className="max-w-6xl mx-auto px-4 ">
-          <RouteCarousel />
-        </section>
+        {/* 3 — Trust row. One row, not a section. */}
+        <Section tight>
+          <dl className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {[
+              [`${site.rating.value} ★`, `${site.rating.count} Google reviews`],
+              ["24/7", "Every day of the year"],
+              [site.tripsCompleted, "Trips completed"],
+              ["10", "Cities served"],
+            ].map(([value, label]) => (
+              <div
+                key={label}
+                className="rounded-2xl border border-line bg-white p-4 text-center"
+              >
+                <dt className="text-2xl font-semibold text-brand">
+                  {value}
+                </dt>
+                <dd className="mt-1 text-sm text-ink-muted">{label}</dd>
+              </div>
+            ))}
+          </dl>
+        </Section>
 
-        {/* Why Choose Us */}
-        <section className="max-w-6xl mx-auto px-4">
-          <WhyChooseUs />
-        </section>
-        <section className="max-w-6xl mx-auto px-4 space-y-12 py-8">
-          <ServiceInfo />
-        </section>
+        {/* 4 — Three benefits, which is the cap the layout is built around. */}
+        <Section
+          tight
+          surface
+          title="Why book with ModgillTravels"
+          lead="Serving Patiala since 2025, with 5,000+ completed trips across Punjab and NCR."
+        >
+          <ul className="grid gap-4 sm:grid-cols-3">
+            {[
+              [
+                <VerifiedIcon key="i" className="h-6 w-6" />,
+                "Verified drivers",
+                "Background-checked and licensed, and they know these highways. Sedan, Ertiga and Innova Crysta, all air-conditioned with GPS tracking.",
+              ],
+              [
+                <AccessTimeIcon key="i" className="h-6 w-6" />,
+                "Available 24/7",
+                "Outstation runs to Delhi (250 km), Chandigarh (68 km), Shimla (170 km) and Manali (357 km), plus local Patiala trips and airport transfers. Early flights and late arrivals included.",
+              ],
+              [
+                <WhatsAppIcon key="i" className="h-6 w-6" />,
+                "Booked on WhatsApp",
+                "No form and no account. Message your pickup point and time; we confirm the driver and a fixed quote before the trip, with no surge pricing.",
+              ],
+            ].map(([icon, title, text]) => (
+              <li
+                key={title}
+                className="rounded-2xl border border-line bg-white p-5"
+              >
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft text-ink">
+                  {icon}
+                </span>
+                <h3 className="mt-3 text-base font-semibold">{title}</h3>
+                <p className="mt-1.5 text-sm text-ink-muted">{text}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 text-sm text-ink-muted">
+            Serving all of Patiala — Urban Estate, Rajindra Hospital, Punjabi
+            University, Leela Bhawan and Tripuri — and every major outstation
+            route across Punjab, Haryana and Himachal Pradesh.{" "}
+            <Link
+              href="/about"
+              className="font-semibold text-brand underline underline-offset-2"
+            >
+              More about us
+            </Link>
+            .
+          </p>
+        </Section>
 
-        {/* Cities & Blog Combined - Desktop 2 Columns, Mobile Stacked */}
-         <section className="max-w-6xl mx-auto px-4 py-6 sm:py-8">
+        {/* 5 — Latest posts, then the FAQ, which carries the FAQPage schema. */}
+        <Section tight>
           <BlogSection />
-        </section>
+        </Section>
 
-        {/* FAQ Section — GEO/AEO Optimized (geo_001) */}
-        <section className="max-w-6xl mx-auto px-4 py-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 text-center">Frequently Asked Questions — Taxi Service in Patiala</h2>
+        <Section tight surface title="Frequently asked questions">
           <FAQAccordion />
-        </section>
+        </Section>
       </main>
     </>
   );

@@ -9,27 +9,27 @@ export default function Breadcrumbs({ items }) {
         <li className="flex items-center gap-2">
           <Link 
             href="/" 
-            className="text-gray-400 hover:text-cyan-400 transition flex items-center gap-1"
+            className="text-ink-muted hover:text-brand transition flex items-center gap-1"
           >
             <HomeIcon className="w-4 h-4" />
             <span>Home</span>
           </Link>
-          {items.length > 0 && <NavigateNextIcon className="w-4 h-4 text-gray-600" />}
+          {items.length > 0 && <NavigateNextIcon className="w-4 h-4 text-ink-muted" />}
         </li>
         
         {items.map((item, index) => (
           <li key={index} className="flex items-center gap-2">
             {index === items.length - 1 ? (
-              <span className="text-white font-medium">{item.label}</span>
+              <span className="text-ink font-medium">{item.label}</span>
             ) : (
               <>
                 <Link 
                   href={item.href} 
-                  className="text-gray-400 hover:text-cyan-400 transition"
+                  className="text-ink-muted hover:text-brand transition"
                 >
                   {item.label}
                 </Link>
-                <NavigateNextIcon className="w-4 h-4 text-gray-600" />
+                <NavigateNextIcon className="w-4 h-4 text-ink-muted" />
               </>
             )}
           </li>
