@@ -308,3 +308,81 @@ ranking later.
    now carries real data; generating more pages from a sentence with the names
    swapped is the scaled-content-abuse pattern this project just moved away
    from.
+
+
+---
+
+## GSC export analysis — 2026-09-12 (`gsc_reports/`, gitignored)
+
+Four dashboard exports, read alongside a live 90-day API pull. The exports are
+local-only; `gsc_reports/` and `Reports/` are in `.gitignore`.
+
+### Indexing is the ceiling, not ranking
+
+**26 pages not indexed against 23 indexed.**
+
+| Reason | Pages |
+| --- | ---: |
+| Crawled – currently not indexed | 14 |
+| Discovered – currently not indexed | 9 |
+| Page with redirect | 3 |
+
+"Crawled – currently not indexed" means Google fetched the page and **chose not
+to index it**. That is a quality verdict, and 14 of them is the signature of
+the near-duplicate route template Phase 8 set out to fix. Measured body copy
+(nav/header/footer stripped) puts route pages at **291-404 words** — thin for a
+commercial page. Phase 8 gave each one genuine journey detail; whether that is
+enough will show on recrawl. Nothing else on the site matters as much: a page
+Google will not index cannot rank at any position.
+
+### Rich results: FAIL, and now fixed
+
+The Review-snippets export says **16 items invalid** against 27 valid, on
+*Invalid object type for field `<parent_node>`*, with **0 impressions**. Search
+Appearance is completely empty — the site has never earned a rich result.
+
+Cause found and fixed on 2026-09-12: `aggregateRating` sat on a bare
+`TaxiService` node in the root layout, so on all 40 pages. `Service` subtypes
+are **not** on Google's supported parent list for review snippets. The rating
+now lives only on `LocalBusiness` (valid) and `Product` (valid). This is
+plausibly the largest CTR lever on the site — a 5.0 star row in the SERP
+against competitors who have one.
+
+### Three backlinks. That is the whole profile.
+
+`Latest links` lists exactly three: a LinkedIn profile, a linktr.ee, and
+`easebuilds.in/portfolio` — the developer's own site. There is no third-party
+link equity here at all, which caps how far on-page work can carry the site.
+Local citations (Justdial, IndiaMART, Sulekha, taxi directories) are the
+realistic route, and the duplicate Justdial listing should be merged first.
+
+### Zero CTR is a titles problem, not a rankings problem
+
+2 clicks on 2,670 impressions over 90 days. Pages sitting at position 11-14
+earn nothing:
+
+| Query | Impr | Pos |
+| --- | ---: | ---: |
+| taxi service in patiala | 283 | 14.1 |
+| patiala to manali distance | 134 | 11.8 |
+| best taxi service in patiala | 126 | 11.9 |
+| patiala taxi service | 122 | 17.2 |
+| cab services in patiala | 79 | 17.8 |
+| patiala taxi service contact number | 26 | **9.8** |
+
+Acted on: route titles now lead with the distance, because distance-intent is
+what actually ranks here (11.8 for Manali against 36.7 for the commercial
+phrasing). `/booking` no longer promises "Fares" it does not have.
+
+### Two live conflicts worth knowing
+
+1. **`patiala taxi service contact number` ranks 9.8** — the closest query on
+   the site to page 1 — and the phone number was just removed from all visible
+   copy at the owner's request. The number remains in JSON-LD, which is what
+   Google reads, but a page that visibly answers "contact number" would serve
+   that query better. Revisit if that query's position slips.
+2. **Call buttons dial 8976376926; the GBP and every citation carry
+   6284992669.** Most calls to a local business originate in the map pack, not
+   the website, so the routing change only reaches site visitors. To actually
+   move calls to the second line, the GBP number has to change — and that is
+   a NAP edit that ripples through Justdial and IndiaMART.
