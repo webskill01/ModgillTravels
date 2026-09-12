@@ -271,7 +271,7 @@ const blogs = [
     author: 'ModgillTravels Team',
     category: 'Route Guide',
     readTime: '6 min read',
-    metaTitle: 'Patiala to Chandigarh Taxi Fare 2026 | ₹1,400 Cab Booking — ModgillTravels',
+    metaTitle: 'Patiala to Chandigarh Taxi 2026 | ₹1,400 Cab Fare',
     metaDescription: 'Patiala to Chandigarh taxi fare starts at ₹1,400 one way (Sedan). 67 km in 2–2.5 hours. Book cab via WhatsApp +91-62849-92669. 24/7 pickup, airport transfers available.',
     keywords: ['patiala to chandigarh taxi', 'patiala chandigarh cab fare', 'chandigarh taxi from patiala', 'patiala to chandigarh one way cab', 'cab booking patiala chandigarh'],
     content: `<p>Patiala to Chandigarh is one of the most popular taxi routes in Punjab. Whether you're traveling for work, airport transfers, medical visits, or shopping at Sector 17, ModgillTravels offers reliable cab service for the 67 km journey at transparent fixed fares.</p>
@@ -352,7 +352,7 @@ const blogs = [
     author: 'ModgillTravels Team',
     category: 'Travel Guide',
     readTime: '9 min read',
-    metaTitle: 'Patiala to Manali Taxi 2026 | ₹5,400 Cab Fare & Trip Guide — ModgillTravels',
+    metaTitle: 'Patiala to Manali Taxi 2026 | ₹5,400 Cab Fare & Guide',
     metaDescription: 'Patiala to Manali taxi fare starts ₹5,400 one way (Sedan). 301 km in 7–8 hours via Chandigarh and Kullu. Hill expert drivers, AC vehicles. Book: +91-62849-92669.',
     keywords: ['patiala to manali taxi', 'patiala manali cab fare', 'manali trip from patiala', 'patiala to manali distance', 'manali taxi booking patiala'],
     content: `<p>Dreaming of Rohtang Pass, Solang Valley, and Hadimba Temple? Patiala to Manali by taxi is one of the most scenic road journeys in North India. ModgillTravels offers comfortable, safe cab service with hill-experienced drivers for the 301 km mountain route.</p>
@@ -436,7 +436,7 @@ const blogs = [
     author: 'ModgillTravels Team',
     category: 'Route Guide',
     readTime: '7 min read',
-    metaTitle: 'Chandigarh to Shimla Taxi 2026 | ₹2,500 Cab Fare & Hill Travel Guide',
+    metaTitle: 'Chandigarh to Shimla Taxi 2026 | ₹2,500 Cab Fare',
     metaDescription: 'Chandigarh to Shimla taxi fare starts at ₹2,500 one way. 115 km in 3–4 hours via Kalka. Hill-certified drivers, AC vehicles. Book: +91-62849-92669. 24/7 available.',
     keywords: ['chandigarh to shimla taxi', 'shimla taxi from chandigarh', 'chandigarh shimla cab fare', 'chandigarh to shimla cab booking', 'shimla trip from chandigarh'],
     content: `<p>Chandigarh to Shimla is the most popular hill station route in North India. Just 115 km from Chandigarh, Shimla offers mountain air, colonial architecture, and stunning Himalayan views. ModgillTravels provides hill-certified taxi drivers for this scenic route.</p>
@@ -516,7 +516,7 @@ const blogs = [
     author: 'ModgillTravels Team',
     category: 'Travel Guide',
     readTime: '7 min read',
-    metaTitle: 'Patiala to Amritsar Taxi for Golden Temple 2026 | ₹3,500 Cab Fare',
+    metaTitle: 'Patiala to Amritsar Golden Temple Taxi | ₹3,500 Fare',
     metaDescription: 'Book Patiala to Amritsar taxi for Golden Temple darshan. ₹3,500 Sedan one way, 165 km in 3–4 hours. Wagah Border evening flag ceremony included. Call +91-62849-92669.',
     keywords: ['patiala to amritsar taxi', 'amritsar golden temple taxi from patiala', 'patiala amritsar cab fare', 'amritsar taxi booking patiala', 'golden temple taxi patiala'],
     content: `<p>Amritsar's Golden Temple (Sri Harmandir Sahib) is one of India's holiest and most visited landmarks. From Patiala, the 165 km taxi journey is a comfortable 3–4 hour drive. ModgillTravels offers reliable cab service with drivers experienced on the Patiala–Amritsar highway.</p>
@@ -602,7 +602,7 @@ const blogs = [
     author: 'ModgillTravels Team',
     category: 'Booking Guide',
     readTime: '6 min read',
-    metaTitle: 'Sedan vs Ertiga vs Innova — Which Taxi to Book from Patiala? | ModgillTravels',
+    metaTitle: 'Sedan vs Ertiga vs Innova | Which Taxi to Book from Patiala',
     metaDescription: 'Sedan, Ertiga or Innova Crysta — which cab is best for Patiala to Delhi, Shimla, Manali? Compare fares, space, and comfort. Expert guide by ModgillTravels.',
     keywords: ['sedan vs innova taxi', 'best cab for outstation trip', 'ertiga vs innova for hill station', 'which taxi to book patiala', 'best vehicle for manali trip'],
     content: `<p>When booking an outstation cab from Patiala, the most common question is: which vehicle should I choose? Sedan, Ertiga, or Innova Crysta? This guide breaks down every comparison so you book the right cab for your trip type and budget.</p>

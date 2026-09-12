@@ -3,7 +3,7 @@ import TermsContent from '@/components/TermsContent';
 import SEO from '@/components/SEO';
 
 export const metadata = {
-  title: "Terms & Conditions - ModgillTravels | Taxi Booking Terms of Service",
+  title: "Terms & Conditions | ModgillTravels",
   description: "Read ModgillTravels terms of service including booking conditions, cancellation policy (₹200 advance), payment terms, and user responsibilities. Updated October 2025.",
   keywords: "terms of service, taxi booking terms, cancellation policy, ModgillTravels conditions, booking agreement, taxi terms and conditions",
   openGraph: {

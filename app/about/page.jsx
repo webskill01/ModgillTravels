@@ -4,7 +4,7 @@ import { getOrganizationSchema } from '@/utils/structuredData';
 
 export const metadata = {
   // patch_022: Title rewrite — removes false 2020 founding year, adds primary keyword
-  title: "About ModgillTravels | Best Taxi Service in Patiala, Punjab — Reliable Cab Booking",
+  title: "About ModgillTravels | Taxi Service in Patiala, Punjab",
   description: "Trusted taxi service in Patiala. Professional drivers, AC vehicles, transparent pricing. 5000+ trips across Punjab, Haryana & Himachal Pradesh. Book 24/7.",
   keywords: "about ModgillTravels, taxi service Patiala, cab service Punjab, professional drivers, reliable transportation, taxi company Patiala",
   openGraph: {

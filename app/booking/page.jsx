@@ -6,7 +6,7 @@ import { DirectionsCarIcon, LocationOnIcon, PhoneIcon, WhatsAppIcon, SearchIcon,
 
 export const metadata = {
   // patch_028: Title rewrite
-  title: 'Cab Booking Patiala | Outstation Taxi Routes & Fares — ModgillTravels',
+  title: 'Cab Booking Patiala | Outstation Routes & Fares',
   description: 'Book one-way or round-trip taxi from Patiala to Delhi (₹3,400), Chandigarh (₹1,400), Shimla (₹2,600), Manali (₹5,400) via WhatsApp or call. All outstation cab routes & fares — ModgillTravels.',
   keywords: ['book taxi online', 'taxi booking', 'cab booking patiala', 'all routes', 'taxi fares'],
   alternates: {

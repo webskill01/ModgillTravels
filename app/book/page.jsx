@@ -4,7 +4,7 @@ import BookingSummary from '@/components/BookingSummary';
 import { getOrganizationSchema } from '@/utils/structuredData';
 
 export const metadata = {
-  title: "Book Taxi Online - Instant Confirmation | ModgillTravels Patiala",
+  title: "Book Taxi Online in Patiala | ModgillTravels",
   description: "Book taxi online with ModgillTravels. Get instant WhatsApp confirmation for one-way & round-trip cab booking in Patiala, Punjab. Professional drivers, transparent pricing, 24/7 support. Book now!",
   keywords: "book taxi online, cab booking, instant taxi booking, ModgillTravels booking, Patiala taxi booking, one way cab, round trip taxi, online cab booking, taxi near me, book cab Patiala",
   

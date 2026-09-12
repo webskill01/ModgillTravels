@@ -13,6 +13,15 @@ export async function generateStaticParams() {
   }));
 }
 
+// Not every popularRoutes pair has a /routes page — chandigarh->manali and
+// friends are in data/cities.js but not in data/destinations.js. Linking them
+// anyway produced 13 crawlable soft-404s sitting at depth 3 in the link graph,
+// all sharing one title. Fall back to the routes hub instead.
+function routeHref(from, to) {
+  const slug = `${from.toLowerCase()}-to-${to.toLowerCase()}`;
+  return destinations.some((r) => r.slug === slug) ? `/routes/${slug}` : '/booking';
+}
+
 // Helper function to get routes for a city
 function getCityRoutes(cityName) {
   return destinations.filter(route =>
@@ -194,7 +203,7 @@ export default async function CityPage({ params }) {
 
         {/* Book Now Button */}
         <Link
-          href={`/routes/${route.from.toLowerCase()}-to-${route.to.toLowerCase()}`}
+          href={routeHref(route.from, route.to)}
           className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-4 py-3 rounded-lg font-semibold transition-all hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20"
         >
           <span>Book This Route</span>

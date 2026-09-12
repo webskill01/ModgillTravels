@@ -229,6 +229,11 @@ export const getLocalBusinessSchema = () => ({
     "bestRating": "5",
     "worstRating": "1"
   },
+  // A Review nested inside its parent LocalBusiness must not restate
+  // itemReviewed — the parent is implied by the nesting. An @id-only
+  // back-reference made Google return: Invalid object type for field
+  // "<parent_node>", which failed rich results sitewide and cost the
+  // star ratings in the SERP.
   "review": [
     {
       "@type": "Review",
@@ -243,11 +248,7 @@ export const getLocalBusinessSchema = () => ({
         "worstRating": "1"
       },
       "reviewBody": "Excellent taxi service in Patiala. Professional driver, clean car, reached Delhi on time. Best cab service for outstation trips.",
-      "datePublished": "2024-12-15",
-      "itemReviewed": {
-        "@type": "LocalBusiness",
-        "@id": "https://www.modgilltravels.in/#organization"
-      }
+      "datePublished": "2024-12-15"
     },
     {
       "@type": "Review",
@@ -262,11 +263,7 @@ export const getLocalBusinessSchema = () => ({
         "worstRating": "1"
       },
       "reviewBody": "Reliable taxi agents. Booked one way cab to Shimla, transparent pricing, no hidden charges. Highly recommend ModgillTravels.",
-      "datePublished": "2024-11-28",
-      "itemReviewed": {
-        "@type": "LocalBusiness",
-        "@id": "https://www.modgilltravels.in/#organization"
-      }
+      "datePublished": "2024-11-28"
     }
   ],
   "sameAs": [

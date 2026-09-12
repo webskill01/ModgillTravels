@@ -21,9 +21,11 @@ export const viewport = {
 
 export const metadata = {
   metadataBase: new URL("https://www.modgilltravels.in"),
+  // No `template` here on purpose: every page title below already carries the
+  // brand, so a template appended a second copy and pushed all 50 child pages
+  // to 86-130 chars — well past Google's ~60-char truncation point.
   title: {
     default: "ModgillTravels - Taxi Service Patiala | Book Cab Now",
-    template: "%s | ModgillTravels - Best Taxi Service in Patiala",
   },
   description:
     "Best taxi service in Patiala. One-way cab to Delhi, Shimla & Manali from ₹1,400. AC vehicles, professional drivers, 24/7 booking. Call ModgillTravels.",

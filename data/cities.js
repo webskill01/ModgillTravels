@@ -31,7 +31,7 @@ const cities = [
       'Tripuri',
       'New Lal Bagh Colony'
     ],
-    metaTitle: 'Taxi Service in Patiala | Cab Booking Patiala - ModgillTravels',
+    metaTitle: 'Taxi Service in Patiala | Cab Booking Patiala',
     metaDescription: 'Book taxi service in Patiala for local & outstation trips. One way cab, round trip, airport transfers. Call +91-62849-92669 for instant booking. 24/7 available.',
     keywords: ['taxi service patiala', 'cab booking patiala', 'patiala taxi', 'taxi near me patiala', 'one way taxi patiala'],
   },
@@ -65,7 +65,7 @@ const cities = [
       'Mohali',
       'Zirakpur'
     ],
-    metaTitle: 'Taxi Service in Chandigarh | Cab Booking Chandigarh - ModgillTravels',
+    metaTitle: 'Taxi Service in Chandigarh | Cab Booking Chandigarh',
     metaDescription: 'Book taxi in Chandigarh for city tours, Shimla trips, Manali travel. Airport pickups, local cabs, outstation taxis. Call +91-62849-92669. Available 24/7.',
     keywords: ['taxi service chandigarh', 'cab booking chandigarh', 'chandigarh taxi', 'taxi near me chandigarh'],
   },
@@ -99,7 +99,7 @@ const cities = [
       'Ferozepur Road',
       'Dugri'
     ],
-    metaTitle: 'Taxi Service in Ludhiana | Cab Booking Ludhiana - ModgillTravels',
+    metaTitle: 'Taxi Service in Ludhiana | Cab Booking Ludhiana',
     metaDescription: 'Book taxi in Ludhiana for Delhi trips, Chandigarh travel, Amritsar visits. One way & round trip cabs. Call +91-62849-92669 for instant booking.',
     keywords: ['taxi service ludhiana', 'cab booking ludhiana', 'ludhiana taxi', 'taxi near me ludhiana'],
   },
@@ -132,7 +132,7 @@ const cities = [
       'Noida',
       'Gurgaon'
     ],
-    metaTitle: 'Taxi Service from Delhi | Delhi to Punjab Cab - ModgillTravels',
+    metaTitle: 'Delhi to Patiala Taxi | Delhi to Punjab Cab Service',
     metaDescription: 'Book taxi from Delhi to Patiala, Chandigarh, Shimla. Outstation cab service with professional drivers. Call +91-62849-92669 for booking.',
     keywords: ['taxi service delhi', 'delhi to patiala taxi', 'delhi to chandigarh cab', 'outstation taxi delhi'],
   },
@@ -197,7 +197,7 @@ const cities = [
       'Lawrence Road',
       'City Centre'
     ],
-    metaTitle: 'Taxi Service in Amritsar | Cab Booking Amritsar - ModgillTravels',
+    metaTitle: 'Taxi Service in Amritsar | Cab Booking Amritsar',
     metaDescription: 'Book taxi in Amritsar for Golden Temple visits, Wagah Border trips, city tours. Airport transfers available. Call +91-62849-92669. 24/7 service.',
     keywords: ['taxi service amritsar', 'cab booking amritsar', 'amritsar taxi', 'golden temple taxi', 'wagah border cab'],
   },

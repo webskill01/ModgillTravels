@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const metadata = {
   // patch_032: Title rewrite
-  title: 'Taxi Travel Guides for Patiala, Punjab | Cab Tips & Route Guides — ModgillTravels',
+  title: 'Patiala Taxi Travel Guides & Route Tips | ModgillTravels',
   // patch_033: Meta description rewrite
   description: 'Expert taxi travel guides for routes from Patiala — Delhi, Shimla, Manali, Amritsar. Cab booking tips, fare guides, hill station travel advice, and airport transfer guides from ModgillTravels.',
   keywords: ['travel blog', 'travel guide', 'taxi tips', 'shimla guide', 'patiala travel', 'cab booking guide'],

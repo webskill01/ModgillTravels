@@ -3,7 +3,7 @@ import PrivacyContent from '@/components/PrivacyContent';
 import SEO from '@/components/SEO';
 
 export const metadata = {
-  title: "Privacy Policy - ModgillTravels | Your Data Protection & Security",
+  title: "Privacy Policy | ModgillTravels",
   description: "Read ModgillTravels privacy policy. Learn how we collect, use, protect your personal information. SSL encryption, transparent data practices, GDPR compliant. Your privacy is our priority.",
   keywords: "privacy policy, data protection, personal information security, ModgillTravels privacy, GDPR, data security, user privacy",
   openGraph: {
