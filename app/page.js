@@ -1,5 +1,4 @@
 // app/page.js - UPDATED WITH NEW COMPONENTS
-import { InstantBookingBar } from "@/components/BookingBar";
 import HeroSection from "../components/HeroSection";
 import RouteCarousel from "../components/RouteCarousel";
 import WhyChooseUs from "../components/WhyChooseUs";
@@ -11,7 +10,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata = {
   title: "Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels",
-  description: "Patiala's 24/7 taxi service. One-way & round trip — Sedan from ₹1,400. Professional drivers, AC vehicles, GPS tracking. Call +91-62849-92669.",
+  description: "Patiala's 24/7 taxi service. One-way and round trip to Delhi, Chandigarh, Shimla and Manali. Verified drivers, AC vehicles. Call +91-62849-92669.",
   keywords: [
     "taxi service near me",
     "taxi agents near me",
@@ -26,7 +25,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels",
-    description: "Patiala's 24/7 taxi service. One-way & round trip — Sedan from ₹1,400. Professional AC vehicles, GPS tracking. Call +91-62849-92669.",
+    description: "Patiala's 24/7 taxi service. One-way and round trip to Delhi, Chandigarh, Shimla and Manali. Verified drivers, AC vehicles. Call +91-62849-92669.",
     type: "website",
     url: "https://www.modgilltravels.in",
     siteName: "ModgillTravels",
@@ -66,15 +65,15 @@ const faqPageSchema = {
       "name": "How much does a taxi from Patiala to Delhi cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The taxi fare from Patiala to Delhi ranges from ₹2,500 to ₹4,500 depending on vehicle type. Sedan costs approximately ₹2,500-₹3,000, Innova or Ertiga ranges from ₹3,500-₹4,500. Final price depends on exact pickup/drop location and current fuel rates. Use our booking form for instant quotes."
+        "text": "The Patiala to Delhi road distance is about 240 km via NH44, and the drive takes 4.5 to 5 hours in normal traffic. Sedan, Ertiga and Innova Crysta are all available. Send your pickup point and travel time on WhatsApp and we confirm the vehicle and a fixed quote before the trip."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the taxi fare from Patiala to Shimla?",
+      "name": "How far is Patiala from Shimla by taxi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Patiala to Shimla taxi fare typically ranges from ₹2,000 to ₹3,500. The distance is approximately 170 km and journey takes 4-5 hours. Sedan options are available starting at ₹2,000, while larger vehicles like Innova cost ₹3,000-₹3,500. Book 24 hours in advance for best rates."
+        "text": "Patiala to Shimla is roughly 180 km by road and takes 4 to 5 hours, climbing through Kalka and Solan. An Innova or Ertiga is the sensible choice for the hill section. Book a day ahead for morning departures, which avoid the afternoon hill traffic."
       }
     },
     {
@@ -138,7 +137,7 @@ const faqPageSchema = {
       "name": "How much does an Innova Crysta taxi cost from Patiala to Delhi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Innova Crysta taxi from Patiala to Delhi costs approximately ₹3,500 to ₹4,200 depending on season and demand. This spacious 6-7 seater vehicle is ideal for families or groups. Prices may vary slightly based on pickup location within Patiala and current fuel rates."
+        "text": "The Innova Crysta seats 6 to 7 with room for luggage, which makes it the usual pick for families on the 240 km Patiala to Delhi run. Tell us the group size on WhatsApp and we confirm the vehicle and a fixed quote before you travel."
       }
     },
     {
@@ -368,7 +367,7 @@ export default function HomePage() {
       />
       <SEO
         title="Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels"
-        description="Book reliable taxi service in Patiala 24/7 — one way & round trip. Sedan from ₹1,400. Professional drivers, AC vehicles, GPS tracking. Call or WhatsApp +91-62849-92669 now."
+        description="Book a taxi in Patiala 24/7 — one way and round trip to Delhi, Chandigarh, Shimla and Manali. Verified drivers, AC vehicles. Call or WhatsApp +91-62849-92669."
         keywords="taxi service near me, cab service patiala, one way cab service in patiala, taxi agents near me"
         url="/"
         jsonLd={[organizationSchema, localBusinessSchema, websiteSchema]}
@@ -376,7 +375,6 @@ export default function HomePage() {
 
       <main className="min-h-screen">
         {/* Booking Bar */}
-        <InstantBookingBar />
 
         {/* Hero Section */}
         <HeroSection />

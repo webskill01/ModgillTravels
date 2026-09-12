@@ -162,11 +162,6 @@ export const getLocalBusinessSchema = () => ({
             "@type": "Organization",
             "name": "ModgillTravels"
           }
-        },
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "priceCurrency": "INR",
-          "price": "10"
         }
       },
       {
@@ -264,7 +259,7 @@ export const getFAQSchema = () => ({
       "name": "What is the fare for one way cab service in Patiala?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "One way cab service in Patiala starts from ₹10/km for local trips. Outstation rates: Patiala to Delhi from ₹3,500, Patiala to Chandigarh from ₹1,800, Patiala to Shimla from ₹5,500. No return charges for one way taxi booking."
+        "text": "One way cab service from Patiala covers Delhi (240 km), Chandigarh (67 km), Shimla (180 km) and Manali (301 km). A one-way booking is charged for the leg you travel, with no return leg added. Send your route on WhatsApp for a quote fixed before the trip."
       }
     },
     {
@@ -357,14 +352,6 @@ export const getServiceSchema = (route) => ({
   },
   "offers": {
     "@type": "Offer",
-    "price": route.fare?.Sedan || route.displayFare,
-    "priceCurrency": "INR",
-    "priceSpecification": {
-      "@type": "PriceSpecification",
-      "price": route.fare?.Sedan || route.displayFare,
-      "priceCurrency": "INR",
-      "valueAddedTaxIncluded": false
-    },
     "description": `Starting fare for ${route.from} to ${route.to} taxi service. Sedan AC cab with professional driver.`,
     "eligibleRegion": {
       "@type": "Place",
@@ -450,8 +437,6 @@ export const getProductSchema = (route) => ({
   },
   "offers": {
     "@type": "Offer",
-    "price": route.fare?.Sedan || route.displayFare,
-    "priceCurrency": "INR",
     "availability": "https://schema.org/InStock",
     "url": `https://www.modgilltravels.in/routes/${route.slug}`,
     "seller": {

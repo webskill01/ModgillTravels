@@ -41,7 +41,7 @@ export const metadata = {
     default: "ModgillTravels - Taxi Service Patiala | Book Cab Now",
   },
   description:
-    "Best taxi service in Patiala. One-way cab to Delhi, Shimla & Manali from ₹1,400. AC vehicles, professional drivers, 24/7 booking. Call ModgillTravels.",
+    "Taxi service in Patiala. One-way and round-trip cabs to Delhi, Shimla and Manali. AC vehicles, verified drivers, available 24/7. Call ModgillTravels.",
   keywords: [
     "taxi service near me",
     "taxi agents near me",
@@ -223,7 +223,7 @@ const businessStructuredData = {
         "itemOffered": {
           "@type": "Service",
           "name": "One Way Cab Service in Patiala",
-          "description": "One way taxi service from Patiala to Delhi, Chandigarh, Shimla, Manali with no return fare. Pay only for your journey.",
+          "description": "One way taxi service from Patiala to Delhi, Chandigarh, Shimla and Manali. Pay only for the journey you take.",
         },
       },
       {

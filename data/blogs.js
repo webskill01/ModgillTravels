@@ -56,7 +56,7 @@ const blogs = [
 </ul>
 
 <h2>Shimla Taxi Service from Patiala</h2>
-<p>ModgillTravels provides reliable taxi service from Patiala to Shimla starting at ₹3,000. Our experienced hill drivers ensure safe mountain travel with well-maintained vehicles.</p>
+<p>ModgillTravels runs the 180 km Patiala to Shimla route daily. Our hill-experienced drivers handle the Kalka ghats and the Solan climb in well-maintained AC vehicles.</p>
 
 <p><strong>Booking Options:</strong></p>
 <ul>
@@ -92,7 +92,7 @@ const blogs = [
     category: 'Travel Guide',
     readTime: '6 min read',
     metaTitle: 'Patiala to Delhi Taxi | Complete Travel Guide 2025',
-    metaDescription: 'Book Patiala to Delhi taxi starting ₹3,400. 240 km journey in 4.5-5 hours. One way & round trip options. Call +91-62849-92669 for instant booking.',
+    metaDescription: 'Patiala to Delhi taxi: 240 km via NH44 in 4.5 to 5 hours. One way and round trip. Call +91-62849-92669 or book on WhatsApp.',
     keywords: ['patiala to delhi taxi', 'patiala delhi cab', 'taxi booking patiala', 'delhi cab service'],
     content: `<p>Planning a trip from Patiala to Delhi? Whether it's for business, medical appointments, or leisure, ModgillTravels offers comfortable and reliable taxi service for the 250 km journey.</p>
 
@@ -107,19 +107,13 @@ const blogs = [
 
 <h3>One Way Taxi</h3>
 <ul>
-  <li><strong>Sedan (Dzire, Etios)</strong>: ₹3,400</li>
-  <li><strong>Maruti Ertiga</strong>: ₹4,400</li>
-  <li><strong>Innova Crysta</strong>: ₹5,900</li>
 </ul>
 
 <h3>Round Trip Options</h3>
 <ul>
-  <li><strong>Sedan</strong>: ₹6,400</li>
-  <li><strong>Ertiga</strong>: ₹8,400</li>
-  <li><strong>Innova Crysta</strong>: ₹10,000</li>
 </ul>
 
-<p><strong>Note</strong>: Toll charges (approximately ₹300-400) are extra.</p>
+<p><strong>Note</strong>: highway tolls on this route are charged separately.</p>
 
 <h2>Popular Stops on the Route</h2>
 
@@ -261,14 +255,14 @@ const blogs = [
   },
   {
     slug: 'patiala-to-chandigarh-taxi',
-    title: 'Patiala to Chandigarh Taxi Fare 2026 | ₹1,400 One Way Cab Booking Guide',
-    excerpt: 'Book Patiala to Chandigarh taxi starting ₹1,400 for a Sedan. 67 km route in 2–2.5 hours. Chandigarh Airport transfers, Sector 17 drop, and same-day bookings available 24/7.',
+    title: 'Patiala to Chandigarh Taxi 2026 | 67 km One Way Cab Guide',
+    excerpt: 'Patiala to Chandigarh is 67 km, about 2 to 2.5 hours via NH64. Chandigarh Airport transfers, Sector 17 drop and same-day bookings, available 24/7.',
     date: '2026-01-10',
     author: 'ModgillTravels Team',
     category: 'Route Guide',
     readTime: '6 min read',
-    metaTitle: 'Patiala to Chandigarh Taxi 2026 | ₹1,400 Cab Fare',
-    metaDescription: 'Patiala to Chandigarh taxi fare starts at ₹1,400 one way (Sedan). 67 km in 2–2.5 hours. Book cab via WhatsApp +91-62849-92669. 24/7 pickup, airport transfers available.',
+    metaTitle: 'Patiala to Chandigarh Taxi 2026 | 67 km Route Guide',
+    metaDescription: 'Patiala to Chandigarh taxi: 67 km in 2 to 2.5 hours via NH64. Book on WhatsApp +91-62849-92669. 24/7 pickup, airport transfers available.',
     keywords: ['patiala to chandigarh taxi', 'patiala chandigarh cab fare', 'chandigarh taxi from patiala', 'patiala to chandigarh one way cab', 'cab booking patiala chandigarh'],
     content: `<p>Patiala to Chandigarh is one of the most popular taxi routes in Punjab. Whether you're traveling for work, airport transfers, medical visits, or shopping at Sector 17, ModgillTravels offers reliable cab service for the 67 km journey at transparent fixed fares.</p>
 
@@ -281,12 +275,12 @@ const blogs = [
 
 <h2>Patiala to Chandigarh Taxi Fare 2026</h2>
 <table>
-  <thead><tr><th>Vehicle</th><th>One Way</th><th>Round Trip</th><th>Passengers</th></tr></thead>
+  <thead><tr><th>Vehicle</th><th>Passengers</th><th>Best for</th></tr></thead>
   <tbody>
-    <tr><td>Sedan (Dzire/Etios)</td><td>₹1,400</td><td>₹2,500</td><td>Up to 4</td></tr>
-    <tr><td>Maruti Ertiga</td><td>₹1,800</td><td>₹3,000</td><td>Up to 6</td></tr>
-    <tr><td>Toyota Innova</td><td>₹2,300</td><td>₹4,200</td><td>Up to 6</td></tr>
-    <tr><td>Innova Crysta</td><td>₹3,300</td><td>₹6,200</td><td>Up to 7</td></tr>
+    <tr><td>Sedan (Dzire/Etios)</td><td>Up to 4</td><td>Couples and solo travellers</td></tr>
+    <tr><td>Maruti Ertiga</td><td>Up to 6</td><td>Small families</td></tr>
+    <tr><td>Toyota Innova</td><td>Up to 6</td><td>Families and groups</td></tr>
+    <tr><td>Innova Crysta</td><td>Up to 7</td><td>Large groups, hill roads</td></tr>
   </tbody>
 </table>
 <p>All fares are inclusive of driver charges, fuel, and tolls. No hidden charges. Book via WhatsApp +91-62849-92669.</p>
@@ -294,7 +288,7 @@ const blogs = [
 <h2>Why People Travel from Patiala to Chandigarh</h2>
 
 <h3>1. Chandigarh Airport Transfers</h3>
-<p>Chandigarh International Airport (IXC) is approximately 12 km from the city center and about 75 km from Patiala. Our airport taxi service ensures on-time pickup with flight tracking. We recommend booking at least 3 hours before departure. Sedan airport transfer: ₹1,600.</p>
+<p>Chandigarh International Airport (IXC) is approximately 12 km from the city center and about 75 km from Patiala. Our airport taxi service ensures on-time pickup with flight tracking. We recommend booking at least 3 hours before departure. Ask for a quote on WhatsApp when you book.</p>
 
 <h3>2. PGI &amp; Medical Visits</h3>
 <p>Post Graduate Institute of Medical Education and Research (PGIMER) is one of North India's top hospitals. ModgillTravels serves hundreds of patients from Patiala traveling to Chandigarh for medical appointments. We offer waiting time packages for hospital visits.</p>
@@ -343,13 +337,13 @@ const blogs = [
   {
     slug: 'patiala-to-manali-travel-guide',
     title: 'Patiala to Manali Taxi 2026 | Distance, Fare & Complete Trip Planning Guide',
-    excerpt: 'Plan your Patiala to Manali trip with ModgillTravels. 301 km route in 7–8 hours. Sedan fare ₹5,400, Innova Crysta ₹9,200. Best routes, stops, and travel tips.',
+    excerpt: 'Plan a Patiala to Manali trip. 301 km in 7 to 8 hours via Chandigarh and Kullu. Best route, where to stop, and which vehicle suits the hill section.',
     date: '2026-01-20',
     author: 'ModgillTravels Team',
     category: 'Travel Guide',
     readTime: '9 min read',
-    metaTitle: 'Patiala to Manali Taxi 2026 | ₹5,400 Cab Fare & Guide',
-    metaDescription: 'Patiala to Manali taxi fare starts ₹5,400 one way (Sedan). 301 km in 7–8 hours via Chandigarh and Kullu. Hill expert drivers, AC vehicles. Book: +91-62849-92669.',
+    metaTitle: 'Patiala to Manali Taxi 2026 | 301 km Route & Guide',
+    metaDescription: 'Patiala to Manali taxi: 301 km in 7 to 8 hours via Chandigarh and Kullu. Hill-experienced drivers, AC vehicles. Book: +91-62849-92669.',
     keywords: ['patiala to manali taxi', 'patiala manali cab fare', 'manali trip from patiala', 'patiala to manali distance', 'manali taxi booking patiala'],
     content: `<p>Dreaming of Rohtang Pass, Solang Valley, and Hadimba Temple? Patiala to Manali by taxi is one of the most scenic road journeys in North India. ModgillTravels offers comfortable, safe cab service with hill-experienced drivers for the 301 km mountain route.</p>
 
@@ -363,12 +357,12 @@ const blogs = [
 
 <h2>Patiala to Manali Taxi Fare 2026</h2>
 <table>
-  <thead><tr><th>Vehicle</th><th>One Way Fare</th><th>Passengers</th><th>Best For</th></tr></thead>
+  <thead><tr><th>Vehicle</th><th>Passengers</th><th>Best for</th></tr></thead>
   <tbody>
-    <tr><td>Sedan (Dzire/Etios)</td><td>₹5,400</td><td>Up to 4</td><td>Couples, solo</td></tr>
-    <tr><td>Maruti Ertiga</td><td>₹6,800</td><td>Up to 6</td><td>Small families</td></tr>
-    <tr><td>Toyota Innova</td><td>₹7,800</td><td>Up to 6</td><td>Families, groups</td></tr>
-    <tr><td>Innova Crysta</td><td>₹9,200</td><td>Up to 7</td><td>Large families, hill terrain</td></tr>
+    <tr><td>Sedan (Dzire/Etios)</td><td>Up to 4</td><td>Couples, solo</td></tr>
+    <tr><td>Maruti Ertiga</td><td>Up to 6</td><td>Small families</td></tr>
+    <tr><td>Toyota Innova</td><td>Up to 6</td><td>Families, groups</td></tr>
+    <tr><td>Innova Crysta</td><td>Up to 7</td><td>Large families, hill terrain</td></tr>
   </tbody>
 </table>
 <p>For hill routes to Manali, we strongly recommend an Innova Crysta or Ertiga for luggage space and mountain road comfort.</p>
@@ -426,14 +420,14 @@ const blogs = [
   },
   {
     slug: 'chandigarh-to-shimla-taxi',
-    title: 'Chandigarh to Shimla Taxi Fare 2026 | ₹2,500 One Way Cab & Travel Guide',
-    excerpt: 'Book Chandigarh to Shimla taxi starting ₹2,500 one way. 115 km scenic route in 3–4 hours. Hill expert drivers, AC vehicles, same-day bookings. Call +91-62849-92669.',
+    title: 'Chandigarh to Shimla Taxi 2026 | 115 km Route Guide',
+    excerpt: 'Chandigarh to Shimla is 115 km of hill road, about 3 to 4 hours via Kalka. Hill-experienced drivers, AC vehicles, same-day bookings. Call +91-62849-92669.',
     date: '2026-02-01',
     author: 'ModgillTravels Team',
     category: 'Route Guide',
     readTime: '7 min read',
-    metaTitle: 'Chandigarh to Shimla Taxi 2026 | ₹2,500 Cab Fare',
-    metaDescription: 'Chandigarh to Shimla taxi fare starts at ₹2,500 one way. 115 km in 3–4 hours via Kalka. Hill-certified drivers, AC vehicles. Book: +91-62849-92669. 24/7 available.',
+    metaTitle: 'Chandigarh to Shimla Taxi 2026 | 115 km Hill Route',
+    metaDescription: 'Chandigarh to Shimla taxi: 115 km in 3 to 4 hours via Kalka. Hill-certified drivers, AC vehicles. Book: +91-62849-92669. Available 24/7.',
     keywords: ['chandigarh to shimla taxi', 'shimla taxi from chandigarh', 'chandigarh shimla cab fare', 'chandigarh to shimla cab booking', 'shimla trip from chandigarh'],
     content: `<p>Chandigarh to Shimla is the most popular hill station route in North India. Just 115 km from Chandigarh, Shimla offers mountain air, colonial architecture, and stunning Himalayan views. ModgillTravels provides hill-certified taxi drivers for this scenic route.</p>
 
@@ -447,12 +441,12 @@ const blogs = [
 
 <h2>Chandigarh to Shimla Taxi Fare 2026</h2>
 <table>
-  <thead><tr><th>Vehicle</th><th>One Way</th><th>Round Trip</th><th>Passengers</th></tr></thead>
+  <thead><tr><th>Vehicle</th><th>Passengers</th><th>Best for</th></tr></thead>
   <tbody>
-    <tr><td>Sedan (Dzire/Etios)</td><td>₹2,500</td><td>₹4,500</td><td>Up to 4</td></tr>
-    <tr><td>Maruti Ertiga</td><td>₹3,200</td><td>₹5,500</td><td>Up to 6</td></tr>
-    <tr><td>Toyota Innova</td><td>₹3,800</td><td>₹7,000</td><td>Up to 6</td></tr>
-    <tr><td>Innova Crysta</td><td>₹4,800</td><td>₹9,000</td><td>Up to 7</td></tr>
+    <tr><td>Sedan (Dzire/Etios)</td><td>Up to 4</td><td>Couples and solo travellers</td></tr>
+    <tr><td>Maruti Ertiga</td><td>Up to 6</td><td>Small families</td></tr>
+    <tr><td>Toyota Innova</td><td>Up to 6</td><td>Families and groups</td></tr>
+    <tr><td>Innova Crysta</td><td>Up to 7</td><td>Large groups, hill roads</td></tr>
   </tbody>
 </table>
 
@@ -496,7 +490,7 @@ const blogs = [
 </ul>
 
 <h2>Patiala to Shimla via Chandigarh</h2>
-<p>Traveling from Patiala? We also offer direct Patiala to Shimla taxi service (180 km, 5–6 hours) starting at ₹2,600 for a Sedan. No need to change cabs at Chandigarh — we pick up from your exact Patiala location.</p>
+<p>Travelling from Patiala? We also run Patiala to Shimla direct (180 km, 5–6 hours). No changing cabs at Chandigarh — we pick up from your exact Patiala address.</p>
 
 <h2>How to Book Chandigarh to Shimla Cab</h2>
 <p>Call or WhatsApp ModgillTravels at <strong>+91-62849-92669</strong>. Share your pickup point in Chandigarh (Sector 17, airport, any sector), date, time, and vehicle preference. Confirmation in 15 minutes. 24/7 booking available.</p>`,
@@ -507,13 +501,13 @@ const blogs = [
   {
     slug: 'patiala-to-amritsar-golden-temple-taxi',
     title: 'Patiala to Amritsar Taxi for Golden Temple | Fare, Route & Tips 2026',
-    excerpt: 'Book Patiala to Amritsar taxi for Golden Temple darshan starting ₹3,500. 165 km in 3–4 hours. Include Wagah Border, Jallianwala Bagh. ModgillTravels 24/7.',
+    excerpt: 'Patiala to Amritsar for Golden Temple darshan: 165 km in 3 to 4 hours. Add Wagah Border and Jallianwala Bagh to the day. ModgillTravels, 24/7.',
     date: '2026-02-10',
     author: 'ModgillTravels Team',
     category: 'Travel Guide',
     readTime: '7 min read',
-    metaTitle: 'Patiala to Amritsar Golden Temple Taxi | ₹3,500 Fare',
-    metaDescription: 'Book Patiala to Amritsar taxi for Golden Temple darshan. ₹3,500 Sedan one way, 165 km in 3–4 hours. Wagah Border evening flag ceremony included. Call +91-62849-92669.',
+    metaTitle: 'Patiala to Amritsar Golden Temple Taxi | 165 km',
+    metaDescription: 'Patiala to Amritsar taxi for Golden Temple darshan. 165 km in 3 to 4 hours, with time for the Wagah Border evening ceremony. Call +91-62849-92669.',
     keywords: ['patiala to amritsar taxi', 'amritsar golden temple taxi from patiala', 'patiala amritsar cab fare', 'amritsar taxi booking patiala', 'golden temple taxi patiala'],
     content: `<p>Amritsar's Golden Temple (Sri Harmandir Sahib) is one of India's holiest and most visited landmarks. From Patiala, the 165 km taxi journey is a comfortable 3–4 hour drive. ModgillTravels offers reliable cab service with drivers experienced on the Patiala–Amritsar highway.</p>
 
@@ -527,12 +521,12 @@ const blogs = [
 
 <h2>Patiala to Amritsar Taxi Fare 2026</h2>
 <table>
-  <thead><tr><th>Vehicle</th><th>One Way</th><th>Round Trip</th><th>Passengers</th></tr></thead>
+  <thead><tr><th>Vehicle</th><th>Passengers</th><th>Best for</th></tr></thead>
   <tbody>
-    <tr><td>Sedan (Dzire/Etios)</td><td>₹3,500</td><td>₹6,300</td><td>Up to 4</td></tr>
-    <tr><td>Maruti Ertiga</td><td>₹4,300</td><td>₹8,300</td><td>Up to 6</td></tr>
-    <tr><td>Toyota Innova</td><td>₹4,800</td><td>₹9,300</td><td>Up to 6</td></tr>
-    <tr><td>Innova Crysta</td><td>₹5,800</td><td>₹9,900</td><td>Up to 7</td></tr>
+    <tr><td>Sedan (Dzire/Etios)</td><td>Up to 4</td><td>Couples and solo travellers</td></tr>
+    <tr><td>Maruti Ertiga</td><td>Up to 6</td><td>Small families</td></tr>
+    <tr><td>Toyota Innova</td><td>Up to 6</td><td>Families and groups</td></tr>
+    <tr><td>Innova Crysta</td><td>Up to 7</td><td>Large groups, hill roads</td></tr>
   </tbody>
 </table>
 
@@ -582,7 +576,7 @@ const blogs = [
 </ul>
 
 <h2>Patiala to Amritsar Round Trip Package</h2>
-<p>For a day trip covering Golden Temple + Wagah Border + Jallianwala Bagh, book our round-trip taxi. Sedan round trip: ₹6,300. Our driver will wait during your entire visit — no time pressure. Ideal for families, senior citizens, and religious groups.</p>
+<p>For a day trip covering the Golden Temple, Wagah Border and Jallianwala Bagh, book a round trip. The driver waits through the whole visit, so there is no time pressure — which matters for families, senior citizens and religious groups.</p>
 
 <h2>How to Book Patiala to Amritsar Taxi</h2>
 <p>WhatsApp or call <strong>+91-62849-92669</strong>. Share your pickup location in Patiala, travel date, preferred vehicle, and whether you need Wagah Border coverage. We confirm in 15 minutes and can arrange early morning 5 AM departures.</p>`,
@@ -612,8 +606,6 @@ const blogs = [
     <tr><td>AC Quality</td><td>Good</td><td>Very Good</td><td>Excellent</td></tr>
     <tr><td>Hill Route</td><td>OK for moderate hills</td><td>Good for hills</td><td>Best for hills</td></tr>
     <tr><td>Comfort Level</td><td>Standard</td><td>Comfortable</td><td>Premium</td></tr>
-    <tr><td>Patiala–Delhi Fare</td><td>₹3,400</td><td>₹4,400</td><td>₹5,900</td></tr>
-    <tr><td>Patiala–Manali Fare</td><td>₹5,400</td><td>₹6,800</td><td>₹9,200</td></tr>
   </tbody>
 </table>
 
@@ -650,7 +642,7 @@ const blogs = [
 </ul>
 
 <h3>Why Ertiga is the "sweet spot":</h3>
-<p>The Ertiga bridges the gap perfectly — more space than a Sedan, significantly cheaper than the Innova, and handles hill roads well. For Patiala to Shimla with 5 family members, the Ertiga at ₹3,000 beats both alternatives on value.</p>
+<p>The Ertiga bridges the gap — more space than a Sedan, less than the Innova, and it handles hill roads well. For Patiala to Shimla with five people, it is usually the right call.</p>
 
 <h2>When to Choose an Innova Crysta</h2>
 
@@ -714,7 +706,7 @@ const blogs = [
     category: 'Booking Guide',
     readTime: '5 min read',
     metaTitle: 'One Way Taxi Booking Guide | No Return Charges',
-    metaDescription: 'Book one way taxi in Patiala with no return fare. Patiala to Delhi ₹3,400 | Chandigarh ₹1,400 | Shimla ₹2,600. Call +91-62849-92669 for instant booking.',
+    metaDescription: 'One way taxi in Patiala with no return leg charged. Delhi 240 km, Chandigarh 67 km, Shimla 180 km. Call +91-62849-92669 to book.',
     keywords: ['one way taxi', 'one way cab booking', 'no return taxi', 'patiala taxi booking'],
     content: `<p>One way taxi service is a cost-effective solution for travelers who don't need a return journey. Instead of paying for a round trip, you pay only for the distance you travel.</p>
 
@@ -723,10 +715,8 @@ const blogs = [
 
 <h3>Example:</h3>
 <ul>
-  <li><strong>Regular Round Trip</strong>: Patiala to Delhi and back = ₹6,500</li>
-  <li><strong>One Way Taxi</strong>: Patiala to Delhi only = ₹3,500</li>
 </ul>
-<p><strong>Savings: ₹3,000!</strong></p>
+<p>A one-way booking is charged for the leg you travel, not the return.</p>
 
 <h2>Who Should Book One Way Taxi?</h2>
 
@@ -751,21 +741,18 @@ const blogs = [
 <ul>
   <li><strong>Distance</strong>: 240 km</li>
   <li><strong>Time</strong>: 4.5-5 hours</li>
-  <li><strong>Fare</strong>: ₹3,400 (Sedan)</li>
 </ul>
 
 <h3>To Chandigarh</h3>
 <ul>
   <li><strong>Distance</strong>: 67 km</li>
   <li><strong>Time</strong>: 2-2.5 hours</li>
-  <li><strong>Fare</strong>: ₹1,400 (Sedan)</li>
 </ul>
 
 <h3>To Shimla</h3>
 <ul>
   <li><strong>Distance</strong>: 180 km</li>
   <li><strong>Time</strong>: 5-6 hours</li>
-  <li><strong>Fare</strong>: ₹2,600 (Sedan)</li>
 </ul>
 
 <h2>How to Book One Way Taxi</h2>

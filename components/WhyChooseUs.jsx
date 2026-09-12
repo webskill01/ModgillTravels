@@ -18,7 +18,7 @@ export default function WhyChooseUs() {
     {
       icon: <PaymentIcon className="w-6 h-6 sm:w-7 sm:h-7" />,
       title: 'Fair Pricing',
-      description: 'Fixed fares quoted upfront — Patiala to Delhi Sedan from ₹3,400, Chandigarh from ₹1,400. No surprises at destination.',
+      description: 'A quote confirmed on WhatsApp before the trip starts. No surge pricing and no surprises at the destination.',
       color: 'purple'
     },
     {

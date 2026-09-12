@@ -185,7 +185,7 @@ export default async function CityPage({ params }) {
             </div>
             <div>
               <span className="text-gray-400 text-xs block mb-0.5">Starting Fare</span>
-              <span className="text-cyan-400 font-bold text-lg">₹{route.fare}</span>
+              <span className="text-[--color-brand] font-bold text-lg">{route.distance}</span>
             </div>
           </div>
 
@@ -252,7 +252,7 @@ export default async function CityPage({ params }) {
             <div className="flex justify-between items-center pt-2 border-t border-gray-700">
               <span className="text-gray-400">Starting at:</span>
               <span className="text-cyan-400 font-bold text-lg">
-                ₹{Object.values(route.fare)[0]}
+                {route.distanceKm} km
               </span>
             </div>
           </div>
@@ -377,9 +377,9 @@ export default async function CityPage({ params }) {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">Frequently Asked Questions — Taxi Service in {city.name}</h2>
           <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
-              <h3 itemProp="name" className="text-white font-semibold mb-3">What is the taxi fare from {city.name} to Delhi?</h3>
+              <h3 itemProp="name" className="text-white font-semibold mb-3">How far is {city.name} from Delhi by road?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">ModgillTravels charges ₹3,400 one-way for a Sedan from Patiala to Delhi (240 km, 4.5–5 hours via NH44). Innova Crysta costs ₹5,900. Fares are fixed with no hidden charges. Both one-way and round-trip options are available. Book via WhatsApp at +91-62849-92669 for instant confirmation.</p>
+                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">Patiala to Delhi is 240 km via NH44 and takes 4.5 to 5 hours in normal traffic. Sedan, Ertiga and Innova Crysta are all available, one-way or round trip. Send your pickup point on WhatsApp at +91-62849-92669 and we confirm the vehicle and a fixed quote before you travel.</p>
               </div>
             </div>
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
@@ -391,7 +391,7 @@ export default async function CityPage({ params }) {
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
               <h3 itemProp="name" className="text-white font-semibold mb-3">Does ModgillTravels cover airport transfers from {city.name}?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">Yes. We offer airport taxi from {city.name} to Chandigarh Airport (75 km from Patiala, Sedan from ₹1,600), Delhi IGI Airport (260 km, Sedan from ₹3,600), and Amritsar Airport (130 km, Sedan from ₹2,200). All airport transfers include flight tracking and guaranteed on-time pickup. Book at least 2 hours before departure.</p>
+                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">Yes. We run airport transfers from {city.name} to Chandigarh Airport (75 km from Patiala), Delhi IGI (260 km) and Amritsar Airport (230 km). Every airport booking includes flight tracking, so the pickup shifts if your flight does. Book at least 2 hours before departure.</p>
               </div>
             </div>
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
@@ -403,7 +403,7 @@ export default async function CityPage({ params }) {
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-gradient-to-br from-slate-800 to-slate-900 border border-gray-700 rounded-xl p-5">
               <h3 itemProp="name" className="text-white font-semibold mb-3">How long does the taxi from {city.name} to Manali take?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">The Patiala to Manali distance is approximately 301 km by road via Chandigarh and Kullu. The taxi journey takes 7–8 hours. ModgillTravels recommends an Innova Crysta for this hill route due to mountain terrain and luggage capacity. One-way fare starts at ₹5,400. Book at least 24 hours in advance for Manali trips.</p>
+                <p itemProp="text" className="text-gray-300 text-sm leading-relaxed">The Patiala to Manali distance is approximately 301 km by road via Chandigarh and Kullu. The taxi journey takes 7–8 hours. ModgillTravels recommends an Innova Crysta for this hill route due to mountain terrain and luggage capacity. Book at least 24 hours in advance for Manali trips.</p>
               </div>
             </div>
 

@@ -30,7 +30,7 @@ export default function BlogSection() {
     },
     {
       title: 'Patiala to Delhi Complete Guide',
-      description: 'Planning a trip from Patiala to Delhi? Book reliable taxi service covering 250 km in 4-5 hours. Our professional drivers know the best routes via Rajpura, Ambala, and Panipat. Get transparent pricing starting at ₹3,500 for one-way trips.',
+      description: 'Planning a trip from Patiala to Delhi? Book reliable taxi service covering 250 km in 4-5 hours. Our professional drivers know the best routes via Rajpura, Ambala, and Panipat. A quote is confirmed on WhatsApp before you travel.',
       slug: 'patiala-to-delhi-travel-guide',
       readTime: '6 min',
       category: 'Route Guide',
@@ -50,7 +50,7 @@ export default function BlogSection() {
       accentColor: 'text-green-400',
       dotColor: 'bg-green-400',
       emoji: '💡',
-      keywords: 'one way taxi, cheap cab booking, no return fare'
+      keywords: 'one way taxi, cab booking patiala, outstation taxi'
     },
   ];
 

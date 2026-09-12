@@ -7,8 +7,8 @@ import { DirectionsCarIcon, LocationOnIcon, PhoneIcon, WhatsAppIcon, SearchIcon,
 export const metadata = {
   // patch_028: Title rewrite
   title: 'Cab Booking Patiala | Outstation Routes & Fares',
-  description: 'Book one-way or round-trip taxi from Patiala to Delhi (₹3,400), Chandigarh (₹1,400), Shimla (₹2,600), Manali (₹5,400) via WhatsApp or call. All outstation cab routes & fares — ModgillTravels.',
-  keywords: ['book taxi online', 'taxi booking', 'cab booking patiala', 'all routes', 'taxi fares'],
+  description: 'All outstation taxi routes from Patiala — Delhi 240 km, Chandigarh 67 km, Shimla 180 km, Manali 301 km. Book on WhatsApp or call +91-62849-92669.',
+  keywords: ['book taxi online', 'taxi booking', 'cab booking patiala', 'all routes', 'outstation taxi patiala'],
   alternates: {
     canonical: 'https://www.modgilltravels.in/booking',
   },
@@ -58,7 +58,7 @@ export default function BookingPage() {
           </p>
           {/* patch_029: keyword-rich intro paragraph */}
           <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto mb-8">
-            Modgill Travels offers cab booking in Patiala for all major outstation routes — Delhi (₹3,400), Chandigarh (₹1,400), Shimla (₹2,600), Manali (₹5,400), Amritsar (₹3,500), Ludhiana (₹1,500). Book one-way or round-trip taxis online or via WhatsApp. Professional drivers available 24/7.
+            ModgillTravels covers every major outstation route from Patiala — Delhi (240 km), Chandigarh (67 km), Shimla (180 km), Manali (301 km), Amritsar (230 km) and Ludhiana (110 km). One-way or round trip, booked on WhatsApp or by phone, with verified drivers available 24/7.
           </p>
 
           {/* Quick Contact Buttons */}
@@ -127,7 +127,7 @@ export default function BookingPage() {
                 <div className="pt-4 border-t border-gray-700 flex items-center justify-between">
                   <div>
                     <span className="text-gray-400 text-xs block mb-1">Starting from</span>
-                    <span className="text-cyan-400 font-bold text-xl">₹{Object.values(route.fare)[0]}</span>
+                    <span className="text-[--color-brand] font-bold text-xl">{route.distanceKm} km</span>
                   </div>
                   <span className="text-cyan-400 text-sm font-semibold group-hover:text-cyan-300 transition">
                     View Details →
@@ -200,7 +200,7 @@ export default function BookingPage() {
                           <span className="text-white font-semibold">{route.to}</span>
                           <DirectionsCarIcon className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition" />
                         </div>
-                        <span className="text-cyan-400 font-bold">₹{Object.values(route.fare)[0]}</span>
+                        <span className="text-[--color-brand] font-bold">{route.distanceKm} km</span>
                       </div>
 
                       <div className="flex items-center justify-between text-xs text-gray-400">
@@ -228,9 +228,9 @@ export default function BookingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-slate-800/50 rounded-xl p-5">
-              <h3 className="text-white font-bold mb-2">₹200 Advance Booking</h3>
+              <h3 className="text-white font-bold mb-2">₹200 advance to confirm</h3>
               <p className="text-gray-400 text-sm mb-3">
-                Pay just ₹200 advance to confirm your booking. Balance payment after trip completion.
+                A ₹200 advance confirms the booking. The balance is settled after the trip.
               </p>
               <span className="text-green-400 text-xs font-semibold">✓ Easy Confirmation</span>
             </div>
@@ -238,7 +238,7 @@ export default function BookingPage() {
             <div className="bg-slate-800/50 rounded-xl p-5">
               <h3 className="text-white font-bold mb-2">One Way Taxi</h3>
               <p className="text-gray-400 text-sm mb-3">
-                Pay only for your journey. No return fare charges. Save up to 40% on one-way trips.
+                Pay only for the journey you take. One-way trips are not charged for the return leg.
               </p>
               <span className="text-green-400 text-xs font-semibold">✓ Save Money</span>
             </div>

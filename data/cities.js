@@ -5,7 +5,7 @@ const cities = [
     name: 'Patiala',
     state: 'Punjab',
     // patch_017: Patiala description rewrite with landmark keywords + fare anchor
-    description: 'ModgillTravels provides 24/7 taxi service in Patiala for local trips, outstation cab booking, and airport transfers. Based in Urban Estate Phase 2, we serve all major Patiala areas — Rajindra Hospital, Punjabi University, Leela Bhawan, Baradari Gardens, and Tripuri. One-way Sedan fares start from ₹1,400. Book by phone or WhatsApp +91-62849-92669.',
+    description: 'ModgillTravels provides 24/7 taxi service in Patiala for local trips, outstation cab booking, and airport transfers. Based in Urban Estate Phase 2, we serve all major Patiala areas — Rajindra Hospital, Punjabi University, Leela Bhawan, Baradari Gardens, and Tripuri. Book by phone or WhatsApp +91-62849-92669.',
     popularRoutes: [
   { from: 'patiala', to: 'delhi', distance: '250 km', duration: '4-5 hours', fare: '3400', slug: 'patiala-to-delhi' },
   { from: 'patiala', to: 'chandigarh', distance: '65 km', duration: '1-1.5 hours', fare: '1400', slug: 'patiala-to-chandigarh' },

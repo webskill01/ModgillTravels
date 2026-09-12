@@ -8,7 +8,7 @@ export const metadata = {
   // patch_032: Title rewrite
   title: 'Patiala Taxi Travel Guides & Route Tips | ModgillTravels',
   // patch_033: Meta description rewrite
-  description: 'Expert taxi travel guides for routes from Patiala — Delhi, Shimla, Manali, Amritsar. Cab booking tips, fare guides, hill station travel advice, and airport transfer guides from ModgillTravels.',
+  description: 'Expert taxi travel guides for routes from Patiala — Delhi, Shimla, Manali, Amritsar. Cab booking tips, route distances, hill station travel advice and airport transfer guides.',
   keywords: ['travel blog', 'travel guide', 'taxi tips', 'shimla guide', 'patiala travel', 'cab booking guide'],
   alternates: {
     canonical: 'https://www.modgilltravels.in/blog',
@@ -20,7 +20,7 @@ export const metadata = {
   // patch_035: Add OG image
   openGraph: {
     title: 'Taxi Travel Guides for Patiala, Punjab | ModgillTravels Blog',
-    description: 'Expert taxi travel guides for routes from Patiala — Delhi, Shimla, Manali, Amritsar. Cab booking tips and fare guides.',
+    description: 'Expert taxi travel guides for routes from Patiala — Delhi, Shimla, Manali, Amritsar. Cab booking tips and route distances.',
     type: 'website',
     url: 'https://www.modgilltravels.in/blog',
     siteName: 'ModgillTravels',
@@ -61,7 +61,7 @@ export default function BlogPage() {
           </p>
           {/* patch_034: keyword-rich intro paragraph */}
           <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto mt-3">
-            We cover fare guides for Patiala to Delhi, Shimla, Manali, and Amritsar routes; vehicle comparison tips (Sedan vs Ertiga vs Innova Crysta); airport transfer guides for Chandigarh Airport; and hill station travel advice for first-time travelers from Punjab.
+            We cover route guides for Patiala to Delhi, Shimla, Manali and Amritsar; vehicle comparison tips (Sedan vs Ertiga vs Innova Crysta); airport transfer guides for Chandigarh Airport; and hill station travel advice for first-time travelers from Punjab.
           </p>
         </section>
 

@@ -28,7 +28,7 @@ const features = [
   {
     icon: <CheckCircleIcon className="w-5 h-5 sm:w-6 sm:h-6" />,
     title: 'Transparent Pricing',
-    description: 'Upfront fare calculation with no hidden charges. What you see at booking is what you pay.',
+    description: 'A fixed quote confirmed before the trip. No hidden charges and no surge pricing.',
     color: 'cyan'
   },
   {
@@ -176,7 +176,7 @@ export default function AboutContent() {
         {/* patch_026: New H2 section for SEO */}
         <section className="mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Why ModgillTravels is Patiala&apos;s Best Taxi Service</h2>
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">ModgillTravels stands out among Patiala taxi services for three core reasons: transparent pricing (fixed fares quoted before booking — Sedan from ₹1,400 to Chandigarh, ₹3,400 to Delhi), verified drivers (background-checked with valid commercial licenses), and true 24/7 availability for both last-minute and advance outstation cab bookings. We serve all of Patiala — Urban Estate, Rajindra Hospital area, Punjabi University, Leela Bhawan, and Tripuri — as well as all major outstation routes across Punjab, Haryana, and Himachal Pradesh.</p>
+          <p className="text-gray-300 text-sm sm:text-base leading-relaxed">ModgillTravels stands out among Patiala taxi services for three core reasons: a fixed quote confirmed on WhatsApp before the trip, verified drivers (background-checked with valid commercial licenses), and true 24/7 availability for both last-minute and advance outstation cab bookings. We serve all of Patiala — Urban Estate, Rajindra Hospital area, Punjabi University, Leela Bhawan, and Tripuri — as well as all major outstation routes across Punjab, Haryana, and Himachal Pradesh.</p>
         </section>
 
         {/* Service Areas & Contact - Responsive */}

@@ -144,7 +144,7 @@ export default function HTMLSitemapPage() {
                     </div>
                     {route.displayFare && (
                       <div className="text-cyan-400 font-semibold text-sm mt-2">
-                        ₹{route.displayFare}
+                        {route.distanceKm} km
                       </div>
                     )}
                   </div>

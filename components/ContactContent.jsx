@@ -222,7 +222,7 @@ export default function ContactContent() {
                 <span className="text-cyan-400">▼</span>
               </summary>
               <div className="mt-1 p-4 text-gray-300 text-sm bg-slate-800/50 border border-gray-700 rounded-lg">
-                Send a WhatsApp message to +91-62849-92669 (tap the WhatsApp button on this page). Include: your pickup location in Patiala, your destination, travel date and time, and preferred vehicle type. We reply with fare confirmation and driver details within 15 minutes.
+                Send a WhatsApp message to +91-62849-92669 (tap the WhatsApp button on this page). Include: your pickup location in Patiala, your destination, travel date and time, and preferred vehicle type. We reply with a confirmed quote and driver details within 15 minutes.
               </div>
             </details>
             <details className="group">

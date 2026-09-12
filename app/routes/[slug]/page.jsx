@@ -1,10 +1,9 @@
 // app/routes/[slug]/page.jsx
 import Link from "next/link";
 import destinations from "@/data/destinations";
+import site from "@/data/site";
 import { PlaceIcon } from '@/components/Icons';
-import RouteOverview from "@/components/RouteOverview";
-import VehicleOptions from "@/components/VehicleOptions";
-import QuickBookingSidebar from "@/components/QuickBookingSidebar";
+import BookCta from "@/components/ui/BookCta";
 import RouteContent from "@/components/RouteContent";
 import { getServiceSchema, getBreadcrumbSchema } from '@/utils/structuredData';
 import { notFound } from "next/navigation";
@@ -27,16 +26,15 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${route.from} to ${route.to} Taxi | ₹${route.fare["Sedan"]} Cab Fare | ModgillTravels`,
-    description: `Book ${route.from} to ${route.to} taxi service. Distance: ${route.distanceKm}km, Duration: ${route.duration}. Starting ₹${route.fare["Sedan"]}. Professional drivers, AC vehicles, 24/7 availability. One way & round trip options.`,
+    title: `${route.from} to ${route.to} Taxi | ${route.distanceKm} km Cab Service`,
+    description: `${route.from} to ${route.to} taxi: ${route.distanceKm} km, ${route.duration}. AC vehicles, verified drivers, 24/7. Book on WhatsApp or call ${site.phone}.`,
     keywords: [
       `${route.from} to ${route.to} taxi`,
       `${route.from} ${route.to} cab`,
       `taxi service ${route.from} to ${route.to}`,
       `${route.to} taxi booking`,
       `one way taxi ${route.from}`,
-      `${route.from} to ${route.to} cab fare`,
-      `taxi fare ${route.from} ${route.to}`,
+      `${route.from} to ${route.to} distance`,
       `cab booking ${route.from} to ${route.to}`
     ],
     alternates: {
@@ -44,7 +42,7 @@ export async function generateMetadata({ params }) {
     },
     openGraph: {
       title: `${route.from} to ${route.to} Taxi Service - ModgillTravels`,
-      description: `Book reliable taxi from ${route.from} to ${route.to}. ${route.distanceKm}km journey starting at ₹${route.fare["Sedan"]}.`,
+      description: `${route.from} to ${route.to} taxi. ${route.distanceKm} km, ${route.duration}. Book on WhatsApp.`,
       url: `https://www.modgilltravels.in/routes/${route.slug}`,
       siteName: 'ModgillTravels',
       images: [
@@ -61,7 +59,7 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: 'summary_large_image',
       title: `${route.from} to ${route.to} Taxi Service - ModgillTravels`,
-      description: `Book reliable taxi from ${route.from} to ${route.to}. ${route.distanceKm}km journey starting at ₹${route.fare["Sedan"]}.`,
+      description: `${route.from} to ${route.to} taxi. ${route.distanceKm} km, ${route.duration}. Book on WhatsApp.`,
       images: [`/og-image.jpg`],
     },
     robots: {
@@ -117,7 +115,7 @@ export default async function RouteDetailsPage({ params }) {
             {route.from} to {route.to} Taxi Service
           </h1>
           <p className="text-gray-400 text-sm sm:lg">
-            {route.distanceKm}km • {route.duration} • Starting ₹{route.fare["Sedan"]} • Professional Drivers
+            {route.distanceKm} km • {route.duration} • Verified drivers • Available 24/7
           </p>
         </div>
 
@@ -129,12 +127,17 @@ export default async function RouteDetailsPage({ params }) {
 
           {/* Desktop: Left Column (order-2 on mobile, order-1 on desktop) */}
           <div className="lg:col-span-2 lg:order-2 space-y-6">
-            <RouteOverview route={route} />
-            <VehicleOptions route={route} />
           </div>
           {/* Mobile: Sidebar appears FIRST (order-1 on mobile, order-2 on desktop) */}
           <div className="lg:col-span-1 lg:order-1">
-            <QuickBookingSidebar route={route} />
+            <div className="rounded-[--radius-lg] border border-[--color-line] bg-[--color-surface] p-5 lg:sticky lg:top-24">
+              <h2 className="text-lg mb-1">Book this route</h2>
+              <p className="text-sm text-[--color-ink-muted] mb-4">
+                Send a message with your pickup point and time. We reply with the
+                driver and vehicle details.
+              </p>
+              <BookCta route={route} className="flex-col [&>*]:w-full" />
+            </div>
           </div>
         </div>
 

@@ -67,7 +67,7 @@ export default function HeroSection() {
 
         {/* Natural Description with Keywords — GEO/AEO optimized (geo_002 supersedes patch_003) */}
         <p className="text-gray-300 text-sm mb-6 text-center lg:text-left">
-          ModgillTravels is Patiala&apos;s 24/7 taxi service for outstation cab booking, airport transfers, and local rides across Punjab, Haryana, and Himachal Pradesh. One-way fares from ₹1,400. Call or WhatsApp +91-62849-92669 to book instantly.
+          ModgillTravels is Patiala&apos;s 24/7 taxi service for outstation cab booking, airport transfers, and local rides across Punjab, Haryana, and Himachal Pradesh. Call or WhatsApp +91-62849-92669 to book in a couple of minutes.
         </p>
 
         {/* From and To Fields */}

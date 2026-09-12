@@ -13,7 +13,7 @@ export default function ServiceInfo() {
             <h3 className="text-white font-bold text-lg">Outstation Service</h3>
           </div>
           <p className="text-gray-300 text-sm leading-relaxed">
-            Book outstation taxi from Patiala to <strong className="text-white">Delhi</strong> (240 km, Sedan ₹3,400), <strong className="text-white">Chandigarh</strong> (67 km, ₹1,400), <strong className="text-white">Shimla</strong> (180 km, ₹2,600), and <strong className="text-white">Manali</strong> (301 km, ₹5,400). Highway-experienced drivers, AC vehicles, GPS tracking. One-way and round-trip available.
+            Book an outstation taxi from Patiala to <strong>Delhi</strong> (240 km, 4.5–5 hours), <strong>Chandigarh</strong> (67 km, 1.5 hours), <strong>Shimla</strong> (180 km, 4–5 hours) or <strong>Manali</strong> (301 km, 7–8 hours). Highway-experienced drivers, AC vehicles, GPS tracking, one-way or round trip.
           </p>
         </div>
 
