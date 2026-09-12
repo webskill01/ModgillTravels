@@ -1,6 +1,6 @@
 # ModgillTravels — SEO state
 
-Last updated: 2026-09-12. Regenerate the numbers with `/seo-report`.
+Last updated: 2026-09-12 (redesign shipped). Regenerate the numbers with `/seo-report`.
 
 > **Corrections applied 2026-09-12 from live pulls + the GBP dashboard.**
 > Several claims below were stale or wrong; see "Corrections" at the end of
@@ -257,3 +257,54 @@ Title truncation on 50 of 52 pages, 13 soft-404 route pages, the invalid
 `itemReviewed` node failing rich results sitewide, the homepage missing from
 its own sitemap, and `lastModified` churn. Re-run `inspect` after the next
 deploy to confirm the rich-result verdict flips FAIL → PASS.
+
+---
+
+## Shipped 2026-09-12 — redesign live on production
+
+`main` at `a91a84a`. Merge `0df57f9`. Everything below is live and verified on
+<https://www.modgilltravels.in>.
+
+### What changed that Search Console will notice
+
+- **All per-destination pricing removed.** Fare queries drew 3 impressions at
+  position 51; distance queries drew 369. Pages now lead with distance and
+  travel time.
+- **Five route distances were wrong and are corrected** — Amritsar 165→233 km,
+  Manali 301→357, Jalandhar 100→154, Ambala 85→53, Delhi 240→250. Verified
+  against Yatra, Savaari, Rome2Rio, distancebetween2. "patiala to manali
+  distance" draws 134 impressions at position 11.8 and the page was 56 km out.
+- **Booking system deleted** (~1,838 lines) in favour of a WhatsApp + call CTA.
+  `/book` 301s into `/booking`, which ranks at 12.7.
+- **Delhi cannibalization resolved.** `/blog/patiala-to-delhi-travel-guide`
+  re-targeted at journey intent and linked down to `/routes/patiala-to-delhi`,
+  which keeps commercial intent.
+- **`/routes/delhi-to-patiala` is now reachable.** It had zero referring URLs
+  and was unknown to Google; every route page now links its return leg.
+- Titles: 50 of 52 pages were 86-130 chars and are now all under 60.
+- 13 soft-404 route pages removed from the link graph.
+- The invalid `itemReviewed` node that failed rich results sitewide is gone,
+  along with fabricated review nodes and testimonials.
+- A dead WhatsApp link in the header (`wa.me/6284992669`, no country code).
+
+### Measure against this
+
+Live baseline pulled **2026-09-12**, 90 days:
+**2 clicks · 2,670 impressions · 193 queries.**
+Homepage position 13.1 · `/routes/patiala-to-delhi` 770 impressions at 42.9.
+
+Re-run in ~30 days. Expect movement on CTR first (titles and rich results),
+ranking later.
+
+### Do these next
+
+1. **`inspect` `/` and `/routes/patiala-to-delhi`** once Google recrawls — the
+   rich-result verdict should flip FAIL → PASS. Confirm; do not assume.
+2. **Unserved commercial cluster found in research:** 7 unranked variants of
+   *"patiala to delhi airport taxi"* (airport taxi, airport taxi fare, airport
+   taxi service, one way taxi to Delhi airport…). No page targets this. It is
+   the clearest content gap on the site.
+3. Route matrix expansion — only with researched per-route detail. The template
+   now carries real data; generating more pages from a sentence with the names
+   swapped is the scaled-content-abuse pattern this project just moved away
+   from.
