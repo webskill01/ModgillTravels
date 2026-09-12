@@ -404,7 +404,7 @@ export default function HomePage() {
                 the copy on phones and beside it from lg up. */}
             <div className="order-first lg:order-last">
               <Image
-                src="/car-caption.png"
+                src="/car-caption.webp"
                 alt="ModgillTravels outstation taxi — Patiala to Delhi, Shimla, Manali and Chandigarh, with professional drivers and AC vehicles."
                 width={640}
                 height={420}

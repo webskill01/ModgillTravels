@@ -292,7 +292,7 @@ const organizationStructuredData = {
   "url": "https://www.modgilltravels.in",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://www.modgilltravels.in/logo.png",
+    "url": "https://www.modgilltravels.in/logo.webp",
     "width": 250,
     "height": 250
   },
@@ -347,7 +347,7 @@ const localBusinessStructuredData = {
     "closes": "23:59"
   },
   "priceRange": "₹₹",
-  "image": "https://www.modgilltravels.in/logo.png",
+  "image": "https://www.modgilltravels.in/logo.webp",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": site.rating.value,

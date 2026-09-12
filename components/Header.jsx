@@ -44,7 +44,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3 group min-w-0">
             <div className="relative w-10 h-10 lg:w-12 lg:h-12 rounded-xl overflow-hidden shrink-0">
               <Image
-                src="/BrandLogo.png"
+                src="/BrandLogo.webp"
                 alt=""
                 width={48}
                 height={48}
