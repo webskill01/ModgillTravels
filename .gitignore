@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Search Console exports — local analysis only, not part of the app
+gsc_reports/
+Reports/
