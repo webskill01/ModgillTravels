@@ -229,43 +229,6 @@ export const getLocalBusinessSchema = () => ({
     "bestRating": "5",
     "worstRating": "1"
   },
-  // A Review nested inside its parent LocalBusiness must not restate
-  // itemReviewed — the parent is implied by the nesting. An @id-only
-  // back-reference made Google return: Invalid object type for field
-  // "<parent_node>", which failed rich results sitewide and cost the
-  // star ratings in the SERP.
-  "review": [
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Rajesh Kumar"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "reviewBody": "Excellent taxi service in Patiala. Professional driver, clean car, reached Delhi on time. Best cab service for outstation trips.",
-      "datePublished": "2024-12-15"
-    },
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Priya Singh"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "reviewBody": "Reliable taxi agents. Booked one way cab to Shimla, transparent pricing, no hidden charges. Highly recommend ModgillTravels.",
-      "datePublished": "2024-11-28"
-    }
-  ],
   "sameAs": [
     "https://wa.me/916284992669"
   ],

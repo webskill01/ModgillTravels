@@ -1,6 +1,11 @@
 # ModgillTravels — SEO state
 
-Last updated: 2026-09-07. Regenerate the numbers with `/seo-report`.
+Last updated: 2026-09-12. Regenerate the numbers with `/seo-report`.
+
+> **Corrections applied 2026-09-12 from live pulls + the GBP dashboard.**
+> Several claims below were stale or wrong; see "Corrections" at the end of
+> this file before acting on anything here. Work from live tool output, never
+> from these stored numbers.
 
 Business: 24/7 taxi and outstation cab service, Patiala, Punjab.
 Site: <https://www.modgilltravels.in> (canonical host is `www`).
@@ -192,3 +197,63 @@ automatically. Full setup and troubleshooting:
 Google Business Profile API access was applied for on 2026-09-07 (support case
 `3-8270000041163`, reply due 16-21 Sep 2026). Until it is approved there is no
 programmatic GBP data — export CSVs from the dashboard by hand.
+
+
+---
+
+## Corrections — 2026-09-12
+
+Verified against live `gsc` / `places` / `inspect` / `crawl` runs and the GBP
+dashboard. Each of these contradicts something written above.
+
+### ✅ The GBP service area is already fixed
+The dashboard now reads **"Patiala and nearby areas"**, with service areas
+Delhi, Chandigarh, Ambala, Patiala, Sangrur, Amritsar, Zirakpur, Jalandhar,
+Nabha and Mohali. The "service area points at Chandigarh" item was the #1
+priority in this file and it is **done**. Do not re-raise it.
+
+### ⚠️ New: two different phone numbers
+The site uses `+91-62849-92669` / `wa.me/916284992669` everywhere, consistently.
+The GBP contact block lists phone **089763 76926** and WhatsApp
+**wa.me/918976376926** — a different number — while the profile *displays*
+`06284 992 669`. Either the GBP contact fields are wrong, or a second line
+exists that the site never mentions. **Ask the owner before changing either.**
+IndiaMART shows `+918047790517`, but that is IndiaMART's proxy number and is
+normal.
+
+### ⚠️ New: duplicate Justdial listings
+Two separate Justdial profiles are live — one rated **4.9 (32)**, one **5.0
+(23)**. They split citation signal and the review count. One should be merged
+or claimed and closed.
+
+### Founding year — IndiaMART is the outlier
+GBP opening date is **1 January 2025**; the site says founded 2025. Those
+agree. **IndiaMART says "9 yrs"** (≈2017) and is the only source that
+disagrees. Fix IndiaMART, not the site.
+
+### Name
+GBP business name is **"Modgilltravels"** (one word) and Google itself prompts
+"Did you mean: Modgill Travels". Justdial and IndiaMART both use **"Modgill
+Travels"**. Three of four sources use two words — the cheaper alignment is to
+rename the GBP, not the rest of the web.
+
+### The local ladder is deeper than recorded above
+Live `places` returns **20** Patiala competitors, not 7:
+52 reviews → top 10 · 96 → top 5 · 114 → top 3. At 31 the business sits ~14th.
+
+### Price queries are worth almost nothing here
+Live 90-day GSC: every fare/price/cost query combined draws **3 impressions**
+(position 51). **Distance** queries draw **369** — "patiala to manali distance"
+alone is 134 at position 11.8. Route-page content should lead with distance,
+duration and journey detail, not fares.
+
+### Other stale claims
+- "16 destinations but only 10 route pairs live" — wrong, all 16 are live.
+- Non-www → www is already a clean single **308**.
+- Route-page `openGraph` is complete; the Next.js partial-OG bug does not apply.
+
+### Fixed in code on 2026-09-12 (commit `ddfaf4a`)
+Title truncation on 50 of 52 pages, 13 soft-404 route pages, the invalid
+`itemReviewed` node failing rich results sitewide, the homepage missing from
+its own sitemap, and `lastModified` churn. Re-run `inspect` after the next
+deploy to confirm the rich-result verdict flips FAIL → PASS.

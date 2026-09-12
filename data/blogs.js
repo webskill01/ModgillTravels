@@ -252,10 +252,6 @@ const blogs = [
   <li>Sanitized vehicles</li>
 </ul>
 
-<h2>Customer Reviews</h2>
-<p><em>"Excellent service from Patiala to Delhi. Driver was punctual and knew the best route. Highly recommended!"</em> - Rajesh Kumar</p>
-<p><em>"Used ModgillTravels for my medical trip to AIIMS. Very professional and caring service."</em> - Simran Kaur</p>
-
 <h2>Conclusion</h2>
 <p>Traveling from Patiala to Delhi by taxi is convenient, comfortable, and time-saving. ModgillTravels ensures you reach your destination safely with professional drivers and well-maintained vehicles.</p>
 <p>Whether it's a business meeting, medical appointment, or family trip, we're available 24/7 to serve you. Book now for the best rates!</p>`,
