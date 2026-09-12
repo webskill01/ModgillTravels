@@ -10,15 +10,20 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
-    dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
+
+    // No remotePatterns, deliberately. Every image on this site is local
+    // (/car-caption.png, /BrandLogo.png, /og-image.jpg), and the previous
+    // value was `hostname: '**'` — a wildcard over every https host. That
+    // turned /_next/image into an open proxy anyone could point at any URL
+    // on the internet and bill to this domain, and it is the exact shape
+    // named in the critical Next advisory ("DoS via Image Optimizer
+    // remotePatterns"). Add specific hostnames here if a remote image is
+    // ever genuinely needed; never a wildcard.
+    //
+    // dangerouslyAllowSVG dropped with it: no SVG passes through
+    // next/image here, the icons are inline JSX.
   },
   experimental: {
     optimizeCss: true,
