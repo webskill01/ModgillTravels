@@ -29,3 +29,24 @@ Four facts that are easy to get wrong:
   is a prominence quirk, never evidence the profile is missing.
 
 Run `/seo-report` from this directory for fresh Search Console numbers.
+
+## Working rules
+
+**Commit only when something is actually done.** A commit is a coherent unit of
+work — a fixed defect, a completed task from `PHASES.md` — not a file save. Do
+not commit after every small edit. Batch related changes and commit once, with
+the build passing.
+
+**Push only at phase boundaries.** Never push mid-phase. When a phase in
+`PHASES.md` is complete and verified, push then. Between boundaries the work
+stays local.
+
+**Consistency is a requirement, not a preference.** Every button, card, section
+and container comes from the shared primitives in `components/ui/`. No one-off
+Tailwind class stacks for something a primitive already covers. If a new variant
+is genuinely needed, add it to the primitive rather than inlining it.
+
+**The goal this project is measured against:** a completely optimized,
+SEO-optimized site that increases both search impressions and clicks. Rankings
+without clicks are not success — titles, descriptions and rich results matter as
+much as position.
