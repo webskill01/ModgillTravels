@@ -1,6 +1,4 @@
 // components/PrivacyContent.jsx
-"use client";
-
 import Link from 'next/link';
 import { SecurityIcon, PersonIcon, StorageIcon, ShareIcon, CookieIcon, ContactMailIcon, VerifiedUserIcon, LockIcon, UpdateIcon } from '@/components/Icons';
 

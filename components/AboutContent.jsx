@@ -1,6 +1,4 @@
 // components/AboutContent.jsx
-"use client";
-
 import Link from 'next/link';
 import site, { waLink } from "@/data/site";
 import Button from "@/components/ui/Button";

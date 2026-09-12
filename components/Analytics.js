@@ -2,6 +2,10 @@
 'use client';
 
 import Script from 'next/script';
+// lazyOnload, not afterInteractive: gtag.js plus the GTM container was the
+// largest single contributor to TBT, and it was running the moment hydration
+// finished. Deferring to the load event costs the tail of very fast bounces
+// and buys back main-thread time on the metric Google actually scores.
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, Suspense } from 'react';
 
@@ -37,12 +41,12 @@ function AnalyticsContent() {
     <>
       {/* Google Analytics gtag.js */}
       <Script
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
       />
       <Script
         id="google-analytics-init"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -63,7 +67,7 @@ function AnalyticsContent() {
         <>
           <Script
             id="gtm-script"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             dangerouslySetInnerHTML={{
               __html: `
                 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

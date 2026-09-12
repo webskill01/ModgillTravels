@@ -1,6 +1,4 @@
 // components/ContactContent.jsx
-"use client";
-
 import Link from "next/link";
 import site from "@/data/site";
 import FAQAccordion from "@/components/FAQAccordion";

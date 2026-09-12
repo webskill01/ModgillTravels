@@ -1,6 +1,4 @@
 // components/TermsContent.jsx
-"use client";
-
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import { GavelIcon, BookOnlineIcon, PaymentIcon, CancelIcon, SecurityIcon, SupportAgentIcon, ContactMailIcon, WarningIcon, UpdateIcon, VerifiedIcon } from '@/components/Icons';
@@ -219,7 +217,7 @@ export default function TermsContent() {
               <div className="w-12 h-12 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-3">
                 <CancelIcon className="w-6 h-6 text-brand" />
               </div>
-              <h4 className="text-ink font-semibold mb-1 text-sm sm:text-base">Cancellation</h4>
+              <h3 className="text-ink font-semibold mb-1 text-sm sm:text-base">Cancellation</h3>
               <p className="text-brand text-sm">₹200 advance non-refundable</p>
               <p className="text-ink-muted text-sm mt-1">Customer cancellations</p>
             </div>
@@ -228,7 +226,7 @@ export default function TermsContent() {
               <div className="w-12 h-12 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-3">
                 <SupportAgentIcon className="w-6 h-6 text-brand" />
               </div>
-              <h4 className="text-ink font-semibold mb-1 text-sm sm:text-base">Support</h4>
+              <h3 className="text-ink font-semibold mb-1 text-sm sm:text-base">Support</h3>
               <p className="text-brand text-sm">24/7 assistance</p>
               <p className="text-ink-muted text-sm mt-1">Response within 2 hrs</p>
             </div>
@@ -315,7 +313,7 @@ export default function TermsContent() {
 
         {/* Quick Navigation */}
         <div className="mt-8 p-4 sm:p-5 bg-surface border border-line rounded-xl">
-          <h4 className="text-ink font-semibold text-sm sm:text-base mb-3">Quick Navigation:</h4>
+          <h3 className="text-ink font-semibold text-sm sm:text-base mb-3">Quick Navigation:</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm">
             {sections.map((section) => (
               <Link
