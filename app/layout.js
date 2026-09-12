@@ -3,13 +3,26 @@ import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Lexend, Source_Sans_3 } from "next/font/google";
 import Analytics from "@/components/Analytics";
+import site from "@/data/site";
 
-const inter = Inter({
+// Lexend is drawn for reading proficiency, which matters for an audience
+// booking a cab in a hurry. Source Sans 3 carries body copy.
+const lexend = Lexend({
   subsets: ["latin"],
   display: "swap",
   preload: true,
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-lexend",
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  weight: ["400", "600", "700"],
+  variable: "--font-source-sans",
 });
 
 export const viewport = {
@@ -251,8 +264,8 @@ const businessStructuredData = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "31",
+    "ratingValue": site.rating.value,
+    "reviewCount": site.rating.count,
     "bestRating": "5",
     "worstRating": "1",
   },
@@ -337,8 +350,8 @@ const localBusinessStructuredData = {
   "image": "https://www.modgilltravels.in/logo.png",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": 5.0,
-    "reviewCount": 31,
+    "ratingValue": site.rating.value,
+    "reviewCount": site.rating.count,
     "bestRating": 5,
     "worstRating": 1
   }
@@ -346,7 +359,7 @@ const localBusinessStructuredData = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={`${lexend.variable} ${sourceSans.variable}`}>
       <head>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -418,7 +431,7 @@ export default function RootLayout({ children }) {
 }} />
 
       </head>
-      <body className={inter.className}>
+      <body>
         <ScrollToTop />
         <Header />
         <main className="overflow-x-hidden">{children}</main>

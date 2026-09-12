@@ -1,4 +1,5 @@
 // utils/structuredData.js
+import site from '@/data/site';
 
 /**
  * Organization Schema - Main business entity
@@ -224,8 +225,8 @@ export const getLocalBusinessSchema = () => ({
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "31",
+    "ratingValue": site.rating.value,
+    "reviewCount": site.rating.count,
     "bestRating": "5",
     "worstRating": "1"
   },
@@ -460,7 +461,7 @@ export const getProductSchema = (route) => ({
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "31"
+    "ratingValue": site.rating.value,
+    "reviewCount": site.rating.count
   }
 });

@@ -1,4 +1,5 @@
 // utils/citySchema.js
+import site from '@/data/site';
 export function getCitySchema(city) {
   return {
     "@context": "https://schema.org",
@@ -30,8 +31,8 @@ export function getCitySchema(city) {
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "31",
+      "ratingValue": site.rating.value,
+      "reviewCount": site.rating.count,
       "bestRating": "5",
       "worstRating": "1"
     }
