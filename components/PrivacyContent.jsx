@@ -114,7 +114,7 @@ export default function PrivacyContent() {
 
       <main className="max-w-4xl mx-auto px-4 py-6 sm:py-8">
         {/* Trust Badges */}
-        <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
           <div className="bg-white border border-line rounded-lg p-3 sm:p-4 text-center">
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-2">
               <LockIcon className="w-4 h-4 sm:w-5 sm:h-5 text-brand" />

@@ -14,7 +14,7 @@ const blogs = [
     content: `<p>Shimla, the Queen of Hills, is one of the most popular hill stations in India. Located in Himachal Pradesh, Shimla attracts tourists throughout the year with its colonial architecture, scenic landscapes, and pleasant weather.</p>
 
 <h2>How to Reach Shimla from Patiala</h2>
-<p>The best way to reach Shimla from Patiala is by hiring a taxi. ModgillTravels offers comfortable cab service covering 180 km in approximately 4-5 hours. Book your taxi online or call +91-62849-92669.</p>
+<p>The best way to reach Shimla from Patiala is by hiring a taxi. ModgillTravels offers comfortable cab service covering 170 km in approximately 4-5 hours. Book your taxi online or call +91-62849-92669.</p>
 
 <h2>Top 10 Places to Visit in Shimla</h2>
 
@@ -56,7 +56,7 @@ const blogs = [
 </ul>
 
 <h2>Shimla Taxi Service from Patiala</h2>
-<p>ModgillTravels runs the 180 km Patiala to Shimla route daily. Our hill-experienced drivers handle the Kalka ghats and the Solan climb in well-maintained AC vehicles.</p>
+<p>ModgillTravels runs the 170 km Patiala to Shimla route daily. Our hill-experienced drivers handle the Kalka ghats and the Solan climb in well-maintained AC vehicles.</p>
 
 <p><strong>Booking Options:</strong></p>
 <ul>
@@ -85,16 +85,17 @@ const blogs = [
   },
   {
     slug: 'patiala-to-delhi-travel-guide',
-    title: 'Patiala to Delhi: Complete Travel Guide & Taxi Service',
-    excerpt: 'Everything you need to know about traveling from Patiala to Delhi by taxi. Route details, fares, booking tips, and popular stops.',
+    title: 'Patiala to Delhi by Road: Distance, Route and Stops',
+    excerpt: 'The 250 km NH44 run from Patiala to Delhi — what the road is like, where to stop, and what time to leave to miss the Karnal and Delhi-border traffic.',
     date: '2025-01-10',
     author: 'ModgillTravels Team',
     category: 'Travel Guide',
     readTime: '6 min read',
-    metaTitle: 'Patiala to Delhi Taxi | Complete Travel Guide 2025',
-    metaDescription: 'Patiala to Delhi taxi: 240 km via NH44 in 4.5 to 5 hours. One way and round trip. Call +91-62849-92669 or book on WhatsApp.',
-    keywords: ['patiala to delhi taxi', 'patiala delhi cab', 'taxi booking patiala', 'delhi cab service'],
-    content: `<p>Planning a trip from Patiala to Delhi? Whether it's for business, medical appointments, or leisure, ModgillTravels offers comfortable and reliable taxi service for the 250 km journey.</p>
+    metaTitle: 'Patiala to Delhi Distance & Road Route Guide',
+    metaDescription: 'Patiala to Delhi is 250 km via NH44 through Ambala, Karnal and Panipat. Drive time, where to stop at Murthal, and the best hour to leave.',
+    keywords: ['patiala to delhi distance', 'patiala to delhi road route', 'patiala to delhi by road', 'murthal dhaba stop', 'nh44 patiala delhi'],
+    content: `<p>Patiala to Delhi is about <strong>250 km</strong> and takes <strong>5 to 5.5 hours</strong> in normal traffic, running the whole way on NH44 through Rajpura, Ambala, Karnal, Panipat and Sonipat.</p>
+<p>This guide covers the road itself — what the drive is like, where to break, and what time to leave. If you just want to book the trip, the <a href="/routes/patiala-to-delhi">Patiala to Delhi taxi page</a> has the booking details.</p>
 
 <h2>Distance and Duration</h2>
 <ul>
@@ -255,16 +256,16 @@ const blogs = [
   },
   {
     slug: 'patiala-to-chandigarh-taxi',
-    title: 'Patiala to Chandigarh Taxi 2026 | 67 km One Way Cab Guide',
-    excerpt: 'Patiala to Chandigarh is 67 km, about 2 to 2.5 hours via NH64. Chandigarh Airport transfers, Sector 17 drop and same-day bookings, available 24/7.',
+    title: 'Patiala to Chandigarh Taxi 2026 | 68 km One Way Cab Guide',
+    excerpt: 'Patiala to Chandigarh is 68 km, about 1.5 hours via NH64. Chandigarh Airport transfers, Sector 17 drop and same-day bookings, available 24/7.',
     date: '2026-01-10',
     author: 'ModgillTravels Team',
     category: 'Route Guide',
     readTime: '6 min read',
-    metaTitle: 'Patiala to Chandigarh Taxi 2026 | 67 km Route Guide',
-    metaDescription: 'Patiala to Chandigarh taxi: 67 km in 2 to 2.5 hours via NH64. Book on WhatsApp +91-62849-92669. 24/7 pickup, airport transfers available.',
+    metaTitle: 'Patiala to Chandigarh Taxi 2026 | 68 km Route Guide',
+    metaDescription: 'Patiala to Chandigarh taxi: 68 km in about 1.5 hours via NH64. Book on WhatsApp +91-62849-92669. 24/7 pickup, airport transfers available.',
     keywords: ['patiala to chandigarh taxi', 'patiala chandigarh cab fare', 'chandigarh taxi from patiala', 'patiala to chandigarh one way cab', 'cab booking patiala chandigarh'],
-    content: `<p>Patiala to Chandigarh is one of the most popular taxi routes in Punjab. Whether you're traveling for work, airport transfers, medical visits, or shopping at Sector 17, ModgillTravels offers reliable cab service for the 67 km journey at transparent fixed fares.</p>
+    content: `<p>Patiala to Chandigarh is one of the most popular taxi routes in Punjab. Whether you're traveling for work, airport transfers, medical visits, or shopping at Sector 17, ModgillTravels offers reliable cab service for the 68 km journey at transparent fixed fares.</p>
 
 <h2>Patiala to Chandigarh Distance &amp; Duration</h2>
 <ul>
@@ -337,19 +338,19 @@ const blogs = [
   {
     slug: 'patiala-to-manali-travel-guide',
     title: 'Patiala to Manali Taxi 2026 | Distance, Fare & Complete Trip Planning Guide',
-    excerpt: 'Plan a Patiala to Manali trip. 301 km in 7 to 8 hours via Chandigarh and Kullu. Best route, where to stop, and which vehicle suits the hill section.',
+    excerpt: 'Plan a Patiala to Manali trip. 357 km in 7 to 8 hours via Chandigarh and Kullu. Best route, where to stop, and which vehicle suits the hill section.',
     date: '2026-01-20',
     author: 'ModgillTravels Team',
     category: 'Travel Guide',
     readTime: '9 min read',
-    metaTitle: 'Patiala to Manali Taxi 2026 | 301 km Route & Guide',
-    metaDescription: 'Patiala to Manali taxi: 301 km in 7 to 8 hours via Chandigarh and Kullu. Hill-experienced drivers, AC vehicles. Book: +91-62849-92669.',
+    metaTitle: 'Patiala to Manali Taxi 2026 | 357 km Route & Guide',
+    metaDescription: 'Patiala to Manali taxi: 357 km in 7 to 8 hours via Chandigarh and Kullu. Hill-experienced drivers, AC vehicles. Book: +91-62849-92669.',
     keywords: ['patiala to manali taxi', 'patiala manali cab fare', 'manali trip from patiala', 'patiala to manali distance', 'manali taxi booking patiala'],
-    content: `<p>Dreaming of Rohtang Pass, Solang Valley, and Hadimba Temple? Patiala to Manali by taxi is one of the most scenic road journeys in North India. ModgillTravels offers comfortable, safe cab service with hill-experienced drivers for the 301 km mountain route.</p>
+    content: `<p>Dreaming of Rohtang Pass, Solang Valley, and Hadimba Temple? Patiala to Manali by taxi is one of the most scenic road journeys in North India. ModgillTravels offers comfortable, safe cab service with hill-experienced drivers for the 357 km mountain route.</p>
 
 <h2>Patiala to Manali Distance &amp; Route</h2>
 <ul>
-  <li><strong>Distance</strong>: 301 km</li>
+  <li><strong>Distance</strong>: 357 km</li>
   <li><strong>Travel Time</strong>: 7–8 hours (mountain roads)</li>
   <li><strong>Route</strong>: Patiala → Chandigarh → Bilaspur → Sundar Nagar → Kullu → Manali</li>
   <li><strong>Road Type</strong>: NH44 then NH3 (Chandigarh-Manali Highway)</li>
@@ -490,7 +491,7 @@ const blogs = [
 </ul>
 
 <h2>Patiala to Shimla via Chandigarh</h2>
-<p>Travelling from Patiala? We also run Patiala to Shimla direct (180 km, 5–6 hours). No changing cabs at Chandigarh — we pick up from your exact Patiala address.</p>
+<p>Travelling from Patiala? We also run Patiala to Shimla direct (170 km, 4.5–5 hours). No changing cabs at Chandigarh — we pick up from your exact Patiala address.</p>
 
 <h2>How to Book Chandigarh to Shimla Cab</h2>
 <p>Call or WhatsApp ModgillTravels at <strong>+91-62849-92669</strong>. Share your pickup point in Chandigarh (Sector 17, airport, any sector), date, time, and vehicle preference. Confirmation in 15 minutes. 24/7 booking available.</p>`,
@@ -501,19 +502,19 @@ const blogs = [
   {
     slug: 'patiala-to-amritsar-golden-temple-taxi',
     title: 'Patiala to Amritsar Taxi for Golden Temple | Fare, Route & Tips 2026',
-    excerpt: 'Patiala to Amritsar for Golden Temple darshan: 165 km in 3 to 4 hours. Add Wagah Border and Jallianwala Bagh to the day. ModgillTravels, 24/7.',
+    excerpt: 'Patiala to Amritsar for Golden Temple darshan: 233 km in about 4 hours. Add Wagah Border and Jallianwala Bagh to the day. ModgillTravels, 24/7.',
     date: '2026-02-10',
     author: 'ModgillTravels Team',
     category: 'Travel Guide',
     readTime: '7 min read',
-    metaTitle: 'Patiala to Amritsar Golden Temple Taxi | 165 km',
-    metaDescription: 'Patiala to Amritsar taxi for Golden Temple darshan. 165 km in 3 to 4 hours, with time for the Wagah Border evening ceremony. Call +91-62849-92669.',
+    metaTitle: 'Patiala to Amritsar Golden Temple Taxi | 233 km',
+    metaDescription: 'Patiala to Amritsar taxi for Golden Temple darshan. 233 km in about 4 hours, with time for the Wagah Border evening ceremony. Call +91-62849-92669.',
     keywords: ['patiala to amritsar taxi', 'amritsar golden temple taxi from patiala', 'patiala amritsar cab fare', 'amritsar taxi booking patiala', 'golden temple taxi patiala'],
-    content: `<p>Amritsar's Golden Temple (Sri Harmandir Sahib) is one of India's holiest and most visited landmarks. From Patiala, the 165 km taxi journey is a comfortable 3–4 hour drive. ModgillTravels offers reliable cab service with drivers experienced on the Patiala–Amritsar highway.</p>
+    content: `<p>Amritsar's Golden Temple (Sri Harmandir Sahib) is one of India's holiest and most visited landmarks. From Patiala, the 233 km taxi journey takes about four hours up NH44 through Ludhiana and Jalandhar. ModgillTravels offers reliable cab service with drivers experienced on the Patiala–Amritsar highway.</p>
 
 <h2>Patiala to Amritsar Distance &amp; Route</h2>
 <ul>
-  <li><strong>Distance</strong>: 165 km</li>
+  <li><strong>Distance</strong>: 233 km</li>
   <li><strong>Travel Time</strong>: 3–4 hours via NH7</li>
   <li><strong>Route</strong>: Patiala → Ludhiana → Jalandhar → Amritsar</li>
   <li><strong>Highway</strong>: NH7 (National Highway) — well-maintained expressway</li>
@@ -660,19 +661,19 @@ const blogs = [
 
 <h2>Route-Specific Recommendations</h2>
 
-<h3>Patiala to Delhi (240 km highway)</h3>
+<h3>Patiala to Delhi (250 km highway)</h3>
 <p><strong>Best choice: Sedan</strong> — Highway route, flat road, 4 hours. Sedan is efficient and economical. For groups of 5+, book Ertiga.</p>
 
-<h3>Patiala to Chandigarh (67 km)</h3>
+<h3>Patiala to Chandigarh (68 km)</h3>
 <p><strong>Best choice: Sedan</strong> — Short route, sedan more than sufficient. For airport transfers with heavy luggage, consider Ertiga.</p>
 
-<h3>Patiala to Shimla (180 km, hills)</h3>
+<h3>Patiala to Shimla (170 km, hills)</h3>
 <p><strong>Best choice: Ertiga or Innova</strong> — Mountain ghats after Kalka need a capable vehicle. Sedan can manage but Ertiga is recommended for families.</p>
 
-<h3>Patiala to Manali (301 km, deep mountains)</h3>
+<h3>Patiala to Manali (357 km, deep mountains)</h3>
 <p><strong>Best choice: Innova Crysta</strong> — Rohtang Pass altitude (3,978m) and mountain terrain strongly favor the Innova. We recommend against Sedan for this route with families.</p>
 
-<h3>Patiala to Amritsar (165 km highway)</h3>
+<h3>Patiala to Amritsar (233 km highway)</h3>
 <p><strong>Best choice: Sedan or Ertiga</strong> — Flat highway, any vehicle works. Choose Ertiga for groups making a day trip (Golden Temple + Wagah Border).</p>
 
 <h2>Luggage Guidelines</h2>
@@ -706,7 +707,7 @@ const blogs = [
     category: 'Booking Guide',
     readTime: '5 min read',
     metaTitle: 'One Way Taxi Booking Guide | No Return Charges',
-    metaDescription: 'One way taxi in Patiala with no return leg charged. Delhi 240 km, Chandigarh 67 km, Shimla 180 km. Call +91-62849-92669 to book.',
+    metaDescription: 'One way taxi in Patiala with no return leg charged. Delhi 250 km, Chandigarh 68 km, Shimla 170 km. Call +91-62849-92669 to book.',
     keywords: ['one way taxi', 'one way cab booking', 'no return taxi', 'patiala taxi booking'],
     content: `<p>One way taxi service is a cost-effective solution for travelers who don't need a return journey. Instead of paying for a round trip, you pay only for the distance you travel.</p>
 
@@ -739,7 +740,7 @@ const blogs = [
 
 <h3>To Delhi</h3>
 <ul>
-  <li><strong>Distance</strong>: 240 km</li>
+  <li><strong>Distance</strong>: 250 km</li>
   <li><strong>Time</strong>: 4.5-5 hours</li>
 </ul>
 
@@ -751,7 +752,7 @@ const blogs = [
 
 <h3>To Shimla</h3>
 <ul>
-  <li><strong>Distance</strong>: 180 km</li>
+  <li><strong>Distance</strong>: 170 km</li>
   <li><strong>Time</strong>: 5-6 hours</li>
 </ul>
 

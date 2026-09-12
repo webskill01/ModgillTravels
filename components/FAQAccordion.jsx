@@ -5,7 +5,7 @@ import { useState } from 'react';
 const faqs = [
   {
     question: 'How far is Patiala from Delhi by road?',
-    answer: 'Patiala to Delhi is about 240 km via NH44, and the drive takes 4.5 to 5 hours in normal traffic. Leaving before 7 AM usually clears the Panipat and Sonipat stretch before it builds up. Send your pickup point on WhatsApp and we confirm the vehicle and a fixed quote before the trip.',
+    answer: 'Patiala to Delhi is about 250 km via NH44, and the drive takes 4.5 to 5 hours in normal traffic. Leaving before 7 AM usually clears the Panipat and Sonipat stretch before it builds up. Send your pickup point on WhatsApp and we confirm the vehicle and a fixed quote before the trip.',
   },
   {
     question: 'Which is the best taxi service in Patiala?',
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: 'Can I book a one-way taxi from Patiala to Chandigarh?',
-    answer: 'Yes. Patiala to Chandigarh is 67 km via NH64 and takes about an hour and a half. One-way trips are charged for the distance you travel, with no return leg added. Same-day bookings are available around the clock on +91-62849-92669.',
+    answer: 'Yes. Patiala to Chandigarh is 68 km via NH64 and takes about an hour and a half. One-way trips are charged for the distance you travel, with no return leg added. Same-day bookings are available around the clock on +91-62849-92669.',
   },
   {
     question: 'Does ModgillTravels offer 24-hour taxi service in Patiala?',
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: 'How far is Patiala from Shimla by taxi?',
-    answer: 'Patiala to Shimla is roughly 180 km and takes 4 to 5 hours, climbing through Kalka and Solan. The last stretch of ghats slows things down, especially in the afternoon. An Ertiga or Innova Crysta is the comfortable choice on this route for luggage space and the hill sections.',
+    answer: 'Patiala to Shimla is about 170 km and takes 4 to 5 hours, climbing through Kalka and Solan. The last stretch of ghats slows things down, especially in the afternoon. An Ertiga or Innova Crysta is the comfortable choice on this route for luggage space and the hill sections.',
   },
   {
     question: 'Is there a taxi service from Patiala to Amritsar Airport?',

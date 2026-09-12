@@ -67,7 +67,7 @@ const faqPageSchema = {
       "name": "How much does a taxi from Patiala to Delhi cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Patiala to Delhi road distance is about 240 km via NH44, and the drive takes 4.5 to 5 hours in normal traffic. Sedan, Ertiga and Innova Crysta are all available. Send your pickup point and travel time on WhatsApp and we confirm the vehicle and a fixed quote before the trip."
+        "text": "The Patiala to Delhi road distance is about 250 km via NH44, and the drive takes 4.5 to 5 hours in normal traffic. Sedan, Ertiga and Innova Crysta are all available. Send your pickup point and travel time on WhatsApp and we confirm the vehicle and a fixed quote before the trip."
       }
     },
     {
@@ -75,7 +75,7 @@ const faqPageSchema = {
       "name": "How far is Patiala from Shimla by taxi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Patiala to Shimla is roughly 180 km by road and takes 4 to 5 hours, climbing through Kalka and Solan. An Innova or Ertiga is the sensible choice for the hill section. Book a day ahead for morning departures, which avoid the afternoon hill traffic."
+        "text": "Patiala to Shimla is about 170 km by road and takes 4 to 5 hours, climbing through Kalka and Solan. An Innova or Ertiga is the sensible choice for the hill section. Book a day ahead for morning departures, which avoid the afternoon hill traffic."
       }
     },
     {
@@ -115,7 +115,7 @@ const faqPageSchema = {
       "name": "Can I book a one-way taxi from Patiala to Chandigarh?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, ModgillTravels offers one-way taxi service from Patiala to Chandigarh. The distance is approximately 100 km and journey takes 2-2.5 hours. You pay only for the one-way trip without return charges. Ideal for airport transfers or relocation."
+        "text": "Yes, ModgillTravels offers one-way taxi service from Patiala to Chandigarh. The distance is about 68 km and the drive takes around 1.5 hours. You pay only for the one-way trip without return charges. Ideal for airport transfers or relocation."
       }
     },
     {
@@ -139,7 +139,7 @@ const faqPageSchema = {
       "name": "How much does an Innova Crysta taxi cost from Patiala to Delhi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Innova Crysta seats 6 to 7 with room for luggage, which makes it the usual pick for families on the 240 km Patiala to Delhi run. Tell us the group size on WhatsApp and we confirm the vehicle and a fixed quote before you travel."
+        "text": "The Innova Crysta seats 6 to 7 with room for luggage, which makes it the usual pick for families on the 250 km Patiala to Delhi run. Tell us the group size on WhatsApp and we confirm the vehicle and a fixed quote before you travel."
       }
     },
     {
@@ -444,7 +444,7 @@ export default function HomePage() {
               [
                 <AccessTimeIcon key="i" className="h-6 w-6" />,
                 "Available 24/7",
-                "Outstation runs to Delhi (240 km), Chandigarh (67 km), Shimla (180 km) and Manali (301 km), plus local Patiala trips and airport transfers. Early flights and late arrivals included.",
+                "Outstation runs to Delhi (250 km), Chandigarh (68 km), Shimla (170 km) and Manali (357 km), plus local Patiala trips and airport transfers. Early flights and late arrivals included.",
               ],
               [
                 <WhatsAppIcon key="i" className="h-6 w-6" />,

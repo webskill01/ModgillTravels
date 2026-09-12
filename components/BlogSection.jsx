@@ -18,7 +18,7 @@ export default function BlogSection() {
   const blogs = [
     {
       title: 'Best Places to Visit in Shimla',
-      description: 'ModgillTravels offers comfortable taxi service from Patiala to Shimla covering 180 km. Explore Mall Road, Jakhoo Temple, Kufri, and more scenic destinations. Our experienced hill drivers ensure safe mountain travel with well-maintained AC vehicles.',
+      description: 'ModgillTravels offers comfortable taxi service from Patiala to Shimla covering 170 km. Explore Mall Road, Jakhoo Temple, Kufri, and more scenic destinations. Our experienced hill drivers ensure safe mountain travel with well-maintained AC vehicles.',
       slug: 'best-places-to-visit-in-shimla',
       readTime: '8 min',
       category: 'Travel Guide',

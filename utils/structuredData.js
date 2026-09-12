@@ -259,7 +259,7 @@ export const getFAQSchema = () => ({
       "name": "What is the fare for one way cab service in Patiala?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "One way cab service from Patiala covers Delhi (240 km), Chandigarh (67 km), Shimla (180 km) and Manali (301 km). A one-way booking is charged for the leg you travel, with no return leg added. Send your route on WhatsApp for a quote fixed before the trip."
+        "text": "One way cab service from Patiala covers Delhi (250 km), Chandigarh (68 km), Shimla (170 km) and Manali (357 km). A one-way booking is charged for the leg you travel, with no return leg added. Send your route on WhatsApp for a quote fixed before the trip."
       }
     },
     {

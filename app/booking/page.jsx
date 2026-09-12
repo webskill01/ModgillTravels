@@ -8,7 +8,7 @@ import { DirectionsCarIcon, LocationOnIcon, PhoneIcon, WhatsAppIcon, SearchIcon,
 export const metadata = {
   // patch_028: Title rewrite
   title: 'Cab Booking Patiala | Outstation Routes & Fares',
-  description: 'All outstation taxi routes from Patiala — Delhi 240 km, Chandigarh 67 km, Shimla 180 km, Manali 301 km. Book on WhatsApp or call +91-62849-92669.',
+  description: 'All outstation taxi routes from Patiala — Delhi 250 km, Chandigarh 68 km, Shimla 170 km, Manali 357 km. Book on WhatsApp or call +91-62849-92669.',
   keywords: ['book taxi online', 'taxi booking', 'cab booking patiala', 'all routes', 'outstation taxi patiala'],
   alternates: {
     canonical: 'https://www.modgilltravels.in/booking',
@@ -59,7 +59,7 @@ export default function BookingPage() {
           </p>
           {/* patch_029: keyword-rich intro paragraph */}
           <p className="text-ink-muted text-sm sm:text-base max-w-2xl mx-auto mb-8">
-            ModgillTravels covers every major outstation route from Patiala — Delhi (240 km), Chandigarh (67 km), Shimla (180 km), Manali (301 km), Amritsar (230 km) and Ludhiana (110 km). One-way or round trip, booked on WhatsApp or by phone, with verified drivers available 24/7.
+            ModgillTravels covers every major outstation route from Patiala — Delhi (250 km), Chandigarh (68 km), Shimla (170 km), Manali (357 km), Amritsar (233 km) and Ludhiana (93 km). One-way or round trip, booked on WhatsApp or by phone, with verified drivers available 24/7.
           </p>
 
           {/* Quick Contact Buttons */}

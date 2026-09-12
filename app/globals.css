@@ -193,3 +193,79 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Blog and long-form content injected as HTML. These elements never pass
+   through a component, so their mobile behaviour has to be set here.
+   `prose-invert` was a dark-theme holdover and is removed at the call site. */
+.rich-text {
+  color: var(--ink-muted);
+  overflow-wrap: break-word;
+}
+
+.rich-text h2 {
+  font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+  color: var(--ink);
+  margin: 2rem 0 0.75rem;
+}
+
+.rich-text h3 {
+  font-size: 1.125rem;
+  color: var(--ink);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.rich-text p,
+.rich-text ul,
+.rich-text ol {
+  margin: 0 0 1rem;
+  max-width: 70ch;
+}
+
+.rich-text ul,
+.rich-text ol {
+  padding-left: 1.25rem;
+}
+
+.rich-text li {
+  margin-bottom: 0.35rem;
+}
+
+.rich-text a {
+  color: var(--brand);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.rich-text strong {
+  color: var(--ink);
+}
+
+/* A table wider than a phone must scroll inside its own box rather than
+   forcing the whole page sideways. */
+.rich-text table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 0 0 1.25rem;
+  font-size: 0.9375rem;
+  white-space: nowrap;
+}
+
+.rich-text th,
+.rich-text td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+}
+
+.rich-text th {
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.rich-text img {
+  border-radius: var(--radius);
+}

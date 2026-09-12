@@ -369,7 +369,7 @@ export default async function CityPage({ params }) {
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white border border-line rounded-xl p-5">
               <h3 itemProp="name" className="text-ink font-semibold mb-3">How far is {city.name} from Delhi by road?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-ink-muted text-sm leading-relaxed">Patiala to Delhi is 240 km via NH44 and takes 4.5 to 5 hours in normal traffic. Sedan, Ertiga and Innova Crysta are all available, one-way or round trip. Send your pickup point on WhatsApp at +91-62849-92669 and we confirm the vehicle and a fixed quote before you travel.</p>
+                <p itemProp="text" className="text-ink-muted text-sm leading-relaxed">Patiala to Delhi is about 250 km via NH44 and takes 4.5 to 5 hours in normal traffic. Sedan, Ertiga and Innova Crysta are all available, one-way or round trip. Send your pickup point on WhatsApp at +91-62849-92669 and we confirm the vehicle and a fixed quote before you travel.</p>
               </div>
             </div>
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white border border-line rounded-xl p-5">
@@ -393,7 +393,7 @@ export default async function CityPage({ params }) {
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white border border-line rounded-xl p-5">
               <h3 itemProp="name" className="text-ink font-semibold mb-3">How long does the taxi from {city.name} to Manali take?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-ink-muted text-sm leading-relaxed">The Patiala to Manali distance is approximately 301 km by road via Chandigarh and Kullu. The taxi journey takes 7–8 hours. ModgillTravels recommends an Innova Crysta for this hill route due to mountain terrain and luggage capacity. Book at least 24 hours in advance for Manali trips.</p>
+                <p itemProp="text" className="text-ink-muted text-sm leading-relaxed">The Patiala to Manali distance is about 357 km by road via Chandigarh, Bilaspur, Mandi and Kullu. The drive takes 8 to 9 hours. ModgillTravels recommends an Innova Crysta for this hill route due to mountain terrain and luggage capacity. Book at least 24 hours in advance for Manali trips.</p>
               </div>
             </div>
 
