@@ -138,8 +138,8 @@ const businessStructuredData = {
   "email": "modgilltravels@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Urban Estate, Phase 2 Near Police Station",
-    "addressLocality": "Patiala",
+    "streetAddress": site.address.street,
+    "addressLocality": site.address.locality,
     "addressRegion": "Punjab",
     "addressCountry": "IN",
     "postalCode": "147001",
@@ -301,8 +301,8 @@ const organizationStructuredData = {
   "email": "modgilltravels@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Urban Estate, Phase 2 Near Police Station",
-    "addressLocality": "Patiala",
+    "streetAddress": site.address.street,
+    "addressLocality": site.address.locality,
     "addressRegion": "Punjab",
     "postalCode": "147001",
     "addressCountry": "IN"
@@ -329,8 +329,8 @@ const localBusinessStructuredData = {
   "telephone": "+91-62849-92669",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Urban Estate, Phase 2 Near Police Station",
-    "addressLocality": "Patiala",
+    "streetAddress": site.address.street,
+    "addressLocality": site.address.locality,
     "addressRegion": "Punjab",
     "postalCode": "147001",
     "addressCountry": "IN"

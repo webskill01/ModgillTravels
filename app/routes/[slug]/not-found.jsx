@@ -1,7 +1,7 @@
 // app/not-found.jsx - MINIMAL DARK VERSION
 import Link from 'next/link';
 import BookCta from "@/components/ui/BookCta";
-import { DirectionsCarIcon, PhoneIcon, WhatsAppIcon, SearchOffIcon } from '@/components/Icons';
+import { DirectionsCarIcon, SearchOffIcon } from '@/components/Icons';
 
 export default function NotFound() {
   return (

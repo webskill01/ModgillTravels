@@ -7,9 +7,10 @@ import { getOrganizationSchema, getLocalBusinessSchema, getWebsiteSchema } from 
 import FAQAccordion from "@/components/FAQAccordion";
 import RouteFinder from "@/components/RouteFinder";
 import BookCta from "@/components/ui/BookCta";
-import { Section, Container, Badge } from "@/components/ui";
+import { Section, GoogleRating } from "@/components/ui";
+import Button from "@/components/ui/Button";
 import site from "@/data/site";
-import { VerifiedIcon, AccessTimeIcon, WhatsAppIcon, StarIcon } from "@/components/Icons";
+import { VerifiedIcon, AccessTimeIcon, WhatsAppIcon, LocationOnIcon } from "@/components/Icons";
 
 export const metadata = {
   title: "Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels",
@@ -92,7 +93,7 @@ const faqPageSchema = {
       "name": "Which is the best taxi service in Patiala?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ModgillTravels is the best taxi service in Patiala with a 5.0/5 rating from 31 Google reviews. We offer professional drivers, well-maintained AC vehicles, 24/7 availability, and transparent pricing. Our services include one-way taxis, round trips, airport transfers, and corporate cab services across Punjab and neighboring states."
+        "text": "ModgillTravels is the best taxi service in Patiala with a 5.0/5 rating on Google. We offer professional drivers, well-maintained AC vehicles, 24/7 availability, and transparent pricing. Our services include one-way taxis, round trips, airport transfers, and corporate cab services across Punjab and neighboring states."
       }
     },
     {
@@ -381,10 +382,7 @@ export default function HomePage() {
         <Section tight>
           <div className="grid items-center gap-8 lg:grid-cols-2">
             <div>
-              <Badge tone="soft" className="mb-4">
-                <StarIcon className="h-3.5 w-3.5" />
-                {site.rating.value} from {site.rating.count} Google reviews
-              </Badge>
+              <GoogleRating className="mb-4" />
               <h1>Taxi service in Patiala, available 24/7</h1>
               <p className="mt-4 text-lg text-ink-muted">
                 ModgillTravels runs outstation cabs, airport transfers and local
@@ -393,6 +391,12 @@ export default function HomePage() {
                 driver, the vehicle and a quote fixed before you travel.
               </p>
               <BookCta size="lg" className="mt-6" />
+              <div className="mt-3">
+                <Button variant="secondary" size="lg" external href={site.gbp}>
+                  <LocationOnIcon className="w-5 h-5 text-brand" />
+                  View us on Google
+                </Button>
+              </div>
             </div>
 
             {/* LCP element, so it carries `priority` and explicit dimensions —
@@ -427,7 +431,7 @@ export default function HomePage() {
         <Section tight>
           <dl className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[
-              [`${site.rating.value} ★`, `${site.rating.count} Google reviews`],
+              [`${site.rating.value} ★`, "Google rating"],
               ["24/7", "Every day of the year"],
               [site.tripsCompleted, "Trips completed"],
               ["10", "Cities served"],

@@ -6,14 +6,19 @@ import Link from "next/link";
 // Colour rules this encodes:
 //   - `whatsapp` and `call` are the booking actions. Green appears nowhere
 //     else, so a green control always means "book".
-//   - Green carries --ink, not white. White on #25d366 is 2.2:1 and fails
-//     WCAG; #0f172a on it is 8:1.
+//   - Every dark fill carries white text. --cta is #0b7a33, not WhatsApp's
+//     #25d366, precisely so white passes on it (5.46:1); ink on it would be
+//     3.27:1, and check:contrast fails the build if that flips back.
 //   - Amber is never a button. It is a fill or a marker, handled in Badge.
+const PRIMARY = "bg-brand text-white hover:bg-brand-hover shadow-sm";
+
 const VARIANTS = {
   whatsapp:
-    "bg-cta text-ink hover:bg-cta-hover shadow-sm",
-  call:
-    "bg-brand text-white hover:bg-brand-hover shadow-sm",
+    "bg-cta text-white hover:bg-cta-hover shadow-sm",
+  // Same navy fill, two names: `call` says "this dials", `primary` says "this
+  // is the main action on the page". Six pages had hand-rolled this stack.
+  call: PRIMARY,
+  primary: PRIMARY,
   secondary:
     "bg-white text-ink border border-line-strong hover:bg-surface",
   ghost:

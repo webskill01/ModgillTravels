@@ -21,13 +21,27 @@ const site = {
   phoneSecondary: "+91-89763-76926",
   phoneDigits: "916284992669",
   whatsapp: "https://wa.me/916284992669",
+  // Prefilled booking link. Every CTA uses this rather than a hand-written
+  // wa.me URL — one of those was shipped missing the 91 country code and the
+  // button was dead. waLink() is for the few CTAs that want their own message.
+  whatsappBook:
+    "https://wa.me/916284992669?text=Hi%2C%20I%20want%20to%20book%20a%20taxi",
   email: "modgilltravels@gmail.com",
 
+  // Google Business Profile. ponytail: this is the Maps *search* URL, which
+  // always resolves to the listing without needing the CID. Swap it for the
+  // profile's own short link (g.page/... or maps.app.goo.gl/...) from the GBP
+  // dashboard — "Share profile" — when that is to hand; it is one hop shorter.
+  gbp: "https://www.google.com/maps/search/?api=1&query=ModgillTravels%20Patiala",
+
   // Service-area business: the GBP reads "No location; deliveries and home
-  // services only", so there is no public street address and the site must
-  // not invent one. It previously claimed "Main Market, Near Bus Stand",
-  // which matched neither the GBP nor the Urban Estate Phase 2 locality.
+  // services only". The street line is the real operating base in Urban
+  // Estate Phase 2, confirmed by the owner — it is not an invented address
+  // (the site once claimed "Main Market, Near Bus Stand", which matched
+  // neither the GBP nor the actual locality). The schema files each used to
+  // hardcode their own copy of this; they now all read it from here.
   address: {
+    street: "Urban Estate, Phase 2",
     locality: "Patiala",
     region: "Punjab",
     postalCode: "147001",
@@ -81,5 +95,9 @@ const site = {
     whatsapp: "https://wa.me/916284992669",
   },
 };
+
+// For CTAs that want a context-specific opening message.
+export const waLink = (text) =>
+  `${site.whatsapp}?text=${encodeURIComponent(text)}`;
 
 export default site;

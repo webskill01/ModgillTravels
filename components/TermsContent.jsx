@@ -2,6 +2,7 @@
 "use client";
 
 import Link from 'next/link';
+import Button from '@/components/ui/Button';
 import { GavelIcon, BookOnlineIcon, PaymentIcon, CancelIcon, SecurityIcon, SupportAgentIcon, ContactMailIcon, WarningIcon, UpdateIcon, VerifiedIcon } from '@/components/Icons';
 
 const sections = [
@@ -122,7 +123,7 @@ export default function TermsContent() {
           <p className="text-ink-muted text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             Your agreement for using ModgillTravels taxi booking services
           </p>
-          <div className="flex items-center justify-center gap-2 mt-4 text-xs sm:text-sm text-ink-muted">
+          <div className="flex items-center justify-center gap-2 mt-4 text-sm text-ink-muted">
             <UpdateIcon className="w-4 h-4" />
             <span>Last updated: October 7, 2025</span>
           </div>
@@ -158,7 +159,7 @@ export default function TermsContent() {
               <h3 className="text-brand font-semibold text-sm sm:text-base mb-2">
                 Legal Agreement Notice
               </h3>
-              <p className="text-brand text-xs sm:text-sm leading-relaxed">
+              <p className="text-brand text-sm leading-relaxed">
                 These terms constitute a legally binding agreement between you and ModgillTravels. 
                 Please read carefully before booking any service. Completing a booking indicates 
                 your full acceptance of all terms and conditions stated below.
@@ -195,19 +196,13 @@ export default function TermsContent() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-ink font-bold text-base sm:text-lg mb-2">{section.title}</h3>
-                  <p className="text-ink-muted text-xs sm:text-sm leading-relaxed">{section.summary}</p>
+                  <p className="text-ink-muted text-sm leading-relaxed">{section.summary}</p>
                 </div>
               </div>
               <ul className="space-y-2 sm:space-y-2.5 pl-1 sm:pl-2">
                 {section.details.map((detail, idx) => (
-                  <li key={idx} className="flex items-start gap-2 sm:gap-3 text-ink-muted text-xs sm:text-sm leading-relaxed">
-                    <span className={`mt-1.5 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 ${
-                      section.color === 'cyan' ? 'bg-accent' :
-                      section.color === 'blue' ? 'bg-blue-400' :
-                      section.color === 'green' ? 'bg-green-400' :
-                      section.color === 'yellow' ? 'bg-yellow-400' :
-                      section.color === 'purple' ? 'bg-purple-400' : 'bg-red-400'
-                    }`}></span>
+                  <li key={idx} className="flex items-start gap-2 sm:gap-3 text-ink-muted text-sm leading-relaxed">
+                    <span className="mt-1.5 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full shrink-0 bg-accent"></span>
                     <span>{detail}</span>
                   </li>
                 ))}
@@ -225,8 +220,8 @@ export default function TermsContent() {
                 <CancelIcon className="w-6 h-6 text-brand" />
               </div>
               <h4 className="text-ink font-semibold mb-1 text-sm sm:text-base">Cancellation</h4>
-              <p className="text-brand text-xs sm:text-sm">₹200 advance non-refundable</p>
-              <p className="text-ink-muted text-xs mt-1">Customer cancellations</p>
+              <p className="text-brand text-sm">₹200 advance non-refundable</p>
+              <p className="text-ink-muted text-sm mt-1">Customer cancellations</p>
             </div>
             
             <div className="bg-white border border-line rounded-xl p-4 sm:p-5 text-center transition-transform">
@@ -234,8 +229,8 @@ export default function TermsContent() {
                 <SupportAgentIcon className="w-6 h-6 text-brand" />
               </div>
               <h4 className="text-ink font-semibold mb-1 text-sm sm:text-base">Support</h4>
-              <p className="text-brand text-xs sm:text-sm">24/7 assistance</p>
-              <p className="text-ink-muted text-xs mt-1">Response within 2 hrs</p>
+              <p className="text-brand text-sm">24/7 assistance</p>
+              <p className="text-ink-muted text-sm mt-1">Response within 2 hrs</p>
             </div>
           </div>
         </section>
@@ -254,7 +249,7 @@ export default function TermsContent() {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
                 <div className="p-3 bg-surface rounded-lg">
-                  <span className="text-ink-muted text-xs sm:text-sm block mb-1">Support Email:</span>
+                  <span className="text-ink-muted text-sm block mb-1">Support Email:</span>
                   <Link 
                     href="mailto:modgilltravels@gmail.com" 
                     className="text-brand hover:text-brand font-medium text-sm sm:text-base break-all transition"
@@ -263,18 +258,18 @@ export default function TermsContent() {
                   </Link>
                 </div>
                 <div className="p-3 bg-surface rounded-lg">
-                  <span className="text-ink-muted text-xs sm:text-sm block mb-1">Support Phone:</span>
+                  <span className="text-ink-muted text-sm block mb-1">Support Phone:</span>
                   <Link 
                     href="tel:+916284992669" 
-                    className="text-brand hover:text-brand font-medium text-sm sm:text-base transition"
+                    className="text-brand hover:text-brand-hover font-medium text-sm sm:text-base transition"
                   >
-                    +91-62849-92669
+                    Call Now
                   </Link>
                 </div>
               </div>
 
               <div className="bg-surface border border-line rounded-lg p-3 sm:p-4">
-                <p className="text-brand text-xs sm:text-sm leading-relaxed">
+                <p className="text-brand text-sm leading-relaxed">
                   <strong>Response Time:</strong> Initial reply within 2 hours • Full resolution within 7 days • 
                   Escalation to management within 48 hours if needed
                 </p>
@@ -286,7 +281,7 @@ export default function TermsContent() {
         {/* Legal Information */}
         <section className="mt-8 bg-white border border-line rounded-xl p-5 sm:p-6">
           <h3 className="text-ink font-semibold text-base sm:text-lg mb-4">Legal Information</h3>
-          <div className="space-y-3 text-xs sm:text-sm">
+          <div className="space-y-3 text-sm">
             <div className="flex items-start gap-2 text-ink-muted">
               <span className="text-brand mt-0.5">•</span>
               <span><strong>Governing Law:</strong> These terms are governed by Indian law and subject to exclusive jurisdiction of Patiala, Punjab courts</span>
@@ -308,24 +303,20 @@ export default function TermsContent() {
 
         {/* Bottom Actions - Enhanced */}
         <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <Link
-            href="/"
-            className="flex-1 bg-brand hover:bg-brand-hover text-white py-3 px-4 sm:px-6 rounded-lg font-semibold transition-all text-center text-sm sm:text-base shadow-lg shadow-md"
+          <Button variant="primary" href="/" className="flex-1"
           >
             Back to Home
-          </Link>
-          <Link
-            href="/privacy"
-            className="flex-1 bg-white hover:bg-surface border border-line hover:border-brand text-ink py-3 px-4 sm:px-6 rounded-lg font-semibold transition-all text-center text-sm sm:text-base"
+          </Button>
+          <Button variant="secondary" href="/privacy" className="flex-1"
           >
             Privacy Policy →
-          </Link>
+          </Button>
         </div>
 
         {/* Quick Navigation */}
         <div className="mt-8 p-4 sm:p-5 bg-surface border border-line rounded-xl">
           <h4 className="text-ink font-semibold text-sm sm:text-base mb-3">Quick Navigation:</h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs sm:text-sm">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm">
             {sections.map((section) => (
               <Link
                 key={section.id}

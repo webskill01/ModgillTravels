@@ -105,7 +105,7 @@ export default function PrivacyContent() {
           <p className="text-ink-muted text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             How ModgillTravels collects, uses, and protects your personal information
           </p>
-          <div className="flex items-center justify-center gap-2 mt-4 text-xs sm:text-sm text-ink-muted">
+          <div className="flex items-center justify-center gap-2 mt-4 text-sm text-ink-muted">
             <UpdateIcon className="w-4 h-4" />
             <span>Last updated: October 7, 2025</span>
           </div>
@@ -119,22 +119,22 @@ export default function PrivacyContent() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-2">
               <LockIcon className="w-4 h-4 sm:w-5 sm:h-5 text-brand" />
             </div>
-            <p className="text-ink font-semibold text-xs sm:text-sm">SSL Encrypted</p>
-            <p className="text-ink-muted text-xs mt-1 hidden sm:block">Secure Data</p>
+            <p className="text-ink font-semibold text-sm">SSL Encrypted</p>
+            <p className="text-ink-muted text-sm mt-1 hidden sm:block">Secure Data</p>
           </div>
           <div className="bg-white border border-line rounded-lg p-3 sm:p-4 text-center">
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-2">
               <VerifiedUserIcon className="w-4 h-4 sm:w-5 sm:h-5 text-brand" />
             </div>
-            <p className="text-ink font-semibold text-xs sm:text-sm">No Data Selling</p>
-            <p className="text-ink-muted text-xs mt-1 hidden sm:block">Privacy First</p>
+            <p className="text-ink font-semibold text-sm">No Data Selling</p>
+            <p className="text-ink-muted text-sm mt-1 hidden sm:block">Privacy First</p>
           </div>
           <div className="bg-white border border-line rounded-lg p-3 sm:p-4 text-center">
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-accent-soft rounded-full flex items-center justify-center mx-auto mb-2">
               <SecurityIcon className="w-4 h-4 sm:w-5 sm:h-5 text-brand" />
             </div>
-            <p className="text-ink font-semibold text-xs sm:text-sm">Your Control</p>
-            <p className="text-ink-muted text-xs mt-1 hidden sm:block">Full Rights</p>
+            <p className="text-ink font-semibold text-sm">Your Control</p>
+            <p className="text-ink-muted text-sm mt-1 hidden sm:block">Full Rights</p>
           </div>
         </div>
 
@@ -183,18 +183,13 @@ export default function PrivacyContent() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-ink font-bold text-base sm:text-lg mb-2">{section.title}</h3>
-                  <p className="text-ink-muted text-xs sm:text-sm leading-relaxed">{section.summary}</p>
+                  <p className="text-ink-muted text-sm leading-relaxed">{section.summary}</p>
                 </div>
               </div>
               <ul className="space-y-2 sm:space-y-2.5 pl-1 sm:pl-2">
                 {section.details.map((detail, idx) => (
-                  <li key={idx} className="flex items-start gap-2 sm:gap-3 text-ink-muted text-xs sm:text-sm leading-relaxed">
-                    <span className={`mt-1.5 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 ${
-                      section.color === 'cyan' ? 'bg-accent' :
-                      section.color === 'blue' ? 'bg-blue-400' :
-                      section.color === 'purple' ? 'bg-purple-400' :
-                      section.color === 'green' ? 'bg-green-400' : 'bg-yellow-400'
-                    }`}></span>
+                  <li key={idx} className="flex items-start gap-2 sm:gap-3 text-ink-muted text-sm leading-relaxed">
+                    <span className="mt-1.5 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full shrink-0 bg-accent"></span>
                     <span>{detail}</span>
                   </li>
                 ))}
@@ -217,7 +212,7 @@ export default function PrivacyContent() {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
                 <div className="p-3 bg-surface rounded-lg">
-                  <span className="text-ink-muted text-xs sm:text-sm block mb-1">Email Us:</span>
+                  <span className="text-ink-muted text-sm block mb-1">Email Us:</span>
                   <Link 
                     href="mailto:modgilltravels@gmail.com" 
                     className="text-brand hover:text-brand font-medium text-sm sm:text-base break-all transition"
@@ -226,12 +221,12 @@ export default function PrivacyContent() {
                   </Link>
                 </div>
                 <div className="p-3 bg-surface rounded-lg">
-                  <span className="text-ink-muted text-xs sm:text-sm block mb-1">Call Us:</span>
+                  <span className="text-ink-muted text-sm block mb-1">Call Us:</span>
                   <Link 
                     href="tel:+916284992669" 
-                    className="text-brand hover:text-brand font-medium text-sm sm:text-base transition"
+                    className="text-brand hover:text-brand-hover font-medium text-sm sm:text-base transition"
                   >
-                    +91-62849-92669
+                    Call Now
                   </Link>
                 </div>
               </div>
@@ -239,7 +234,7 @@ export default function PrivacyContent() {
               <div className="bg-surface border border-line rounded-lg p-3 sm:p-4">
                 <div className="flex items-start gap-2">
                   <UpdateIcon className="w-4 h-4 text-brand flex-shrink-0 mt-0.5" />
-                  <p className="text-brand text-xs sm:text-sm leading-relaxed">
+                  <p className="text-brand text-sm leading-relaxed">
                     <strong>Policy Updates:</strong> We may update this privacy policy occasionally. 
                     Material changes will be communicated via email to registered users.
                   </p>
@@ -268,7 +263,7 @@ export default function PrivacyContent() {
         {/* Quick Navigation - Mobile Friendly */}
         <div className="mt-8 p-4 sm:p-5 bg-surface border border-line rounded-xl">
           <h4 className="text-ink font-semibold text-sm sm:text-base mb-3">Quick Links:</h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs sm:text-sm">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm">
             {sections.map((section) => (
               <Link
                 key={section.id}

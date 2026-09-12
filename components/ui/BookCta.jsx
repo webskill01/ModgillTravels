@@ -36,7 +36,7 @@ export default function BookCta({
       </Button>
       <Button variant="call" size={size} href={`tel:${site.phone}`}>
         <PhoneIcon className="w-5 h-5" />
-        Call {site.phone}
+        Call Now
       </Button>
     </div>
   );

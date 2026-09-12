@@ -2,133 +2,167 @@
 import Link from "next/link";
 import site from "@/data/site";
 import Button from "@/components/ui/Button";
-import { PhoneIcon, EmailIcon, WhatsAppIcon, InstagramIcon, LocationOnIcon, ArticleIcon, LinkedIn } from '@/components/Icons';
+import {
+  PhoneIcon,
+  EmailIcon,
+  WhatsAppIcon,
+  InstagramIcon,
+  LocationOnIcon,
+  ArticleIcon,
+  LinkedIn,
+} from "@/components/Icons";
+
+const popularRoutes = [
+  { name: "Patiala → Delhi", slug: "patiala-to-delhi" },
+  { name: "Delhi → Patiala", slug: "delhi-to-patiala" },
+  { name: "Patiala → Chandigarh", slug: "patiala-to-chandigarh" },
+  { name: "Patiala → Shimla", slug: "patiala-to-shimla" },
+];
+
+const cities = [
+  { name: "Patiala", slug: "patiala" },
+  { name: "Chandigarh", slug: "chandigarh" },
+  { name: "Ludhiana", slug: "ludhiana" },
+  { name: "Delhi", slug: "delhi" },
+  { name: "Shimla", slug: "shimla" },
+];
+
+const blogLinks = [
+  { name: "Patiala to Chandigarh Taxi", slug: "patiala-to-chandigarh-taxi" },
+  { name: "Patiala to Manali Guide", slug: "patiala-to-manali-travel-guide" },
+  { name: "Chandigarh to Shimla Cab", slug: "chandigarh-to-shimla-taxi" },
+  {
+    name: "Patiala to Amritsar Taxi",
+    slug: "patiala-to-amritsar-golden-temple-taxi",
+  },
+  { name: "Best Places in Shimla", slug: "best-places-to-visit-in-shimla" },
+];
+
+const colLink =
+  "block text-ink-muted hover:text-brand text-sm transition-colors";
+// Amber is a fill, never a text colour — ink on amber is 9.63:1. The previous
+// hover repeated the resting background, so nothing happened on hover.
+const socialLink =
+  "rounded-full bg-accent-soft text-brand flex items-center justify-center " +
+  "hover:bg-accent transition-colors";
+const heading =
+  "text-ink font-semibold mb-3 text-sm uppercase tracking-wider";
+const bottomLink = "text-ink-muted hover:text-brand transition-colors";
+const moreLink =
+  "block text-brand hover:text-brand-hover text-sm font-medium transition-colors pt-1";
+
+const socials = [
+  { href: site.whatsappBook, label: "WhatsApp", Icon: WhatsAppIcon },
+  {
+    href: "https://www.linkedin.com/in/tanishq-kumar-modgill-09b308265",
+    label: "LinkedIn",
+    Icon: LinkedIn,
+  },
+  {
+    href: "https://www.instagram.com/modgilltravels",
+    label: "Instagram",
+    Icon: InstagramIcon,
+  },
+];
+
+function Socials() {
+  return (
+    <div className="flex items-center gap-3">
+      {socials.map(({ href, label, Icon }) => (
+        <a
+          key={label}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`w-9 h-9 ${socialLink}`}
+          aria-label={label}
+        >
+          <Icon className="w-4 h-4" />
+        </a>
+      ))}
+    </div>
+  );
+}
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-
-const popularRoutes = [
-  { name: 'Patiala → Delhi', slug: 'patiala-to-delhi' },
-  { name: 'Delhi → Patiala', slug: 'delhi-to-patiala' },
-  { name: 'Patiala → Chandigarh', slug: 'patiala-to-chandigarh' },
-  { name: 'Patiala → Shimla', slug: 'patiala-to-shimla' },
-];
-
-
-  const cities = [
-    { name: 'Patiala', slug: 'patiala' },
-    { name: 'Chandigarh', slug: 'chandigarh' },
-    { name: 'Ludhiana', slug: 'ludhiana' },
-    { name: 'Delhi', slug: 'delhi' },
-  ];
-
-  const blogLinks = [
-    { name: 'Patiala to Chandigarh Taxi', slug: 'patiala-to-chandigarh-taxi' },
-    { name: 'Patiala to Manali Guide', slug: 'patiala-to-manali-travel-guide' },
-    { name: 'Chandigarh to Shimla Cab', slug: 'chandigarh-to-shimla-taxi' },
-    { name: 'Patiala to Amritsar Taxi', slug: 'patiala-to-amritsar-golden-temple-taxi' },
-    { name: 'Best Places in Shimla', slug: 'best-places-to-visit-in-shimla' },
-  ];
-
   return (
     <footer className="bg-white border-t border-line">
-      {/* Main Footer Content */}
       <div className="mx-auto max-w-7xl px-4 py-8 sm:py-10">
-        
-        {/* Grid Layout: 2 cols mobile, 5 cols desktop */}
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
-          
-          {/* Company Info - Takes 2 cols on mobile, 1 on desktop */}
+          {/* Company */}
           <div className="col-span-2 lg:col-span-1">
             <h4 className="text-ink font-bold text-base mb-3">
-              ModgillTravels
+              {site.businessName}
             </h4>
-            <p className="text-ink-muted text-xs sm:text-sm leading-relaxed mb-4">
-              Your trusted taxi service in Patiala. Professional cab booking for local & outstation 
-              travel. Available 24/7 with transparent pricing.
+            <p className="text-ink-muted text-sm leading-relaxed mb-4">
+              Your trusted taxi service in Patiala. Professional cab booking for
+              local and outstation travel. Available 24/7.
             </p>
-            
-            {/* Quick Links */}
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               <Link
                 href="/about"
-                className="text-ink-muted hover:text-brand text-xs sm:text-sm transition-colors"
+                className="text-ink-muted hover:text-brand text-sm transition-colors"
               >
                 About
               </Link>
               <Link
                 href="/contact"
-                className="text-ink-muted hover:text-brand text-xs sm:text-sm transition-colors"
+                className="text-ink-muted hover:text-brand text-sm transition-colors"
               >
                 Contact
               </Link>
               <Link
                 href="/booking"
-                className="text-ink-muted hover:text-brand text-xs sm:text-sm transition-colors"
+                className="text-ink-muted hover:text-brand text-sm transition-colors"
               >
                 Book Taxi
               </Link>
             </div>
           </div>
 
-          {/* Popular Routes */}
+          {/* Routes */}
           <div>
-            <h4 className="text-ink font-semibold mb-3 text-xs sm:text-sm uppercase tracking-wider">
-              Popular Routes
-            </h4>
+            <h4 className={heading}>Popular Routes</h4>
             <div className="space-y-2">
               {popularRoutes.map((route) => (
                 <Link
                   key={route.slug}
                   href={`/routes/${route.slug}`}
-                  className="block text-ink-muted hover:text-brand text-xs transition-colors"
+                  className={colLink}
                 >
                   {route.name}
                 </Link>
               ))}
-              <Link
-                href="/booking"
-                className="block text-brand hover:text-brand text-xs font-medium transition-colors pt-1"
-              >
+              <Link href="/booking" className={moreLink}>
                 View All Routes →
               </Link>
             </div>
           </div>
 
-          {/* Cities We Serve */}
+          {/* Cities */}
           <div>
-            <h4 className="text-ink font-semibold mb-3 text-xs sm:text-sm uppercase tracking-wider">
-              Cities We Serve
-            </h4>
+            <h4 className={heading}>Cities We Serve</h4>
             <div className="space-y-2">
               {cities.map((city) => (
                 <Link
                   key={city.slug}
                   href={`/city/${city.slug}`}
-                  className="block text-ink-muted hover:text-brand text-xs transition-colors"
+                  className={colLink}
                 >
                   {city.name}
                 </Link>
               ))}
-              <Link
-                href="/city/shimla"
-                className="block text-ink-muted hover:text-brand text-xs transition-colors"
-              >
-                Shimla
-              </Link>
-              <Link
-                href="/booking"
-                className="block text-brand hover:text-brand text-xs font-medium transition-colors pt-1"
-              >
+              <Link href="/booking" className={moreLink}>
                 More Cities →
               </Link>
             </div>
           </div>
 
-          {/* Blog & Resources */}
+          {/* Blog */}
           <div>
-            <h4 className="text-ink font-semibold mb-3 text-xs sm:text-sm uppercase tracking-wider flex items-center gap-1">
+            <h4 className={`${heading} flex items-center gap-1`}>
               <ArticleIcon className="w-4 h-4" />
               Travel Guides
             </h4>
@@ -137,133 +171,103 @@ const popularRoutes = [
                 <Link
                   key={blog.slug}
                   href={`/blog/${blog.slug}`}
-                  className="block text-ink-muted hover:text-brand text-xs transition-colors line-clamp-1"
+                  className={`${colLink} line-clamp-1`}
                 >
                   {blog.name}
                 </Link>
               ))}
-              <Link
-                href="/blog"
-                className="block text-brand hover:text-brand text-xs font-medium transition-colors pt-1"
-              >
+              <Link href="/blog" className={moreLink}>
                 Read More Blogs →
               </Link>
             </div>
           </div>
 
-          {/* Contact Info - Takes 2 cols on mobile, 1 on desktop */}
+          {/* Contact. Every control here is one inline row — icon then label,
+              no stacked caption. The two CTAs are dark fills, so their content
+              is white; they previously carried ink-muted labels on navy and
+              green, which rendered as an all-but-empty button. */}
           <div className="col-span-2 lg:col-span-1">
-            <h4 className="text-ink font-semibold mb-3 text-xs sm:text-sm uppercase tracking-wider">
-              Contact Us
-            </h4>
-            
-            {/* Contact Grid */}
+            <h4 className={heading}>Contact Us</h4>
             <div className="grid grid-cols-2 lg:grid-cols-1 gap-3">
-              
-              {/* Phone */}
-              <Button variant="call" href={`tel:${site.phone}`} className=""><div className="w-8 h-8 rounded-lg bg-surface flex items-center justify-center group-hover:bg-accent-soft transition-colors flex-shrink-0">
-                  <PhoneIcon className="w-4 h-4 text-brand" />
-                </div>
-                <div className="min-w-0">
-                  <p className="text-xs text-ink-muted">Call 24/7</p>
-                  <p className="text-xs font-medium truncate">+91-62849-92669</p>
-                </div></Button>
-              
-              {/* WhatsApp */}
-              <Button variant="whatsapp" external href="https://wa.me/916284992669?text=Hi, I want to book a taxi" className=""><div className="w-8 h-8 rounded-lg bg-surface flex items-center justify-center group-hover:bg-accent-soft transition-colors flex-shrink-0">
-                  <WhatsAppIcon className="w-4 h-4 text-brand" />
-                </div>
-                <div className="min-w-0">
-                  <p className="text-xs text-ink-muted">WhatsApp</p>
-                  <p className="text-xs font-medium">Book Now</p>
-                </div></Button>
-
-              {/* Email */}
-              <a 
-                href="mailto:modgilltravels@gmail.com" 
-                className="flex items-center gap-2 text-ink-muted hover:text-brand transition-colors group col-span-2 lg:col-span-1"
+              <Button
+                variant="call"
+                size="sm"
+                href={`tel:${site.phone}`}
+                className="justify-start"
               >
-                <div className="w-8 h-8 rounded-lg bg-surface flex items-center justify-center group-hover:bg-accent-soft transition-colors flex-shrink-0">
-                  <EmailIcon className="w-4 h-4 text-brand" />
-                </div>
-                <div className="min-w-0 overflow-hidden">
-                  <p className="text-xs text-ink-muted">Contact via Email</p>
-                </div>
+                <PhoneIcon className="w-4 h-4 shrink-0" />
+                <span className="truncate">Call Now</span>
+              </Button>
+
+              <Button
+                variant="whatsapp"
+                size="sm"
+                external
+                href={site.whatsappBook}
+                className="justify-start"
+              >
+                <WhatsAppIcon className="w-4 h-4 shrink-0" />
+                <span className="truncate">Book on WhatsApp</span>
+              </Button>
+
+              <Button
+                variant="secondary"
+                size="sm"
+                external
+                href={site.gbp}
+                className="justify-start col-span-2 lg:col-span-1"
+              >
+                <LocationOnIcon className="w-4 h-4 shrink-0 text-brand" />
+                <span className="truncate">View us on Google</span>
+              </Button>
+
+              <a
+                href={`mailto:${site.email}`}
+                className="col-span-2 lg:col-span-1 flex items-center gap-2 min-h-11 text-ink-muted hover:text-brand transition-colors"
+              >
+                <EmailIcon className="w-4 h-4 shrink-0 text-brand" />
+                <span className="text-sm truncate">{site.email}</span>
               </a>
 
-              {/* Location */}
-              <div className="hidden lg:flex items-center gap-2 text-ink-muted">
-                <div className="w-8 h-8 rounded-lg bg-surface flex items-center justify-center flex-shrink-0">
-                  <LocationOnIcon className="w-4 h-4 text-brand" />
-                </div>
-                <div className="min-w-0">
-                  <p className="text-xs text-ink-muted">Location</p>
-                  <p className="text-xs font-medium">Patiala, Punjab</p>
-                </div>
+              <div className="hidden lg:flex items-center gap-2 min-h-11 text-ink-muted">
+                <LocationOnIcon className="w-4 h-4 shrink-0 text-brand" />
+                <span className="text-sm">Patiala, Punjab</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      {/* Bottom bar */}
       <div className="border-t border-line bg-surface">
         <div className="mx-auto max-w-7xl px-4 py-4">
-          
-          {/* Mobile: Compact Stack */}
+          {/* Mobile */}
           <div className="flex flex-col items-center gap-3 lg:hidden">
-            
-            {/* Social Icons */}
-            <div className="flex items-center gap-3">
-              <a
-                href="https://wa.me/916284992669?text=Hi, I want to book a taxi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-accent-soft flex items-center justify-center text-brand hover:bg-accent-soft transition-all"
-                aria-label="WhatsApp"
-              >
-                <WhatsAppIcon className="w-4 h-4" />
-              </a>
-              
-              <a
-                href="https://www.linkedin.com/in/tanishq-kumar-modgill-09b308265"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-accent-soft flex items-center justify-center text-brand hover:bg-accent-soft transition-all"
-                aria-label="LinkedIn"
-              >
-                <LinkedIn className="w-4 h-4" />
-              </a>
-              
-              <a
-                href="https://www.instagram.com/modgilltravels"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-pink-600/20 flex items-center justify-center text-pink-400 hover:bg-pink-600/30 transition-all"
-                aria-label="Instagram"
-              >
-                <InstagramIcon className="w-4 h-4" />
-              </a>
-            </div>
-
-            {/* Links & Copyright */}
-            <div className="flex flex-wrap items-center justify-center gap-x-2 text-xs text-ink-muted">
-              <Link href="/privacy" className="hover:text-brand transition-colors">Privacy</Link>
+            <Socials />
+            <div className="flex flex-wrap items-center justify-center gap-x-2 text-sm text-ink-muted">
+              <Link href="/privacy" className={bottomLink}>
+                Privacy
+              </Link>
               <span>•</span>
-              <Link href="/terms" className="hover:text-brand transition-colors">Terms</Link>
+              <Link href="/terms" className={bottomLink}>
+                Terms
+              </Link>
               <span>•</span>
-              <Link href="/blog" className="hover:text-brand transition-colors">Blog</Link>
+              <Link href="/blog" className={bottomLink}>
+                Blog
+              </Link>
             </div>
-
-            <div className="text-center text-xs text-ink-muted">
-              <div>&copy; {currentYear} ModgillTravels</div>
+            <div className="text-center text-sm text-ink-muted">
+              <div>
+                &copy; {currentYear} {site.businessName}
+              </div>
               <div className="mt-1">
-                Designed By{' '}
-                <a 
-                  href="https://codenest-service.vercel.app" 
+                Designed By{" "}
+                <a
+                  href="https://codenest-service.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-brand hover:text-brand transition-colors"
+                  className="text-brand hover:text-brand-hover transition-colors"
                 >
                   CodeNest
                 </a>
@@ -271,72 +275,40 @@ const popularRoutes = [
             </div>
           </div>
 
-          {/* Desktop: Horizontal Layout */}
+          {/* Desktop */}
           <div className="hidden lg:flex justify-between items-center">
             <div className="flex items-center gap-6">
               <div className="text-ink-muted text-sm">
-                &copy; {currentYear} ModgillTravels
+                &copy; {currentYear} {site.businessName}
               </div>
-              
-              <div className="flex items-center gap-3 text-xs">
-                <Link href="/privacy" className="text-ink-muted hover:text-brand transition-colors">
+              <div className="flex items-center gap-3 text-sm">
+                <Link href="/privacy" className={bottomLink}>
                   Privacy
                 </Link>
                 <span className="text-ink-muted">•</span>
-                <Link href="/terms" className="text-ink-muted hover:text-brand transition-colors">
+                <Link href="/terms" className={bottomLink}>
                   Terms
                 </Link>
                 <span className="text-ink-muted">•</span>
-                <Link href="/blog" className="text-ink-muted hover:text-brand transition-colors">
+                <Link href="/blog" className={bottomLink}>
                   Blog
                 </Link>
                 <span className="text-ink-muted">•</span>
-                <Link href="/sitemap.xml" className="text-ink-muted hover:text-brand transition-colors">
+                <Link href="/sitemap.xml" className={bottomLink}>
                   Sitemap
                 </Link>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-6">
-              <div className="flex items-center gap-3">
+              <Socials />
+              <div className="text-ink-muted text-sm">
+                Designed By{" "}
                 <a
-                  href="https://wa.me/916284992669?text=Hi, I want to book a taxi"
+                  href="https://codenest-service.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-accent-soft flex items-center justify-center text-brand hover:bg-accent-soft transition-all"
-                  aria-label="WhatsApp"
-                >
-                  <WhatsAppIcon className="w-4 h-4" />
-                </a>
-                
-                <a
-                  href="https://www.linkedin.com/in/tanishq-kumar-modgill-09b308265"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-accent-soft flex items-center justify-center text-brand hover:bg-accent-soft transition-all"
-                  aria-label="LinkedIn"
-                >
-                  <LinkedIn className="w-4 h-4" />
-                </a>
-                
-                <a
-                  href="https://www.instagram.com/modgilltravels"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-pink-600/20 flex items-center justify-center text-pink-400 hover:bg-pink-600/30 transition-all"
-                  aria-label="Instagram"
-                >
-                  <InstagramIcon className="w-4 h-4" />
-                </a>
-              </div>
-              
-              <div className="text-ink-muted text-xs">
-                Designed By{' '}
-                <a 
-                  href="https://codenest-service.vercel.app" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand hover:text-brand transition-colors"
+                  className="text-brand hover:text-brand-hover transition-colors"
                 >
                   CodeNest
                 </a>
@@ -346,15 +318,16 @@ const popularRoutes = [
         </div>
       </div>
 
-      {/* Floating WhatsApp Button - Mobile Only */}
+      {/* Floating WhatsApp — mobile only. This carried no background token at
+          all, so it rendered as a bare icon with a shadow behind it. */}
       <a
-        href="https://wa.me/916284992669?text=Hi, I want to book a taxi"
+        href={site.whatsappBook}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-2xl shadow-md transition-all lg:hidden"
-        aria-label="WhatsApp"
+        className="fixed bottom-5 right-5 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-cta text-white shadow-lg hover:bg-cta-hover transition-colors lg:hidden"
+        aria-label="Book on WhatsApp"
       >
-        <WhatsAppIcon className="w-7 h-7 text-ink" />
+        <WhatsAppIcon className="w-7 h-7" />
       </a>
     </footer>
   );

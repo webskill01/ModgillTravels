@@ -439,6 +439,22 @@ export function FacebookIcon({ className = 'w-5 h-5' }) {
   );
 }
 
+export function MenuIcon({ className = 'w-5 h-5' }) {
+  return (
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+    </svg>
+  );
+}
+
+export function ChevronDownIcon({ className = 'w-5 h-5' }) {
+  return (
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+    </svg>
+  );
+}
+
 // Aliases for alternate icon names used in imports
 export const PhoneOutlined = PhoneIcon;
 export const LocalPhoneOutlined = PhoneIcon;

@@ -26,8 +26,8 @@ export const getOrganizationSchema = () => ({
   "paymentAccepted": ["Cash", "UPI", "Credit Card", "Debit Card"],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Urban Estate, Phase 2 Near Police Station",
-    "addressLocality": "Patiala",
+    "streetAddress": site.address.street,
+    "addressLocality": site.address.locality,
     "addressRegion": "Punjab",
     "postalCode": "147001",
     "addressCountry": "IN"
@@ -89,8 +89,8 @@ export const getLocalBusinessSchema = () => ({
   ],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Urban Estate, Phase 2 Near Police Station",
-    "addressLocality": "Patiala",
+    "streetAddress": site.address.street,
+    "addressLocality": site.address.locality,
     "addressRegion": "Punjab",
     "postalCode": "147001",
     "addressCountry": "IN"
@@ -330,7 +330,7 @@ export const getServiceSchema = (route) => ({
     "url": "https://www.modgilltravels.in",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Patiala",
+      "addressLocality": site.address.locality,
       "addressRegion": "Punjab",
       "addressCountry": "IN"
     }

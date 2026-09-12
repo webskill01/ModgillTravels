@@ -48,7 +48,7 @@ export default function HTMLSitemapPage() {
             <div className="text-ink-muted text-sm">Happy Customers</div>
           </div>
           <div className="bg-surface backdrop-blur-sm border border-line rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-brand mb-1">4.8★</div>
+            <div className="text-3xl font-bold text-brand mb-1">{site.rating.value}★</div>
             <div className="text-ink-muted text-sm">Rating</div>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function HTMLSitemapPage() {
                     <div className="text-ink font-medium text-sm mb-1 group-hover:text-brand transition-colors">
                       {route.from} → {route.to}
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-ink-muted">
+                    <div className="flex items-center gap-2 text-sm text-ink-muted">
                       <span>{route.distanceKm}km</span>
                       <span>•</span>
                       <span>{route.duration}</span>
@@ -200,15 +200,13 @@ export default function HTMLSitemapPage() {
             Choose from {destinations.length} routes or contact us for custom bookings. Professional drivers, transparent pricing, 24/7 availability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/booking"
-              className="inline-flex items-center justify-center gap-2 bg-brand hover:bg-brand-hover text-white font-semibold px-8 py-3 rounded-lg transition-all duration-200"
+            <Button variant="primary" size="lg" href="/booking"
             >
               <BookOnlineIcon />
               Book Now
-            </Link>
+            </Button>
             <Button variant="call" href={`tel:${site.phone}`} className="justify-center"><ContactMailIcon />
-              Call: +91-62849-92669</Button>
+              Call Now</Button>
           </div>
         </section>
       </div>

@@ -24,7 +24,6 @@ export default function BlogSection() {
       category: 'Travel Guide',
       borderColor: 'border-line',
       accentColor: 'text-brand',
-      dotColor: 'bg-purple-400',
       emoji: '⛰️',
       keywords: 'shimla taxi, patiala to shimla, hill station travel'
     },
@@ -36,19 +35,17 @@ export default function BlogSection() {
       category: 'Route Guide',
       borderColor: 'border-line',
       accentColor: 'text-brand',
-      dotColor: 'bg-blue-400',
       emoji: '🚗',
       keywords: 'patiala to delhi, taxi booking, outstation cab'
     },
     {
       title: 'How to Book One Way Taxi',
-      description: 'Save up to 40% with our one-way taxi service in Patiala. No return charges! Book cabs to Delhi, Chandigarh, Shimla, or Ludhiana paying only for your journey. Available 24/7 with instant confirmation. Call +91-62849-92669 for best rates.',
+      description: 'Save up to 40% with our one-way taxi service in Patiala. No return charges! Book cabs to Delhi, Chandigarh, Shimla, or Ludhiana paying only for your journey. Available 24/7 with instant confirmation. Call us for best rates.',
       slug: 'how-to-book-one-way-taxi',
       readTime: '5 min',
       category: 'Booking Tips',
       borderColor: 'border-line',
       accentColor: 'text-brand',
-      dotColor: 'bg-green-400',
       emoji: '💡',
       keywords: 'one way taxi, cab booking patiala, outstation taxi'
     },
@@ -128,12 +125,12 @@ export default function BlogSection() {
             <h2 className="text-base sm:text-lg font-bold text-ink">
               Travel Guides & Booking Tips
             </h2>
-            <p className="text-ink-muted text-xs">Expert advice for your journey</p>
+            <p className="text-ink-muted text-sm">Expert advice for your journey</p>
           </div>
         </div>
         <Link 
           href="/blog" 
-          className="text-brand hover:text-brand text-xs sm:text-sm font-semibold transition flex items-center gap-1 group flex-shrink-0"
+          className="text-brand hover:text-brand text-sm font-semibold transition flex items-center gap-1 group flex-shrink-0"
         >
           <span>All Guides</span>
           <ArrowForwardIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -178,10 +175,10 @@ export default function BlogSection() {
                   
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2 flex-wrap">
-                      <span className={`px-2 py-0.5 ${blog.borderColor} border rounded text-xs font-medium ${blog.accentColor}`}>
+                      <span className={`px-2 py-0.5 ${blog.borderColor} border rounded text-sm font-medium ${blog.accentColor}`}>
                         {blog.category}
                       </span>
-                      <div className="flex items-center gap-1 text-xs text-ink-muted">
+                      <div className="flex items-center gap-1 text-sm text-ink-muted">
                         <AccessTimeIcon className="w-3 h-3" />
                         <span>{blog.readTime}</span>
                       </div>
@@ -204,7 +201,7 @@ export default function BlogSection() {
                     {blog.keywords.split(', ').map((keyword, index) => (
                       <span 
                         key={index}
-                        className="text-xs bg-surface px-2 py-1 rounded text-ink-muted"
+                        className="text-sm bg-surface px-2 py-1 rounded text-ink-muted"
                       >
                         {keyword}
                       </span>
@@ -232,7 +229,7 @@ export default function BlogSection() {
             onClick={() => scrollToCard(index)}
             className={`h-2 rounded-full transition-all ${
               currentCard === index 
-                ? `w-2 ${blog.dotColor}` 
+                ? 'w-2 bg-accent' 
                 : 'w-2 bg-surface hover:bg-surface'
             }`}
             aria-label={`Go to ${blog.title}`}
@@ -241,7 +238,7 @@ export default function BlogSection() {
       </div>
 
       {/* Slide Counter */}
-      <p className="text-center text-ink-muted text-xs mt-2">
+      <p className="text-center text-ink-muted text-sm mt-2">
         Article {currentCard + 1} of {blogs.length}
       </p>
 

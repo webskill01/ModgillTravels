@@ -26,10 +26,12 @@
   --accent: #f5b301;
   --accent-soft: #fff8e5;
 
-  /* WhatsApp green — booking actions only, nothing decorative.
-     White on this is 2.2:1 and fails; --ink on it is 8:1. */
-  --cta: #25d366;
-  --cta-hover: #1fbb5a;
+  /* Booking green — booking actions only, nothing decorative.
+     Deliberately darker than WhatsApp's #25d366: that brand green carries
+     white at only 1.98:1. This one is 5.46:1, so every dark button on the
+     site can take light text. --ink on it is 3.27:1 and is forbidden. */
+  --cta: #0b7a33;
+  --cta-hover: #09632a;
 
   --border: #e2e8f0;
   --border-strong: #cbd5e1;
@@ -81,6 +83,7 @@
     background: var(--bg);
     color: var(--ink);
     font-family: var(--font-source-sans), system-ui, -apple-system, sans-serif;
+    font-size: 1.0625rem;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -143,6 +146,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    font-size: 1.0625rem;
     font-weight: 600;
     color: var(--ink);
     min-height: 44px;
@@ -170,6 +174,8 @@
 
   .faq-content {
     padding-bottom: 1rem;
+    font-size: 1.0625rem;
+    line-height: 1.7;
     color: var(--ink-muted);
     animation: faqFadeIn 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -205,6 +211,8 @@
      through a component, so their mobile behaviour has to be set here.
      `prose-invert` was a dark-theme holdover and is removed at the call site. */
   .rich-text {
+    font-size: 1.0625rem;
+    line-height: 1.75;
     color: var(--ink-muted);
     overflow-wrap: break-word;
   }

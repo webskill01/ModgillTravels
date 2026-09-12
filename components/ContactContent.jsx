@@ -3,16 +3,17 @@
 
 import Link from "next/link";
 import site from "@/data/site";
+import FAQAccordion from "@/components/FAQAccordion";
 import Button from "@/components/ui/Button";
 import BookCta from "@/components/ui/BookCta";
-import { ContactMailIcon, PhoneIcon, WhatsAppIcon, FacebookIcon, InstagramIcon, LocationOnIcon, AccessTimeIcon, EmailIcon, HeadsetMicIcon, LinkedIn } from '@/components/Icons';
+import { PhoneIcon, WhatsAppIcon, LocationOnIcon, AccessTimeIcon, EmailIcon, HeadsetMicIcon } from '@/components/Icons';
 
 const contactMethods = [
   {
     id: "phone",
     title: "Call Us",
     icon: <PhoneIcon className="w-6 h-6" />,
-    value: "+91-62849-92669",
+    value: "Call Now",
     action: "tel:+916284992669",
     description: "Immediate taxi booking assistance",
     availability: "Available 24/7",
@@ -22,8 +23,8 @@ const contactMethods = [
     id: "whatsapp",
     title: "WhatsApp",
     icon: <WhatsAppIcon className="w-6 h-6" />,
-    value: "+91-62849-92669",
-    action: "https://wa.me/916284992669?text=Hi, I want to book a taxi",
+    value: "Message Us",
+    action: site.whatsappBook,
     description: "Quick chat support & instant booking",
     availability: "Response within 2 min",
     color: "green",
@@ -47,6 +48,21 @@ const contactMethods = [
     description: "In-person consultation available",
     availability: "Mon-Sun: 9 AM - 8 PM",
     color: "purple",
+  },
+];
+
+const contactFaqs = [
+  {
+    question: 'How do I book a taxi via WhatsApp?',
+    answer: 'Send a WhatsApp message using the WhatsApp button on this page. Include: your pickup location in Patiala, your destination, travel date and time, and preferred vehicle type. We reply with a confirmed quote and driver details within 15 minutes.',
+  },
+  {
+    question: 'How do I reach ModgillTravels?',
+    answer: 'ModgillTravels uses one number for calls and WhatsApp — tap Call Now or Message Us above. We are available 24 hours a day, 7 days a week for taxi bookings, queries, and emergency cab service in Patiala and outstation routes.',
+  },
+  {
+    question: 'How quickly can I get a cab in Patiala?',
+    answer: 'For immediate bookings in Patiala, we dispatch a cab within 30–45 minutes depending on your pickup location. For outstation trips, advance booking of 2+ hours is recommended. For airport transfers, book at least 3 hours before your flight. WhatsApp us for the fastest response.',
   },
 ];
 
@@ -113,8 +129,8 @@ export default function ContactContent() {
                 <p className="text-brand text-sm sm:text-base font-medium mb-2 break-all">
                   {method.value}
                 </p>
-                <p className="text-ink-muted text-xs sm:text-sm mb-3">{method.description}</p>
-                <div className="flex items-center gap-2 text-xs text-ink-muted">
+                <p className="text-ink-muted text-sm mb-3">{method.description}</p>
+                <div className="flex items-center gap-2 text-sm text-ink-muted">
                   <AccessTimeIcon className="w-4 h-4" />
                   <span>{method.availability}</span>
                 </div>
@@ -162,16 +178,16 @@ export default function ContactContent() {
             </h3>
             <div className="space-y-4 text-sm">
               <div className="p-3 bg-surface rounded-lg">
-                <span className="text-ink-muted text-xs block mb-1">Office Address:</span>
+                <span className="text-ink-muted text-sm block mb-1">Office Address:</span>
                 <p className="text-ink font-medium leading-relaxed">
-                  Urban Estate, Phase 2<br />
-                  Near Police Station<br />
-                  Patiala, Punjab 147001<br />
-                  India
+                  {site.address.street}
+                  <br />
+                  {site.address.locality}, {site.address.region}{" "}
+                  {site.address.postalCode}
                 </p>
               </div>
               <div className="p-3 bg-surface rounded-lg">
-                <span className="text-ink-muted text-xs block mb-1">Service Coverage:</span>
+                <span className="text-ink-muted text-sm block mb-1">Service Coverage:</span>
                 <p className="text-ink font-medium">
                   Punjab • Haryana • Himachal Pradesh • Delhi NCR
                 </p>
@@ -210,38 +226,9 @@ export default function ContactContent() {
           </div>
         </section>
 
-        {/* patch_041: FAQ section for contact page */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-ink mb-4">Quick Answers</h2>
-          <div className="space-y-3">
-            <details className="group">
-              <summary className="flex items-center justify-between cursor-pointer text-ink font-semibold p-4 bg-surface border border-line rounded-lg text-sm list-none">
-                <span>How do I book a taxi via WhatsApp?</span>
-                <span className="text-brand">▼</span>
-              </summary>
-              <div className="mt-1 p-4 text-ink-muted text-sm bg-surface border border-line rounded-lg">
-                Send a WhatsApp message to +91-62849-92669 (tap the WhatsApp button on this page). Include: your pickup location in Patiala, your destination, travel date and time, and preferred vehicle type. We reply with a confirmed quote and driver details within 15 minutes.
-              </div>
-            </details>
-            <details className="group">
-              <summary className="flex items-center justify-between cursor-pointer text-ink font-semibold p-4 bg-surface border border-line rounded-lg text-sm list-none">
-                <span>What is Modgill Travels&apos; phone number?</span>
-                <span className="text-brand">▼</span>
-              </summary>
-              <div className="mt-1 p-4 text-ink-muted text-sm bg-surface border border-line rounded-lg">
-                ModgillTravels&apos; phone number is +91-62849-92669. This is also our WhatsApp number. We are available 24 hours a day, 7 days a week for taxi bookings, queries, and emergency cab service in Patiala and outstation routes.
-              </div>
-            </details>
-            <details className="group">
-              <summary className="flex items-center justify-between cursor-pointer text-ink font-semibold p-4 bg-surface border border-line rounded-lg text-sm list-none">
-                <span>How quickly can I get a cab in Patiala?</span>
-                <span className="text-brand">▼</span>
-              </summary>
-              <div className="mt-1 p-4 text-ink-muted text-sm bg-surface border border-line rounded-lg">
-                For immediate bookings in Patiala, we dispatch a cab within 30–45 minutes depending on your pickup location. For outstation trips, advance booking of 2+ hours is recommended. For airport transfers, book at least 3 hours before your flight. WhatsApp +91-62849-92669 for fastest response.
-              </div>
-            </details>
-          </div>
+          <FAQAccordion faqs={contactFaqs} />
         </section>
 
         {/* Social Media - Enhanced */}

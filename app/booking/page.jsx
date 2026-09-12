@@ -3,7 +3,7 @@ import Link from 'next/link';
 import BookCta from "@/components/ui/BookCta";
 import destinations from '@/data/destinations';
 import cities from '@/data/cities';
-import { DirectionsCarIcon, LocationOnIcon, PhoneIcon, WhatsAppIcon, SearchIcon, TrendingUpIcon, ExploreIcon, LocalOfferIcon } from '@/components/Icons';
+import { DirectionsCarIcon, LocationOnIcon, SearchIcon, TrendingUpIcon, ExploreIcon, LocalOfferIcon } from '@/components/Icons';
 
 export const metadata = {
   // patch_028: Title rewrite
@@ -70,7 +70,7 @@ export default function BookingPage() {
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-accent-soft rounded-full flex items-center justify-center">
-              <TrendingUpIcon className="w-6 h-6 text-orange-400" />
+              <TrendingUpIcon className="w-6 h-6 text-brand" />
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-ink">
               Popular Routes
@@ -110,7 +110,7 @@ export default function BookingPage() {
                 {/* Fare */}
                 <div className="pt-4 border-t border-line flex items-center justify-between">
                   <div>
-                    <span className="text-ink-muted text-xs block mb-1">Starting from</span>
+                    <span className="text-ink-muted text-sm block mb-1">Starting from</span>
                     <span className="text-brand font-bold text-xl">{route.distanceKm} km</span>
                   </div>
                   <span className="text-brand text-sm font-semibold group-hover:text-brand transition">
@@ -142,7 +142,7 @@ export default function BookingPage() {
               >
                 <LocationOnIcon className="w-10 h-10 text-brand mx-auto mb-3 group- transition" />
                 <h3 className="text-ink font-bold mb-1">{city.name}</h3>
-                <p className="text-ink-muted text-xs mb-3">{city.state}</p>
+                <p className="text-ink-muted text-sm mb-3">{city.state}</p>
                 <span className="text-brand text-sm group-hover:text-brand transition">
                   Explore Routes →
                 </span>
@@ -187,7 +187,7 @@ export default function BookingPage() {
                         <span className="text-brand font-bold">{route.distanceKm} km</span>
                       </div>
 
-                      <div className="flex items-center justify-between text-xs text-ink-muted">
+                      <div className="flex items-center justify-between text-sm text-ink-muted">
                         <span>{route.distanceKm} km</span>
                         <span>•</span>
                         <span>{route.duration}</span>
@@ -216,7 +216,7 @@ export default function BookingPage() {
               <p className="text-ink-muted text-sm mb-3">
                 A ₹200 advance confirms the booking. The balance is settled after the trip.
               </p>
-              <span className="text-brand text-xs font-semibold">✓ Easy Confirmation</span>
+              <span className="text-brand text-sm font-semibold">✓ Easy Confirmation</span>
             </div>
 
             <div className="bg-surface rounded-xl p-5">
@@ -224,7 +224,7 @@ export default function BookingPage() {
               <p className="text-ink-muted text-sm mb-3">
                 Pay only for the journey you take. One-way trips are not charged for the return leg.
               </p>
-              <span className="text-brand text-xs font-semibold">✓ Save Money</span>
+              <span className="text-brand text-sm font-semibold">✓ Save Money</span>
             </div>
 
             <div className="bg-surface rounded-xl p-5">
@@ -232,7 +232,7 @@ export default function BookingPage() {
               <p className="text-ink-muted text-sm mb-3">
                 Book anytime, day or night. Professional drivers available round the clock.
               </p>
-              <span className="text-brand text-xs font-semibold">✓ Always Ready</span>
+              <span className="text-brand text-sm font-semibold">✓ Always Ready</span>
             </div>
           </div>
         </section>
@@ -261,7 +261,7 @@ export default function BookingPage() {
               <h3 className="text-ink font-bold mb-2">Call or WhatsApp</h3>
               {/* patch_030: step-2 text rewrite */}
               <p className="text-ink-muted text-sm">
-                WhatsApp us at +91-62849-92669 with your pickup location, travel date, and destination — we confirm your cab within 15 minutes
+                WhatsApp us with your pickup location, travel date, and destination — we confirm your cab within 15 minutes
               </p>
             </div>
 

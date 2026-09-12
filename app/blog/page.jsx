@@ -105,7 +105,7 @@ export default function BlogPage() {
 
               {/* Content */}
               <div className="p-5">
-                <div className="flex items-center gap-3 mb-3 text-xs text-ink-muted">
+                <div className="flex items-center gap-3 mb-3 text-sm text-ink-muted">
                   <span className="flex items-center gap-1">
                     <CalendarMonthIcon className="w-4 h-4" />
                     {new Date(blog.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
@@ -116,7 +116,7 @@ export default function BlogPage() {
                   </span>
                 </div>
 
-                <span className="inline-block px-2 py-1 bg-surface text-brand text-xs rounded mb-3">
+                <span className="inline-block px-2 py-1 bg-surface text-brand text-sm rounded mb-3">
                   {blog.category}
                 </span>
 

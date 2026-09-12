@@ -8,7 +8,6 @@ export default function robots() {
         disallow: [
           '/api/',
           '/admin/',
-          '/_next/static/',
           '/private/',
         ],
       },

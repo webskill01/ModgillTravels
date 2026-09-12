@@ -9,7 +9,7 @@ import { readFileSync } from "node:fs";
 
 const T = {
   bg: "#ffffff", surface: "#f8fafc", ink: "#0f172a", inkMuted: "#475569",
-  brand: "#10294a", accent: "#f5b301", cta: "#25d366", white: "#ffffff",
+  brand: "#10294a", accent: "#f5b301", cta: "#0b7a33", white: "#ffffff",
 };
 
 const lum = (h) => {
@@ -28,13 +28,13 @@ const used = [
   ["muted text", T.inkMuted, T.bg],
   ["muted on surface", T.inkMuted, T.surface],
   ["call button", T.white, T.brand],
-  ["whatsapp CTA", T.ink, T.cta],   // ink, not white — white is 1.98:1
+  ["whatsapp CTA", T.white, T.cta], // white, not ink — ink on it is 3.27:1
   ["badge", T.ink, T.accent],
 ];
 // Combinations the tokens forbid. If either starts passing, the palette moved
 // and Button/Badge need revisiting.
 const forbidden = [
-  ["white on CTA green", T.white, T.cta],
+  ["ink on CTA green", T.ink, T.cta],
   ["amber as text on white", T.accent, T.bg],
 ];
 

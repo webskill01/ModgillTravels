@@ -11,7 +11,7 @@ export default function Badge({ tone = "soft", className = "", children, ...prop
     <span
       className={[
         "inline-flex items-center gap-1.5 rounded-full",
-        "px-2.5 py-1 text-xs font-semibold leading-none",
+        "px-2.5 py-1 text-sm font-semibold leading-none",
         TONES[tone] ?? TONES.soft,
         className,
       ].join(" ")}

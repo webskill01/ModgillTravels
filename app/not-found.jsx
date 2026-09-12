@@ -48,13 +48,11 @@ export default function NotFound() {
 
           {/* Primary CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-              href="/"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-brand hover:bg-brand-hover text-white rounded-lg font-semibold transition-all shadow-lg shadow-md"
+            <Button variant="primary" size="lg" href="/"
             >
               <HomeIcon className="w-5 h-5" />
               Go to Homepage
-            </Link>
+            </Button>
             <Button variant="call" href={`tel:${site.phone}`} className="justify-center"><PhoneIcon className="w-5 h-5" />
               Call Us Now</Button>
           </div>
@@ -126,13 +124,13 @@ export default function NotFound() {
             Need help finding something?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-            <Button variant="call" href={`tel:${site.phone}`} className="">Call: +91-62849-92669</Button>
+            <Button variant="call" href={`tel:${site.phone}`}>Call Now</Button>
             <span className="hidden sm:inline text-ink-muted">•</span>
-            <Button variant="whatsapp" external href="https://wa.me/916284992669" className="">WhatsApp Us</Button>
+            <Button variant="whatsapp" external href={site.whatsappBook} className="">WhatsApp Us</Button>
             <span className="hidden sm:inline text-ink-muted">•</span>
             <a
-              href="mailto:modgilltravels@gmail.com"
-              className="text-brand hover:text-brand transition"
+              href={`mailto:${site.email}`}
+              className="text-brand hover:text-brand-hover transition"
             >
               Email Support
             </a>

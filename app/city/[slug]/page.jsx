@@ -1,6 +1,7 @@
 // app/city/[slug]/page.jsx
 import { notFound } from 'next/navigation';
-import site from "@/data/site";
+import site, { waLink } from "@/data/site";
+import FAQAccordion from "@/components/FAQAccordion";
 import Button from "@/components/ui/Button";
 import cities from '@/data/cities';
 import Link from 'next/link';
@@ -71,6 +72,38 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// Rendered by the shared FAQAccordion, which carries the FAQPage microdata.
+function cityFaqs(city) {
+  return [
+    {
+      question: `How far is ${city.name} from Delhi by road?`,
+      answer:
+        "Patiala to Delhi is about 250 km via NH44 and takes 4.5 to 5 hours in normal traffic. Sedan, Ertiga and Innova Crysta are all available, one-way or round trip. Send your pickup point on WhatsApp and we confirm the vehicle and a fixed quote before you travel.",
+    },
+    {
+      question: `How do I book a local taxi in ${city.name}?`,
+      answer: `To book a local taxi in ${city.name}, WhatsApp or call ModgillTravels. Share your pickup location, destination, and time — we confirm your cab within 15 minutes. We cover all major areas of ${city.name} including neighborhoods listed in the service areas section above. Available 24/7.`,
+    },
+    {
+      question: `Does ModgillTravels cover airport transfers from ${city.name}?`,
+      answer: `Yes. We run airport transfers from ${city.name} to Chandigarh Airport (75 km from Patiala), Delhi IGI (260 km) and Amritsar Airport (230 km). Every airport booking includes flight tracking, so the pickup shifts if your flight does. Book at least 2 hours before departure.`,
+    },
+    {
+      question: `Is there a cab service available near me in ${city.name} right now?`,
+      answer: `Yes. ModgillTravels provides 24/7 cab service across all major areas of ${city.name}. Call or WhatsApp us for immediate or advance booking. Drivers are available around the clock including late nights, early mornings, and public holidays.`,
+    },
+    {
+      question: `How long does the taxi from ${city.name} to Manali take?`,
+      answer:
+        "The Patiala to Manali distance is about 357 km by road via Chandigarh, Bilaspur, Mandi and Kullu. The drive takes 8 to 9 hours. ModgillTravels recommends an Innova Crysta for this hill route due to mountain terrain and luggage capacity. Book at least 24 hours in advance for Manali trips.",
+    },
+    {
+      question: `Does ModgillTravels pick up from all neighborhoods in ${city.name}?`,
+      answer: `We cover all ${city.name} neighborhoods for taxi bookings — ${city.serviceAreas.join(", ")}. If you need a cab near Rajindra Hospital, Punjabi University, or Qila Mubarak, we pick up from your exact location within 30 minutes of confirmation.`,
+    },
+  ];
+}
+
 export default async function CityPage({ params }) {
   const { slug } = await params;
   const city = cities.find(c => c.slug === slug);
@@ -114,8 +147,8 @@ export default async function CityPage({ params }) {
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button variant="call" href={`tel:${site.phone}`} className="justify-center"><PhoneIcon className="w-5 h-5" />
-              <span>Call +91-62849-92669</span></Button>
-            <Button variant="whatsapp" external href={`https://wa.me/916284992669?text=Hi, I want to book a taxi in ${city.name}`} className="justify-center"><WhatsAppIcon className="w-5 h-5" />
+              <span>Call Now</span></Button>
+            <Button variant="whatsapp" external href={waLink(`Hi, I want to book a taxi in ${city.name}`)} className="justify-center"><WhatsAppIcon className="w-5 h-5" />
               <span>WhatsApp Booking</span></Button>
           </div>
         </section>
@@ -152,7 +185,7 @@ export default async function CityPage({ params }) {
               <Straighten className="w-4 h-4 text-brand" />
             </div>
             <div>
-              <span className="text-ink-muted text-xs block mb-0.5">Distance</span>
+              <span className="text-ink-muted text-sm block mb-0.5">Distance</span>
               <span className="text-ink font-semibold text-sm">{route.distance}</span>
             </div>
           </div>
@@ -163,7 +196,7 @@ export default async function CityPage({ params }) {
               <AccessTime className="w-4 h-4 text-brand" />
             </div>
             <div>
-              <span className="text-ink-muted text-xs block mb-0.5">Duration</span>
+              <span className="text-ink-muted text-sm block mb-0.5">Duration</span>
               <span className="text-ink font-semibold text-sm">{route.duration}</span>
             </div>
           </div>
@@ -174,7 +207,7 @@ export default async function CityPage({ params }) {
               <CurrencyRupee className="w-4 h-4 text-brand" />
             </div>
             <div>
-              <span className="text-ink-muted text-xs block mb-0.5">Starting Fare</span>
+              <span className="text-ink-muted text-sm block mb-0.5">Starting Fare</span>
               <span className="text-brand font-bold text-lg">{route.distance}</span>
             </div>
           </div>
@@ -185,23 +218,24 @@ export default async function CityPage({ params }) {
               <DirectionsCar className="w-4 h-4 text-brand" />
             </div>
             <div>
-              <span className="text-ink-muted text-xs block mb-0.5">Vehicle</span>
+              <span className="text-ink-muted text-sm block mb-0.5">Vehicle</span>
               <span className="text-ink font-semibold text-sm">AC Sedan</span>
             </div>
           </div>
         </div>
 
         {/* Book Now Button */}
-        <Link
+        <Button
+          variant="primary"
           href={routeHref(route.from, route.to)}
-          className="w-full bg-brand hover:bg-brand-hover text-white px-4 py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-md"
+          className="w-full"
         >
           <span>Book This Route</span>
-          <ArrowForward className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-        </Link>
+          <ArrowForward className="w-5 h-5" />
+        </Button>
 
         {/* Additional Info Badge */}
-        <div className="flex items-center justify-center gap-2 mt-3 text-xs text-ink-muted">
+        <div className="flex items-center justify-center gap-2 mt-3 text-sm text-ink-muted">
           <CheckCircle className="w-4 h-4 text-brand" />
           <span>Professional drivers • Clean AC cars</span>
         </div>
@@ -316,7 +350,7 @@ export default async function CityPage({ params }) {
                 <p className="text-ink-muted text-sm mb-4">Distance: {airport.distance}</p>
                 {/* geo_006 + patch_019: Airport transfer paragraph rewrite */}
                 <p className="text-ink-muted text-sm leading-relaxed">
-                  Airport taxi from {city.name} to {airport.name} — {airport.distance} away. Pre-booked pickup with flight tracking, meet &amp; greet at the terminal, and guaranteed on-time arrival. Book at least 2 hours before departure — call or WhatsApp +91-62849-92669.
+                  Airport taxi from {city.name} to {airport.name} — {airport.distance} away. Pre-booked pickup with flight tracking, meet &amp; greet at the terminal, and guaranteed on-time arrival. Book at least 2 hours before departure — call or WhatsApp us.
                 </p>
               </div>
             ))}
@@ -362,49 +396,13 @@ export default async function CityPage({ params }) {
           </div>
         </section>
 
-        {/* geo_005 + patch_020: FAQ section with FAQPage microdata */}
+        {/* Same accordion as every other FAQ on the site. These were six
+            always-open cards, which is a third FAQ treatment. */}
         <section className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-ink mb-6">Frequently Asked Questions — Taxi Service in {city.name}</h2>
-          <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white border border-line rounded-xl p-5">
-              <h3 itemProp="name" className="text-ink font-semibold mb-3">How far is {city.name} from Delhi by road?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-ink-muted text-sm leading-relaxed">Patiala to Delhi is about 250 km via NH44 and takes 4.5 to 5 hours in normal traffic. Sedan, Ertiga and Innova Crysta are all available, one-way or round trip. Send your pickup point on WhatsApp at +91-62849-92669 and we confirm the vehicle and a fixed quote before you travel.</p>
-              </div>
-            </div>
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white border border-line rounded-xl p-5">
-              <h3 itemProp="name" className="text-ink font-semibold mb-3">How do I book a local taxi in {city.name}?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-ink-muted text-sm leading-relaxed">To book a local taxi in {city.name}, WhatsApp or call ModgillTravels at +91-62849-92669. Share your pickup location, destination, and time — we confirm your cab within 15 minutes. We cover all major areas of {city.name} including neighborhoods listed in the service areas section above. Available 24/7.</p>
-              </div>
-            </div>
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white border border-line rounded-xl p-5">
-              <h3 itemProp="name" className="text-ink font-semibold mb-3">Does ModgillTravels cover airport transfers from {city.name}?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-ink-muted text-sm leading-relaxed">Yes. We run airport transfers from {city.name} to Chandigarh Airport (75 km from Patiala), Delhi IGI (260 km) and Amritsar Airport (230 km). Every airport booking includes flight tracking, so the pickup shifts if your flight does. Book at least 2 hours before departure.</p>
-              </div>
-            </div>
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white border border-line rounded-xl p-5">
-              <h3 itemProp="name" className="text-ink font-semibold mb-3">Is there a cab service available near me in {city.name} right now?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-ink-muted text-sm leading-relaxed">Yes. ModgillTravels provides 24/7 cab service across all major areas of {city.name}. Call or WhatsApp +91-62849-92669 for immediate or advance booking. Drivers are available around the clock including late nights, early mornings, and public holidays.</p>
-              </div>
-            </div>
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white border border-line rounded-xl p-5">
-              <h3 itemProp="name" className="text-ink font-semibold mb-3">How long does the taxi from {city.name} to Manali take?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-ink-muted text-sm leading-relaxed">The Patiala to Manali distance is about 357 km by road via Chandigarh, Bilaspur, Mandi and Kullu. The drive takes 8 to 9 hours. ModgillTravels recommends an Innova Crysta for this hill route due to mountain terrain and luggage capacity. Book at least 24 hours in advance for Manali trips.</p>
-              </div>
-            </div>
-
-            {/* patch_018: neighborhood-level service areas paragraph */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white border border-line rounded-xl p-5">
-              <h3 itemProp="name" className="text-ink font-semibold mb-3">Does ModgillTravels pick up from all neighborhoods in {city.name}?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <p itemProp="text" className="text-ink-muted text-sm leading-relaxed">We cover all {city.name} neighborhoods for taxi bookings — {city.serviceAreas.join(', ')}. If you need a cab near Rajindra Hospital, Punjabi University, or Qila Mubarak, we pick up from your exact location within 30 minutes of confirmation.</p>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink mb-6">
+            Frequently Asked Questions — Taxi Service in {city.name}
+          </h2>
+          <FAQAccordion faqs={cityFaqs(city)} />
         </section>
 
         {/* CTA */}

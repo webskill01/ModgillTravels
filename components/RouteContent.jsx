@@ -52,7 +52,7 @@ export default function RouteContent({ route }) {
             ["Availability", "24/7"],
           ].map(([label, value]) => (
             <div key={label} className="rounded-xl bg-surface p-3">
-              <dt className="text-xs text-ink-muted">{label}</dt>
+              <dt className="text-sm text-ink-muted">{label}</dt>
               <dd className="mt-0.5 font-semibold text-ink">{value}</dd>
             </div>
           ))}
@@ -105,7 +105,7 @@ export default function RouteContent({ route }) {
           Send a WhatsApp message with your pickup point in {from}, the drop
           address in {to}, and when you want to leave. We reply within about 15
           minutes with the driver, the vehicle and a quote fixed before you
-          travel. You can also call {site.phone}. There is no form and no
+          travel. You can also call us. There is no form and no
           account.
         </p>
         <BookCta route={route} className="mt-5" />
