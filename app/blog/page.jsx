@@ -69,16 +69,16 @@ export default function BlogPage() {
         <section className="mt-12 mb-6 bg-white border border-line rounded-xl p-6">
           <h2 className="text-xl font-bold text-ink mb-4">Popular Categories</h2>
           <div className="flex flex-wrap gap-3">
-            <span className="px-4 py-2 bg-accent-soft text-brand rounded-lg text-sm cursor-pointer hover:bg-accent-soft transition">
+            <span className="px-4 py-2 bg-surface text-brand rounded-lg text-sm cursor-pointer hover:bg-surface transition">
               Travel Guides
             </span>
-            <span className="px-4 py-2 bg-accent-soft text-brand rounded-lg text-sm cursor-pointer hover:bg-accent-soft transition">
+            <span className="px-4 py-2 bg-surface text-brand rounded-lg text-sm cursor-pointer hover:bg-surface transition">
               Booking Tips
             </span>
-            <span className="px-4 py-2 bg-accent-soft text-brand rounded-lg text-sm cursor-pointer hover:bg-accent-soft transition">
+            <span className="px-4 py-2 bg-surface text-brand rounded-lg text-sm cursor-pointer hover:bg-surface transition">
               Destination Info
             </span>
-            <span className="px-4 py-2 bg-accent-soft text-brand rounded-lg text-sm cursor-pointer hover:bg-accent-soft transition">
+            <span className="px-4 py-2 bg-surface text-brand rounded-lg text-sm cursor-pointer hover:bg-surface transition">
               Travel Stories
             </span>
           </div>
@@ -116,7 +116,7 @@ export default function BlogPage() {
                   </span>
                 </div>
 
-                <span className="inline-block px-2 py-1 bg-accent-soft text-brand text-xs rounded mb-3">
+                <span className="inline-block px-2 py-1 bg-surface text-brand text-xs rounded mb-3">
                   {blog.category}
                 </span>
 

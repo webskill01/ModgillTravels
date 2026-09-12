@@ -34,7 +34,7 @@ export default function NotFound() {
             <SearchIcon className="w-12 h-12 text-brand" />
           </div>
           
-          <h1 className="text-6xl sm:text-8xl font-bold text-transparent bg-clip-text bg-brand mb-4">
+          <h1 className="text-6xl sm:text-8xl font-bold text-brand mb-4">
             404
           </h1>
           

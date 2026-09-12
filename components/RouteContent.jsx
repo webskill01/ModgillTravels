@@ -87,7 +87,7 @@ export default function RouteContent({ route }) {
               {[from, ...via, to].map((place, i) => (
                 <li
                   key={`${place}-${i}`}
-                  className="rounded-full bg-accent-soft px-3 py-1 text-ink"
+                  className="rounded-full bg-surface px-3 py-1 text-ink"
                 >
                   {place}
                 </li>

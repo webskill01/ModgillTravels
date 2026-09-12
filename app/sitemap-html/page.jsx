@@ -56,7 +56,7 @@ export default function HTMLSitemapPage() {
         {/* Main Pages Section */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-accent-soft flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-surface flex items-center justify-center">
               <HomeIcon className="text-brand" />
             </div>
             <h2 className="text-2xl font-bold text-ink">Main Pages</h2>
@@ -116,7 +116,7 @@ export default function HTMLSitemapPage() {
         {/* All Taxi Routes Section - CRITICAL FOR SEO */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-accent-soft flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-surface flex items-center justify-center">
               <DirectionsCarIcon className="text-brand" />
             </div>
             <div>
@@ -160,7 +160,7 @@ export default function HTMLSitemapPage() {
         {/* Legal & Policies Section */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-accent-soft flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-surface flex items-center justify-center">
               <GavelIcon className="text-brand" />
             </div>
             <h2 className="text-2xl font-bold text-ink">Legal & Policies</h2>
@@ -192,7 +192,7 @@ export default function HTMLSitemapPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-accent-soft border border-brand rounded-2xl p-8 text-center">
+        <section className="bg-surface border border-brand rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-ink mb-3">
             Ready to Book Your Taxi?
           </h3>

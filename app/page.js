@@ -1,5 +1,6 @@
 // app/page.js - UPDATED WITH NEW COMPONENTS
 import Link from "next/link";
+import Image from "next/image";
 import BlogSection from "../components/BlogSection";
 import SEO from '@/components/SEO';
 import { getOrganizationSchema, getLocalBusinessSchema, getWebsiteSchema } from '@/utils/structuredData';
@@ -378,19 +379,36 @@ export default function HomePage() {
       <main>
         {/* 1 — Hero. One headline, one paragraph, the two booking actions. */}
         <Section tight>
-          <div className="max-w-3xl">
-            <Badge tone="soft" className="mb-4">
-              <StarIcon className="h-3.5 w-3.5" />
-              {site.rating.value} from {site.rating.count} Google reviews
-            </Badge>
-            <h1>Taxi service in Patiala, available 24/7</h1>
-            <p className="mt-4 text-lg text-ink-muted">
-              ModgillTravels runs outstation cabs, airport transfers and local
-              rides across Punjab, Haryana, Delhi and Himachal Pradesh. Send a
-              WhatsApp message and we reply within about 15 minutes with the
-              driver, the vehicle and a quote fixed before you travel.
-            </p>
-            <BookCta size="lg" className="mt-6" />
+          <div className="grid items-center gap-8 lg:grid-cols-2">
+            <div>
+              <Badge tone="soft" className="mb-4">
+                <StarIcon className="h-3.5 w-3.5" />
+                {site.rating.value} from {site.rating.count} Google reviews
+              </Badge>
+              <h1>Taxi service in Patiala, available 24/7</h1>
+              <p className="mt-4 text-lg text-ink-muted">
+                ModgillTravels runs outstation cabs, airport transfers and local
+                rides across Punjab, Haryana, Delhi and Himachal Pradesh. Send a
+                WhatsApp message and we reply within about 15 minutes with the
+                driver, the vehicle and a quote fixed before you travel.
+              </p>
+              <BookCta size="lg" className="mt-6" />
+            </div>
+
+            {/* LCP element, so it carries `priority` and explicit dimensions —
+                no layout shift while it loads. Order is set so it sits under
+                the copy on phones and beside it from lg up. */}
+            <div className="order-first lg:order-last">
+              <Image
+                src="/car-caption.png"
+                alt="ModgillTravels outstation taxi — Patiala to Delhi, Shimla, Manali and Chandigarh, with professional drivers and AC vehicles."
+                width={640}
+                height={420}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="h-auto w-full max-w-lg mx-auto lg:ml-auto lg:mr-0"
+                priority
+              />
+            </div>
           </div>
         </Section>
 

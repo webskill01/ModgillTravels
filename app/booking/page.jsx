@@ -202,7 +202,7 @@ export default function BookingPage() {
         </section>
 
         {/* Special Offers Section */}
-        <section className="mb-12 bg-accent-soft border border-line rounded-2xl p-6 sm:p-8">
+        <section className="mb-12 bg-surface border border-line rounded-2xl p-6 sm:p-8">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-accent-soft rounded-full flex items-center justify-center">
               <LocalOfferIcon className="w-6 h-6 text-brand" />
@@ -278,7 +278,7 @@ export default function BookingPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="bg-accent-soft border border-brand rounded-2xl p-8 text-center">
+        <section className="bg-surface border border-brand rounded-2xl p-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-ink mb-4">
             Ready to Book Your Ride?
           </h2>

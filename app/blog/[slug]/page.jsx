@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }) {
         <article className="bg-white border border-line rounded-2xl p-6 sm:p-8 mb-8">
 
           {/* Category Badge */}
-          <span className="inline-block px-3 py-1 bg-accent-soft text-brand text-sm rounded-lg mb-4">
+          <span className="inline-block px-3 py-1 bg-surface text-brand text-sm rounded-lg mb-4">
             {blog.category}
           </span>
 
@@ -144,7 +144,7 @@ export default async function BlogPostPage({ params }) {
         </article>
 
         {/* CTA Section */}
-        <section className="bg-accent-soft border border-brand rounded-2xl p-6 sm:p-8 mb-8">
+        <section className="bg-surface border border-brand rounded-2xl p-6 sm:p-8 mb-8">
           {/* patch_038: CTA H2 rewrite */}
           <h2 className="text-2xl sm:text-3xl font-bold text-ink mb-4 text-center">
             Book Your Taxi from Patiala — Call or WhatsApp +91-62849-92669
@@ -191,7 +191,7 @@ export default async function BlogPostPage({ params }) {
                   href={`/blog/${relatedBlog.slug}`}
                   className="bg-white border border-line rounded-xl p-5 hover:border-brand transition-all"
                 >
-                  <span className="inline-block px-2 py-1 bg-accent-soft text-brand text-xs rounded mb-3">
+                  <span className="inline-block px-2 py-1 bg-surface text-brand text-xs rounded mb-3">
                     {relatedBlog.category}
                   </span>
                   <h3 className="text-ink font-bold text-lg mb-2 line-clamp-2">

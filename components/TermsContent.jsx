@@ -132,7 +132,7 @@ export default function TermsContent() {
       <main className="max-w-4xl mx-auto px-4 py-6 sm:py-8">
         
         {/* Quick Summary - Enhanced */}
-        <section className="bg-accent-soft border border-brand rounded-xl p-5 sm:p-6 mb-8">
+        <section className="bg-surface border border-brand rounded-xl p-5 sm:p-6 mb-8">
           <div className="flex items-start gap-3 mb-3">
             <div className="w-10 h-10 bg-accent-soft rounded-full flex items-center justify-center flex-shrink-0">
               <VerifiedIcon className="w-5 h-5 text-brand" />
@@ -151,7 +151,7 @@ export default function TermsContent() {
         </section>
 
         {/* Important Notice */}
-        <section className="bg-accent-soft border border-line rounded-xl p-4 sm:p-5 mb-8">
+        <section className="bg-surface border border-line rounded-xl p-4 sm:p-5 mb-8">
           <div className="flex items-start gap-3">
             <WarningIcon className="w-6 h-6 sm:w-7 sm:h-7 text-brand flex-shrink-0 mt-0.5" />
             <div>
@@ -273,7 +273,7 @@ export default function TermsContent() {
                 </div>
               </div>
 
-              <div className="bg-accent-soft border border-line rounded-lg p-3 sm:p-4">
+              <div className="bg-surface border border-line rounded-lg p-3 sm:p-4">
                 <p className="text-brand text-xs sm:text-sm leading-relaxed">
                   <strong>Response Time:</strong> Initial reply within 2 hours • Full resolution within 7 days • 
                   Escalation to management within 48 hours if needed

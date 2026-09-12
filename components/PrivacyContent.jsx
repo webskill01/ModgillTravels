@@ -139,7 +139,7 @@ export default function PrivacyContent() {
         </div>
 
         {/* Quick Summary - Enhanced */}
-        <section className="bg-accent-soft border border-brand rounded-xl p-5 sm:p-6 mb-8">
+        <section className="bg-surface border border-brand rounded-xl p-5 sm:p-6 mb-8">
           <div className="flex items-start gap-3 mb-3">
             <div className="w-10 h-10 bg-accent-soft rounded-full flex items-center justify-center flex-shrink-0">
               <SecurityIcon className="w-5 h-5 text-brand" />
@@ -236,7 +236,7 @@ export default function PrivacyContent() {
                 </div>
               </div>
 
-              <div className="bg-accent-soft border border-line rounded-lg p-3 sm:p-4">
+              <div className="bg-surface border border-line rounded-lg p-3 sm:p-4">
                 <div className="flex items-start gap-2">
                   <UpdateIcon className="w-4 h-4 text-brand flex-shrink-0 mt-0.5" />
                   <p className="text-brand text-xs sm:text-sm leading-relaxed">

@@ -14,7 +14,7 @@ export default function NotFound() {
         </div>
 
         {/* 404 */}
-        <h2 className="text-6xl sm:text-8xl font-bold text-transparent bg-clip-text bg-brand mb-4">
+        <h2 className="text-6xl sm:text-8xl font-bold text-brand mb-4">
           Route Not Available
         </h2>
         

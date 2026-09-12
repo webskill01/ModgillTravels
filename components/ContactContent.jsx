@@ -251,7 +251,7 @@ export default function ContactContent() {
         </section>
 
         {/* Bottom CTA - Enhanced */}
-        <section className="bg-accent-soft border border-brand rounded-2xl p-6 sm:p-8 text-center">
+        <section className="bg-surface border border-brand rounded-2xl p-6 sm:p-8 text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-ink mb-3 sm:mb-4">
             Need Immediate Taxi Booking?
           </h2>

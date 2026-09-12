@@ -133,7 +133,7 @@ export default function AboutContent() {
             </div>
 
             {/* patch_024: Replace false 2015 claim */}
-            <div className="bg-accent-soft border border-brand rounded-xl p-4 sm:p-5">
+            <div className="bg-surface border border-brand rounded-xl p-4 sm:p-5">
               <p className="text-brand text-sm sm:text-base leading-relaxed">
                 <strong className="text-brand">Serving since 2025:</strong> ModgillTravels is Patiala&apos;s dedicated taxi service for outstation cab booking, airport transfers, and corporate travel. Over 5,000 satisfied customers across Punjab, Haryana, Delhi, and Himachal Pradesh in our first year.
               </p>
@@ -293,7 +293,7 @@ export default function AboutContent() {
         </section>
 
         {/* Core Values - Enhanced */}
-        <section className="bg-accent-soft border border-brand rounded-2xl p-6 sm:p-8 mb-12">
+        <section className="bg-surface border border-brand rounded-2xl p-6 sm:p-8 mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold text-ink text-center mb-6 sm:mb-8">Our Core Values</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">

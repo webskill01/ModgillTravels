@@ -148,7 +148,7 @@ export default async function CityPage({ params }) {
         <div className="grid grid-cols-2 gap-4 mb-5">
           {/* Distance */}
           <div className="flex items-start gap-2">
-            <div className="w-8 h-8 bg-accent-soft rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="w-8 h-8 bg-surface rounded-lg flex items-center justify-center flex-shrink-0">
               <Straighten className="w-4 h-4 text-brand" />
             </div>
             <div>
@@ -159,7 +159,7 @@ export default async function CityPage({ params }) {
 
           {/* Duration */}
           <div className="flex items-start gap-2">
-            <div className="w-8 h-8 bg-accent-soft rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="w-8 h-8 bg-surface rounded-lg flex items-center justify-center flex-shrink-0">
               <AccessTime className="w-4 h-4 text-brand" />
             </div>
             <div>
@@ -170,7 +170,7 @@ export default async function CityPage({ params }) {
 
           {/* Fare */}
           <div className="flex items-start gap-2">
-            <div className="w-8 h-8 bg-accent-soft rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="w-8 h-8 bg-surface rounded-lg flex items-center justify-center flex-shrink-0">
               <CurrencyRupee className="w-4 h-4 text-brand" />
             </div>
             <div>
@@ -181,7 +181,7 @@ export default async function CityPage({ params }) {
 
           {/* Vehicle Type (Optional) */}
           <div className="flex items-start gap-2">
-            <div className="w-8 h-8 bg-accent-soft rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="w-8 h-8 bg-surface rounded-lg flex items-center justify-center flex-shrink-0">
               <DirectionsCar className="w-4 h-4 text-brand" />
             </div>
             <div>
@@ -324,7 +324,7 @@ export default async function CityPage({ params }) {
         </section>
 
         {/* Why Choose Us */}
-        <section className="mb-12 bg-accent-soft border border-brand rounded-2xl p-6 sm:p-8">
+        <section className="mb-12 bg-surface border border-brand rounded-2xl p-6 sm:p-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-ink mb-6 text-center">
             Why Choose ModgillTravels in {city.name}?
           </h2>
