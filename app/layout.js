@@ -361,15 +361,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${lexend.variable} ${sourceSans.variable}`}>
       <head>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0a0b0f" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        {/* No favicon <link> here: app/favicon.ico is the App Router
+            convention and Next emits the tag itself. These three were
+            hand-written duplicates of it. */}
+
+        {/* No manifest and no install prompt: this is a marketing site whose
+            only actions are call and WhatsApp, both of which hand off to a
+            native app. The apple-touch-icon here pointed at a file that never
+            existed and had been 404ing.
+
+            theme-color stays — it is not PWA, it tints the mobile browser
+            chrome on any site. The value was #0a0b0f, left over from the
+            dark theme the redesign replaced. */}
+        <meta name="theme-color" content="#10294a" />
 
         {/* Geo-targeting for local SEO */}
         <meta name="geo.region" content="IN-PB" />
