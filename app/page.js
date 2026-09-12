@@ -1,12 +1,14 @@
 // app/page.js - UPDATED WITH NEW COMPONENTS
-import HeroSection from "../components/HeroSection";
-import RouteCarousel from "../components/RouteCarousel";
-import WhyChooseUs from "../components/WhyChooseUs";
+import Link from "next/link";
 import BlogSection from "../components/BlogSection";
 import SEO from '@/components/SEO';
 import { getOrganizationSchema, getLocalBusinessSchema, getWebsiteSchema } from '@/utils/structuredData';
-import ServiceInfo from "@/components/ServiceInfo";
 import FAQAccordion from "@/components/FAQAccordion";
+import RouteFinder from "@/components/RouteFinder";
+import BookCta from "@/components/ui/BookCta";
+import { Section, Container, Badge } from "@/components/ui";
+import site from "@/data/site";
+import { VerifiedIcon, AccessTimeIcon, WhatsAppIcon, StarIcon } from "@/components/Icons";
 
 export const metadata = {
   title: "Taxi Service in Patiala | 24/7 Cab Booking — ModgillTravels",
@@ -373,36 +375,117 @@ export default function HomePage() {
         jsonLd={[organizationSchema, localBusinessSchema, websiteSchema]}
       />
 
-      <main className="min-h-screen">
-        {/* Booking Bar */}
+      <main>
+        {/* 1 — Hero. One headline, one paragraph, the two booking actions. */}
+        <Section tight>
+          <div className="max-w-3xl">
+            <Badge tone="soft" className="mb-4">
+              <StarIcon className="h-3.5 w-3.5" />
+              {site.rating.value} from {site.rating.count} Google reviews
+            </Badge>
+            <h1>Taxi service in Patiala, available 24/7</h1>
+            <p className="mt-4 text-lg text-[--color-ink-muted]">
+              ModgillTravels runs outstation cabs, airport transfers and local
+              rides across Punjab, Haryana, Delhi and Himachal Pradesh. Send a
+              WhatsApp message and we reply within about 15 minutes with the
+              driver, the vehicle and a quote fixed before you travel.
+            </p>
+            <BookCta size="lg" className="mt-6" />
+          </div>
+        </Section>
 
-        {/* Hero Section */}
-        <HeroSection />
+        {/* 2 — Route finder. The interactive block; replaces the hero form
+            and the carousel, and links straight to the pages that rank. */}
+        <Section
+          tight
+          surface
+          title="Find your route"
+          lead="Distances and travel times for every route we run from Patiala."
+        >
+          <RouteFinder />
+        </Section>
 
+        {/* 3 — Trust row. One row, not a section. */}
+        <Section tight>
+          <dl className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {[
+              [`${site.rating.value} ★`, `${site.rating.count} Google reviews`],
+              ["24/7", "Every day of the year"],
+              [site.tripsCompleted, "Trips completed"],
+              ["10", "Cities served"],
+            ].map(([value, label]) => (
+              <div
+                key={label}
+                className="rounded-[--radius-lg] border border-[--color-line] bg-white p-4 text-center"
+              >
+                <dt className="text-2xl font-semibold text-[--color-brand]">
+                  {value}
+                </dt>
+                <dd className="mt-1 text-sm text-[--color-ink-muted]">{label}</dd>
+              </div>
+            ))}
+          </dl>
+        </Section>
 
-        {/* Route Carousel */}
-        <section className="max-w-6xl mx-auto px-4 ">
-          <RouteCarousel />
-        </section>
+        {/* 4 — Three benefits, which is the cap the layout is built around. */}
+        <Section
+          tight
+          surface
+          title="Why book with ModgillTravels"
+          lead="Serving Patiala since 2025, with 5,000+ completed trips across Punjab and NCR."
+        >
+          <ul className="grid gap-4 sm:grid-cols-3">
+            {[
+              [
+                <VerifiedIcon key="i" className="h-6 w-6" />,
+                "Verified drivers",
+                "Background-checked and licensed, and they know these highways. Sedan, Ertiga and Innova Crysta, all air-conditioned with GPS tracking.",
+              ],
+              [
+                <AccessTimeIcon key="i" className="h-6 w-6" />,
+                "Available 24/7",
+                "Outstation runs to Delhi (240 km), Chandigarh (67 km), Shimla (180 km) and Manali (301 km), plus local Patiala trips and airport transfers. Early flights and late arrivals included.",
+              ],
+              [
+                <WhatsAppIcon key="i" className="h-6 w-6" />,
+                "Booked on WhatsApp",
+                "No form and no account. Message your pickup point and time; we confirm the driver and a fixed quote before the trip, with no surge pricing.",
+              ],
+            ].map(([icon, title, text]) => (
+              <li
+                key={title}
+                className="rounded-[--radius-lg] border border-[--color-line] bg-white p-5"
+              >
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[--color-accent-soft] text-[--color-ink]">
+                  {icon}
+                </span>
+                <h3 className="mt-3 text-base font-semibold">{title}</h3>
+                <p className="mt-1.5 text-sm text-[--color-ink-muted]">{text}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 text-sm text-[--color-ink-muted]">
+            Serving all of Patiala — Urban Estate, Rajindra Hospital, Punjabi
+            University, Leela Bhawan and Tripuri — and every major outstation
+            route across Punjab, Haryana and Himachal Pradesh.{" "}
+            <Link
+              href="/about"
+              className="font-semibold text-[--color-brand] underline underline-offset-2"
+            >
+              More about us
+            </Link>
+            .
+          </p>
+        </Section>
 
-        {/* Why Choose Us */}
-        <section className="max-w-6xl mx-auto px-4">
-          <WhyChooseUs />
-        </section>
-        <section className="max-w-6xl mx-auto px-4 space-y-12 py-8">
-          <ServiceInfo />
-        </section>
-
-        {/* Cities & Blog Combined - Desktop 2 Columns, Mobile Stacked */}
-         <section className="max-w-6xl mx-auto px-4 py-6 sm:py-8">
+        {/* 5 — Latest posts, then the FAQ, which carries the FAQPage schema. */}
+        <Section tight>
           <BlogSection />
-        </section>
+        </Section>
 
-        {/* FAQ Section — GEO/AEO Optimized (geo_001) */}
-        <section className="max-w-6xl mx-auto px-4 py-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 text-center">Frequently Asked Questions — Taxi Service in Patiala</h2>
+        <Section tight surface title="Frequently asked questions">
           <FAQAccordion />
-        </section>
+        </Section>
       </main>
     </>
   );

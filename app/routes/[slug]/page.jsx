@@ -99,22 +99,22 @@ export default async function RouteDetailsPage({ params }) {
       <div className="max-w-7xl mx-auto px-5 py-6">
         {/* Breadcrumb */}
         <nav className="mb-6 text-sm" aria-label="Breadcrumb">
-          <div className="flex items-center space-x-2 text-gray-400">
-            <Link href="/" className="hover:text-cyan-400 transition">Home</Link>
+          <div className="flex items-center space-x-2 text-[--color-ink-muted]">
+            <Link href="/" className="hover:text-[--color-brand] transition">Home</Link>
             <span>/</span>
-            <Link href="/" className="hover:text-cyan-400 transition">Routes</Link>
+            <Link href="/" className="hover:text-[--color-brand] transition">Routes</Link>
             <span>/</span>
-            <span className="text-white">{route.from} to {route.to}</span>
+            <span className="text-[--color-ink]">{route.from} to {route.to}</span>
           </div>
         </nav>
 
         {/* Page Header - SEO Optimized H1 */}
         <div className="mb-6">
-          <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2 flex items-center gap-3">
-            <PlaceIcon className="text-cyan-400" />
+          <h1 className="text-3xl lg:text-4xl font-bold text-[--color-ink] mb-2 flex items-center gap-3">
+            <PlaceIcon className="text-[--color-brand]" />
             {route.from} to {route.to} Taxi Service
           </h1>
-          <p className="text-gray-400 text-sm sm:lg">
+          <p className="text-[--color-ink-muted] text-sm sm:lg">
             {route.distanceKm} km • {route.duration} • Verified drivers • Available 24/7
           </p>
         </div>

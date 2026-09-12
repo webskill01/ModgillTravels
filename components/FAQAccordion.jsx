@@ -64,15 +64,15 @@ export default function FAQAccordion() {
             >
               <h4
                 itemProp="name"
-                className="text-white font-semibold text-xs sm:text-xs leading-snug"
+                className="text-[--color-ink] font-semibold text-xs sm:text-xs leading-snug"
               >
                 {faq.question}
               </h4>
 
               {/* Chevron icon */}
               <span
-                className={`flex-shrink-0 w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center transition-transform duration-300 ${
-                  isOpen ? 'rotate-180 border-gray-500 bg-slate-700' : ''
+                className={`flex-shrink-0 w-6 h-6 rounded-full border border-[--color-line] flex items-center justify-center transition-transform duration-300 ${
+                  isOpen ? 'rotate-180 border-[--color-line] bg-[--color-surface]' : ''
                 }`}
                 aria-hidden="true"
               >
@@ -103,11 +103,11 @@ export default function FAQAccordion() {
                   itemScope
                   itemProp="acceptedAnswer"
                   itemType="https://schema.org/Answer"
-                  className="px-5 pb-5 pt-1 border-t border-gray-700/60"
+                  className="px-5 pb-5 pt-1 border-t border-[--color-line]/60"
                 >
                   <p
                     itemProp="text"
-                    className="text-gray-300 text-xs sm:text-sm leading-relaxed"
+                    className="text-[--color-ink-muted] text-xs sm:text-sm leading-relaxed"
                   >
                     {faq.answer}
                   </p>
