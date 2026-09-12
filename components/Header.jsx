@@ -28,9 +28,16 @@ const navLink =
   "flex items-center gap-2 px-4 py-2 rounded-xl text-ink-muted " +
   "hover:text-ink hover:bg-surface-2 font-medium transition-colors duration-200";
 
+// Glass: the fill has to be translucent enough for backdrop-blur to show
+// anything through it. The original was `bg-surface /95` — a typo that left
+// the bar fully opaque with a junk `/95` class, so the blur did nothing.
+const HEADER =
+ "sticky top-0 z-50 border-b border-line bg-white/70 " +
+ "backdrop-blur-xl backdrop-saturate-150 shadow-lg";
+
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-xl bg-surface/95 border-b border-line shadow-sm">
+    <header className={HEADER}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 lg:h-20 items-center justify-between gap-3">
           {/* Logo */}

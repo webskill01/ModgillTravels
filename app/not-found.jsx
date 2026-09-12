@@ -73,7 +73,7 @@ export default function NotFound() {
                   href={link.href}
                   className="group bg-white border border-line rounded-xl p-5 text-center hover:border-brand transition-all"
                 >
-                  <Icon className="w-8 h-8 text-brand mx-auto mb-3 group- transition" />
+                  <Icon className="w-8 h-8 text-brand mx-auto mb-3  transition" />
                   <span className="text-ink font-semibold text-sm">{link.name}</span>
                 </Link>
               );
@@ -110,7 +110,7 @@ export default function NotFound() {
           <div className="mt-6 text-center">
             <Link
               href="/booking"
-              className="inline-flex items-center gap-2 text-brand hover:text-brand transition font-semibold"
+              className="inline-flex items-center gap-2 text-brand hover:text-brand-hover transition font-semibold"
             >
               <ExploreIcon className="w-5 h-5" />
               View All Routes

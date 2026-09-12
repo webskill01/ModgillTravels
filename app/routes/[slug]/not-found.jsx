@@ -34,7 +34,7 @@ export default function NotFound() {
         {/* Back Link */}
         <Link 
           href="/booking" 
-          className="inline-flex items-center gap-2 text-brand hover:text-brand font-semibold transition"
+          className="inline-flex items-center gap-2 text-brand hover:text-brand-hover font-semibold transition"
         >
           <DirectionsCarIcon />
           Browse Available Routes

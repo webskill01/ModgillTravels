@@ -149,7 +149,7 @@ export default function PrivacyContent() {
               <p className="text-brand text-sm sm:text-base leading-relaxed">
                 We collect only what's necessary for taxi bookings, protect your data with SSL encryption, 
                 never sell your information to third parties, and give you complete control over your data. 
-                Questions? <Link href="#contact" className="text-brand hover:text-brand underline font-semibold transition">
+                Questions? <Link href="#contact" className="text-brand hover:text-brand-hover underline font-semibold transition">
                   Contact us anytime
                 </Link>.
               </p>
@@ -215,7 +215,7 @@ export default function PrivacyContent() {
                   <span className="text-ink-muted text-sm block mb-1">Email Us:</span>
                   <Link 
                     href="mailto:modgilltravels@gmail.com" 
-                    className="text-brand hover:text-brand font-medium text-sm sm:text-base break-all transition"
+                    className="text-brand hover:text-brand-hover font-medium text-sm sm:text-base break-all transition"
                   >
                     modgilltravels@gmail.com
                   </Link>
@@ -268,7 +268,7 @@ export default function PrivacyContent() {
               <Link
                 key={section.id}
                 href={`#${section.id}`}
-                className="text-brand hover:text-brand transition truncate"
+                className="text-brand hover:text-brand-hover transition truncate"
               >
                 → {section.title}
               </Link>

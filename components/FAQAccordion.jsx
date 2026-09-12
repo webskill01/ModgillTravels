@@ -43,12 +43,16 @@ const defaultFaqs = [
   },
 ];
 
-export default function FAQAccordion({ faqs = defaultFaqs }) {
+// `name` groups the <details> so the browser closes the open one when another
+// is opened — exclusive accordion with no state and no JS. Pass a distinct
+// name if two accordions ever share a page, or they will interlock.
+export default function FAQAccordion({ faqs = defaultFaqs, name = "faq" }) {
   return (
     <div itemScope itemType="https://schema.org/FAQPage">
       {faqs.map((faq) => (
         <details
           key={faq.question}
+          name={name}
           className="faq-item"
           itemScope
           itemProp="mainEntity"

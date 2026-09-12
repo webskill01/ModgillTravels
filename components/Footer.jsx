@@ -221,17 +221,25 @@ export default function Footer() {
                 <span className="truncate">View us on Google</span>
               </Button>
 
+              {/* Email and address share one block. They were two grid cells
+                  with min-h-11 each, which left a gap wide enough to read as
+                  a section break. */}
+              <div className="col-span-2 lg:col-span-1 space-y-1.5 pt-1">
               <a
                 href={`mailto:${site.email}`}
-                className="col-span-2 lg:col-span-1 flex items-center gap-2 min-h-11 text-ink-muted hover:text-brand transition-colors"
+                  className="flex items-center gap-2 text-ink-muted hover:text-brand transition-colors"
               >
                 <EmailIcon className="w-4 h-4 shrink-0 text-brand" />
                 <span className="text-sm truncate">{site.email}</span>
               </a>
 
-              <div className="hidden lg:flex items-center gap-2 min-h-11 text-ink-muted">
-                <LocationOnIcon className="w-4 h-4 shrink-0 text-brand" />
-                <span className="text-sm">Patiala, Punjab</span>
+                <address className="flex items-start gap-2 text-ink-muted not-italic">
+                  <LocationOnIcon className="w-4 h-4 shrink-0 text-brand mt-0.5" />
+                  <span className="text-sm leading-snug">
+                    {site.address.street}, {site.address.locality},<br />
+                    {site.address.region} {site.address.postalCode}
+                  </span>
+                </address>
               </div>
             </div>
           </div>

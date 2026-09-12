@@ -103,12 +103,12 @@ export default function ContactContent() {
                 className="group bg-white border border-line rounded-xl p-5 sm:p-6 hover:border-brand transition-all duration-300"
               >
                 <div
-                  className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center mb-4 transition-transform group- ${
+                  className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center mb-4 transition-transform  ${
                     method.color === "green"
-                      ? "bg-accent-soft group-hover:bg-accent-soft"
+                      ? "bg-accent-softhover:bg-accent"
                       : method.color === "blue"
-                      ? "bg-accent-soft group-hover:bg-accent-soft"
-                      : "bg-accent-soft group-hover:bg-accent-soft"
+                      ? "bg-accent-softhover:bg-accent"
+                      : "bg-accent-softhover:bg-accent"
                   }`}
                 >
                   <span
@@ -201,21 +201,21 @@ export default function ContactContent() {
             <div className="space-y-3 text-sm">
               <Link
                 href="/"
-                className="flex items-center gap-2 text-brand hover:text-brand transition p-2 bg-surface rounded-lg hover:bg-surface"
+                className="flex items-center gap-2 text-brand hover:text-brand-hover transition p-2 bg-surface rounded-lg hover:bg-surface"
               >
                 <span>→</span>
                 <span>Book Taxi Now</span>
               </Link>
               <Link
                 href="/about"
-                className="flex items-center gap-2 text-brand hover:text-brand transition p-2 bg-surface rounded-lg hover:bg-surface"
+                className="flex items-center gap-2 text-brand hover:text-brand-hover transition p-2 bg-surface rounded-lg hover:bg-surface"
               >
                 <span>→</span>
                 <span>About Us</span>
               </Link>
               <Link
                 href="/privacy"
-                className="flex items-center gap-2 text-brand hover:text-brand transition p-2 bg-surface rounded-lg hover:bg-surface"
+                className="flex items-center gap-2 text-brand hover:text-brand-hover transition p-2 bg-surface rounded-lg hover:bg-surface"
               >
                 <span>→</span>
                 <span>Privacy Policy</span>

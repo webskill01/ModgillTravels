@@ -140,7 +140,7 @@ export default function BookingPage() {
                 href={`/city/${city.slug}`}
                 className="group bg-white border border-line rounded-xl p-5 text-center hover:border-line transition-all"
               >
-                <LocationOnIcon className="w-10 h-10 text-brand mx-auto mb-3 group- transition" />
+                <LocationOnIcon className="w-10 h-10 text-brand mx-auto mb-3  transition" />
                 <h3 className="text-ink font-bold mb-1">{city.name}</h3>
                 <p className="text-ink-muted text-sm mb-3">{city.state}</p>
                 <span className="text-brand text-sm group-hover:text-brand transition">

@@ -98,7 +98,7 @@ export default function BlogPage() {
                   src={blog.image}
                   alt={blog.title}
                   fill
-                  className="object-cover group- transition-transform duration-300"
+                  className="object-cover  transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>

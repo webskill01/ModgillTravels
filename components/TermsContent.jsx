@@ -143,7 +143,7 @@ export default function TermsContent() {
               <p className="text-brand text-sm sm:text-base leading-relaxed">
                 Book responsibly with accurate details, pay ₹200 advance to confirm, respect cancellation 
                 terms, treat drivers courteously, and contact support for any issues. 
-                <Link href="#contact" className="text-brand hover:text-brand underline font-semibold ml-1 transition">
+                <Link href="#contact" className="text-brand hover:text-brand-hover underline font-semibold ml-1 transition">
                   Have questions?
                 </Link>
               </p>
@@ -252,7 +252,7 @@ export default function TermsContent() {
                   <span className="text-ink-muted text-sm block mb-1">Support Email:</span>
                   <Link 
                     href="mailto:modgilltravels@gmail.com" 
-                    className="text-brand hover:text-brand font-medium text-sm sm:text-base break-all transition"
+                    className="text-brand hover:text-brand-hover font-medium text-sm sm:text-base break-all transition"
                   >
                     modgilltravels@gmail.com
                   </Link>
@@ -321,7 +321,7 @@ export default function TermsContent() {
               <Link
                 key={section.id}
                 href={`#${section.id}`}
-                className="text-brand hover:text-brand transition truncate"
+                className="text-brand hover:text-brand-hover transition truncate"
               >
                 → {section.title}
               </Link>

@@ -114,7 +114,7 @@ export default function BlogSection() {
   }, []);
 
   return (
-    <div className="bg-surface /50 border border-line rounded-xl p-4 sm:p-5 overflow-hidden">
+    <div className="bg-surface border border-line rounded-xl p-4 sm:p-5 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-2 sm:gap-3">
@@ -130,7 +130,7 @@ export default function BlogSection() {
         </div>
         <Link 
           href="/blog" 
-          className="text-brand hover:text-brand text-sm font-semibold transition flex items-center gap-1 group flex-shrink-0"
+          className="text-brand hover:text-brand-hover text-sm font-semibold transition flex items-center gap-1 group flex-shrink-0"
         >
           <span>All Guides</span>
           <ArrowForwardIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -169,7 +169,7 @@ export default function BlogSection() {
               <div className="relative z-10">
                 {/* Top Section with Emoji */}
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="text-4xl sm:text-5xl group- transition-transform duration-300 flex-shrink-0">
+                  <div className="text-4xl sm:text-5xl  transition-transform duration-300 flex-shrink-0">
                     {blog.emoji}
                   </div>
                   
@@ -222,23 +222,29 @@ export default function BlogSection() {
       </div>
 
       {/* Navigation Dots */}
+      {/* Buttons, not spans: these were click-only, so the carousel could not
+          be driven from a keyboard at all. Inactive dots were bg-surface on a
+          near-white background, i.e. invisible. */}
       <div className="flex items-center justify-center gap-2 mt-4">
         {blogs.map((blog, index) => (
-          <span
+          <button
             key={index}
+            type="button"
             onClick={() => scrollToCard(index)}
+            aria-label={`Go to ${blog.title}`}
+            aria-current={currentCard === index}
             className={`h-2 rounded-full transition-all ${
               currentCard === index 
-                ? 'w-2 bg-accent' 
-                : 'w-2 bg-surface hover:bg-surface'
+                ? "w-6 bg-accent"
+                : "w-2 bg-line-strong hover:bg-ink-muted"
             }`}
-            aria-label={`Go to ${blog.title}`}
           />
         ))}
       </div>
 
-      {/* Slide Counter */}
-      <p className="text-center text-ink-muted text-sm mt-2">
+      {/* Slide counter. mx-auto because the base `p` rule caps every paragraph
+          at 70ch — text-center then centres inside a box still pinned left. */}
+      <p className="mx-auto text-center text-ink-muted text-sm mt-2">
         Article {currentCard + 1} of {blogs.length}
       </p>
 

@@ -149,7 +149,7 @@ export default async function BlogPostPage({ params }) {
           <h2 className="text-2xl sm:text-3xl font-bold text-ink mb-4 text-center">
             Book Your Taxi from Patiala — Call or WhatsApp Us
           </h2>
-          <p className="text-ink-muted text-center mb-6">
+          <p className="text-ink-muted text-center mx-auto mb-6">
             Call us now or WhatsApp for instant booking confirmation with professional drivers and comfortable vehicles.
           </p>
           <BookCta align="center" size="lg" />

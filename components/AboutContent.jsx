@@ -8,36 +8,32 @@ import { InfoIcon, PeopleIcon, DirectionsCarIcon, StarIcon, SecurityIcon, Suppor
 
 // patch_025: Replace '10+ Years Experience' with '5,000+ Trips Completed' (fixes false claim)
 const stats = [
- { label: 'Happy Customers', value: '5000+', icon: <PeopleIcon className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'cyan' },
- { label: 'Routes Covered', value: '50+', icon: <LocationOnIcon className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'green' },
- { label: 'Professional Drivers', value: '25+', icon: <DirectionsCarIcon className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'blue' },
- { label: 'Trips Completed', value: '5,000+', icon: <StarIcon className="w-5 h-5 sm:w-6 sm:h-6" />, color: 'purple' },
+ { label: 'Happy Customers', value: '5000+', icon: <PeopleIcon className="w-5 h-5 sm:w-6 sm:h-6" /> },
+ { label: 'Routes Covered', value: '50+', icon: <LocationOnIcon className="w-5 h-5 sm:w-6 sm:h-6" /> },
+ { label: 'Professional Drivers', value: '25+', icon: <DirectionsCarIcon className="w-5 h-5 sm:w-6 sm:h-6" /> },
+ { label: 'Trips Completed', value: '5,000+', icon: <StarIcon className="w-5 h-5 sm:w-6 sm:h-6" /> },
 ];
 
 const features = [
  {
  icon: <SecurityIcon className="w-5 h-5 sm:w-6 sm:h-6" />,
  title: 'Safe & Secure',
- description: 'All drivers undergo background verification with valid licenses. Vehicles are sanitized and maintained regularly for your safety.',
- color: 'green'
+ description: 'All drivers undergo background verification with valid licenses. Vehicles are sanitized and maintained regularly for your safety.'
  },
  {
  icon: <SupportAgentIcon className="w-5 h-5 sm:w-6 sm:h-6" />,
  title: '24/7 Customer Support',
- description: 'Round-the-clock assistance via phone and WhatsApp. Emergency support available for all bookings.',
- color: 'blue'
+ description: 'Round-the-clock assistance via phone and WhatsApp. Emergency support available for all bookings.'
  },
  {
  icon: <CheckCircleIcon className="w-5 h-5 sm:w-6 sm:h-6" />,
  title: 'Transparent Pricing',
- description: 'A fixed quote confirmed before the trip. No hidden charges and no surge pricing.',
- color: 'cyan'
+ description: 'A fixed quote confirmed before the trip. No hidden charges and no surge pricing.'
  },
  {
  icon: <DirectionsCarIcon className="w-5 h-5 sm:w-6 sm:h-6" />,
  title: 'Modern Fleet',
- description: 'Well-maintained AC vehicles ranging from sedans to SUVs. Clean, comfortable rides for all group sizes.',
- color: 'purple'
+ description: 'Well-maintained AC vehicles ranging from sedans to SUVs. Clean, comfortable rides for all group sizes.'
  },
 ];
 
@@ -77,16 +73,8 @@ export default function AboutContent() {
  key={index}
  className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center border border-line hover:border-brand transition-all"
  >
- <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 ${
- stat.color === 'cyan' ? 'bg-accent-soft' :
- stat.color === 'green' ? 'bg-accent-soft' :
- stat.color === 'blue' ? 'bg-accent-soft' : 'bg-accent-soft'
- }`}>
- <span className={
- stat.color === 'cyan' ? 'text-brand' :
- stat.color === 'green' ? 'text-brand' :
- stat.color === 'blue' ? 'text-brand' : 'text-brand'
- }>
+ <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 bg-accent-soft`}>
+ <span className="text-brand">
  {stat.icon}
  </span>
  </div>
@@ -151,16 +139,8 @@ export default function AboutContent() {
  className="bg-white rounded-xl p-4 sm:p-5 border border-line hover:border-brand transition-all group"
  >
  <div className="flex items-start gap-3 sm:gap-4">
- <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-transform group- ${
- feature.color === 'green' ? 'bg-accent-soft' :
- feature.color === 'blue' ? 'bg-accent-soft' :
- feature.color === 'cyan' ? 'bg-accent-soft' : 'bg-accent-soft'
- }`}>
- <span className={
- feature.color === 'green' ? 'text-brand' :
- feature.color === 'blue' ? 'text-brand' :
- feature.color === 'cyan' ? 'text-brand' : 'text-brand'
- }>
+ <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-transform bg-accent-soft`}>
+ <span className="text-brand">
  {feature.icon}
  </span>
  </div>
@@ -254,17 +234,20 @@ export default function AboutContent() {
  <div className="space-y-4">
  <div className="p-3 bg-surface rounded-lg">
  <h4 className="text-ink font-semibold mb-2 text-sm sm:text-base">Phone & WhatsApp</h4>
- <Button variant="call" href={`tel:${site.phone}`} className=""></Button>
+ <Button variant="call" size="sm" href={`tel:${site.phone}`}>
+ <PhoneIcon className="w-4 h-4 shrink-0" />
+ <span>Call Now</span>
+ </Button>
  <p className="text-ink-muted text-sm mt-1">Available 24/7 for bookings</p>
  </div>
 
  <div className="p-3 bg-surface rounded-lg">
  <h4 className="text-ink font-semibold mb-2 text-sm sm:text-base">Email</h4>
  <a
- href="mailto:modgilltravels@gmail.com"
- className="text-brand hover:text-brand transition text-sm sm:text-base break-all"
+ href={`mailto:${site.email}`}
+ className="text-brand hover:text-brand-hover transition text-sm sm:text-base break-all"
  >
- modgilltravels@gmail.com
+ {site.email}
  </a>
  <p className="text-ink-muted text-sm mt-1">Response within 2 hours</p>
  </div>
@@ -285,7 +268,7 @@ export default function AboutContent() {
  <div className="mt-5 pt-4 border-t border-line">
  <Link
  href="/contact"
- className="text-brand hover:text-brand transition text-sm flex items-center gap-2"
+ className="text-brand hover:text-brand-hover transition text-sm flex items-center gap-2"
  >
  <span>→ View detailed contact information</span>
  </Link>
