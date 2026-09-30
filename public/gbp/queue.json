@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mt-2026-10-06-patiala-delhi",
+    "publish_on": "2026-10-06",
+    "text": "One-way taxi from Patiala to Delhi, and Delhi to Patiala. Door-to-door pickup, AC cars and experienced drivers who do this road every week. Tap Call to book.",
+    "cta": "CALL",
+    "url": null,
+    "image": "mt-2026-10-06-patiala-delhi.jpg",
+    "alt": "Sedan on a highway with the route Patiala to Delhi in yellow",
+    "approved": true
+  },
+  {
+    "id": "mt-2026-10-09-chandigarh",
+    "publish_on": "2026-10-09",
+    "text": "Patiala to Chandigarh, Mohali or Zirakpur, and back. Daily trips at any hour in AC sedans and SUVs. Tap Call to book your ride.",
+    "cta": "CALL",
+    "url": null,
+    "image": "mt-2026-10-09-chandigarh.jpg",
+    "alt": "SUV with a map line connecting Patiala and Chandigarh",
+    "approved": true
+  },
+  {
+    "id": "mt-2026-10-13-airport",
+    "publish_on": "2026-10-13",
+    "text": "Flying out of Chandigarh or Delhi? Airport drops and pickups from Patiala, timed to your flight so you are never rushing. Book a day ahead - tap Call.",
+    "cta": "CALL",
+    "url": null,
+    "image": "mt-2026-10-13-airport.jpg",
+    "alt": "Sedan with a suitcase and a plane flight path for airport transfers",
+    "approved": true
+  },
+  {
+    "id": "mt-2026-10-16-hills",
+    "publish_on": "2026-10-16",
+    "text": "October is the right month for the hills. Shimla and Manali trips from Patiala, one way or round trip, in AC SUVs with drivers who know the mountain roads. Tap Call to plan yours.",
+    "cta": "CALL",
+    "url": null,
+    "image": "mt-2026-10-16-hills.jpg",
+    "alt": "SUV on a mountain road for Shimla and Manali trips from Patiala",
+    "approved": true
+  },
+  {
+    "id": "mt-2026-10-20-amritsar",
+    "publish_on": "2026-10-20",
+    "text": "Planning a Golden Temple visit? Patiala to Amritsar by taxi, one way or a same-day round trip, with a driver who waits while you have darshan. Tap Call to book.",
+    "cta": "CALL",
+    "url": null,
+    "image": "mt-2026-10-20-amritsar.jpg",
+    "alt": "Sedan with a line drawing of the Golden Temple for Patiala to Amritsar trips",
+    "approved": false
+  },
+  {
+    "id": "mt-2026-10-23-corporate",
+    "publish_on": "2026-10-23",
+    "text": "Need reliable cars for your team or clients? Corporate taxi bookings from Patiala for meetings, client pickups and airport runs, in clean AC sedans and SUVs. Tap Call to set up regular bookings.",
+    "cta": "CALL",
+    "url": null,
+    "image": "mt-2026-10-23-corporate.jpg",
+    "alt": "Executive sedan for corporate taxi bookings from Patiala",
+    "approved": true
+  },
+  {
+    "id": "mt-2026-10-27-festive-travel",
+    "publish_on": "2026-10-27",
+    "text": "Travelling for Diwali? Cars get booked up fast in the festive week, so book your taxi early - Patiala to Delhi, Chandigarh, Amritsar or wherever home is. Tap Call to reserve your date.",
+    "cta": "CALL",
+    "url": null,
+    "image": "mt-2026-10-27-festive-travel.jpg",
+    "alt": "Taxi at night with diya lights for Diwali travel bookings",
+    "approved": true
+  },
+  {
+    "id": "mt-2026-10-30-24x7",
+    "publish_on": "2026-10-30",
+    "text": "Early flight, late train or a long drive through the night? Modgill Travels runs 24 hours a day, every day, from Patiala. Book ahead for early-morning pickups - tap Call.",
+    "cta": "CALL",
+    "url": null,
+    "image": "mt-2026-10-30-24x7.jpg",
+    "alt": "Taxi with headlights on at night, clock showing 4 AM, available 24 hours",
+    "approved": true
+  }
+]
